@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>संस्कृत परीक्षा-तैयारी</title>
+<style>
+  :root {
+    --bg: #0b0c0e;
+    --card: #15171b;
+    --card-hover: #1c1f26;
+    --line: #2a2e36;
+    --ink: #f3efe6;
+    --ink-dim: #b9b4a8;
+    --sanskrit: #ffe7b8;
+    --accent: #e0a34e;
+    --accent2: #7fc8a9;
+    --accent3: #c47a7a;
+  }
+  *, *::before, *::after { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: Georgia, "Iowan Old Style", serif;
+    line-height: 1.6;
+    padding: 20px 16px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .deva {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", serif;
+    line-height: 1.85;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 24px 4px 28px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  header h1 {
+    font-size: 2.1rem;
+    margin: 0 0 6px;
+    color: var(--sanskrit);
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    letter-spacing: .5px;
+  }
+  header .sub {
+    color: var(--ink-dim);
+    font-size: .92rem;
+    font-style: italic;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: .72rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 14px 2px;
+    font-family: Georgia, serif;
+  }
+
+  /* Subject grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* Subject card */
+  .card {
+    display: block;
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 20px 18px;
+    transition: background .15s, border-color .15s, transform .1s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+  }
+  .card.gold::before  { background: var(--accent); }
+  .card.green::before { background: var(--accent2); }
+  .card.rose::before  { background: var(--accent3); }
+  .card.purple::before { background: #a07fc8; }
+
+  .card .tag {
+    display: inline-block;
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+  }
+  .card.gold  .tag { background: rgba(224,163,78,.15);  color: var(--accent);  border: 1px solid rgba(224,163,78,.3); }
+  .card.green .tag { background: rgba(127,200,169,.15); color: var(--accent2); border: 1px solid rgba(127,200,169,.3); }
+  .card.rose  .tag { background: rgba(196,122,122,.15); color: var(--accent3); border: 1px solid rgba(196,122,122,.3); }
+  .card.purple .tag { background: rgba(160,127,200,.15); color: #a07fc8; border: 1px solid rgba(160,127,200,.3); }
+
+  .card h2 {
+    margin: 0 0 4px;
+    font-size: 1.45rem;
+    color: var(--sanskrit);
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    line-height: 1.6;
+  }
+  .card .latin-title {
+    font-size: .88rem;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+    font-style: italic;
+  }
+  .card .meta {
+    font-size: .8rem;
+    color: var(--ink-dim);
+    line-height: 1.55;
+  }
+  .card .meta b { color: var(--ink); font-style: normal; }
+  .card .arrow {
+    position: absolute;
+    bottom: 18px; right: 20px;
+    font-size: 1.1rem;
+    color: var(--line);
+    transition: color .15s, transform .15s;
+  }
+  .card:hover .arrow { color: var(--accent); transform: translateX(3px); }
+
+  /* Coming soon card */
+  .card.soon {
+    opacity: .45;
+    cursor: default;
+    pointer-events: none;
+    border-style: dashed;
+  }
+  .card.soon:hover { transform: none; }
+  .card.soon h2 { color: var(--ink-dim); }
+
+  /* Stats bar */
+  .stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 36px;
+    font-size: .84rem;
+    color: var(--ink-dim);
+  }
+  .stats .stat b { color: var(--accent); font-size: 1.15rem; display: block; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: .78rem;
+    color: var(--ink-dim);
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="deva">संस्कृत · परीक्षा-तैयारी</h1>
+  <div class="sub">B.A. Sanskrit · PYQ Answers · Updated as I prepare</div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>2</b>subjects ready</div>
+  <div class="stat"><b>Sanskrit + English</b>bilingual answers</div>
+  <div class="stat"><b>1-mark · 5-mark · 15-mark</b>all sections</div>
+</div>
+
+<div class="section-label">Subjects</div>
+<div class="grid">
+
+  <!-- Kadambari -->
+  <a class="card gold" href="Kadambari.html">
+    <div class="tag">पत्रिका · 3</div>
+    <h2 class="deva">कादम्बरी</h2>
+    <div class="latin-title">Kadambari · Banabhatta</div>
+    <div class="meta">
+      <b>QP 21B4MN1SBS3</b> (2025)<br>
+      कथासार · 10 short · 6 essays · 3 long
+    </div>
+    <span class="arrow">→</span>
+  </a>
+
+  <!-- Tarka Sopanam -->
+  <a class="card green" href="Tarka Sopanam.html">
+    <div class="tag">तर्कशास्त्रम्</div>
+    <h2 class="deva">तर्कसोपानम्</h2>
+    <div class="latin-title">Tarka Sopanam · Logic</div>
+    <div class="meta">
+      All sections · Sanskrit + English<br>
+      Bilingual answers ready
+    </div>
+    <span class="arrow">→</span>
+  </a>
+
+  <!-- Placeholder: add the next subject here -->
+  <!-- Copy the block below, fill in details, remove the "soon" class, and pick a color (gold/green/rose/purple) -->
+  <div class="card rose soon">
+    <div class="tag">पत्रिका · ?</div>
+    <h2 class="deva">अगला विषयः</h2>
+    <div class="latin-title">Next subject · coming soon</div>
+    <div class="meta">Answers loading…</div>
+  </div>
+
+</div>
+
+<footer>
+  Updated as preparation continues &nbsp;·&nbsp; Sanskrit answers are exam-style prose &nbsp;·&nbsp; verify key facts against your teacher's key
+</footer>
+
+</body>
+</html>

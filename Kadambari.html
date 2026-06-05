@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>कादम्बरी — परीक्षा-तैयारी</title>
+<style>
+  :root{
+    --bg:#0b0c0e;--card:#15171b;--card2:#1b1e24;--line:#2a2e36;
+    --ink:#f3efe6;--ink-dim:#b9b4a8;--sanskrit:#ffe7b8;
+    --accent:#e0a34e;--accent2:#7fc8a9;--qbg:#211a10;
+  }
+  *{box-sizing:border-box;-webkit-text-size-adjust:100%;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+  body{font-family:"Georgia","Iowan Old Style",serif;line-height:1.6;
+    padding:14px 12px 64px;max-width:680px;margin:0 auto;}
+  .deva{font-family:"Kohinoor Devanagari","Noto Sans Devanagari","Mangal",serif;line-height:1.85;}
+  header{text-align:center;padding:10px 4px 16px;border-bottom:1px solid var(--line);margin-bottom:16px;}
+  header h1{font-size:1.9rem;margin:0 0 4px;color:var(--sanskrit);letter-spacing:.5px;
+    font-family:"Kohinoor Devanagari","Noto Sans Devanagari",serif;}
+  header .sub{color:var(--ink-dim);font-size:.9rem;font-style:italic;}
+  .toc{display:flex;flex-direction:column;gap:8px;margin:0 0 22px;}
+  .toc a{display:block;text-decoration:none;color:var(--ink);background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:1.02rem;}
+  .toc a b{color:var(--accent);}
+  .secttl{font-size:1.1rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;
+    margin:30px 0 14px;font-family:Georgia,serif;border-left:4px solid var(--accent);padding-left:12px;}
+  .secttl small{display:block;font-size:.7rem;letter-spacing:1px;color:var(--ink-dim);text-transform:none;margin-top:3px;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;overflow:hidden;}
+  details[open]{background:var(--card2);}
+  summary{list-style:none;cursor:pointer;padding:16px 18px;font-size:1.18rem;color:var(--sanskrit);
+    font-family:"Kohinoor Devanagari","Noto Sans Devanagari",serif;line-height:1.7;
+    display:flex;gap:9px;align-items:flex-start;}
+  summary::-webkit-details-marker{display:none;}
+  summary .num{flex:0 0 auto;background:var(--accent);color:#000;font-family:Georgia,serif;font-weight:bold;
+    border-radius:8px;padding:2px 9px;font-size:.9rem;margin-top:3px;}
+  summary .tier{flex:0 0 auto;background:transparent;border:1px solid var(--accent);color:var(--accent);
+    font-family:Georgia,serif;border-radius:8px;padding:2px 8px;font-size:.74rem;margin-top:4px;letter-spacing:1px;}
+  details[open] summary{border-bottom:1px solid var(--line);}
+  .body{padding:6px 18px 20px;}
+  .label{display:inline-block;font-family:Georgia,serif;font-size:.72rem;letter-spacing:2px;
+    text-transform:uppercase;margin:18px 0 6px;}
+  .label.a,.label.q{color:var(--accent);}
+  .label.en{color:var(--accent2);}
+  .deva.a{font-size:1.2rem;color:var(--sanskrit);}
+  .en{font-size:1.18rem;color:#fbf8f0;font-style:normal;line-height:1.65;}
+  .sub-h{color:var(--accent);font-family:Georgia,serif;font-weight:bold;font-size:.92rem;margin:16px 0 4px;letter-spacing:1px;}
+  .quick{display:flex;flex-direction:column;gap:10px;}
+  .ql{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;}
+  .ql .qn{color:var(--accent);font-family:Georgia,serif;font-weight:bold;font-size:.9rem;}
+  .ql .deva{font-size:1.16rem;margin:3px 0;}
+  .ql .qd{color:var(--sanskrit);}
+  .ql .ad{color:var(--ink);}
+  .ql .ad::before{content:"उ\2014 ";color:var(--accent);}
+  .ql .ten{color:#ece7da;font-style:normal;font-size:1.04rem;line-height:1.5;}
+  .note{font-size:.82rem;color:var(--ink-dim);background:var(--card);border:1px dashed var(--line);
+    border-radius:10px;padding:12px 14px;margin:22px 0 0;}
+  .top{display:block;text-align:center;color:var(--accent);text-decoration:none;margin:20px 0;font-size:.9rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="deva">कादम्बरी</h1>
+  <div class="sub">B.A. Sanskrit · पत्रिका-3 · QP 21B4MN1SBS3 (2025) · बाणभट्टः</div>
+</header>
+
+<nav class="toc">
+  <a href="#story"><b>0 · कथासार</b> &nbsp;· The story + rebirth key</a>
+  <a href="#s1"><b>I · 1-mark</b> &nbsp;· लघूत्तर (10)</a>
+  <a href="#s2"><b>II · 5-mark</b> &nbsp;· लघुनिबन्ध (any four)</a>
+  <a href="#s3"><b>III · 15-mark</b> &nbsp;· निबन्ध (answer two)</a>
+</nav>
+
+<!-- =================== STORY / KATHASARA =================== -->
+<div class="secttl" id="story">0 · कथासार — The Story<small>Plot &amp; reincarnation key · essential background for every essay</small></div>
+
+<div class="ql" style="border-color:var(--accent);">
+  <div class="sub-h" style="margin-top:2px;">पात्राणि — Characters &amp; their rebirths</div>
+  <div class="en" style="font-size:1.06rem;">
+    &bull; <b class="deva" style="color:var(--sanskrit);">चन्द्रः</b> (the Moon) &rarr; चन्द्रापीडः &rarr; शूद्रकः<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">पुण्डरीकः</b> &rarr; वैशम्पायनः &rarr; शुकः (the parrot)<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">कपिञ्जलः</b> &rarr; इन्द्रायुधः (the horse)<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">रोहिणी</b> (Moon's wife) &rarr; पत्रलेखा<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">लक्ष्मीः</b> (Pundarika's mother) &rarr; चण्डालकन्या<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">महाश्वेता, कादम्बरी</b> &rarr; स्वरूपेण एव (unchanged)
+  </div>
+</div>
+
+<details open>
+  <summary><span class="num">&#9733;</span><span class="deva">कथासारः — full plot</span></summary>
+  <div class="body">
+
+    <div class="sub-h">The frame &middot; कथाप्रवेशः</div>
+    <div class="en">King Shudraka rules at Vidisha on the river Vetravati. A Chandala maiden presents him a remarkable talking parrot named Vaishampayana. At the king's request, the parrot recounts its former births &mdash; knowledge it had gained in the hermitage of the sage Jabali, who revealed its past lives. The whole romance is thus a story-within-a-story, narrated by the parrot.</div>
+
+    <div class="sub-h">Why it all happens &middot; शापमूलम्</div>
+    <div class="en">The young ascetic Pundarika (son of the goddess Lakshmi and the sage Shvetaketu) and the gandharva maiden Mahashweta fall in love at first sight, and Pundarika dies of love-longing. The Moon-god Chandra carries his body to heaven but is blamed for inflaming the lovers' suffering with his rays. Pundarika curses the Moon to be born on earth and suffer the same pangs of love; the Moon curses him back to share that fate. So each must take two human births &mdash; and only through the grace of Pundarika's father Shvetaketu does the curse finally end.</div>
+
+    <div class="sub-h">Birth of the heroes &middot; नायकजन्म</div>
+    <div class="en">At Ujjayini, the long-childless king Tarapida and queen Vilasavati at last obtain a son &mdash; the Moon reborn &mdash; named Chandrapida. At the same time the prime minister Shukanasa gets a son, Vaishampayana (Pundarika reborn). The two boys grow up as inseparable friends.</div>
+
+    <div class="sub-h">Advice &amp; the campaign &middot; उपदेशः, दिग्विजयः</div>
+    <div class="en">When Chandrapida is made crown prince, Shukanasa gives him the celebrated advice on the dangers of youth, wealth and power. Chandrapida then sets out to conquer the world, with Vaishampayana, his confidante Patralekha (Rohini, the Moon's wife, reborn), and his horse Indrayudha (his friend Kapinjala, reborn by a curse).</div>
+
+    <div class="sub-h">Mahashweta &middot; महाश्वेतावृत्तान्तः</div>
+    <div class="en">Straying from his retinue, Chandrapida reaches the Acchoda lake near the Himalayas and finds Mahashweta living as an ascetic. She tells him her sorrowful tale of Pundarika and the heavenly voice that promised reunion, and speaks of her dear friend Kadambari &mdash; a gandharva princess of Hemakuta who has vowed not to marry until Mahashweta is reunited with Pundarika.</div>
+
+    <div class="sub-h">The love &middot; प्रेमकथा</div>
+    <div class="en">Chandrapida meets Kadambari, and the two fall deeply in love. Summoned home by his father, he returns to Ujjayini, leaving Patralekha behind with Kadambari.</div>
+
+    <div class="sub-h">The tragedy &middot; विपत्तिः</div>
+    <div class="en">Vaishampayana, left near the lake, approaches Mahashweta and declares his love. Not realising he is the reborn Pundarika, the grieving ascetic curses him to become a parrot, and he dies. Hearing of his friend's death, the heartbroken Chandrapida too falls dead on the shore of Acchoda. As Kadambari prepares to follow him in death, a divine voice declares that Chandrapida's body will remain incorrupt and that she will be reunited with him.</div>
+
+    <div class="sub-h">The reunion &middot; समागमः</div>
+    <div class="en">The Chandala maiden (in truth Lakshmi, Pundarika's mother) reveals to Shudraka that he is none other than Chandrapida, the Moon &mdash; and that the mutual curses are now ended. Chandrapida is restored to life by the touch of Kadambari's hand; Pundarika reappears from heaven in his original form; and both couples &mdash; Chandrapida &amp; Kadambari, Pundarika &amp; Mahashweta &mdash; are at last united. The romance thus celebrates love and friendship enduring across lifetimes. (Bana left the work unfinished; his son Bhushanabhatta composed the latter half that brings about this reunion.)</div>
+
+    <div class="label a">संक्षिप्तः कथासारः (संस्कृतम्)</div>
+    <div class="deva a">विदिशानगर्याः राजा शूद्रकः आसीत्। एकदा चण्डालकन्या तस्मै वैशम्पायननामानं शुकम् उपायनीकृत्य दत्तवती। सः शुकः जाबालिमुनेः आश्रमे ज्ञातं स्वपूर्वजन्मवृत्तान्तं राज्ञे कथयति।<br><br>
+    उज्जयिन्याः राजा तारापीडः, तस्य पुत्रः चन्द्रापीडः, मन्त्रिणः शुकनासस्य पुत्रः वैशम्पायनः च — एतौ सख्यौ सह वर्धेते। युवराजपदं प्राप्य शुकनासोपदेशं श्रुत्वा च चन्द्रापीडः दिग्विजयार्थं प्रस्थितः। मार्गे अच्छोदसरोवरतीरे तपस्विनीं महाश्वेतां दृष्टवान्। सा पुण्डरीकेण सह स्वस्नेहं तस्य मरणं च कथयति, सख्याः कादम्बर्याः परिचयं च ददाति। चन्द्रापीडः कादम्बर्यां, कादम्बरी च चन्द्रापीडे अनुरक्ता।<br><br>
+    पश्चात् वैशम्पायनः महाश्वेतां प्रति प्रेम प्रकटयति; सा क्रुद्धा "शुकः भव" इति शशाप; सः मृत्वा शुकः जातः। मित्रमरणवार्तां श्रुत्वा चन्द्रापीडः अपि अच्छोदतीरे प्राणान् त्यक्तवान्। दिव्या वाणी — "चन्द्रापीडस्य शरीरं रक्षितं भविष्यति, कादम्बर्या सह पुनर्मिलनं च" इति आदिशत्।<br><br>
+    अन्ते — चन्द्रः (चन्द्रापीडः, शूद्रकः) पुण्डरीकः (वैशम्पायनः, शुकः) च परस्परशापात् मुक्तौ। कादम्बर्याः स्पर्शेन चन्द्रापीडः पुनर्जीवितः; पुण्डरीकः अपि स्वरूपेण आगतः; उभे दम्पती मिलिते। एवं प्रेम्णः जन्मान्तरस्थायित्वम् अनया कथया प्रतिपाद्यते।</div>
+
+  </div>
+</details>
+
+<a class="top" href="#story">&uarr; top</a>
+
+<!-- =================== SECTION I : 1 MARK =================== -->
+<div class="secttl" id="s1">I · लघूत्तर — 1 mark<small>Write short answers · all 10</small></div>
+<div class="quick">
+
+  <div class="ql"><span class="qn">1.</span>
+    <div class="deva qd">बाणविरचितायाः आख्यायिकायाः नाम किम्?</div>
+    <div class="ten">Name of the ākhyāyikā composed by Bana?</div>
+    <div class="deva ad">बाणविरचितायाः आख्यायिकायाः नाम "हर्षचरितम्"।</div>
+    <div class="ten">"Harshacharitam." (Kadambari is a <i>kathā</i>; the <i>ākhyāyikā</i> is Harshacharita.)</div></div>
+
+  <div class="ql"><span class="qn">2.</span>
+    <div class="deva qd">कादम्बर्याः अपरः नायकः कः?</div>
+    <div class="ten">Who is the other hero of Kadambari?</div>
+    <div class="deva ad">कादम्बर्याः अपरः नायकः वैशम्पायनः।</div>
+    <div class="ten">Vaishampayana (the principal hero being Chandrapida).</div></div>
+
+  <div class="ql"><span class="qn">3.</span>
+    <div class="deva qd">चन्द्रापीडस्य पितुः नाम किम्?</div>
+    <div class="ten">Chandrapida's father's name?</div>
+    <div class="deva ad">चन्द्रापीडस्य पितुः नाम तारापीडः।</div>
+    <div class="ten">Tarapida.</div></div>
+
+  <div class="ql"><span class="qn">4.</span>
+    <div class="deva qd">कादम्बर्यां वैशम्पायनः इति कस्य नामधेयम्?</div>
+    <div class="ten">"Vaishampayana" is the name of whom?</div>
+    <div class="deva ad">वैशम्पायनः इति शुकनासस्य पुत्रस्य नामधेयम्।</div>
+    <div class="ten">The name of Shukanasa's son.</div></div>
+
+  <div class="ql"><span class="qn">5.</span>
+    <div class="deva qd">कादम्बर्याः सखी का?</div>
+    <div class="ten">Who is Kadambari's friend?</div>
+    <div class="deva ad">कादम्बर्याः सखी महाश्वेता।</div>
+    <div class="ten">Mahashweta.</div></div>
+
+  <div class="ql"><span class="qn">6.</span>
+    <div class="deva qd">कादम्बर्यां कस्य आश्रमस्य वर्णनम् अस्ति?</div>
+    <div class="ten">Whose hermitage is described in Kadambari?</div>
+    <div class="deva ad">कादम्बर्यां जाबालेः (जाबालिमुनेः) आश्रमस्य वर्णनम् अस्ति।</div>
+    <div class="ten">The hermitage of the sage Jabali.</div></div>
+
+  <div class="ql"><span class="qn">7.</span>
+    <div class="deva qd">कादम्बर्याः उत्तरार्धभागस्य रचयिता कः?</div>
+    <div class="ten">Who composed the latter half of Kadambari?</div>
+    <div class="deva ad">कादम्बर्याः उत्तरार्धभागस्य रचयिता भूषणभट्टः (बाणस्य पुत्रः)।</div>
+    <div class="ten">Bhushanabhatta (Bana's son).</div></div>
+
+  <div class="ql"><span class="qn">8.</span>
+    <div class="deva qd">कादम्बर्यां वर्णितः सरोवरः कः?</div>
+    <div class="ten">Which lake is described in Kadambari?</div>
+    <div class="deva ad">कादम्बर्यां वर्णितः सरोवरः अच्छोदः (अच्छोदसरोवरः)।</div>
+    <div class="ten">The Acchoda lake.</div></div>
+
+  <div class="ql"><span class="qn">9.</span>
+    <div class="deva qd">क्षीरसमुद्रोत्पन्ना लक्ष्मीः इन्दुशकलात् किं प्राप्तवती?</div>
+    <div class="ten">What did Lakshmi get from the crescent moon?</div>
+    <div class="deva ad">लक्ष्मीः इन्दुशकलात् कान्तवक्रतां प्राप्तवती।</div>
+    <div class="ten">Charming crookedness (kanta-vakrata).</div></div>
+
+  <div class="ql"><span class="qn">10.</span>
+    <div class="deva qd">शूद्रकमहाराजस्य राजधान्याः नाम किम्?</div>
+    <div class="ten">Name of King Shudraka's capital?</div>
+    <div class="deva ad">शूद्रकमहाराजस्य राजधान्याः नाम विदिशा (विदिशः)।</div>
+    <div class="ten">Vidisha.</div></div>
+
+</div>
+<a class="top" href="#s1">&uarr; top</a>
+
+<!-- =================== SECTION II : 5 MARK =================== -->
+<div class="secttl" id="s2">II · लघुनिबन्ध — 5 mark<small>Short essays · answer any four (all 6 given)</small></div>
+
+<!-- 11 -->
+<details>
+  <summary><span class="num">11</span><span class="tier">5</span><span class="deva">शुकनासोक्ताः चत्वारः अनर्थहेतवः के? वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">What are the four causes of ruin spoken of by Shukanasa? Describe them.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः चन्द्रापीडं प्रति स्वोपदेशे कथयति यत् यौवनस्य आरम्भे मनुष्यं विनाशं प्रति नयन्तः चत्वारः प्रमुखाः अनर्थहेतवः सन्ति — (१) कामः, (२) मदः, (३) अहंकारः (दर्पः), (४) प्रमादः (मोहः)।<br><br>
+    (१) कामः — विषयेषु आसक्तिः; एषः विवेकं नाशयति, कर्तव्याकर्तव्यविचारं च लोपयति।<br>
+    (२) मदः — धन-यौवन-ऐश्वर्यजनितः गर्वमयः उन्मादः; अयं सूर्येण, मणिप्रभया, दीपेन वा न नश्यति, जरारोगादिभिः अपि न शाम्यति।<br>
+    (३) अहंकारः — "अहं श्रेष्ठः" इति अभिमानः; एषः नेत्ररोगवत् अन्तर्दृष्टिम् अन्धां करोति, गुरूणां हितवचनम् अपि श्रोतुं न ददाति।<br>
+    (४) प्रमादः — कर्तव्ये अनवधानता आलस्यं च; अनेन राजा धर्मं प्रजाहितं च विस्मरति, राज्यं च पतनं गच्छति।<br><br>
+    एते चत्वारः दोषाः प्रथमदृष्ट्या गुणाः इव आकर्षकाः प्रतीयन्ते, परन्तु वस्तुतः अनर्थस्य मूलकारणानि। अतः शुकनासः उपदिशति — संयमेन विवेकेन च एतान् त्यक्त्वा धर्मे स्थातव्यम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">In his advice to Chandrapida, Shukanasa names four chief causes of ruin that drag a person to destruction at the onset of youth: (1) lust (kāma), (2) intoxication-pride (mada), (3) egotism (ahaṅkāra), (4) heedlessness (pramāda).<br><br>
+    (1) Lust — attachment to sense-objects; it destroys discrimination and erases the sense of right and wrong. (2) Intoxication — the giddy pride born of wealth, youth and power; it cannot be dispelled by sun, jewel-light or lamp, nor calmed even by age and disease. (3) Egotism — the conceit "I am supreme"; like an eye-disease it blinds inner vision and will not let one hear even a teacher's good counsel. (4) Heedlessness — inattention to duty and laziness; through it a king forgets dharma and his subjects' welfare, and the kingdom falls.<br><br>
+    These four first appear attractive, like virtues, but are really the root of calamity. So Shukanasa advises abandoning them through restraint and discernment and standing firm in dharma.</div>
+  </div>
+</details>
+
+<!-- 12 -->
+<details>
+  <summary><span class="num">12</span><span class="tier">5</span><span class="deva">'गद्यं कवीनां निकषं वदन्ति' इति वाक्यं विशदयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Explain the statement: "Prose is the touchstone of poets."</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">भावार्थः</div>
+    <div class="deva a">गद्यं कवीनां प्रतिभायाः असली परीक्षा (निकषा) इति कथ्यते। यतः पद्यलेखनं छन्दः-अलङ्कारादिभिः मुखरितं सुलभं भवति, किन्तु गद्ये कवेः भाषाकौशलं, चिन्तनशक्तिः, विचारसरणिः, प्रस्तुतीकरणशैली च स्पष्टं प्रतिफलति। अतः गद्यं यथार्थे कवीनां शक्तेः कसौटी।</div>
+    <div class="sub-h">"निकष"-शब्दार्थः</div>
+    <div class="deva a">"निकष" इत्यस्य अर्थः — सा कसौटी यया परीक्षां कृत्वा रत्नं सुवर्णं वा शुद्धम् अशुद्धं वा इति ज्ञायते। तद्वत् गद्यम् अपि कवीनां शुद्धिं, गाम्भीर्यं, भाषावैदग्ध्यं च परीक्षितुं कसौटीरूपेण स्वीक्रियते।</div>
+    <div class="sub-h">उदाहरणम्</div>
+    <div class="deva a">बाणभट्टस्य "हर्षचरितम्", दण्डिनः "दशकुमारचरितम्" इत्येतानि गद्यकाव्यानि कवीनां निपुणतायाः उत्तमं प्रमाणम्। पद्ये अलङ्कारादयः साहाय्यं कुर्वन्ति, गद्ये तु ते न सन्ति; तत्र गम्भीरविचारः सगर्भवाक्यप्रवाहश्च आवश्यकः।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">अत्र न केवलं भाषासौन्दर्यम्, अपि तु लेखकस्य बौद्धिकशक्तेः, चिन्तनशक्तेः, भावस्पष्टतायाः च परीक्षणम् अभिप्रेतम्। यः उत्तमं गद्यं रचयितुं शक्नोति, सः साहित्यजगति महान् कलाकारः।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Purport:</b> Prose is called the real test of a poet's genius. Verse is made easy by metre and ornament, but in prose the poet's command of language, thought, reasoning and presentation are clearly reflected — so prose is truly the touchstone of a poet's power.<br><br>
+    <b>Meaning of "nikasha":</b> the touchstone by which one tests whether gold/gem is pure; likewise prose tests a poet's purity, depth and skill.<br><br>
+    <b>Example:</b> Bana's <i>Harshacharitam</i> and Dandin's <i>Dashakumaracharitam</i> prove their authors' mastery. Verse leans on ornament; prose lacks it and needs weighty thought and a flow of meaning-laden sentences.<br><br>
+    <b>Conclusion:</b> The statement tests not just beauty of language but the writer's intellect, thought and clarity. One who writes excellent prose is a great artist in literature.</div>
+  </div>
+</details>
+
+<!-- 13 -->
+<details>
+  <summary><span class="num">13</span><span class="tier">5</span><span class="deva">शुकनासकृतं यौवनारम्भवर्णनं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe Shukanasa's depiction of the onset of youth.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः कथयति — यौवनस्य आरम्भे स्वाभाविकतया एव कामः, मदः, अहंकारः, प्रमादः इत्यादयः दोषाः उद्भवन्ति। एते प्रथमदृष्ट्या गुणाः इव आकर्षकाः सुखदायकाः च प्रतीयन्ते, परन्तु वस्तुतः ते मनुष्यं विनाशमार्गं नयन्ति।<br><br>
+    यौवनकाले यः मोहान्धकारः जायते, सः सूर्येण, मणिप्रकाशेन, दीपप्रभया वा अपि न निवार्यते; सः अतीव दुर्दर्शः। धनसम्पत्तेः मदः जरारोगैः अपि न शाम्यति; धनाभिमानजः गर्वः नेत्ररोगवत् अन्धत्वं जनयति; ऐश्वर्यजः ज्वरः चन्दनैः अपि न शाम्यति, प्रत्युत तीव्रतरः भवति; विषयासक्तिमलः बाह्यस्नानैः न क्षाल्यते।<br><br>
+    अतः शुकनासः उपदिशति — यौवनं संयमेन धर्मेण च युक्तं चेत् सार्थकम्; अन्यथा तदेव पतनस्य कारणम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa says that at the onset of youth, faults like lust, intoxication, egotism and heedlessness arise naturally. They first appear attractive and pleasant, like virtues, but in truth they lead a person to ruin.<br><br>
+    The delusion-darkness of youth cannot be removed by sun, jewel-light or lamp, and is hard to see through. Wealth's intoxication is not calmed by age and disease; pride over riches blinds like an eye-disease; the fever of lordship is not cooled even by sandal-paste but grows fiercer; the stain of sensual attachment is not washed off by external bathing.<br><br>
+    Hence Shukanasa advises: youth joined with restraint and dharma is fruitful; otherwise it becomes the very cause of one's fall.</div>
+  </div>
+</details>
+
+<!-- 14 -->
+<details>
+  <summary><span class="num">14</span><span class="tier">5</span><span class="deva">गुरूपदेशस्य महत्त्वं वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the importance of the teacher's instruction (gurūpadeśa).</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">भारतीयसंस्कृतौ गुरोः उपदेशः अत्यन्तं महत्त्वपूर्णः मन्यते। कादम्बर्यां मन्त्री शुकनासः चन्द्रापीडाय यम् उपदेशं ददाति, सः गुरूपदेशस्य आदर्शः।<br><br>
+    (१) गुरुः शिष्यस्य अज्ञानान्धकारं ज्ञानप्रकाशेन नाशयति।<br>
+    (२) यौवने उत्पन्नान् कामक्रोधादीन् दोषान् नियन्तुं गुरोः वचनम् एव समर्थम्; यः अन्धकारः सूर्येण दीपेन वा न नश्यति, सः गुरूपदेशेन एव दूरीभवति।<br>
+    (३) गुरुः धर्म-अर्थ-काम-मोक्षान् सम्यक् सेवितुं मार्गं दर्शयति, राजपुत्रं च नीतिमार्गे स्थापयति।<br>
+    (४) "गुणानाम् उपदेशः कर्णयोः अभूषणम्" इति उक्तम् — सद्गुणोपदेशः एव मनुष्यस्य यथार्थम् अलङ्करणम्।<br><br>
+    अतः गुरूपदेशेन विना न ज्ञानम्, न विवेकः, न च सन्मार्गे स्थितिः सम्भवति। तस्मात् गुरूपदेशः जीवनस्य आधारः।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">In Indian culture a teacher's instruction is held supremely important; Shukanasa's advice to Chandrapida is its ideal example.<br><br>
+    (1) The teacher destroys the disciple's darkness of ignorance with the light of knowledge. (2) Only the teacher's word can restrain the faults of youth — lust, anger and the rest; the darkness the sun or lamp cannot remove is dispelled by his instruction alone. (3) He shows the way to pursue dharma, artha, kama and moksha rightly and sets a prince on the path of polity. (4) "The teaching of virtues is the ornament of the ears" — instruction in good qualities is a person's true adornment.<br><br>
+    Hence without the teacher's instruction there is no knowledge, discrimination, or standing on the right path; it is the foundation of life.</div>
+  </div>
+</details>
+
+<!-- 15 -->
+<details>
+  <summary><span class="num">15</span><span class="tier">5</span><span class="deva">राजतन्त्रकाले राज्ञा कथं वर्तितव्यम्?</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">In matters of statecraft, how should a king conduct himself?</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः उपदिशति यत् राज्यपदं प्राप्य राज्ञा अतीव सावधानेन धर्मनीतियुक्तेन च भवितव्यम्। राज्ञः कर्तव्यानि —<br><br>
+    (१) राजा धर्मे नीतौ च तत्परः भवेत्; अधर्मेण राज्यं न शाश्वतम्।<br>
+    (२) प्रजाहितम् एव परमं कर्तव्यम् इति मत्वा प्रजाः पालयेत्।<br>
+    (३) राज्यलक्ष्मीः चञ्चला; अतः तस्याः मदेन अन्धः न भवेत्, गर्वं च त्यजेत्।<br>
+    (४) कामक्रोधलोभादीन् अन्तःशत्रून् संयमेन जयेत्।<br>
+    (५) गुरूणां वृद्धानां च हितवचनं श्रृणुयात्, नीतिशास्त्रम् अनुसरेत्।<br>
+    (६) धर्म-अर्थ-काम-मोक्षेषु समतां रक्षन् न्यायेन राज्यं पालयेत्।<br><br>
+    यः राजा एवं संयमेन धर्मेण च वर्तते, तस्य राज्यं स्थिरं कीर्तिश्च चिरस्थायिनी; अहंकारेण असंयमेन च वर्तमानः तु शीघ्रं पतनं प्राप्नोति।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa instructs that on gaining kingship a king must be very careful and grounded in dharma and polity. His duties:<br><br>
+    (1) Be devoted to righteousness and policy — a kingdom is not lasting through adharma. (2) Hold the subjects' welfare as the highest duty and protect them. (3) Royal fortune is fickle; do not be blinded by its intoxication, and shed pride. (4) Conquer the inner enemies — lust, anger, greed — through restraint. (5) Heed the good counsel of teachers and elders and follow the science of polity. (6) Keeping balance among the four aims, rule with justice.<br><br>
+    A king who acts thus, with restraint and dharma, gains a stable kingdom and lasting fame; one who acts with egotism and indiscipline swiftly falls.</div>
+  </div>
+</details>
+
+<!-- 16 -->
+<details>
+  <summary><span class="num">16</span><span class="tier">5</span><span class="deva">लक्ष्म्याः आचारं वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the conduct (behaviour) of Lakshmi.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः लक्ष्मीम् अतीव चञ्चलाम् अस्थिरां च वर्णयति। सा क्षीरसमुद्रमन्थनकाले पारिजातादिभिः सह समुद्भूता। समीपस्थेभ्यः पदार्थेभ्यः सा गुणान् इव दोषान् गृहीतवती — चन्द्रखण्डात् वक्रताम्, कालकूटात् निष्ठुरताम्, मदिरायाः मादकत्वम्, वैडूर्यमणेः बाह्यप्रकाशम् अन्तःशून्यतां च।<br><br>
+    एषा लक्ष्मीः अधिककालपरिचयेन अपि स्नेहं न जानाति। यथा नीचप्रकृतिः, तथैव सा — प्राप्तिः सुलभा, रक्षणं तु महाकष्टसाध्यम्। सन्धिविग्रहादिभिः रज्जुवत् बद्ध्वा अपि सा न तिष्ठति; शस्त्रजालेन पञ्जरे स्थापिता अपि पलायते।<br><br>
+    सा न कुलं, न रूपं, न परम्पराम्, न स्वभावं, न चातुर्यम्, न ज्ञानम्, न आचारम्, न च सत्यं पश्यति। गन्धर्वनगरसदृशी — आकाशे दृश्यते इव, क्षणेन च लीयते। अतः शुकनासः उपदिशति — लक्ष्म्याः मोहे न पतितव्यम्; धर्मेण नीत्या च सा रक्षणीया।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa describes Lakshmi as exceedingly fickle and unsteady. She rose at the ocean-churning with the Parijata and others, and seems to have taken, as if virtues, the faults of nearby things — crookedness from the crescent moon, cruelty from the kalakuta poison, intoxicating power from wine, and from the cat's-eye gem outer brilliance with inner emptiness.<br><br>
+    She knows no affection even after long acquaintance. Like a low-natured person she is easy to get but hard to keep; bound like a rope through treaty and war she will not stay, and caged with weapons she flees.<br><br>
+    She looks at neither lineage, beauty, tradition, character, cleverness, knowledge, conduct nor truth. Like a mirage-city, she seems seen in the sky yet dissolves in a moment. So Shukanasa advises: do not fall into infatuation with her; guard her through dharma and polity.</div>
+  </div>
+</details>
+
+<a class="top" href="#s2">&uarr; top</a>
+
+<!-- =================== SECTION III : 15 MARK =================== -->
+<div class="secttl" id="s3">III · निबन्ध — 15 mark<small>Long essays · answer two (all 3 given)</small></div>
+
+<!-- 17 -->
+<details open>
+  <summary><span class="num">17</span><span class="tier">15</span><span class="deva">शुकनासोक्तस्य लक्ष्मीस्वभावस्य वर्णनं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the nature of Lakshmi as told by Shukanasa.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">कादम्बर्यां मन्त्री शुकनासः चन्द्रापीडं युवराजं प्रति उपदिशन् राज्यलक्ष्म्याः स्वभावं विस्तरेण वर्णयति। सः लक्ष्मीं चञ्चलाम्, अस्थिराम्, कृतघ्नां च निरूपयति।</div>
+    <div class="sub-h">उत्पत्तिः</div>
+    <div class="deva a">लक्ष्मीः क्षीरसमुद्रमन्थनकाले पारिजात-कौस्तुभादिभिः रत्नैः सह समुद्भूता। तस्मिन्नेव काले समीपस्थेभ्यः पदार्थेभ्यः सा तेषां दोषान् इव गुणान् स्वीकृतवती इति कविः उत्प्रेक्षते — चन्द्रखण्डात् वक्रताम् (कुटिलताम्), कालकूटविषात् निष्ठुरताम्, मदिरायाः मादकत्वम्, वैडूर्यमणेः बाह्यप्रकाशम् अन्तःशून्यतां च, उच्चैःश्रवसः चञ्चलताम्। एवं सा बहिः शोभमाना अपि अन्तः दोषयुक्ता।</div>
+    <div class="sub-h">स्वभावः</div>
+    <div class="deva a">एषा लक्ष्मीः अधिककालपरिचयेन अपि स्नेहं न जानाति। यथा नीचप्रकृतिः जनः, तथा सा — प्राप्तिः सुलभा, रक्षणं तु महाकष्टसाध्यम्। सन्धिविग्रहादिभिः उपायैः रज्जुवत् बद्ध्वा अपि सा न तिष्ठति; शस्त्रजालेन पञ्जरे स्थापिता अपि पलायते।</div>
+    <div class="sub-h">अविवेकः</div>
+    <div class="deva a">लक्ष्मीः न कुलं पश्यति, न रूपं, न परम्पराम्, न स्वभावं, न चातुर्यम्, न ज्ञानम्, न आचारम्, न च सत्यम्। सा गुणान् अवगणय्य प्रायः अयोग्यान् एव आश्रयति।</div>
+    <div class="sub-h">उपमा</div>
+    <div class="deva a">सा गन्धर्वनगरसदृशी — आकाशे क्षणं दृश्यते, क्षणेन च लीयते। मन्दभाग्यानां सा भ्रमणकालेऽपि न तिष्ठति।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं लक्ष्मीः स्वभावतः चञ्चला कृतघ्ना च। अतः शुकनासः उपदिशति — तस्याः मदेन अन्धः न भूत्वा धर्मेण नीत्या विवेकेन च तां रक्षेत्। यः लक्ष्म्याः मोहे न पतति, स एव यथार्थः राजा।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> Advising the young prince Chandrapida, Shukanasa describes at length the nature of royal Fortune — fickle, unsteady and ungrateful.<br><br>
+    <b>Origin:</b> Lakshmi rose at the milk-ocean's churning with jewels like the Parijata and Kaustubha. The poet imagines she then took, as if virtues, the faults of nearby things — crookedness from the crescent moon, cruelty from the kalakuta poison, intoxicating power from wine, outer brilliance with inner emptiness from the cat's-eye gem, restlessness from Ucchaihshravas. Thus, though shining outwardly, she is inwardly flawed.<br><br>
+    <b>Nature:</b> She knows no affection even after long acquaintance. Like a low-natured person, she is easy to obtain but very hard to keep; bound like a rope through treaty and war she will not stay, and caged with weapons she flees.<br><br>
+    <b>Lack of discernment:</b> She regards neither lineage, beauty, tradition, character, cleverness, knowledge, conduct nor truth; ignoring merit she often resorts to the unworthy.<br><br>
+    <b>Simile:</b> She is like a city of the gandharvas — seen a moment in the sky, gone the next; for the unfortunate she does not stay even while passing.<br><br>
+    <b>Conclusion:</b> Thus Lakshmi is by nature fickle and ungrateful. Shukanasa therefore advises that one not be blinded by her intoxication but guard her through dharma, polity and discernment. He who does not fall into infatuation with Fortune is the true king.</div>
+  </div>
+</details>
+
+<!-- 18 -->
+<details>
+  <summary><span class="num">18</span><span class="tier">15</span><span class="deva">बाणभट्टस्य देश-काल-कृति-परिचयं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Introduce Banabhatta's place, time, and works (deśa–kāla–kṛti).</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">बाणभट्टः संस्कृतसाहित्ये गद्यकाव्यस्य सम्राट् इति प्रसिद्धः। "बाणोच्छिष्टं जगत्सर्वम्" इति उक्त्या तस्य गद्यशैलेः अद्वितीयता प्रकटिता।</div>
+    <div class="sub-h">कालः</div>
+    <div class="deva a">बाणभट्टः सप्तमे ख्रिस्ताब्दशतके (७वीं शताब्दी) आसीत्। सः स्थाण्वीश्वराधिपतेः सम्राजः हर्षवर्धनस्य (शीलादित्यस्य) सभाकविः आसीत्।</div>
+    <div class="sub-h">देशः (जन्मस्थानम्)</div>
+    <div class="deva a">बाणः शोण (सोणभद्रा) नद्याः तीरे स्थितस्य प्रीतिकूटग्रामस्य वात्स्यायनगोत्रीयः ब्राह्मणः। तस्य पितुः नाम चित्रभानुः, माता च राजदेवी। बाल्ये एव मातापितरौ दिवंगतौ; ततः सः देशाटनं कृत्वा बहु अनुभवम् अर्जयत्, अनन्तरं हर्षस्य सभायां सम्मानं प्राप्तवान्।</div>
+    <div class="sub-h">कृतयः</div>
+    <div class="deva a">(१) हर्षचरितम् — हर्षवर्धनस्य जीवनम् आश्रित्य रचिता ऐतिहासिकी आख्यायिका; संस्कृते प्रथमा ऐतिहासिकगद्यरचना इति मन्यते।<br>
+    (२) कादम्बरी — अद्भुतरसप्रधाना कथा (गद्यकाव्यम्); अस्याः पूर्वार्धं बाणेन रचितम्, उत्तरार्धं च तस्य पुत्रः भूषणभट्टः पूरितवान्।<br>
+    (केचन "चण्डीशतकम्", "पार्वतीपरिणयम्" इत्यादीन् अपि तेन कृतान् इति मन्यन्ते।)</div>
+    <div class="sub-h">शैली</div>
+    <div class="deva a">बाणस्य गद्यं दीर्घसमासयुक्तम्, श्लेष-उपमा-रूपकादि-अलङ्कारबहुलम्, वर्णनमाधुर्येण च मनोहरम्। तेन "गौडी रीतिः" प्रसिद्धिं गता।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं देश-काल-कृतिभिः बाणभट्टः संस्कृतगद्यसाहित्यस्य शिरोमणिः। तस्य कादम्बरी हर्षचरितं च गद्यकाव्यस्य उत्कृष्टतमानि उदाहरणानि।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> Banabhatta is celebrated as the emperor of Sanskrit prose-poetry; the saying "Bana's leavings are the whole world" expresses the unrivalled quality of his prose.<br><br>
+    <b>Time:</b> He lived in the 7th century CE, court poet of Emperor Harshavardhana (Shiladitya), lord of Sthanvishvara.<br><br>
+    <b>Place:</b> A Brahmin of the Vatsyayana gotra from the village Pritikuta on the river Shona (Sonabhadra). His father was Chitrabhanu, mother Rajadevi. Orphaned young, he wandered widely, gained much experience, and later won honour at Harsha's court.<br><br>
+    <b>Works:</b> (1) <i>Harshacharitam</i> — a historical ākhyāyikā on Harsha's life, regarded as the first historical prose work in Sanskrit. (2) <i>Kadambari</i> — a kathā dominated by the marvellous rasa; Bana wrote the first half, his son Bhushanabhatta completed the second. (Some also credit him with Chandishataka and Parvatiparinaya.)<br><br>
+    <b>Style:</b> His prose is rich in long compounds and figures (paronomasia, simile, metaphor) and charming in descriptive sweetness; through it the "Gaudi" style became famous.<br><br>
+    <b>Conclusion:</b> Thus, by place, time and works, Banabhatta is the crest-jewel of Sanskrit prose; Kadambari and Harshacharita are the finest examples of prose-poetry.</div>
+  </div>
+</details>
+
+<!-- 19 -->
+<details>
+  <summary><span class="num">19</span><span class="tier">15</span><span class="deva">शुकनासोपदेशं यथायोग्यं विवृणुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Explain Shukanasa's advice (upadeśa) appropriately and fully.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">यदा राजा तारापीडः स्वपुत्रं चन्द्रापीडं युवराजपदे अभिषिक्तवान्, तदा मन्त्री शुकनासः तं स्नेहेन हितबुद्ध्या च दीर्घम् उपदेशम् अकरोत्। एषः "शुकनासोपदेशः" कादम्बर्याः प्रसिद्धतमः नीतिप्रधानः अंशः, यः राजनीतेः आदर्शः इति मन्यते।</div>
+    <div class="sub-h">उपदेशस्य आरम्भः</div>
+    <div class="deva a">शुकनासः अवदत् — "हे वत्स! ज्ञातव्यं सर्वं त्वया ज्ञातम्, शास्त्राणि च अधीतानि। तथापि स्नेहात् किञ्चित् वक्तव्यम् —"</div>
+    <div class="sub-h">यौवनस्य दोषाः</div>
+    <div class="deva a">यौवनस्य आरम्भे स्वाभाविकतया एव कामः, मदः, अहंकारः, प्रमादः इत्यादयः दोषाः उद्भवन्ति। एते प्रथमं गुणाः इव आकर्षकाः, परन्तु वस्तुतः अनर्थहेतवः।</div>
+    <div class="sub-h">मदस्य भयङ्करत्वम्</div>
+    <div class="deva a">यौवनकाले यः मोहान्धकारः जायते, सः सूर्येण, मणिप्रभया, दीपेन वा न नश्यति। धनसम्पत्तेः मदः जरारोगैः अपि न शाम्यति; धनाभिमानजः गर्वः नेत्ररोगवत् अन्धत्वं जनयति; ऐश्वर्यजः ज्वरः चन्दनैः अपि न शाम्यति, प्रत्युत तीव्रतरः; विषयासक्तिमलः बाह्यस्नानैः न क्षाल्यते।</div>
+    <div class="sub-h">लक्ष्म्याः चाञ्चल्यम्</div>
+    <div class="deva a">राज्यलक्ष्मीः चञ्चला कृतघ्ना च; सा न कुलं न गुणं न ज्ञानं न आचारं पश्यति, गन्धर्वनगरवत् क्षणे लीयते। अतः तस्याः मदेन अन्धः न भवेत्।</div>
+    <div class="sub-h">राज्ञः कर्तव्यम्</div>
+    <div class="deva a">राजा धर्मे, नीतौ, प्रजाहिते च तत्परः भवेत्। धर्म-अर्थ-काम-मोक्षान् सम्यक् सेवेत; अन्तःशत्रून् (कामक्रोधादीन्) संयमेन जयेत्; गुरुवृद्धानां वचनं च श्रृणुयात्।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं शुकनासः यौवन-धन-ऐश्वर्यजनितान् दोषान् दर्शयन् संयमस्य धर्मस्य विवेकस्य च महत्त्वं प्रतिपादयति। अयम् उपदेशः न केवलं चन्द्रापीडाय, अपि तु सर्वेभ्यः शासकेभ्यः जनेभ्यश्च कालातीतः नीतिग्रन्थः इव उपयुज्यते। अतः शुकनासोपदेशः कादम्बर्याः नीतिसौन्दर्यस्य शिखरम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> When King Tarapida consecrated his son Chandrapida as crown prince, the minister Shukanasa gave him a long discourse out of affection and goodwill. This "Shukanasa-upadesha" is the most famous, ethically-centred portion of Kadambari, a model of polity.<br><br>
+    <b>Opening:</b> He said, "Dear child, all that is to be known you already know, and you have studied the scriptures; yet out of affection let me say a little —"<br><br>
+    <b>Faults of youth:</b> At youth's onset, lust, intoxication, egotism and heedlessness arise naturally. They seem attractive like virtues but are really causes of ruin.<br><br>
+    <b>The terror of intoxication:</b> The delusion-darkness of youth is not dispelled by sun, jewel-light or lamp. Wealth's intoxication is not calmed by age and disease; pride over riches blinds like an eye-disease; the fever of lordship is not cooled even by sandal-paste but grows fiercer; the stain of sensual attachment is not washed off by external bathing.<br><br>
+    <b>Fickleness of Fortune:</b> Royal Fortune is fickle and ungrateful, regarding neither lineage, merit, knowledge nor conduct, and dissolving in a moment like a mirage-city; so one should not be blinded by her.<br><br>
+    <b>The king's duty:</b> A king should be devoted to dharma, polity and his subjects' welfare; pursue the four aims rightly; conquer the inner enemies through restraint; and heed the words of teachers and elders.<br><br>
+    <b>Conclusion:</b> Thus, by exposing the faults born of youth, wealth and power, Shukanasa establishes the importance of restraint, righteousness and discernment. This advice serves not only Chandrapida but, like a timeless treatise of polity, all rulers and people. Hence the Shukanasa-upadesha is the summit of the ethical beauty of Kadambari.</div>
+  </div>
+</details>
+
+<a class="top" href="#s1">&uarr; top</a>
+
+<div class="note">
+  Built to match QP 21B4MN1SBS3 exactly: I &middot; 10 short answers (1-mark), II &middot; 6 short essays (5-mark, attempt any 4), III &middot; 3 long essays (15-mark, attempt 2). The Sanskrit is clean exam-style prose; verify a couple of factual one-liners (Q1 ākhyāyikā = Harshacharita; Q6 Jabali's hermitage; Q8 Acchoda lake) against your teacher's key if in doubt.
+</div>
+
+</body>
+</html>
