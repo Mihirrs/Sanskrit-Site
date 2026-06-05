@@ -3,850 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>तर्कसोपानम् — परीक्षा-तैयारी</title>
+<title>कादम्बरी — परीक्षा-तैयारी</title>
 <style>
-  :root {
-    --bg: #0a0b0d;
-    --card: #131619;
-    --card2: #1a1e24;
-    --line: #252b35;
-    --ink: #f0ece3;
-    --ink-dim: #9a9590;
-    --deva: #ffd98a;
-    --accent: #d4883a;
-    --jade: #6fbfa3;
-    --rose: #c47a7a;
-    --qnum: #3a4a5a;
+  :root{
+    --bg:#0b0c0e;--card:#15171b;--card2:#1b1e24;--line:#2a2e36;
+    --ink:#f3efe6;--ink-dim:#b9b4a8;--sanskrit:#ffe7b8;
+    --accent:#e0a34e;--accent2:#7fc8a9;--qbg:#211a10;
   }
-  *, *::before, *::after { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
-  body {
-    font-family: Georgia, "Iowan Old Style", serif;
-    line-height: 1.7;
-    padding: 12px 14px 80px;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-  .deva {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", serif;
-    line-height: 1.9;
-  }
-
-  /* ── Header ── */
-  header {
-    text-align: center;
-    padding: 20px 4px 22px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 24px;
-  }
-  header h1 {
-    font-size: 2rem; margin: 0 0 6px;
-    color: var(--deva);
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-  }
-  header .sub { color: var(--ink-dim); font-size: .95rem; letter-spacing: .5px; }
-
-  /* ── Section headers ── */
-  .section-title {
-    display: flex; align-items: center; gap: 12px;
-    margin: 36px 0 16px;
-  }
-  .section-title .badge {
-    background: var(--accent);
-    color: #000;
-    font-size: .75rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-  .section-title h2 {
-    font-size: 1.1rem;
-    margin: 0;
-    color: var(--accent);
-    font-variant: small-caps;
-    letter-spacing: 1px;
-  }
-
-  /* ── QA Card ── */
-  .qa {
-    background: var(--card);
-    border-left: 3px solid var(--line);
-    border-radius: 8px;
-    padding: 16px 16px 14px;
-    margin-bottom: 14px;
-    transition: border-color .2s;
-  }
-  .qa:hover { border-color: var(--accent); }
-
-  .qa .qhead {
-    display: flex; gap: 10px; align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  .qa .qnum {
-    background: var(--qnum);
-    color: var(--ink-dim);
-    font-size: .72rem;
-    font-weight: bold;
-    padding: 2px 7px;
-    border-radius: 4px;
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-  .qa .q-sa {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-    color: var(--deva);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin: 0;
-  }
-  .qa .q-en {
-    font-style: italic;
-    color: var(--ink-dim);
-    font-size: .88rem;
-    margin: 2px 0 12px 0;
-  }
-
-  .label {
-    font-size: .7rem;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .label.ans-sa { color: var(--jade); }
-  .label.ans-en { color: var(--rose); }
-
-  .ans-sa-text {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-    color: #e8dfc8;
-    font-size: 1rem;
-    line-height: 1.9;
-    margin: 0 0 10px 0;
-    padding: 10px 12px;
-    background: #0f1215;
-    border-radius: 6px;
-  }
-  .ans-en-text {
-    color: var(--ink-dim);
-    font-size: .92rem;
-    line-height: 1.65;
-    margin: 0 0 0 0;
-    padding: 10px 12px;
-    background: #0d1118;
-    border-radius: 6px;
-    font-style: italic;
-  }
-
-  /* ── Long answer ── */
-  .qa.long { border-left-color: var(--jade); }
-  .qa.long .q-sa { font-size: 1.08rem; }
-
-  /* ── TOC ── */
-  .toc {
-    background: var(--card2);
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin-bottom: 28px;
-  }
-  .toc h3 { margin: 0 0 10px; font-size: .9rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
-  .toc a { display: block; color: var(--ink-dim); text-decoration: none; font-size: .88rem; padding: 3px 0; }
-  .toc a:hover { color: var(--ink); }
-
-  hr.divider { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
-
-  @media (max-width: 380px) {
-    body { font-size: 15px; padding: 8px 10px 60px; }
-    header h1 { font-size: 1.5rem; }
-    .qa { padding: 12px 11px; }
-    .ans-sa-text, .ans-en-text { font-size: .9rem; padding: 8px 9px; }
-  }
+  *{box-sizing:border-box;-webkit-text-size-adjust:100%;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+  body{font-family:"Georgia","Iowan Old Style",serif;line-height:1.6;
+    padding:14px 12px 64px;max-width:680px;margin:0 auto;}
+  .deva{font-family:"Kohinoor Devanagari","Noto Sans Devanagari","Mangal",serif;line-height:1.85;}
+  header{text-align:center;padding:10px 4px 16px;border-bottom:1px solid var(--line);margin-bottom:16px;}
+  header h1{font-size:1.9rem;margin:0 0 4px;color:var(--sanskrit);letter-spacing:.5px;
+    font-family:"Kohinoor Devanagari","Noto Sans Devanagari",serif;}
+  header .sub{color:var(--ink-dim);font-size:.9rem;font-style:italic;}
+  .toc{display:flex;flex-direction:column;gap:8px;margin:0 0 22px;}
+  .toc a{display:block;text-decoration:none;color:var(--ink);background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:1.02rem;}
+  .toc a b{color:var(--accent);}
+  .secttl{font-size:1.1rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;
+    margin:30px 0 14px;font-family:Georgia,serif;border-left:4px solid var(--accent);padding-left:12px;}
+  .secttl small{display:block;font-size:.7rem;letter-spacing:1px;color:var(--ink-dim);text-transform:none;margin-top:3px;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;overflow:hidden;}
+  details[open]{background:var(--card2);}
+  summary{list-style:none;cursor:pointer;padding:16px 18px;font-size:1.18rem;color:var(--sanskrit);
+    font-family:"Kohinoor Devanagari","Noto Sans Devanagari",serif;line-height:1.7;
+    display:flex;gap:9px;align-items:flex-start;}
+  summary::-webkit-details-marker{display:none;}
+  summary .num{flex:0 0 auto;background:var(--accent);color:#000;font-family:Georgia,serif;font-weight:bold;
+    border-radius:8px;padding:2px 9px;font-size:.9rem;margin-top:3px;}
+  summary .tier{flex:0 0 auto;background:transparent;border:1px solid var(--accent);color:var(--accent);
+    font-family:Georgia,serif;border-radius:8px;padding:2px 8px;font-size:.74rem;margin-top:4px;letter-spacing:1px;}
+  details[open] summary{border-bottom:1px solid var(--line);}
+  .body{padding:6px 18px 20px;}
+  .label{display:inline-block;font-family:Georgia,serif;font-size:.72rem;letter-spacing:2px;
+    text-transform:uppercase;margin:18px 0 6px;}
+  .label.a,.label.q{color:var(--accent);}
+  .label.en{color:var(--accent2);}
+  .deva.a{font-size:1.2rem;color:var(--sanskrit);}
+  .en{font-size:1.18rem;color:#fbf8f0;font-style:normal;line-height:1.65;}
+  .sub-h{color:var(--accent);font-family:Georgia,serif;font-weight:bold;font-size:.92rem;margin:16px 0 4px;letter-spacing:1px;}
+  .quick{display:flex;flex-direction:column;gap:10px;}
+  .ql{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;}
+  .ql .qn{color:var(--accent);font-family:Georgia,serif;font-weight:bold;font-size:.9rem;}
+  .ql .deva{font-size:1.16rem;margin:3px 0;}
+  .ql .qd{color:var(--sanskrit);}
+  .ql .ad{color:var(--ink);}
+  .ql .ad::before{content:"उ\2014 ";color:var(--accent);}
+  .ql .ten{color:#ece7da;font-style:normal;font-size:1.04rem;line-height:1.5;}
+  .note{font-size:.82rem;color:var(--ink-dim);background:var(--card);border:1px dashed var(--line);
+    border-radius:10px;padding:12px 14px;margin:22px 0 0;}
+  .top{display:block;text-align:center;color:var(--accent);text-decoration:none;margin:20px 0;font-size:.9rem;}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>तर्कसोपानम्</h1>
-  <div class="sub">Exam Prep · All Sections · Sanskrit + English</div>
+  <h1 class="deva">कादम्बरी</h1>
+  <div class="sub">B.A. Sanskrit · पत्रिका-3 · QP 21B4MN1SBS3 (2025) · बाणभट्टः</div>
 </header>
 
-<div class="toc">
-  <h3>Contents</h3>
-  <a href="#s2mark">§1 — 2-Mark Questions (One Word / Short Answer)</a>
-  <a href="#s5mark">§2 — 5-Mark Questions (लघुप्रबन्धाः)</a>
-  <a href="#s15mark">§3 — 15-Mark Questions (दीर्घप्रबन्धाः)</a>
-</div>
+<nav class="toc">
+  <a href="#story"><b>0 · कथासार</b> &nbsp;· The story + rebirth key</a>
+  <a href="#s1"><b>I · 1-mark</b> &nbsp;· लघूत्तर (10)</a>
+  <a href="#s2"><b>II · 5-mark</b> &nbsp;· लघुनिबन्ध (any four)</a>
+  <a href="#s3"><b>III · 15-mark</b> &nbsp;· निबन्ध (answer two)</a>
+</nav>
 
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 1 — 2 MARK / ONE-WORD                  -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s2mark">
-  <span class="badge">1 MARK</span>
-  <h2>One Word Answers</h2>
-</div>
+<!-- =================== STORY / KATHASARA =================== -->
+<div class="secttl" id="story">0 · कथासार — The Story<small>Plot &amp; reincarnation key · essential background for every essay</small></div>
 
-<!-- Q1 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q1</span>
-    <p class="q-sa">अनुमानस्य लक्षणं किम्?</p>
+<div class="ql" style="border-color:var(--accent);">
+  <div class="sub-h" style="margin-top:2px;">पात्राणि — Characters &amp; their rebirths</div>
+  <div class="en" style="font-size:1.06rem;">
+    &bull; <b class="deva" style="color:var(--sanskrit);">चन्द्रः</b> (the Moon) &rarr; चन्द्रापीडः &rarr; शूद्रकः<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">पुण्डरीकः</b> &rarr; वैशम्पायनः &rarr; शुकः (the parrot)<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">कपिञ्जलः</b> &rarr; इन्द्रायुधः (the horse)<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">रोहिणी</b> (Moon's wife) &rarr; पत्रलेखा<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">लक्ष्मीः</b> (Pundarika's mother) &rarr; चण्डालकन्या<br>
+    &bull; <b class="deva" style="color:var(--sanskrit);">महाश्वेता, कादम्बरी</b> &rarr; स्वरूपेण एव (unchanged)
   </div>
-  <p class="q-en">What is the definition of Anumāna?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">व्याप्तिविशिष्टपक्षधर्मताज्ञानजन्यं ज्ञानम्</p>
-  <p class="ans-en-text">Knowledge born of parāmarśa</p>
 </div>
 
-<!-- Q2 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q2</span>
-    <p class="q-sa">परामर्शस्य लक्षणं किम्?</p>
+<details open>
+  <summary><span class="num">&#9733;</span><span class="deva">कथासारः — full plot</span></summary>
+  <div class="body">
+
+    <div class="sub-h">The frame &middot; कथाप्रवेशः</div>
+    <div class="en">King Shudraka rules at Vidisha on the river Vetravati. A Chandala maiden presents him a remarkable talking parrot named Vaishampayana. At the king's request, the parrot recounts its former births &mdash; knowledge it had gained in the hermitage of the sage Jabali, who revealed its past lives. The whole romance is thus a story-within-a-story, narrated by the parrot.</div>
+
+    <div class="sub-h">Why it all happens &middot; शापमूलम्</div>
+    <div class="en">The young ascetic Pundarika (son of the goddess Lakshmi and the sage Shvetaketu) and the gandharva maiden Mahashweta fall in love at first sight, and Pundarika dies of love-longing. The Moon-god Chandra carries his body to heaven but is blamed for inflaming the lovers' suffering with his rays. Pundarika curses the Moon to be born on earth and suffer the same pangs of love; the Moon curses him back to share that fate. So each must take two human births &mdash; and only through the grace of Pundarika's father Shvetaketu does the curse finally end.</div>
+
+    <div class="sub-h">Birth of the heroes &middot; नायकजन्म</div>
+    <div class="en">At Ujjayini, the long-childless king Tarapida and queen Vilasavati at last obtain a son &mdash; the Moon reborn &mdash; named Chandrapida. At the same time the prime minister Shukanasa gets a son, Vaishampayana (Pundarika reborn). The two boys grow up as inseparable friends.</div>
+
+    <div class="sub-h">Advice &amp; the campaign &middot; उपदेशः, दिग्विजयः</div>
+    <div class="en">When Chandrapida is made crown prince, Shukanasa gives him the celebrated advice on the dangers of youth, wealth and power. Chandrapida then sets out to conquer the world, with Vaishampayana, his confidante Patralekha (Rohini, the Moon's wife, reborn), and his horse Indrayudha (his friend Kapinjala, reborn by a curse).</div>
+
+    <div class="sub-h">Mahashweta &middot; महाश्वेतावृत्तान्तः</div>
+    <div class="en">Straying from his retinue, Chandrapida reaches the Acchoda lake near the Himalayas and finds Mahashweta living as an ascetic. She tells him her sorrowful tale of Pundarika and the heavenly voice that promised reunion, and speaks of her dear friend Kadambari &mdash; a gandharva princess of Hemakuta who has vowed not to marry until Mahashweta is reunited with Pundarika.</div>
+
+    <div class="sub-h">The love &middot; प्रेमकथा</div>
+    <div class="en">Chandrapida meets Kadambari, and the two fall deeply in love. Summoned home by his father, he returns to Ujjayini, leaving Patralekha behind with Kadambari.</div>
+
+    <div class="sub-h">The tragedy &middot; विपत्तिः</div>
+    <div class="en">Vaishampayana, left near the lake, approaches Mahashweta and declares his love. Not realising he is the reborn Pundarika, the grieving ascetic curses him to become a parrot, and he dies. Hearing of his friend's death, the heartbroken Chandrapida too falls dead on the shore of Acchoda. As Kadambari prepares to follow him in death, a divine voice declares that Chandrapida's body will remain incorrupt and that she will be reunited with him.</div>
+
+    <div class="sub-h">The reunion &middot; समागमः</div>
+    <div class="en">The Chandala maiden (in truth Lakshmi, Pundarika's mother) reveals to Shudraka that he is none other than Chandrapida, the Moon &mdash; and that the mutual curses are now ended. Chandrapida is restored to life by the touch of Kadambari's hand; Pundarika reappears from heaven in his original form; and both couples &mdash; Chandrapida &amp; Kadambari, Pundarika &amp; Mahashweta &mdash; are at last united. The romance thus celebrates love and friendship enduring across lifetimes. (Bana left the work unfinished; his son Bhushanabhatta composed the latter half that brings about this reunion.)</div>
+
+    <div class="label a">संक्षिप्तः कथासारः (संस्कृतम्)</div>
+    <div class="deva a">विदिशानगर्याः राजा शूद्रकः आसीत्। एकदा चण्डालकन्या तस्मै वैशम्पायननामानं शुकम् उपायनीकृत्य दत्तवती। सः शुकः जाबालिमुनेः आश्रमे ज्ञातं स्वपूर्वजन्मवृत्तान्तं राज्ञे कथयति।<br><br>
+    उज्जयिन्याः राजा तारापीडः, तस्य पुत्रः चन्द्रापीडः, मन्त्रिणः शुकनासस्य पुत्रः वैशम्पायनः च — एतौ सख्यौ सह वर्धेते। युवराजपदं प्राप्य शुकनासोपदेशं श्रुत्वा च चन्द्रापीडः दिग्विजयार्थं प्रस्थितः। मार्गे अच्छोदसरोवरतीरे तपस्विनीं महाश्वेतां दृष्टवान्। सा पुण्डरीकेण सह स्वस्नेहं तस्य मरणं च कथयति, सख्याः कादम्बर्याः परिचयं च ददाति। चन्द्रापीडः कादम्बर्यां, कादम्बरी च चन्द्रापीडे अनुरक्ता।<br><br>
+    पश्चात् वैशम्पायनः महाश्वेतां प्रति प्रेम प्रकटयति; सा क्रुद्धा "शुकः भव" इति शशाप; सः मृत्वा शुकः जातः। मित्रमरणवार्तां श्रुत्वा चन्द्रापीडः अपि अच्छोदतीरे प्राणान् त्यक्तवान्। दिव्या वाणी — "चन्द्रापीडस्य शरीरं रक्षितं भविष्यति, कादम्बर्या सह पुनर्मिलनं च" इति आदिशत्।<br><br>
+    अन्ते — चन्द्रः (चन्द्रापीडः, शूद्रकः) पुण्डरीकः (वैशम्पायनः, शुकः) च परस्परशापात् मुक्तौ। कादम्बर्याः स्पर्शेन चन्द्रापीडः पुनर्जीवितः; पुण्डरीकः अपि स्वरूपेण आगतः; उभे दम्पती मिलिते। एवं प्रेम्णः जन्मान्तरस्थायित्वम् अनया कथया प्रतिपाद्यते।</div>
+
   </div>
-  <p class="q-en">What is the definition of Parāmarśa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">व्याप्तिविशिष्टपक्षधर्मताज्ञानम्</p>
-  <p class="ans-en-text">Cognition of hetu in pakṣa pervaded by vyāpti</p>
-</div>
+</details>
 
-<!-- Q3 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q3</span>
-    <p class="q-sa">दृष्टान्तः नाम कः?</p>
+<a class="top" href="#story">&uarr; top</a>
+
+<!-- =================== SECTION I : 1 MARK =================== -->
+<div class="secttl" id="s1">I · लघूत्तर — 1 mark<small>Write short answers · all 10</small></div>
+<div class="quick">
+
+  <div class="ql"><span class="qn">1.</span>
+    <div class="deva qd">बाणविरचितायाः आख्यायिकायाः नाम किम्?</div>
+    <div class="ten">Name of the ākhyāyikā composed by Bana?</div>
+    <div class="deva ad">बाणविरचितायाः आख्यायिकायाः नाम "हर्षचरितम्"।</div>
+    <div class="ten">"Harshacharitam." (Kadambari is a <i>kathā</i>; the <i>ākhyāyikā</i> is Harshacharita.)</div></div>
+
+  <div class="ql"><span class="qn">2.</span>
+    <div class="deva qd">कादम्बर्याः अपरः नायकः कः?</div>
+    <div class="ten">Who is the other hero of Kadambari?</div>
+    <div class="deva ad">कादम्बर्याः अपरः नायकः वैशम्पायनः।</div>
+    <div class="ten">Vaishampayana (the principal hero being Chandrapida).</div></div>
+
+  <div class="ql"><span class="qn">3.</span>
+    <div class="deva qd">चन्द्रापीडस्य पितुः नाम किम्?</div>
+    <div class="ten">Chandrapida's father's name?</div>
+    <div class="deva ad">चन्द्रापीडस्य पितुः नाम तारापीडः।</div>
+    <div class="ten">Tarapida.</div></div>
+
+  <div class="ql"><span class="qn">4.</span>
+    <div class="deva qd">कादम्बर्यां वैशम्पायनः इति कस्य नामधेयम्?</div>
+    <div class="ten">"Vaishampayana" is the name of whom?</div>
+    <div class="deva ad">वैशम्पायनः इति शुकनासस्य पुत्रस्य नामधेयम्।</div>
+    <div class="ten">The name of Shukanasa's son.</div></div>
+
+  <div class="ql"><span class="qn">5.</span>
+    <div class="deva qd">कादम्बर्याः सखी का?</div>
+    <div class="ten">Who is Kadambari's friend?</div>
+    <div class="deva ad">कादम्बर्याः सखी महाश्वेता।</div>
+    <div class="ten">Mahashweta.</div></div>
+
+  <div class="ql"><span class="qn">6.</span>
+    <div class="deva qd">कादम्बर्यां कस्य आश्रमस्य वर्णनम् अस्ति?</div>
+    <div class="ten">Whose hermitage is described in Kadambari?</div>
+    <div class="deva ad">कादम्बर्यां जाबालेः (जाबालिमुनेः) आश्रमस्य वर्णनम् अस्ति।</div>
+    <div class="ten">The hermitage of the sage Jabali.</div></div>
+
+  <div class="ql"><span class="qn">7.</span>
+    <div class="deva qd">कादम्बर्याः उत्तरार्धभागस्य रचयिता कः?</div>
+    <div class="ten">Who composed the latter half of Kadambari?</div>
+    <div class="deva ad">कादम्बर्याः उत्तरार्धभागस्य रचयिता भूषणभट्टः (बाणस्य पुत्रः)।</div>
+    <div class="ten">Bhushanabhatta (Bana's son).</div></div>
+
+  <div class="ql"><span class="qn">8.</span>
+    <div class="deva qd">कादम्बर्यां वर्णितः सरोवरः कः?</div>
+    <div class="ten">Which lake is described in Kadambari?</div>
+    <div class="deva ad">कादम्बर्यां वर्णितः सरोवरः अच्छोदः (अच्छोदसरोवरः)।</div>
+    <div class="ten">The Acchoda lake.</div></div>
+
+  <div class="ql"><span class="qn">9.</span>
+    <div class="deva qd">क्षीरसमुद्रोत्पन्ना लक्ष्मीः इन्दुशकलात् किं प्राप्तवती?</div>
+    <div class="ten">What did Lakshmi get from the crescent moon?</div>
+    <div class="deva ad">लक्ष्मीः इन्दुशकलात् कान्तवक्रतां प्राप्तवती।</div>
+    <div class="ten">Charming crookedness (kanta-vakrata).</div></div>
+
+  <div class="ql"><span class="qn">10.</span>
+    <div class="deva qd">शूद्रकमहाराजस्य राजधान्याः नाम किम्?</div>
+    <div class="ten">Name of King Shudraka's capital?</div>
+    <div class="deva ad">शूद्रकमहाराजस्य राजधान्याः नाम विदिशा (विदिशः)।</div>
+    <div class="ten">Vidisha.</div></div>
+
+</div>
+<a class="top" href="#s1">&uarr; top</a>
+
+<!-- =================== SECTION II : 5 MARK =================== -->
+<div class="secttl" id="s2">II · लघुनिबन्ध — 5 mark<small>Short essays · answer any four (all 6 given)</small></div>
+
+<!-- 11 -->
+<details>
+  <summary><span class="num">11</span><span class="tier">5</span><span class="deva">शुकनासोक्ताः चत्वारः अनर्थहेतवः के? वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">What are the four causes of ruin spoken of by Shukanasa? Describe them.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः चन्द्रापीडं प्रति स्वोपदेशे कथयति यत् यौवनस्य आरम्भे मनुष्यं विनाशं प्रति नयन्तः चत्वारः प्रमुखाः अनर्थहेतवः सन्ति — (१) कामः, (२) मदः, (३) अहंकारः (दर्पः), (४) प्रमादः (मोहः)।<br><br>
+    (१) कामः — विषयेषु आसक्तिः; एषः विवेकं नाशयति, कर्तव्याकर्तव्यविचारं च लोपयति।<br>
+    (२) मदः — धन-यौवन-ऐश्वर्यजनितः गर्वमयः उन्मादः; अयं सूर्येण, मणिप्रभया, दीपेन वा न नश्यति, जरारोगादिभिः अपि न शाम्यति।<br>
+    (३) अहंकारः — "अहं श्रेष्ठः" इति अभिमानः; एषः नेत्ररोगवत् अन्तर्दृष्टिम् अन्धां करोति, गुरूणां हितवचनम् अपि श्रोतुं न ददाति।<br>
+    (४) प्रमादः — कर्तव्ये अनवधानता आलस्यं च; अनेन राजा धर्मं प्रजाहितं च विस्मरति, राज्यं च पतनं गच्छति।<br><br>
+    एते चत्वारः दोषाः प्रथमदृष्ट्या गुणाः इव आकर्षकाः प्रतीयन्ते, परन्तु वस्तुतः अनर्थस्य मूलकारणानि। अतः शुकनासः उपदिशति — संयमेन विवेकेन च एतान् त्यक्त्वा धर्मे स्थातव्यम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">In his advice to Chandrapida, Shukanasa names four chief causes of ruin that drag a person to destruction at the onset of youth: (1) lust (kāma), (2) intoxication-pride (mada), (3) egotism (ahaṅkāra), (4) heedlessness (pramāda).<br><br>
+    (1) Lust — attachment to sense-objects; it destroys discrimination and erases the sense of right and wrong. (2) Intoxication — the giddy pride born of wealth, youth and power; it cannot be dispelled by sun, jewel-light or lamp, nor calmed even by age and disease. (3) Egotism — the conceit "I am supreme"; like an eye-disease it blinds inner vision and will not let one hear even a teacher's good counsel. (4) Heedlessness — inattention to duty and laziness; through it a king forgets dharma and his subjects' welfare, and the kingdom falls.<br><br>
+    These four first appear attractive, like virtues, but are really the root of calamity. So Shukanasa advises abandoning them through restraint and discernment and standing firm in dharma.</div>
   </div>
-  <p class="q-en">What is Dṛṣṭānta?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">साध्यसाधनसाहचर्यदृष्टस्थलम्</p>
-  <p class="ans-en-text">Example where sādhya and hetu are seen together</p>
-</div>
+</details>
 
-<!-- Q4 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q4</span>
-    <p class="q-sa">व्याप्तिः कति विधा?</p>
+<!-- 12 -->
+<details>
+  <summary><span class="num">12</span><span class="tier">5</span><span class="deva">'गद्यं कवीनां निकषं वदन्ति' इति वाक्यं विशदयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Explain the statement: "Prose is the touchstone of poets."</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">भावार्थः</div>
+    <div class="deva a">गद्यं कवीनां प्रतिभायाः असली परीक्षा (निकषा) इति कथ्यते। यतः पद्यलेखनं छन्दः-अलङ्कारादिभिः मुखरितं सुलभं भवति, किन्तु गद्ये कवेः भाषाकौशलं, चिन्तनशक्तिः, विचारसरणिः, प्रस्तुतीकरणशैली च स्पष्टं प्रतिफलति। अतः गद्यं यथार्थे कवीनां शक्तेः कसौटी।</div>
+    <div class="sub-h">"निकष"-शब्दार्थः</div>
+    <div class="deva a">"निकष" इत्यस्य अर्थः — सा कसौटी यया परीक्षां कृत्वा रत्नं सुवर्णं वा शुद्धम् अशुद्धं वा इति ज्ञायते। तद्वत् गद्यम् अपि कवीनां शुद्धिं, गाम्भीर्यं, भाषावैदग्ध्यं च परीक्षितुं कसौटीरूपेण स्वीक्रियते।</div>
+    <div class="sub-h">उदाहरणम्</div>
+    <div class="deva a">बाणभट्टस्य "हर्षचरितम्", दण्डिनः "दशकुमारचरितम्" इत्येतानि गद्यकाव्यानि कवीनां निपुणतायाः उत्तमं प्रमाणम्। पद्ये अलङ्कारादयः साहाय्यं कुर्वन्ति, गद्ये तु ते न सन्ति; तत्र गम्भीरविचारः सगर्भवाक्यप्रवाहश्च आवश्यकः।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">अत्र न केवलं भाषासौन्दर्यम्, अपि तु लेखकस्य बौद्धिकशक्तेः, चिन्तनशक्तेः, भावस्पष्टतायाः च परीक्षणम् अभिप्रेतम्। यः उत्तमं गद्यं रचयितुं शक्नोति, सः साहित्यजगति महान् कलाकारः।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Purport:</b> Prose is called the real test of a poet's genius. Verse is made easy by metre and ornament, but in prose the poet's command of language, thought, reasoning and presentation are clearly reflected — so prose is truly the touchstone of a poet's power.<br><br>
+    <b>Meaning of "nikasha":</b> the touchstone by which one tests whether gold/gem is pure; likewise prose tests a poet's purity, depth and skill.<br><br>
+    <b>Example:</b> Bana's <i>Harshacharitam</i> and Dandin's <i>Dashakumaracharitam</i> prove their authors' mastery. Verse leans on ornament; prose lacks it and needs weighty thought and a flow of meaning-laden sentences.<br><br>
+    <b>Conclusion:</b> The statement tests not just beauty of language but the writer's intellect, thought and clarity. One who writes excellent prose is a great artist in literature.</div>
   </div>
-  <p class="q-en">How many kinds of Vyāpti are there?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">द्विविधा — अन्वयव्याप्तिः, व्यतिरेकव्याप्तिः</p>
-  <p class="ans-en-text">Two — anvaya and vyatireka</p>
-</div>
+</details>
 
-<!-- Q5 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q5</span>
-    <p class="q-sa">हेत्वाभासाः कति सन्ति? ते के?</p>
+<!-- 13 -->
+<details>
+  <summary><span class="num">13</span><span class="tier">5</span><span class="deva">शुकनासकृतं यौवनारम्भवर्णनं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe Shukanasa's depiction of the onset of youth.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः कथयति — यौवनस्य आरम्भे स्वाभाविकतया एव कामः, मदः, अहंकारः, प्रमादः इत्यादयः दोषाः उद्भवन्ति। एते प्रथमदृष्ट्या गुणाः इव आकर्षकाः सुखदायकाः च प्रतीयन्ते, परन्तु वस्तुतः ते मनुष्यं विनाशमार्गं नयन्ति।<br><br>
+    यौवनकाले यः मोहान्धकारः जायते, सः सूर्येण, मणिप्रकाशेन, दीपप्रभया वा अपि न निवार्यते; सः अतीव दुर्दर्शः। धनसम्पत्तेः मदः जरारोगैः अपि न शाम्यति; धनाभिमानजः गर्वः नेत्ररोगवत् अन्धत्वं जनयति; ऐश्वर्यजः ज्वरः चन्दनैः अपि न शाम्यति, प्रत्युत तीव्रतरः भवति; विषयासक्तिमलः बाह्यस्नानैः न क्षाल्यते।<br><br>
+    अतः शुकनासः उपदिशति — यौवनं संयमेन धर्मेण च युक्तं चेत् सार्थकम्; अन्यथा तदेव पतनस्य कारणम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa says that at the onset of youth, faults like lust, intoxication, egotism and heedlessness arise naturally. They first appear attractive and pleasant, like virtues, but in truth they lead a person to ruin.<br><br>
+    The delusion-darkness of youth cannot be removed by sun, jewel-light or lamp, and is hard to see through. Wealth's intoxication is not calmed by age and disease; pride over riches blinds like an eye-disease; the fever of lordship is not cooled even by sandal-paste but grows fiercer; the stain of sensual attachment is not washed off by external bathing.<br><br>
+    Hence Shukanasa advises: youth joined with restraint and dharma is fruitful; otherwise it becomes the very cause of one's fall.</div>
   </div>
-  <p class="q-en">How many Hetvābhāsas? What are they?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पञ्च — सव्यभिचारः, विरुद्धः, सत्प्रतिपक्षः, असिद्धः, बाधितः</p>
-  <p class="ans-en-text">Five — Savyabhicāra, Viruddha, Satpratipakṣa, Asiddha, Bādhita</p>
-</div>
+</details>
 
-<!-- Q6 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q6</span>
-    <p class="q-sa">लक्षणायाः किं लक्षणम्?</p>
+<!-- 14 -->
+<details>
+  <summary><span class="num">14</span><span class="tier">5</span><span class="deva">गुरूपदेशस्य महत्त्वं वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the importance of the teacher's instruction (gurūpadeśa).</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">भारतीयसंस्कृतौ गुरोः उपदेशः अत्यन्तं महत्त्वपूर्णः मन्यते। कादम्बर्यां मन्त्री शुकनासः चन्द्रापीडाय यम् उपदेशं ददाति, सः गुरूपदेशस्य आदर्शः।<br><br>
+    (१) गुरुः शिष्यस्य अज्ञानान्धकारं ज्ञानप्रकाशेन नाशयति।<br>
+    (२) यौवने उत्पन्नान् कामक्रोधादीन् दोषान् नियन्तुं गुरोः वचनम् एव समर्थम्; यः अन्धकारः सूर्येण दीपेन वा न नश्यति, सः गुरूपदेशेन एव दूरीभवति।<br>
+    (३) गुरुः धर्म-अर्थ-काम-मोक्षान् सम्यक् सेवितुं मार्गं दर्शयति, राजपुत्रं च नीतिमार्गे स्थापयति।<br>
+    (४) "गुणानाम् उपदेशः कर्णयोः अभूषणम्" इति उक्तम् — सद्गुणोपदेशः एव मनुष्यस्य यथार्थम् अलङ्करणम्।<br><br>
+    अतः गुरूपदेशेन विना न ज्ञानम्, न विवेकः, न च सन्मार्गे स्थितिः सम्भवति। तस्मात् गुरूपदेशः जीवनस्य आधारः।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">In Indian culture a teacher's instruction is held supremely important; Shukanasa's advice to Chandrapida is its ideal example.<br><br>
+    (1) The teacher destroys the disciple's darkness of ignorance with the light of knowledge. (2) Only the teacher's word can restrain the faults of youth — lust, anger and the rest; the darkness the sun or lamp cannot remove is dispelled by his instruction alone. (3) He shows the way to pursue dharma, artha, kama and moksha rightly and sets a prince on the path of polity. (4) "The teaching of virtues is the ornament of the ears" — instruction in good qualities is a person's true adornment.<br><br>
+    Hence without the teacher's instruction there is no knowledge, discrimination, or standing on the right path; it is the foundation of life.</div>
   </div>
-  <p class="q-en">What is the definition of Lakṣaṇā?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">मुख्यार्थबाधे तत्सम्बन्धे यः अर्थः बोध्यते</p>
-  <p class="ans-en-text">Meaning conveyed when primary sense is blocked</p>
-</div>
+</details>
 
-<!-- Q7 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q7</span>
-    <p class="q-sa">सौगम्यता नाम का?</p>
+<!-- 15 -->
+<details>
+  <summary><span class="num">15</span><span class="tier">5</span><span class="deva">राजतन्त्रकाले राज्ञा कथं वर्तितव्यम्?</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">In matters of statecraft, how should a king conduct himself?</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः उपदिशति यत् राज्यपदं प्राप्य राज्ञा अतीव सावधानेन धर्मनीतियुक्तेन च भवितव्यम्। राज्ञः कर्तव्यानि —<br><br>
+    (१) राजा धर्मे नीतौ च तत्परः भवेत्; अधर्मेण राज्यं न शाश्वतम्।<br>
+    (२) प्रजाहितम् एव परमं कर्तव्यम् इति मत्वा प्रजाः पालयेत्।<br>
+    (३) राज्यलक्ष्मीः चञ्चला; अतः तस्याः मदेन अन्धः न भवेत्, गर्वं च त्यजेत्।<br>
+    (४) कामक्रोधलोभादीन् अन्तःशत्रून् संयमेन जयेत्।<br>
+    (५) गुरूणां वृद्धानां च हितवचनं श्रृणुयात्, नीतिशास्त्रम् अनुसरेत्।<br>
+    (६) धर्म-अर्थ-काम-मोक्षेषु समतां रक्षन् न्यायेन राज्यं पालयेत्।<br><br>
+    यः राजा एवं संयमेन धर्मेण च वर्तते, तस्य राज्यं स्थिरं कीर्तिश्च चिरस्थायिनी; अहंकारेण असंयमेन च वर्तमानः तु शीघ्रं पतनं प्राप्नोति।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa instructs that on gaining kingship a king must be very careful and grounded in dharma and polity. His duties:<br><br>
+    (1) Be devoted to righteousness and policy — a kingdom is not lasting through adharma. (2) Hold the subjects' welfare as the highest duty and protect them. (3) Royal fortune is fickle; do not be blinded by its intoxication, and shed pride. (4) Conquer the inner enemies — lust, anger, greed — through restraint. (5) Heed the good counsel of teachers and elders and follow the science of polity. (6) Keeping balance among the four aims, rule with justice.<br><br>
+    A king who acts thus, with restraint and dharma, gains a stable kingdom and lasting fame; one who acts with egotism and indiscipline swiftly falls.</div>
   </div>
-  <p class="q-en">What is Saugamyatā?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पाकभेदः</p>
-  <p class="ans-en-text">A type of pāka (method of grasping vyāpti)</p>
-</div>
+</details>
 
-<!-- Q8 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q8</span>
-    <p class="q-sa">पाकः नाम कः?</p>
+<!-- 16 -->
+<details>
+  <summary><span class="num">16</span><span class="tier">5</span><span class="deva">लक्ष्म्याः आचारं वर्णयत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the conduct (behaviour) of Lakshmi.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="deva a">शुकनासः लक्ष्मीम् अतीव चञ्चलाम् अस्थिरां च वर्णयति। सा क्षीरसमुद्रमन्थनकाले पारिजातादिभिः सह समुद्भूता। समीपस्थेभ्यः पदार्थेभ्यः सा गुणान् इव दोषान् गृहीतवती — चन्द्रखण्डात् वक्रताम्, कालकूटात् निष्ठुरताम्, मदिरायाः मादकत्वम्, वैडूर्यमणेः बाह्यप्रकाशम् अन्तःशून्यतां च।<br><br>
+    एषा लक्ष्मीः अधिककालपरिचयेन अपि स्नेहं न जानाति। यथा नीचप्रकृतिः, तथैव सा — प्राप्तिः सुलभा, रक्षणं तु महाकष्टसाध्यम्। सन्धिविग्रहादिभिः रज्जुवत् बद्ध्वा अपि सा न तिष्ठति; शस्त्रजालेन पञ्जरे स्थापिता अपि पलायते।<br><br>
+    सा न कुलं, न रूपं, न परम्पराम्, न स्वभावं, न चातुर्यम्, न ज्ञानम्, न आचारम्, न च सत्यं पश्यति। गन्धर्वनगरसदृशी — आकाशे दृश्यते इव, क्षणेन च लीयते। अतः शुकनासः उपदिशति — लक्ष्म्याः मोहे न पतितव्यम्; धर्मेण नीत्या च सा रक्षणीया।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en">Shukanasa describes Lakshmi as exceedingly fickle and unsteady. She rose at the ocean-churning with the Parijata and others, and seems to have taken, as if virtues, the faults of nearby things — crookedness from the crescent moon, cruelty from the kalakuta poison, intoxicating power from wine, and from the cat's-eye gem outer brilliance with inner emptiness.<br><br>
+    She knows no affection even after long acquaintance. Like a low-natured person she is easy to get but hard to keep; bound like a rope through treaty and war she will not stay, and caged with weapons she flees.<br><br>
+    She looks at neither lineage, beauty, tradition, character, cleverness, knowledge, conduct nor truth. Like a mirage-city, she seems seen in the sky yet dissolves in a moment. So Shukanasa advises: do not fall into infatuation with her; guard her through dharma and polity.</div>
   </div>
-  <p class="q-en">What is Pāka?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">बहुशः दर्शनजनितसंस्कारेण व्याप्तिनिश्चयः</p>
-  <p class="ans-en-text">Firm vyāpti-cognition from repeated observation</p>
-</div>
+</details>
 
-<!-- Q9 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q9</span>
-    <p class="q-sa">वाक्यं नाम किम्?</p>
+<a class="top" href="#s2">&uarr; top</a>
+
+<!-- =================== SECTION III : 15 MARK =================== -->
+<div class="secttl" id="s3">III · निबन्ध — 15 mark<small>Long essays · answer two (all 3 given)</small></div>
+
+<!-- 17 -->
+<details open>
+  <summary><span class="num">17</span><span class="tier">15</span><span class="deva">शुकनासोक्तस्य लक्ष्मीस्वभावस्य वर्णनं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Describe the nature of Lakshmi as told by Shukanasa.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">कादम्बर्यां मन्त्री शुकनासः चन्द्रापीडं युवराजं प्रति उपदिशन् राज्यलक्ष्म्याः स्वभावं विस्तरेण वर्णयति। सः लक्ष्मीं चञ्चलाम्, अस्थिराम्, कृतघ्नां च निरूपयति।</div>
+    <div class="sub-h">उत्पत्तिः</div>
+    <div class="deva a">लक्ष्मीः क्षीरसमुद्रमन्थनकाले पारिजात-कौस्तुभादिभिः रत्नैः सह समुद्भूता। तस्मिन्नेव काले समीपस्थेभ्यः पदार्थेभ्यः सा तेषां दोषान् इव गुणान् स्वीकृतवती इति कविः उत्प्रेक्षते — चन्द्रखण्डात् वक्रताम् (कुटिलताम्), कालकूटविषात् निष्ठुरताम्, मदिरायाः मादकत्वम्, वैडूर्यमणेः बाह्यप्रकाशम् अन्तःशून्यतां च, उच्चैःश्रवसः चञ्चलताम्। एवं सा बहिः शोभमाना अपि अन्तः दोषयुक्ता।</div>
+    <div class="sub-h">स्वभावः</div>
+    <div class="deva a">एषा लक्ष्मीः अधिककालपरिचयेन अपि स्नेहं न जानाति। यथा नीचप्रकृतिः जनः, तथा सा — प्राप्तिः सुलभा, रक्षणं तु महाकष्टसाध्यम्। सन्धिविग्रहादिभिः उपायैः रज्जुवत् बद्ध्वा अपि सा न तिष्ठति; शस्त्रजालेन पञ्जरे स्थापिता अपि पलायते।</div>
+    <div class="sub-h">अविवेकः</div>
+    <div class="deva a">लक्ष्मीः न कुलं पश्यति, न रूपं, न परम्पराम्, न स्वभावं, न चातुर्यम्, न ज्ञानम्, न आचारम्, न च सत्यम्। सा गुणान् अवगणय्य प्रायः अयोग्यान् एव आश्रयति।</div>
+    <div class="sub-h">उपमा</div>
+    <div class="deva a">सा गन्धर्वनगरसदृशी — आकाशे क्षणं दृश्यते, क्षणेन च लीयते। मन्दभाग्यानां सा भ्रमणकालेऽपि न तिष्ठति।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं लक्ष्मीः स्वभावतः चञ्चला कृतघ्ना च। अतः शुकनासः उपदिशति — तस्याः मदेन अन्धः न भूत्वा धर्मेण नीत्या विवेकेन च तां रक्षेत्। यः लक्ष्म्याः मोहे न पतति, स एव यथार्थः राजा।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> Advising the young prince Chandrapida, Shukanasa describes at length the nature of royal Fortune — fickle, unsteady and ungrateful.<br><br>
+    <b>Origin:</b> Lakshmi rose at the milk-ocean's churning with jewels like the Parijata and Kaustubha. The poet imagines she then took, as if virtues, the faults of nearby things — crookedness from the crescent moon, cruelty from the kalakuta poison, intoxicating power from wine, outer brilliance with inner emptiness from the cat's-eye gem, restlessness from Ucchaihshravas. Thus, though shining outwardly, she is inwardly flawed.<br><br>
+    <b>Nature:</b> She knows no affection even after long acquaintance. Like a low-natured person, she is easy to obtain but very hard to keep; bound like a rope through treaty and war she will not stay, and caged with weapons she flees.<br><br>
+    <b>Lack of discernment:</b> She regards neither lineage, beauty, tradition, character, cleverness, knowledge, conduct nor truth; ignoring merit she often resorts to the unworthy.<br><br>
+    <b>Simile:</b> She is like a city of the gandharvas — seen a moment in the sky, gone the next; for the unfortunate she does not stay even while passing.<br><br>
+    <b>Conclusion:</b> Thus Lakshmi is by nature fickle and ungrateful. Shukanasa therefore advises that one not be blinded by her intoxication but guard her through dharma, polity and discernment. He who does not fall into infatuation with Fortune is the true king.</div>
   </div>
-  <p class="q-en">What is Vākya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">आकाङ्क्षायोग्यतासत्तिमत् पदसमूहः</p>
-  <p class="ans-en-text">Group of words with ākāṅkṣā, yogyatā, āsatti</p>
-</div>
+</details>
 
-<!-- Q10 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q10</span>
-    <p class="q-sa">कारणं कति विधम्?</p>
+<!-- 18 -->
+<details>
+  <summary><span class="num">18</span><span class="tier">15</span><span class="deva">बाणभट्टस्य देश-काल-कृति-परिचयं कुरुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Introduce Banabhatta's place, time, and works (deśa–kāla–kṛti).</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">बाणभट्टः संस्कृतसाहित्ये गद्यकाव्यस्य सम्राट् इति प्रसिद्धः। "बाणोच्छिष्टं जगत्सर्वम्" इति उक्त्या तस्य गद्यशैलेः अद्वितीयता प्रकटिता।</div>
+    <div class="sub-h">कालः</div>
+    <div class="deva a">बाणभट्टः सप्तमे ख्रिस्ताब्दशतके (७वीं शताब्दी) आसीत्। सः स्थाण्वीश्वराधिपतेः सम्राजः हर्षवर्धनस्य (शीलादित्यस्य) सभाकविः आसीत्।</div>
+    <div class="sub-h">देशः (जन्मस्थानम्)</div>
+    <div class="deva a">बाणः शोण (सोणभद्रा) नद्याः तीरे स्थितस्य प्रीतिकूटग्रामस्य वात्स्यायनगोत्रीयः ब्राह्मणः। तस्य पितुः नाम चित्रभानुः, माता च राजदेवी। बाल्ये एव मातापितरौ दिवंगतौ; ततः सः देशाटनं कृत्वा बहु अनुभवम् अर्जयत्, अनन्तरं हर्षस्य सभायां सम्मानं प्राप्तवान्।</div>
+    <div class="sub-h">कृतयः</div>
+    <div class="deva a">(१) हर्षचरितम् — हर्षवर्धनस्य जीवनम् आश्रित्य रचिता ऐतिहासिकी आख्यायिका; संस्कृते प्रथमा ऐतिहासिकगद्यरचना इति मन्यते।<br>
+    (२) कादम्बरी — अद्भुतरसप्रधाना कथा (गद्यकाव्यम्); अस्याः पूर्वार्धं बाणेन रचितम्, उत्तरार्धं च तस्य पुत्रः भूषणभट्टः पूरितवान्।<br>
+    (केचन "चण्डीशतकम्", "पार्वतीपरिणयम्" इत्यादीन् अपि तेन कृतान् इति मन्यन्ते।)</div>
+    <div class="sub-h">शैली</div>
+    <div class="deva a">बाणस्य गद्यं दीर्घसमासयुक्तम्, श्लेष-उपमा-रूपकादि-अलङ्कारबहुलम्, वर्णनमाधुर्येण च मनोहरम्। तेन "गौडी रीतिः" प्रसिद्धिं गता।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं देश-काल-कृतिभिः बाणभट्टः संस्कृतगद्यसाहित्यस्य शिरोमणिः। तस्य कादम्बरी हर्षचरितं च गद्यकाव्यस्य उत्कृष्टतमानि उदाहरणानि।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> Banabhatta is celebrated as the emperor of Sanskrit prose-poetry; the saying "Bana's leavings are the whole world" expresses the unrivalled quality of his prose.<br><br>
+    <b>Time:</b> He lived in the 7th century CE, court poet of Emperor Harshavardhana (Shiladitya), lord of Sthanvishvara.<br><br>
+    <b>Place:</b> A Brahmin of the Vatsyayana gotra from the village Pritikuta on the river Shona (Sonabhadra). His father was Chitrabhanu, mother Rajadevi. Orphaned young, he wandered widely, gained much experience, and later won honour at Harsha's court.<br><br>
+    <b>Works:</b> (1) <i>Harshacharitam</i> — a historical ākhyāyikā on Harsha's life, regarded as the first historical prose work in Sanskrit. (2) <i>Kadambari</i> — a kathā dominated by the marvellous rasa; Bana wrote the first half, his son Bhushanabhatta completed the second. (Some also credit him with Chandishataka and Parvatiparinaya.)<br><br>
+    <b>Style:</b> His prose is rich in long compounds and figures (paronomasia, simile, metaphor) and charming in descriptive sweetness; through it the "Gaudi" style became famous.<br><br>
+    <b>Conclusion:</b> Thus, by place, time and works, Banabhatta is the crest-jewel of Sanskrit prose; Kadambari and Harshacharita are the finest examples of prose-poetry.</div>
   </div>
-  <p class="q-en">How many kinds of Kāraṇa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">त्रिविधम् — समवायि, असमवायि, निमित्तम्</p>
-  <p class="ans-en-text">Three — samavāyi, asamavāyi, nimitta</p>
-</div>
+</details>
 
-<!-- Q11 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q11</span>
-    <p class="q-sa">अनुभूतेः नाम का?</p>
+<!-- 19 -->
+<details>
+  <summary><span class="num">19</span><span class="tier">15</span><span class="deva">शुकनासोपदेशं यथायोग्यं विवृणुत।</span></summary>
+  <div class="body">
+    <div class="label en">Question (English)</div>
+    <div class="en">Explain Shukanasa's advice (upadeśa) appropriately and fully.</div>
+    <div class="label a">उत्तरम् (संस्कृतम्)</div>
+    <div class="sub-h">प्रस्तावना</div>
+    <div class="deva a">यदा राजा तारापीडः स्वपुत्रं चन्द्रापीडं युवराजपदे अभिषिक्तवान्, तदा मन्त्री शुकनासः तं स्नेहेन हितबुद्ध्या च दीर्घम् उपदेशम् अकरोत्। एषः "शुकनासोपदेशः" कादम्बर्याः प्रसिद्धतमः नीतिप्रधानः अंशः, यः राजनीतेः आदर्शः इति मन्यते।</div>
+    <div class="sub-h">उपदेशस्य आरम्भः</div>
+    <div class="deva a">शुकनासः अवदत् — "हे वत्स! ज्ञातव्यं सर्वं त्वया ज्ञातम्, शास्त्राणि च अधीतानि। तथापि स्नेहात् किञ्चित् वक्तव्यम् —"</div>
+    <div class="sub-h">यौवनस्य दोषाः</div>
+    <div class="deva a">यौवनस्य आरम्भे स्वाभाविकतया एव कामः, मदः, अहंकारः, प्रमादः इत्यादयः दोषाः उद्भवन्ति। एते प्रथमं गुणाः इव आकर्षकाः, परन्तु वस्तुतः अनर्थहेतवः।</div>
+    <div class="sub-h">मदस्य भयङ्करत्वम्</div>
+    <div class="deva a">यौवनकाले यः मोहान्धकारः जायते, सः सूर्येण, मणिप्रभया, दीपेन वा न नश्यति। धनसम्पत्तेः मदः जरारोगैः अपि न शाम्यति; धनाभिमानजः गर्वः नेत्ररोगवत् अन्धत्वं जनयति; ऐश्वर्यजः ज्वरः चन्दनैः अपि न शाम्यति, प्रत्युत तीव्रतरः; विषयासक्तिमलः बाह्यस्नानैः न क्षाल्यते।</div>
+    <div class="sub-h">लक्ष्म्याः चाञ्चल्यम्</div>
+    <div class="deva a">राज्यलक्ष्मीः चञ्चला कृतघ्ना च; सा न कुलं न गुणं न ज्ञानं न आचारं पश्यति, गन्धर्वनगरवत् क्षणे लीयते। अतः तस्याः मदेन अन्धः न भवेत्।</div>
+    <div class="sub-h">राज्ञः कर्तव्यम्</div>
+    <div class="deva a">राजा धर्मे, नीतौ, प्रजाहिते च तत्परः भवेत्। धर्म-अर्थ-काम-मोक्षान् सम्यक् सेवेत; अन्तःशत्रून् (कामक्रोधादीन्) संयमेन जयेत्; गुरुवृद्धानां वचनं च श्रृणुयात्।</div>
+    <div class="sub-h">निष्कर्षः</div>
+    <div class="deva a">एवं शुकनासः यौवन-धन-ऐश्वर्यजनितान् दोषान् दर्शयन् संयमस्य धर्मस्य विवेकस्य च महत्त्वं प्रतिपादयति। अयम् उपदेशः न केवलं चन्द्रापीडाय, अपि तु सर्वेभ्यः शासकेभ्यः जनेभ्यश्च कालातीतः नीतिग्रन्थः इव उपयुज्यते। अतः शुकनासोपदेशः कादम्बर्याः नीतिसौन्दर्यस्य शिखरम्।</div>
+    <div class="label en">Answer (English)</div>
+    <div class="en"><b>Introduction:</b> When King Tarapida consecrated his son Chandrapida as crown prince, the minister Shukanasa gave him a long discourse out of affection and goodwill. This "Shukanasa-upadesha" is the most famous, ethically-centred portion of Kadambari, a model of polity.<br><br>
+    <b>Opening:</b> He said, "Dear child, all that is to be known you already know, and you have studied the scriptures; yet out of affection let me say a little —"<br><br>
+    <b>Faults of youth:</b> At youth's onset, lust, intoxication, egotism and heedlessness arise naturally. They seem attractive like virtues but are really causes of ruin.<br><br>
+    <b>The terror of intoxication:</b> The delusion-darkness of youth is not dispelled by sun, jewel-light or lamp. Wealth's intoxication is not calmed by age and disease; pride over riches blinds like an eye-disease; the fever of lordship is not cooled even by sandal-paste but grows fiercer; the stain of sensual attachment is not washed off by external bathing.<br><br>
+    <b>Fickleness of Fortune:</b> Royal Fortune is fickle and ungrateful, regarding neither lineage, merit, knowledge nor conduct, and dissolving in a moment like a mirage-city; so one should not be blinded by her.<br><br>
+    <b>The king's duty:</b> A king should be devoted to dharma, polity and his subjects' welfare; pursue the four aims rightly; conquer the inner enemies through restraint; and heed the words of teachers and elders.<br><br>
+    <b>Conclusion:</b> Thus, by exposing the faults born of youth, wealth and power, Shukanasa establishes the importance of restraint, righteousness and discernment. This advice serves not only Chandrapida but, like a timeless treatise of polity, all rulers and people. Hence the Shukanasa-upadesha is the summit of the ethical beauty of Kadambari.</div>
   </div>
-  <p class="q-en">What is Anubhūti?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">स्मृतिव्यतिरिक्तं ज्ञानम्</p>
-  <p class="ans-en-text">Cognition other than memory</p>
-</div>
+</details>
 
-<!-- Q12 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q12</span>
-    <p class="q-sa">'इदं द्रव्यं गुणवत्' इत्यत्र साध्यं किम्?</p>
-  </div>
-  <p class="q-en">In "idaṃ dravyaṃ guṇavat" — what is the sādhya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">गुणवत्त्वम्</p>
-  <p class="ans-en-text">Guṇavatva</p>
-</div>
+<a class="top" href="#s1">&uarr; top</a>
 
-<!-- Q13 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q13</span>
-    <p class="q-sa">परामर्शस्य विषयौ कौ?</p>
-  </div>
-  <p class="q-en">What are the two objects of Parāmarśa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पक्षधर्मता, व्याप्तिः</p>
-  <p class="ans-en-text">Pakṣadharmatā and vyāpti</p>
-</div>
-
-<!-- Q14 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q14</span>
-    <p class="q-sa">न्यायः नाम कः?</p>
-  </div>
-  <p class="q-en">What is Nyāya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">प्रमाणैः अर्थपरीक्षणम्</p>
-  <p class="ans-en-text">Examination of objects by pramāṇas</p>
-</div>
-
-<!-- Q15 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q15</span>
-    <p class="q-sa">हेत्वाभासपदस्य कोऽर्थः?</p>
-  </div>
-  <p class="q-en">Meaning of the word "Hetvābhāsa"?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">हेतुदोषः / हेतोः आभासः</p>
-  <p class="ans-en-text">Fallacy of the hetu / pseudo-probans</p>
-</div>
-
-<!-- Q16 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q16</span>
-    <p class="q-sa">उपमाने व्यापारः कः?</p>
-  </div>
-  <p class="q-en">Operative function in Upamāna?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">सादृश्यस्मृतिः</p>
-  <p class="ans-en-text">Sādṛśya-smṛti (recollection of similarity)</p>
-</div>
-
-<!-- Q17 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q17</span>
-    <p class="q-sa">वाक्यं कति विधम्?</p>
-  </div>
-  <p class="q-en">How many kinds of Vākya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">द्विविधम् — विधिवाक्यम्, निषेधवाक्यम्</p>
-  <p class="ans-en-text">Two — vidhi-vākya and niṣedha-vākya</p>
-</div>
-
-<!-- Q18 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q18</span>
-    <p class="q-sa">शक्तिः नाम का?</p>
-  </div>
-  <p class="q-en">What is Śakti?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">ईश्वरसंकेतः</p>
-  <p class="ans-en-text">Īśvara-saṃketa (God's ordinance)</p>
-</div>
-
-<hr class="divider">
-
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 2 — 5 MARK                            -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s5mark">
-  <span class="badge">5 MARKS</span>
-  <h2>लघुप्रबन्धाः — Short Essays</h2>
-</div>
-
-<!-- 5M Q1 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q19</span>
-    <p class="q-sa">अनुमितिः।</p>
-  </div>
-  <p class="q-en">Write a short note on Anumiti (inferential cognition).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    अनुमितिः अनुमानजन्यं ज्ञानम् इति उच्यते। यत्र परामर्शात् साध्यविषयकं ज्ञानम् उत्पद्यते तत् अनुमितिः।<br><br>
-    परामर्शः व्याप्तिविशिष्टपक्षधर्मताज्ञानम्। स एव अनुमितेः जनकः। यथा — पर्वते धूमं दृष्ट्वा "पर्वतो वह्निमान् धूमात्" इति ज्ञानम् अनुमितिः।<br><br>
-    अनुमितिः स्वार्थानुमाने परार्थानुमाने च भिद्यते। स्वार्थानुमाने स्वज्ञानार्थम् अनुमानम्, परार्थानुमाने परस्मै बोधनार्थं पञ्चावयवीप्रक्रिया अपेक्षिता।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Anumiti is the cognition (jñāna) produced by anumāna (inference). It arises from parāmarśa — the cognition of the probans (hetu) as located in the pakṣa and pervaded by vyāpti.<br><br>
-    Example: Seeing smoke on a mountain and knowing "the mountain has fire, because of smoke" — that cognition of fire is anumiti. The probans "smoke" (hetu) is pervaded by fire (vyāpti) and is present in the mountain (pakṣa); the resulting knowledge of fire there is the anumiti.<br><br>
-    Anumiti is the goal of both svārthānumāna (inference for oneself) and parārthānumāna (inference presented to another). In the latter, it is formally expressed through the five-membered syllogism (pañcāvayavī).
-  </p>
-</div>
-
-<!-- 5M Q2 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q20</span>
-    <p class="q-sa">याप्तिः।</p>
-  </div>
-  <p class="q-en">Write a short note on Vyāpti (invariable concomitance).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    अव्यभिचरितसहचरणं व्याप्तिः। हेतोः साध्येन अनिवार्यसम्बन्धः व्याप्तिः इत्युच्यते।<br><br>
-    व्याप्तिः द्विविधा — अन्वयव्याप्तिः विपक्षव्याप्तिः च। "यत्र धूमः तत्र वह्निः" इति अन्वयव्याप्तिः। "यत्र वह्निः नास्ति तत्र धूमः नास्ति" इति व्यतिरेकव्याप्तिः।<br><br>
-    व्याप्तिग्रहणस्य उपायाः — भूयोदर्शनम्, उपाधिः, तर्कः च। व्याप्तिज्ञानम् अनुमानस्य मूलभूतं साधनम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Vyāpti is the invariable concomitance between hetu (probans) and sādhya (probandum) — the unfailing accompaniment of one with the other.<br><br>
-    It has two forms: anvaya-vyāpti (positive) — "wherever there is smoke, there is fire" — and vyatireka-vyāpti (negative) — "wherever there is no fire, there is no smoke."<br><br>
-    The means of cognising vyāpti are repeated observation (bhūyadarśana), elimination of upādhi (conditional qualifiers), and tarka (reductio ad absurdum reasoning). Vyāpti-jñāna is the foundation of all valid inference.
-  </p>
-</div>
-
-<!-- 5M Q3 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q21</span>
-    <p class="q-sa">परामर्शलक्षणं सदलकृत्वं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain the definition of Parāmarśa with illustration.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    व्याप्तिविशिष्टपक्षधर्मताज्ञानं परामर्शः। अर्थात् — पक्षे विद्यमानः हेतुः व्याप्तिसहितः इति यत् ज्ञानम् उत्पद्यते तत् परामर्शः।<br><br>
-    यथा — "पर्वतः धूमवान्" इति पक्षधर्मताज्ञानम्। "धूमो वह्निव्याप्तः" इति व्याप्तिज्ञानम्। एतयोः संयोगेन "पर्वते धूमः वह्निव्याप्तः" इति यत् ज्ञानम् उत्पद्यते तत् परामर्शः।<br><br>
-    परामर्शात् एव "पर्वतो वह्निमान्" इति अनुमितिः उत्पद्यते। अतः परामर्शः अनुमितेः साक्षात्कारणम् इति उच्यते।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Parāmarśa is defined as the cognition of the hetu as being present in the pakṣa and as being pervaded by vyāpti (vyāpti-viśiṣṭa-pakṣa-dharmatā-jñānam).<br><br>
-    Example: "The mountain has smoke" is the pakṣa-dharmatā cognition. "Smoke is pervaded by fire" is the vyāpti cognition. The combined cognition — "the smoke that is on the mountain is pervaded by fire" — is parāmarśa.<br><br>
-    From this parāmarśa directly arises the anumiti: "the mountain has fire." Thus parāmarśa is the immediate (sākṣāt) cause of the inferential cognition.
-  </p>
-</div>
-
-<!-- 5M Q4 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q22</span>
-    <p class="q-sa">लिङ्गं त्रिविधम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">The liṅga (mark/hetu) is of three kinds — Explain.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    लिङ्गं (हेतुः) त्रिविधम् — केवलान्वयी, केवलव्यतिरेकी, अन्वयव्यतिरेकी च।<br><br>
-    १. केवलान्वयी — यः हेतुः केवलम् अन्वयव्याप्तिमान्, न तु व्यतिरेकव्याप्तिमान्। यथा — "इदं वक्तव्यम् अभिधेयत्वात्।" अत्र अभिधेयत्वस्य केवलान्वयव्याप्तिः अस्ति।<br><br>
-    २. केवलव्यतिरेकी — यः हेतुः केवलम् व्यतिरेकव्याप्तिमान्। यथा — "आत्मा ज्ञानाश्रयः न, अज्ञानाश्रयत्वात्।"<br><br>
-    ३. अन्वयव्यतिरेकी — यः उभाभ्यां व्याप्तिभ्यां युक्तः। यथा — "पर्वतो वह्निमान् धूमात्।"
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    The liṅga (inferential mark / hetu) is of three kinds: Kevalānvayī, Kevalavyatirekī, and Anvaya-vyatirekī.<br><br>
-    1. Kevalānvayī — has only positive (anvaya) vyāpti, no negative counterpart (because sādhya-abhāva has no known locus). E.g., "This is nameable, because it is expressible."<br><br>
-    2. Kevalavyatirekī — has only negative (vyatireka) vyāpti. E.g., inferences about the self or absolute entities where positive instances cannot be enumerated.<br><br>
-    3. Anvaya-vyatirekī — has both positive and negative vyāpti. E.g., "The mountain has fire, because of smoke" — both "where there is smoke there is fire" and "where there is no fire there is no smoke" hold.
-  </p>
-</div>
-
-<!-- 5M Q5 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q23</span>
-    <p class="q-sa">सव्यभिचारं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain Savyabhicāra (the fallacy of the irregular/erratic hetu).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    अनैकान्तिकः सव्यभिचारः। यः हेतुः साध्यवति, असाध्यवति च विद्यते — सः सव्यभिचारः।<br><br>
-    सव्यभिचारः त्रिविधः — साधारणः, असाधारणः, अनुपसंहारी च।<br><br>
-    साधारणः — "पर्वतो वह्निमान् प्रमेयत्वात्।" प्रमेयत्वं वह्निमति (महानसे) वह्न्यभाववति (ह्रदे) च वर्तते — साध्यवति असाध्यवति च।<br><br>
-    असाधारणः — "शब्दः नित्यः शब्दत्वात्।" शब्दत्वं केवलं शब्दे एव वर्तते, न नित्येषु (आकाशादिषु) न अनित्येषु (घटादिषु) — सपक्षविपक्षव्यावृत्तम्।<br><br>
-    अनुपसंहारी — "सर्वं अनित्यं प्रमेयत्वात्।" अत्र सर्वम् एव पक्षः, अतः दृष्टान्तः (सपक्षः विपक्षः वा) न सम्भवति।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Savyabhicāra is the "erratic" or "irregular" hetu — one that is present in both sapakṣa (where sādhya obtains) and vipakṣa (where sādhya does not obtain), and hence lacks vyāpti.<br><br>
-    Three sub-kinds: (1) Sādhāraṇa (too wide) — present in both sapakṣa and vipakṣa. E.g., "The mountain has fire because of knowability (prameya-tva)" — knowability is present in fire-possessing places (kitchen) and also in non-fire places (lake), so it proves nothing. (2) Asādhāraṇa (too narrow) — present only in the pakṣa itself, absent from both sapakṣa and vipakṣa. E.g., "Sound is eternal because of soundness (śabdatva)" — soundness belongs only to sound, so no sapakṣa or vipakṣa example exists. (3) Anupasaṃhāri — the entire universe is taken as the pakṣa, so no example (sapakṣa or vipakṣa) can be given at all. E.g., "Everything is non-eternal because of knowability."
-  </p>
-</div>
-
-<!-- 5M Q6 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q24</span>
-    <p class="q-sa">उपमानं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain Upamāna (comparison as a pramāṇa).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    उपमानं नाम उपमितिकरणम्। सादृश्यज्ञानात् संज्ञासंज्ञिसम्बन्धज्ञानम् उपमितिः। तत्करणम् उपमानम्।<br><br>
-    प्रक्रिया — पुरुषः वनं गच्छति। तत्र "गवयः गोसदृशः" इति पूर्वं श्रुतम् अस्ति। वने गवयं दृष्ट्वा "अयं गोसदृशः अतः गवयः" इति संज्ञासंज्ञिसम्बन्धः ज्ञायते। एतत् उपमितिः।<br><br>
-    उपमाने व्यापारः सादृश्यस्मृतिः। उपमानं न अनुमानान्तर्गतम् — यतः अत्र व्याप्तिज्ञानम् नास्ति।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Upamāna is the pramāṇa (means of valid knowledge) that produces upamiti — the cognition of the relation between a name and its object through perceived similarity.<br><br>
-    Process: A person goes to a forest. He has previously heard "a gavaya (wild cow) looks like a cow." On seeing the gavaya in the forest, he cognises "this is similar to a cow, so this must be what is called a gavaya." This cognition of the name-object relation is upamiti.<br><br>
-    The operative function (vyāpāra) in upamāna is the recollection of similarity (sādṛśya-smṛti). Upamāna is a distinct pramāṇa — it cannot be reduced to anumāna, because it does not rely on vyāpti.
-  </p>
-</div>
-
-<!-- 5M Q7 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q25</span>
-    <p class="q-sa">शक्तं पदम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">Explain "Śaktaṃ padam" — a word endowed with denotative power.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    ईश्वरसंकेतः शक्तिः। येन पदेन यः अर्थः ईश्वरेण संकेतितः, तस्य पदस्य सः अर्थः शक्यार्थः। तद् पदं शक्तं पदम् इत्युच्यते।<br><br>
-    पदार्थबोधस्य साधनत्रयम् — शक्तिः, लक्षणा, व्यञ्जना च। तेषु शक्तिः मुख्या। शक्त्या एव मुख्यार्थः बोध्यते।<br><br>
-    यत्र शक्यार्थः बाधितः तत्र लक्षणाशक्तिः आश्रीयते। यथा — "गङ्गायां घोषः" इत्यत्र "गङ्गा" पदस्य शक्यार्थः नद्याः प्रवाहः। परं तत्र घोषः सम्भवति — अतः लक्षणया तीरम् अर्थः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Śakti is the divinely ordained (Īśvara-saṃketa) denotative power — the God-given relation between a word and its primary meaning. A word possessing this power is called śaktaṃ padam.<br><br>
-    There are three functions by which a word conveys meaning: (1) Śakti (primary denotation), (2) Lakṣaṇā (secondary/indicative), (3) Vyañjanā (suggestion). Among them, śakti is primary.<br><br>
-    Example: The word "gaṅgā" by its śakti denotes the river (stream). But "gaṅgāyāṃ ghoṣaḥ" (the village is on the Gaṅgā) — here the primary meaning (stream) is blocked, so lakṣaṇā shifts the meaning to the bank (tīra).
-  </p>
-</div>
-
-<!-- 5M Q8 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q26</span>
-    <p class="q-sa">वाक्यं द्विविधम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">Vākya is of two kinds — Explain.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    वाक्यं द्विविधम् — विधिवाक्यम्, निषेधवाक्यञ्च।<br><br>
-    विधिवाक्यम् — यत् वाक्यम् अनुष्ठानाय प्रेरयति। यथा — "सोमेन यजेत" (सोमेन यजनं विधीयते)।<br><br>
-    निषेधवाक्यम् — यत् वाक्यम् अनुष्ठानात् निवारयति। यथा — "कलञ्जं न भक्षयेत्" (कलञ्जभक्षणं निषिध्यते)।<br><br>
-    वाक्यस्य त्रयो गुणाः — आकाङ्क्षा (syntactic expectancy), योग्यता (semantic compatibility), आसत्तिः (proximity). एतैः त्रिभिः गुणैः युक्तः पदसमूहः एव वाक्यम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Vākya (sentence) is of two kinds: Vidhi-vākya (injunctive) and Niṣedha-vākya (prohibitive).<br><br>
-    Vidhi-vākya prescribes an action. E.g., "Sacrifice with soma" — enjoining the performance of the soma sacrifice.<br><br>
-    Niṣedha-vākya prohibits an action. E.g., "Do not eat kalañja (garlic/onion)" — a Vedic prohibition.<br><br>
-    A valid vākya requires three properties in its constituent words: ākāṅkṣā (each word expecting the others for completeness), yogyatā (the meanings must be mutually compatible), and āsatti/sannidhi (the words must be uttered in temporal proximity).
-  </p>
-</div>
-
-<!-- 5M Q9 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q27</span>
-    <p class="q-sa">लक्षणा।</p>
-  </div>
-  <p class="q-en">Write a short note on Lakṣaṇā (secondary signification).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    मुख्यार्थबाधे तत्सम्बन्धे रूढितः प्रयोजनाद्वा यः अर्थः बोध्यते सा लक्षणा।<br><br>
-    लक्षणायाः त्रयः भेदाः — जहल्लक्षणा, अजहल्लक्षणा, जहदजहल्लक्षणा च।<br><br>
-    जहल्लक्षणा — मुख्यार्थं जहाति। "गङ्गायां घोषः" — गङ्गायाः मुख्यार्थः (प्रवाहः) जहाति, तीरम् अर्थः।<br><br>
-    अजहल्लक्षणा — मुख्यार्थं न जहाति। "शौरिः विक्रान्तः" — श्रीकृष्णस्य शौर्यं मुख्यार्थेन सह लक्ष्यते।<br><br>
-    जहदजहल्लक्षणा — "तत्त्वमसि" — "तत्" पदस्य सर्वज्ञत्वम्, "त्वम्" पदस्य अल्पज्ञत्वम् जहाति, शुद्धचैतन्यमात्रम् अर्थः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Lakṣaṇā is the secondary (indicative) function of a word — operative when the primary (śakya) meaning is blocked, and conveying a related meaning either by convention or by purpose.<br><br>
-    Three kinds: (1) Jahallakṣaṇā — completely abandons the primary meaning. E.g., "gaṅgāyāṃ ghoṣaḥ" where "gaṅgā" shifts from "stream" to "bank." (2) Ajahallakṣaṇā — retains the primary meaning, adds a secondary one. (3) Jahadajahallakṣaṇā — partially retains and partially abandons, as in the great Upaniṣadic statement "Tat tvam asi" (That thou art), where the conditioned aspects of both terms are negated and pure consciousness alone is indicated.
-  </p>
-</div>
-
-<!-- 5M Q10 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q28</span>
-    <p class="q-sa">शाब्दबोधे सहकारिणः।</p>
-  </div>
-  <p class="q-en">What are the auxiliary factors (sahakāriṇas) in Śābdabodha (verbal/linguistic cognition)?</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    शाब्दबोधस्य सहकारिकारणानि — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br><br>
-    आकाङ्क्षा — एकस्य पदस्य अन्यपदापेक्षा। यथा — "पच" इति पदं कर्तृ-कर्म-पदापेक्षं करोति।<br><br>
-    योग्यता — पदार्थानाम् परस्परबाधाभावः। "अग्निना सिञ्चति" इति वाक्ये योग्यता नास्ति।<br><br>
-    आसत्तिः — पदानां कालिकसान्निध्यम्। विच्छिन्नोच्चारणे वाक्यं न भवति।<br><br>
-    तात्पर्यम् — वक्तुः अभिप्रायः। शाब्दबोधाय वक्तुः तात्पर्यज्ञानम् आवश्यकम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    The auxiliary factors (sahakāri-kāraṇas) in śābdabodha (cognition generated by verbal testimony) are four: ākāṅkṣā, yogyatā, āsatti (sannidhi), and tātparya.<br><br>
-    Ākāṅkṣā — syntactic expectancy: each word expects others to complete the sense. "Cook!" expects a subject and object.<br><br>
-    Yogyatā — semantic compatibility: the meanings must not contradict each other. "Water with fire" lacks yogyatā.<br><br>
-    Āsatti — temporal proximity: words must be uttered in close succession; a sentence split across days fails.<br><br>
-    Tātparya — the speaker's intention: knowing what the speaker means is essential to correctly understand the sentence.
-  </p>
-</div>
-
-<hr class="divider">
-
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 3 — 15 MARK                           -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s15mark">
-  <span class="badge">15 MARKS</span>
-  <h2>दीर्घप्रबन्धाः — Long Essays</h2>
-</div>
-
-<!-- 15M Q1 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q29</span>
-    <p class="q-sa">अनुमानप्रमाणं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain the pramāṇa of Anumāna (inference) in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>अनुमानस्वरूपम्</strong><br>
-    अनुमानं नाम व्याप्तिविशिष्टपक्षधर्मताज्ञानजन्यं ज्ञानम्। व्याप्तिज्ञानात् पक्षधर्मताज्ञानात् च परामर्शः उत्पद्यते। परामर्शात् अनुमितिः।<br><br>
-    <strong>अनुमानस्य प्रक्रिया</strong><br>
-    १. साध्यः — यः अर्थः अनुमातुं वाञ्छितः (यथा वह्निः)।<br>
-    २. पक्षः — यत्र साध्यः सिषाधयिषितः (यथा पर्वतः)।<br>
-    ३. हेतुः (लिङ्गम्) — साध्येन व्याप्तः पक्षे वर्तमानः धर्मः (यथा धूमः)।<br>
-    ४. व्याप्तिः — हेतोः साध्येन अव्यभिचरितसम्बन्धः।<br>
-    ५. परामर्शः — "पर्वते धूमः वह्निव्याप्तः" इति ज्ञानम्।<br>
-    ६. अनुमितिः — "पर्वतो वह्निमान्" इति ज्ञानम्।<br><br>
-    <strong>अनुमानभेदाः</strong><br>
-    अनुमानं द्विविधम् — स्वार्थानुमानम्, परार्थानुमानञ्च।<br>
-    स्वार्थानुमाने — स्वस्य ज्ञानार्थम् अनुमानम्।<br>
-    परार्थानुमाने — परस्मै बोधनाय पञ्चावयवी प्रयुज्यते — प्रतिज्ञा, हेतुः, उदाहरणम्, उपनयः, निगमनञ्च।<br><br>
-    <strong>हेतोः लक्षणम्</strong><br>
-    हेतोः पञ्च लक्षणानि — पक्षधर्मता, सपक्षसत्त्वम्, विपक्षाव्यावृत्तिः, अबाधितविषयता, असत्प्रतिपक्षता च।<br><br>
-    <strong>हेत्वाभासाः</strong><br>
-    अनुमानस्य दोषाः पञ्च — सव्यभिचारः, विरुद्धः, सत्प्रतिपक्षः, असिद्धः, बाधितः च।<br><br>
-    <strong>उपसंहारः</strong><br>
-    अनुमानम् प्रत्यक्षानुपलब्धार्थस्य ज्ञानसाधनम्। तर्कशास्त्रे अनुमानं सर्वप्रधानम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Anumāna</strong><br>
-    Anumāna (inference) is the cognition generated by parāmarśa — the joint cognition of the hetu as residing in the pakṣa and as pervaded by vyāpti with the sādhya. It is the second of the four pramāṇas in Nyāya.<br><br>
-    <strong>Process of Inference</strong><br>
-    (1) Sādhya — the probandum, what is to be proved (e.g., fire). (2) Pakṣa — the subject where sādhya is to be established (e.g., mountain). (3) Hetu/Liṅga — the probans, present in pakṣa and pervaded by sādhya (e.g., smoke). (4) Vyāpti — the invariable concomitance between hetu and sādhya ("wherever smoke, there fire"). (5) Parāmarśa — the cognition "the smoke on the mountain is pervaded by fire." (6) Anumiti — the resulting cognition "the mountain has fire."<br><br>
-    <strong>Kinds of Anumāna</strong><br>
-    Svārthānumāna — inference for oneself (the mental process, not formally stated). Parārthānumāna — inference stated for another, using the five-membered syllogism (pañcāvayavī): (1) Pratijñā (proposition), (2) Hetu (reason), (3) Udāharaṇa (example), (4) Upanaya (application), (5) Nigamana (conclusion). E.g.: "The mountain has fire (1); because of smoke (2); whatever has smoke has fire, like a kitchen (3); the mountain has smoke (4); therefore the mountain has fire (5)."<br><br>
-    <strong>Five Properties of a Valid Hetu</strong><br>
-    Pakṣa-dharmatā (presence in pakṣa), sapakṣa-sattva (presence in similar cases), vipakṣa-vyāvṛtti (absence in dissimilar cases), abādhita-viṣayatā (not contradicted by other pramāṇas), and asat-pratipakṣatā (not counter-balanced).<br><br>
-    <strong>Fallacies (Hetvābhāsas)</strong><br>
-    Five: Savyabhicāra (irregular), Viruddha (contradictory), Satpratipakṣa (counter-balanced), Asiddha (unproved), Bādhita (contradicted).<br><br>
-    <strong>Conclusion</strong><br>
-    Anumāna is the instrument for knowing what cannot be directly perceived. It is the cornerstone of Nyāya epistemology and logical reasoning.
-  </p>
-</div>
-
-<!-- 15M Q2 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q30</span>
-    <p class="q-sa">हेत्वाभासाः।</p>
-  </div>
-  <p class="q-en">Discuss the Hetvābhāsas (fallacies of the probans) in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>हेत्वाभासस्वरूपम्</strong><br>
-    हेतुवत् आभासते, परन्तु वास्तवेन हेतुः न भवति — इति हेत्वाभासः। हेत्वाभासाः पञ्च सन्ति।<br><br>
-    <strong>१. सव्यभिचारः (अनैकान्तिकः)</strong><br>
-    साध्यवति असाध्यवति च विद्यमानः हेतुः सव्यभिचारः।<br>
-    — साधारणः: "पर्वतो वह्निमान् प्रमेयत्वात्।" प्रमेयत्वं वह्निमति (महानसे) वह्न्यभाववति (ह्रदे) च।<br>
-    — असाधारणः: "शब्दः नित्यः शब्दत्वात्।" शब्दत्वं शब्दमात्रे — सपक्षविपक्षव्यावृत्तम्।<br>
-    — अनुपसंहारी: "सर्वं अनित्यं प्रमेयत्वात्।" सर्वस्यापि पक्षत्वात् दृष्टान्तो नास्ति।<br><br>
-    <strong>२. विरुद्धः</strong><br>
-    साध्याभावं साधयति। यथा — "शब्दः नित्यः कृतकत्वात्।" कृतकत्वं तु अनित्यत्वव्याप्तम्।<br><br>
-    <strong>३. सत्प्रतिपक्षः</strong><br>
-    यस्य हेतोः प्रतिपक्षेऽपि सत् हेत्वन्तरम् अस्ति। यथा — "शब्दः नित्यः श्रावणत्वात्। शब्दः अनित्यः कृतकत्वात्।" — एतौ द्वौ विरुद्धौ हेतू।<br><br>
-    <strong>४. असिद्धः</strong><br>
-    पक्षे हेतोः सिद्धत्वाभावः। त्रिविधः — आश्रयासिद्धः, स्वरूपासिद्धः, व्याप्यत्वासिद्धः।<br>
-    — आश्रयासिद्धः: "गगनपुष्पं सुरभि, द्रव्यत्वात्।" गगनपुष्पमेव नास्ति।<br>
-    — स्वरूपासिद्धः: "शब्दः नित्यः स्पर्शवत्त्वात्।" शब्दे स्पर्शः नास्ति।<br>
-    — व्याप्यत्वासिद्धः: "वह्निः धूमवान् धूमे सति।" धूमः वह्निव्याप्तः नास्ति।<br><br>
-    <strong>५. बाधितः</strong><br>
-    यः हेतुः अन्यप्रमाणबाधितसाध्यसाधकः। यथा — "वह्निः शीतः द्रव्यत्वात्।" वह्नेः शैत्यम् अनुमानेन गम्यते, परन्तु प्रत्यक्षबाधितम्।<br><br>
-    <strong>उपसंहारः</strong><br>
-    एते पञ्च हेत्वाभासाः अनुमानदोषाः। तान् परिहृत्य शुद्धहेतुना अनुमानं कर्तव्यम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Hetvābhāsa</strong><br>
-    A hetvābhāsa appears to be a valid hetu (probans) but is actually fallacious — it violates one or more conditions of a valid hetu. The Nyāya system enumerates five hetvābhāsas.<br><br>
-    <strong>1. Savyabhicāra (Irregular/Erratic)</strong><br>
-    The hetu occurs in both sapakṣa (where sādhya holds) and vipakṣa (where sādhya does not hold) — lacking vyāpti. Three sub-kinds: (1) Sādhāraṇa (too wide) — e.g., "The mountain has fire because of knowability" — knowability is present in fire-possessing places and also in non-fire places like a lake, so it wanders across both. (2) Asādhāraṇa (too narrow) — e.g., "Sound is eternal because of soundness (śabdatva)" — soundness belongs only to sound, absent from both sapakṣa and vipakṣa, so it generates only doubt. (3) Anupasaṃhāri — e.g., "Everything is non-eternal because of knowability" — since everything is the pakṣa, no sapakṣa or vipakṣa example can be provided.<br><br>
-    <strong>2. Viruddha (Contradictory)</strong><br>
-    The hetu is pervaded by the contradictory of the sādhya — it proves the opposite of what is intended. E.g., "Sound is eternal because it is produced" — "producedness" actually proves non-eternality.<br><br>
-    <strong>3. Satpratipakṣa (Counter-balanced)</strong><br>
-    A genuine counter-hetu of equal strength exists, leading to opposing conclusions simultaneously. Neither inference can be accepted. E.g., "Sound is eternal because of audibility" versus "Sound is non-eternal because of producedness."<br><br>
-    <strong>4. Asiddha (Unestablished)</strong><br>
-    The hetu is not established in the pakṣa. Three sub-kinds: Āśrayāsiddha (the pakṣa itself does not exist — e.g., "sky-flower"); Svarūpāsiddha (the hetu does not exist in the pakṣa — e.g., "sound has touch"); Vyāpyatvāsiddha (the hetu's pervadedness is not established).<br><br>
-    <strong>5. Bādhita (Contradicted)</strong><br>
-    The hetu's sādhya is already contradicted by a stronger pramāṇa (usually perception). E.g., "Fire is cold because it is a substance" — the sādhya (coldness of fire) is directly refuted by perception.<br><br>
-    <strong>Conclusion</strong><br>
-    The five hetvābhāsas cover all possible ways a hetu can fail. A logician must identify and avoid these to produce a sound (saddhetu) inference.
-  </p>
-</div>
-
-<!-- 15M Q3 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q31</span>
-    <p class="q-sa">उपमानम्।</p>
-  </div>
-  <p class="q-en">Discuss Upamāna (comparison/analogy) as a pramāṇa in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>उपमानस्वरूपम्</strong><br>
-    उपमानं सादृश्यज्ञानजन्यसंज्ञासंज्ञिसम्बन्धज्ञानकरणम्। तज्जन्यं ज्ञानं उपमितिः।<br><br>
-    <strong>उपमितेः प्रक्रिया</strong><br>
-    (१) पूर्वमेव "गवयः गोसदृशः" इति श्रुतम्।<br>
-    (२) वने गवयं दृष्ट्वा सादृश्यं स्मृतम् — "अयं गोसदृशः।"<br>
-    (३) तदनन्तरं "अयमेव गवयशब्दवाच्यः" इति संज्ञासंज्ञिसम्बन्धः ज्ञायते।<br>
-    एतत् उपमितिज्ञानम्।<br><br>
-    <strong>उपमाने व्यापारः</strong><br>
-    सादृश्यस्मृतिः उपमाने व्यापारः। आप्तवाक्यजन्यसादृश्यज्ञानस्मृत्या संज्ञासंज्ञिसम्बन्धज्ञानं जायते।<br><br>
-    <strong>उपमानस्य स्वातन्त्र्यम्</strong><br>
-    नैयायिकाः उपमानं स्वतन्त्रं प्रमाणम् इति स्वीकुर्वन्ति। बौद्धाः तु उपमानम् अनुमानान्तर्गतम् इति वदन्ति। परन्तु नैयायिकमते — अत्र व्याप्तिज्ञानं नास्ति, सादृश्यज्ञानं कारणम् — अतः उपमानं स्वतन्त्रम्।<br><br>
-    <strong>उपमितिः</strong><br>
-    का उपमितिः? संज्ञासंज्ञिसम्बन्धविषयकं ज्ञानम् उपमितिः। "अयं गवयः" इति ज्ञानम् उपमितिः।<br><br>
-    <strong>उपमानस्य उपयोगः</strong><br>
-    अज्ञातार्थज्ञाने उपमानं प्रमाणम्। पशुपक्षिनामज्ञाने, अपरिचितव्यक्तिपरिचये च उपमानम् उपयुज्यते।<br><br>
-    <strong>उपसंहारः</strong><br>
-    उपमानं प्रत्यक्ष-अनुमान-शब्दव्यतिरिक्तम् स्वतन्त्रं प्रमाणम्। नैयायिकचतुष्टयप्रमाणेषु तृतीयस्थाने विराजते।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Upamāna</strong><br>
-    Upamāna is the pramāṇa whose result (upamiti) is the cognition of the relation between a name (saṃjñā) and its referent (saṃjñī), produced through the cognition of similarity (sādṛśya).<br><br>
-    <strong>Process of Upamiti</strong><br>
-    (1) One has previously heard from a trustworthy person: "A gavaya looks like a cow." (2) On going to the forest, one perceives an animal and cognises the similarity: "This looks like a cow." (3) Through this similarity-cognition, one recalls the description and arrives at: "This is what is called a gavaya." This final cognition — of the word–object relation — is upamiti.<br><br>
-    <strong>Operative Function (Vyāpāra)</strong><br>
-    The vyāpāra in upamāna is sādṛśya-smṛti — the memory of the similarity as communicated by verbal testimony. It is this smṛti, combined with direct perception of the similar object, that generates the upamiti.<br><br>
-    <strong>Upamāna as an Independent Pramāṇa</strong><br>
-    The Naiyāyikas accept upamāna as a fourth, independent pramāṇa. Buddhists reduce it to anumāna. The Naiyāyika counter: no vyāpti is operative here — the mediating cognition is similarity, not invariable concomitance — therefore upamāna is irreducibly distinct.<br><br>
-    <strong>Definition of Upamiti</strong><br>
-    Upamiti is the cognition whose content is the name-object relation (saṃjñā-saṃjñi-sambandha). "This is a gavaya" — the first-time recognition via comparison — is upamiti.<br><br>
-    <strong>Practical Use</strong><br>
-    Upamāna is invaluable for learning the names of unfamiliar animals, plants, and people through resemblance to known entities.<br><br>
-    <strong>Conclusion</strong><br>
-    Upamāna is the third of the four Nyāya pramāṇas — distinct from perception, inference, and verbal testimony. Its unique character lies in the role of perceived similarity as the means to new propositional knowledge.
-  </p>
-</div>
-
-<!-- 15M Q4 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q32</span>
-    <p class="q-sa">शाब्दबोधहेतुः।</p>
-  </div>
-  <p class="q-en">Discuss the causes (hetus) of Śābdabodha (verbal cognition).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>शाब्दबोधस्वरूपम्</strong><br>
-    शब्दप्रमाणजन्यं ज्ञानं शाब्दबोधः। आप्तोक्तेः शब्दात् यत् ज्ञानम् उत्पद्यते तत् शाब्दबोधः।<br><br>
-    <strong>शाब्दबोधस्य हेतवः</strong><br>
-    शाब्दबोधस्य प्रधानहेतुः — वाक्यस्य पदानां शक्तिः। तस्याः सहकारिकारणानि — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br><br>
-    <strong>१. शक्तिः</strong><br>
-    ईश्वरसंकेतः शक्तिः। शक्त्या एव पदं स्वार्थं बोधयति। "घट" पदं शक्त्या घटम् एव बोधयति।<br><br>
-    <strong>२. आकाङ्क्षा</strong><br>
-    एकस्य पदस्य अन्यपदापेक्षा। "आनय" इति पदं "किम्" इति अपेक्षते। आकाङ्क्षारहिते वाक्यं न भवति।<br><br>
-    <strong>३. योग्यता</strong><br>
-    पदार्थानां परस्परबाधाभावः। "अग्निना सिञ्चति" इत्यत्र अग्निः सेचने अयोग्यः — योग्यता नास्ति, अतः शाब्दबोधो न जायते।<br><br>
-    <strong>४. आसत्तिः (सान्निध्यम्)</strong><br>
-    पदानां कालिकसान्निध्यम्। यदि "गां" इत्युक्त्वा वर्षानन्तरं "आनय" उच्यते तदा वाक्यं न भवति।<br><br>
-    <strong>५. तात्पर्यम्</strong><br>
-    वक्तुः अभिप्रायः। एकस्यैव वाक्यस्य अनेकार्थे सम्भवे वक्तुः तात्पर्यज्ञानम् अर्थनिर्णये साहाय्यं करोति।<br><br>
-    <strong>उपसंहारः</strong><br>
-    शक्तिर्मुख्या। आकाङ्क्षा-योग्यता-आसत्ति-तात्पर्याणि सहकारिणः। एतेषां समवायेन शाब्दबोधः जायते।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Śābdabodha</strong><br>
-    Śābdabodha is the cognition generated by verbal testimony (śabda-pramāṇa) — the knowledge one gains from a reliable (āpta) speaker's utterance.<br><br>
-    <strong>Primary Cause: Śakti</strong><br>
-    The primary cause of śābdabodha is the śakti (denotative power) of each word — its God-ordained relation to its meaning. "Pot" (ghaṭa) denotes a pot by śakti.<br><br>
-    <strong>Auxiliary Causes (Sahakāriṇas)</strong><br><br>
-    1. Ākāṅkṣā (Syntactic Expectancy) — Each word in a sentence expects other words to complete the intended sense. "Bring!" expects "what?" Without ākāṅkṣā, words are mere isolated utterances, not a sentence.<br><br>
-    2. Yogyatā (Semantic Compatibility) — The meanings of words must not contradict each other. "Water the plants with fire" — fire and watering are semantically incompatible; no valid śābdabodha arises.<br><br>
-    3. Āsatti / Sannidhi (Temporal Proximity) — Words must be uttered in close temporal sequence. If "bring" is uttered one year after "cow," no cognitive unit (vākya) is formed.<br><br>
-    4. Tātparya (Speaker's Intention) — Where a sentence is ambiguous, the speaker's intended meaning resolves the ambiguity. E.g., "saindhava" can mean both "horse" and "salt" — context and speaker's intent determine which is meant.<br><br>
-    <strong>Conclusion</strong><br>
-    Śakti is the primary cause; ākāṅkṣā, yogyatā, āsatti, and tātparya are indispensable auxiliaries. Their joint operation produces the valid verbal cognition that is śābdabodha.
-  </p>
-</div>
-
-<!-- 15M Q5 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q33</span>
-    <p class="q-sa">शाब्दबोधः।</p>
-  </div>
-  <p class="q-en">Write a detailed essay on Śābdabodha (verbal cognition / cognition from word-testimony).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>शाब्दबोधस्वरूपम्</strong><br>
-    शब्दजन्यं ज्ञानं शाब्दबोधः। शब्दः नाम आप्तोपदिष्टः व्याकरणसम्मतः पदसमूहः। तस्माद् उत्पन्नं बोधनं शाब्दबोधः।<br><br>
-    <strong>शब्दप्रमाणस्य स्वरूपम्</strong><br>
-    शब्दः द्विविधः — वैदिकः, लौकिकः च। वैदिकशब्दः ईश्वरप्रणीतः — अपौरुषेयः। लौकिकशब्दः आप्तमनुष्यप्रणीतः। उभाभ्यां शाब्दबोधः सम्भवति।<br><br>
-    <strong>पदस्य अर्थबोधनप्रक्रिया</strong><br>
-    प्रत्येकं पदं शक्त्या स्वार्थं बोधयति। पदानां संयोगे वाक्यं जायते। वाक्यात् वाक्यार्थबोधः। वाक्यार्थः — "कारकसम्बन्धविशिष्टक्रियाविषयकं बोधनम्।"<br><br>
-    <strong>शाब्दबोधस्य साधनानि</strong><br>
-    शाब्दबोधाय पदस्य शक्तिः मुख्या। सहकारिणः — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br>
-    — आकाङ्क्षा: पदानाम् अन्योन्यापेक्षा।<br>
-    — योग्यता: पदार्थानां सङ्गतता।<br>
-    — आसत्तिः: उच्चारणे कालिकसान्निध्यम्।<br>
-    — तात्पर्यम्: वक्तुः विवक्षा।<br><br>
-    <strong>शाब्दबोधे लक्षणाया भूमिका</strong><br>
-    यत्र शक्यार्थः बाधितः तत्र लक्षणाशक्त्या अर्थः बोध्यते। "गङ्गायां घोषः" — गङ्गाशब्दस्य शक्यार्थः प्रवाहः, परन्तु लक्षणया तीरम् अर्थः गृह्यते।<br><br>
-    <strong>शाब्दबोधस्य प्रकाराः</strong><br>
-    — मुख्यार्थबोधः (शक्त्या)।<br>
-    — लाक्षणिकार्थबोधः (लक्षणया)।<br>
-    — व्यङ्ग्यार्थबोधः (व्यञ्जनया)।<br><br>
-    <strong>शाब्दबोधस्य महत्त्वम्</strong><br>
-    वेदागमपुराणादिग्रन्थेभ्यः ज्ञानप्राप्तौ शब्दप्रमाणं परमावश्यकम्। गुरूपदेशेन शिष्यः ज्ञानं प्राप्नोति — एतत् सर्वं शाब्दबोधपरम्परायाः फलम्।<br><br>
-    <strong>उपसंहारः</strong><br>
-    शाब्दबोधः न केवलं ज्ञानसाधनम् — अपितु भारतीयज्ञानपरम्पराया मूलाधारः। तर्कशास्त्रे, मीमांसायां, वेदान्ते च शाब्दबोधस्य विचारः अत्यन्तं महत्त्वपूर्णः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Śābdabodha</strong><br>
-    Śābdabodha is the valid cognition produced by verbal testimony (śabda). It arises when a grammatically well-formed sentence, uttered by a reliable speaker (āpta), is heard and understood.<br><br>
-    <strong>Two Kinds of Śabda</strong><br>
-    Vaidika śabda — the Vedas, which the Naiyāyikas consider to be authored by an omniscient God (Īśvara), hence impersonal and infallible. Laukika śabda — statements of reliable human speakers in everyday life. Both generate valid śābdabodha.<br><br>
-    <strong>How Words Produce Meaning</strong><br>
-    Each word conveys its own meaning through its śakti (denotative power). A collection of words with ākāṅkṣā, yogyatā, and āsatti forms a vākya (sentence). The vākya generates vākyārtha-bodha — cognition of the complete propositional content, understood as: cognition of an action qualified by its kāraka (case) relations.<br><br>
-    <strong>Causes of Śābdabodha</strong><br>
-    Primary: śakti of each word. Auxiliaries: (1) Ākāṅkṣā — mutual expectancy of words; (2) Yogyatā — semantic non-contradiction; (3) Āsatti — temporal proximity of utterance; (4) Tātparya — speaker's intention, resolving ambiguity.<br><br>
-    <strong>Role of Lakṣaṇā in Śābdabodha</strong><br>
-    When the śakya (primary denotative) meaning is blocked, lakṣaṇā (secondary/indicative function) operates. "Gaṅgāyāṃ ghoṣaḥ" — "on the Gaṅgā" — shifts from the primary meaning (stream) to the related meaning (bank), because a village cannot exist in a river-stream.<br><br>
-    <strong>Three Modes of Verbal Meaning</strong><br>
-    (1) Mukhyārtha-bodha via śakti (primary denotation), (2) Lākṣaṇikārtha-bodha via lakṣaṇā (secondary), (3) Vyaṅgyārtha-bodha via vyañjanā (suggestion/implication).<br><br>
-    <strong>Significance</strong><br>
-    Śābdabodha is the foundation of all scriptural and traditional knowledge transmission — from the Vedas to the guru-śiṣya paramparā. Without the validity of verbal testimony, no received knowledge would be epistemologically grounded.<br><br>
-    <strong>Conclusion</strong><br>
-    Śābdabodha is not merely one pramāṇa among four — it is the backbone of the Indian intellectual tradition. Its analysis in Nyāya, Mīmāṃsā, and Vedānta represents one of the most sophisticated philosophies of language in the world.
-  </p>
-</div>
-
-<div style="text-align:center; margin-top:48px; color:var(--ink-dim); font-size:.85rem; letter-spacing:.5px;">
-  तर्कसोपानम् · सर्वे उत्तराः · शुभास्ते परीक्षायाः
+<div class="note">
+  Built to match QP 21B4MN1SBS3 exactly: I &middot; 10 short answers (1-mark), II &middot; 6 short essays (5-mark, attempt any 4), III &middot; 3 long essays (15-mark, attempt 2). The Sanskrit is clean exam-style prose; verify a couple of factual one-liners (Q1 ākhyāyikā = Harshacharita; Q6 Jabali's hermitage; Q8 Acchoda lake) against your teacher's key if in doubt.
 </div>
 
 </body>
