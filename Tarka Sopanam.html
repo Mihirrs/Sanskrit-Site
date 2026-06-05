@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>तर्कसोपानम् — परीक्षा-तैयारी</title>
+<title>तर्कसोपानम् — Reading Notes</title>
 <style>
   :root {
     --bg: #0a0b0d;
@@ -16,151 +16,109 @@
     --accent: #d4883a;
     --jade: #6fbfa3;
     --rose: #c47a7a;
-    --qnum: #3a4a5a;
+    --lavender: #9b8ec4;
+    --steel: #6a9dbf;
   }
   *, *::before, *::after { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
   html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
   body {
     font-family: Georgia, "Iowan Old Style", serif;
-    line-height: 1.7;
+    line-height: 1.75;
     padding: 12px 14px 80px;
     max-width: 720px;
     margin: 0 auto;
   }
-  .deva {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", serif;
-    line-height: 1.9;
-  }
 
   /* ── Header ── */
-  header {
-    text-align: center;
-    padding: 20px 4px 22px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 24px;
-  }
-  header h1 {
-    font-size: 2rem; margin: 0 0 6px;
-    color: var(--deva);
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-  }
-  header .sub { color: var(--ink-dim); font-size: .95rem; letter-spacing: .5px; }
+  header { text-align: center; padding: 20px 4px 22px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+  header h1 { font-size: 2rem; margin: 0 0 6px; color: var(--deva); font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif; }
+  header .sub { color: var(--ink-dim); font-size: .9rem; letter-spacing: .5px; }
 
-  /* ── Section headers ── */
-  .section-title {
-    display: flex; align-items: center; gap: 12px;
-    margin: 36px 0 16px;
+  /* ── TOC ── */
+  .toc { background: var(--card2); border-radius: 8px; padding: 14px 16px; margin-bottom: 28px; }
+  .toc h3 { margin: 0 0 10px; font-size: .85rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
+  .toc a { display: block; color: var(--ink-dim); text-decoration: none; font-size: .85rem; padding: 2px 0; }
+  .toc a:hover { color: var(--ink); }
+
+  /* ── Topic block ── */
+  .topic {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 16px 16px;
+    margin-bottom: 18px;
   }
-  .section-title .badge {
+  .topic.secondary { border-left-color: var(--jade); }
+  .topic.tertiary  { border-left-color: var(--lavender); }
+  .topic.info      { border-left-color: var(--steel); }
+
+  .topic h2 {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: var(--deva);
+    font-size: 1.2rem;
+    margin: 0 0 4px;
+    font-weight: normal;
+  }
+  .topic .en-title {
+    color: var(--accent);
+    font-size: .8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .topic.secondary .en-title { color: var(--jade); }
+  .topic.tertiary .en-title  { color: var(--lavender); }
+  .topic.info .en-title      { color: var(--steel); }
+
+  /* ── Mūlam box ── */
+  .mulam {
+    background: #0d1015;
+    border-left: 2px solid var(--deva);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: var(--deva);
+    font-size: .98rem;
+    line-height: 1.9;
+  }
+  .mulam .label { font-size: .65rem; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-dim); display: block; margin-bottom: 2px; }
+
+  /* ── Body text ── */
+  .topic p { margin: 0 0 10px; font-size: .95rem; color: var(--ink); }
+  .topic p:last-child { margin-bottom: 0; }
+  .topic .en { color: var(--ink-dim); font-style: italic; font-size: .88rem; }
+
+  /* ── Table ── */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: .88rem; }
+  th { background: #1e2530; color: var(--accent); text-align: left; padding: 6px 10px; font-weight: normal; letter-spacing: .5px; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: top; }
+  td.sa { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif; color: var(--deva); }
+  tr:last-child td { border-bottom: none; }
+
+  /* ── Section divider ── */
+  .section-head {
+    display: flex; align-items: center; gap: 10px;
+    margin: 32px 0 14px;
+  }
+  .section-head .chip {
     background: var(--accent);
     color: #000;
-    font-size: .75rem;
+    font-size: .7rem;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 3px 10px;
     border-radius: 20px;
-    white-space: nowrap;
   }
-  .section-title h2 {
-    font-size: 1.1rem;
-    margin: 0;
-    color: var(--accent);
-    font-variant: small-caps;
-    letter-spacing: 1px;
-  }
+  .section-head h3 { margin: 0; font-size: 1rem; color: var(--accent); font-variant: small-caps; letter-spacing: 1px; }
 
-  /* ── QA Card ── */
-  .qa {
-    background: var(--card);
-    border-left: 3px solid var(--line);
-    border-radius: 8px;
-    padding: 16px 16px 14px;
-    margin-bottom: 14px;
-    transition: border-color .2s;
-  }
-  .qa:hover { border-color: var(--accent); }
-
-  .qa .qhead {
-    display: flex; gap: 10px; align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  .qa .qnum {
-    background: var(--qnum);
-    color: var(--ink-dim);
-    font-size: .72rem;
-    font-weight: bold;
-    padding: 2px 7px;
-    border-radius: 4px;
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-  .qa .q-sa {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-    color: var(--deva);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin: 0;
-  }
-  .qa .q-en {
-    font-style: italic;
-    color: var(--ink-dim);
-    font-size: .88rem;
-    margin: 2px 0 12px 0;
-  }
-
-  .label {
-    font-size: .7rem;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .label.ans-sa { color: var(--jade); }
-  .label.ans-en { color: var(--rose); }
-
-  .ans-sa-text {
-    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
-    color: #e8dfc8;
-    font-size: 1rem;
-    line-height: 1.9;
-    margin: 0 0 10px 0;
-    padding: 10px 12px;
-    background: #0f1215;
-    border-radius: 6px;
-  }
-  .ans-en-text {
-    color: var(--ink-dim);
-    font-size: .92rem;
-    line-height: 1.65;
-    margin: 0 0 0 0;
-    padding: 10px 12px;
-    background: #0d1118;
-    border-radius: 6px;
-    font-style: italic;
-  }
-
-  /* ── Long answer ── */
-  .qa.long { border-left-color: var(--jade); }
-  .qa.long .q-sa { font-size: 1.08rem; }
-
-  /* ── TOC ── */
-  .toc {
-    background: var(--card2);
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin-bottom: 28px;
-  }
-  .toc h3 { margin: 0 0 10px; font-size: .9rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
-  .toc a { display: block; color: var(--ink-dim); text-decoration: none; font-size: .88rem; padding: 3px 0; }
-  .toc a:hover { color: var(--ink); }
-
-  hr.divider { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+  hr.div { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
 
   @media (max-width: 380px) {
-    body { font-size: 15px; padding: 8px 10px 60px; }
+    body { font-size: 14px; padding: 8px 10px 60px; }
     header h1 { font-size: 1.5rem; }
-    .qa { padding: 12px 11px; }
-    .ans-sa-text, .ans-en-text { font-size: .9rem; padding: 8px 9px; }
+    .topic { padding: 12px 11px; }
   }
 </style>
 </head>
@@ -168,693 +126,415 @@
 
 <header>
   <h1>तर्कसोपानम्</h1>
-  <div class="sub">Exam Prep · All Sections · Sanskrit + English</div>
+  <div class="sub">Reading Notes · All Exam Topics · Sanskrit + English</div>
 </header>
 
 <div class="toc">
-  <h3>Contents</h3>
-  <a href="#s2mark">§1 — 2-Mark Questions (One Word / Short Answer)</a>
-  <a href="#s5mark">§2 — 5-Mark Questions (लघुप्रबन्धाः)</a>
-  <a href="#s15mark">§3 — 15-Mark Questions (दीर्घप्रबन्धाः)</a>
+  <h3>Topics</h3>
+  <a href="#nyaya">1. न्यायः — Nyāya &amp; Pramāṇas</a>
+  <a href="#anumana">2. अनुमानम् — Anumāna &amp; Anumiti</a>
+  <a href="#paribhasha">3. पारिभाषिकाः शब्दाः — Key Terms (Pakṣa, Sādhya, Hetu, Dṛṣṭānta)</a>
+  <a href="#paramarsha">4. परामर्शः — Parāmarśa</a>
+  <a href="#vyapti">5. व्याप्तिः — Vyāpti, Pāka, Saugamyatā</a>
+  <a href="#linga">6. लिङ्गम् — Liṅga (3 kinds)</a>
+  <a href="#hetvabhasa">7. हेत्वाभासाः — The Five Fallacies</a>
+  <a href="#upamana">8. उपमानम् — Upamāna</a>
+  <a href="#karana">9. कारणम् — Kāraṇa (3 kinds)</a>
+  <a href="#anubhuti">10. अनुभूतिः — Anubhūti</a>
+  <a href="#shabda">11. शब्दः — Śabda, Śakti, Lakṣaṇā</a>
+  <a href="#vakya">12. वाक्यम् — Vākya &amp; Śābdabodha</a>
 </div>
 
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 1 — 2 MARK / ONE-WORD                  -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s2mark">
-  <span class="badge">1 MARK</span>
-  <h2>One Word Answers</h2>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">FOUNDATIONS</span><h3>Nyāya &amp; Pramāṇas</h3></div>
+
+<div class="topic info" id="nyaya">
+  <h2>न्यायः</h2>
+  <span class="en-title">Nyāya — The System of Logic</span>
+  <div class="mulam"><span class="label">Definition</span>प्रमाणैः अर्थपरीक्षणं न्यायः।</div>
+  <p>Nyāya is the examination of objects by means of valid instruments of knowledge (pramāṇas). The Nyāya system recognises four pramāṇas:</p>
+  <table>
+    <tr><th>#</th><th class="sa">पमाणम्</th><th>Name</th><th>Meaning</th></tr>
+    <tr><td>1</td><td class="sa">प्रत्यक्षम्</td><td>Pratyakṣa</td><td>Direct perception</td></tr>
+    <tr><td>2</td><td class="sa">अनुमानम्</td><td>Anumāna</td><td>Inference</td></tr>
+    <tr><td>3</td><td class="sa">उपमानम्</td><td>Upamāna</td><td>Comparison / analogy</td></tr>
+    <tr><td>4</td><td class="sa">शब्दः</td><td>Śabda</td><td>Verbal testimony</td></tr>
+  </table>
+  <p class="en">Anumāna follows pratyakṣa and precedes upamāna. It is the most analysed pramāṇa in the Tarka Sopanam syllabus.</p>
 </div>
 
-<!-- Q1 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q1</span>
-    <p class="q-sa">अनुमानस्य लक्षणं किम्?</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">INFERENCE</span><h3>Anumāna &amp; Anumiti</h3></div>
+
+<div class="topic" id="anumana">
+  <h2>अनुमानम् · अनुमितिः</h2>
+  <span class="en-title">Anumāna (Inference) &amp; Anumiti (Inferential Cognition)</span>
+  <div class="mulam">
+    <span class="label">Mūlam (textbook)</span>
+    अनुमितिकरणमनुमानम् ।<br>
+    परामर्शजन्यज्ञानमनुमितिः ।
   </div>
-  <p class="q-en">What is the definition of Anumāna?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">अनुमितिकरणम्</p>
-  <p class="ans-en-text">The instrument that produces anumiti (inferential cognition)</p>
+  <p><strong style="color:var(--deva)">अनुमानम्</strong> — the instrument (karaṇa) that produces anumiti. It is the pramāṇa that gives knowledge of what cannot be directly perceived, by means of a mark (liṅga/hetu).</p>
+  <p><strong style="color:var(--deva)">अनुमितिः</strong> — the result (phala): the fresh inferential cognition of the sādhya in the pakṣa. It is born of parāmarśa.</p>
+  <p><strong>The full sequence:</strong></p>
+  <table>
+    <tr><th>Step</th><th>Sanskrit</th><th>What happens</th></tr>
+    <tr><td>1</td><td class="sa">धूमदर्शनम्</td><td>Smoke seen on the mountain</td></tr>
+    <tr><td>2</td><td class="sa">व्याप्तिस्मरणम्</td><td>Recall: "wherever smoke, there fire"</td></tr>
+    <tr><td>3</td><td class="sa">परामर्शः</td><td>"वह्निव्याप्यधूमवान् अयं पर्वतः" — this mountain has fire-pervaded smoke</td></tr>
+    <tr><td>4</td><td class="sa">अनुमितिः</td><td>"पर्वतो वह्निमान्" — the mountain has fire ✓</td></tr>
+  </table>
+  <p class="en">Key roles: Anumāna = karaṇa (instrument). Parāmarśa = vyāpāra (operative act). Anumiti = phala (result/cognition).</p>
 </div>
 
-<!-- Q2 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q2</span>
-    <p class="q-sa">परामर्शस्य लक्षणं किम्?</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">KEY TERMS</span><h3>Pakṣa, Sādhya, Hetu, Dṛṣṭānta</h3></div>
+
+<div class="topic secondary" id="paribhasha">
+  <h2>पारिभाषिकाः शब्दाः</h2>
+  <span class="en-title">Technical Terms of Inference</span>
+  <table>
+    <tr><th>Term</th><th>Sanskrit definition</th><th>English</th><th>Example</th></tr>
+    <tr>
+      <td class="sa">पक्षः</td>
+      <td class="sa">सन्दिग्धसाध्यवान् धर्मी</td>
+      <td>Subject — where sādhya is to be proved</td>
+      <td>Mountain (पर्वतः)</td>
+    </tr>
+    <tr>
+      <td class="sa">साध्यम्</td>
+      <td class="sa">यत् साध्यते तत् साध्यम्</td>
+      <td>What is to be proved (major term)</td>
+      <td>Fire (वह्निः)</td>
+    </tr>
+    <tr>
+      <td class="sa">हेतुः</td>
+      <td class="sa">पक्षे साध्यस्य साधने किञ्चित् निमित्तम्</td>
+      <td>Probans / reason (minor term)</td>
+      <td>Smoke (धूमः)</td>
+    </tr>
+    <tr>
+      <td class="sa">दृष्टान्तः</td>
+      <td class="sa">साध्यसाधनसाहचर्यदृष्टस्थलम्</td>
+      <td>Example where both sādhya and hetu are seen</td>
+      <td>Kitchen (महानसम्)</td>
+    </tr>
+    <tr>
+      <td class="sa">सपक्षः</td>
+      <td class="sa">साध्यवान् पक्षभिन्नः</td>
+      <td>Similar instance (where sādhya exists)</td>
+      <td>Kitchen (has fire)</td>
+    </tr>
+    <tr>
+      <td class="sa">विपक्षः</td>
+      <td class="sa">साध्याभाववान्</td>
+      <td>Dissimilar instance (where sādhya absent)</td>
+      <td>Lake (no fire)</td>
+    </tr>
+  </table>
+  <p class="en">The inference "पर्वतो वह्निमान् धूमात्" maps as: pakṣa = mountain, sādhya = fire, hetu = smoke, dṛṣṭānta = kitchen.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">INFERENCE</span><h3>Parāmarśa</h3></div>
+
+<div class="topic" id="paramarsha">
+  <h2>परामर्शः</h2>
+  <span class="en-title">Parāmarśa — The Operative Cognition</span>
+  <div class="mulam">
+    <span class="label">Mūlam (textbook)</span>
+    व्याप्तिविशिष्टपक्षधर्मताज्ञानं परामर्शः ।<br>
+    यथा — <em>वह्निव्याप्यधूमवान् अयं पर्वतः</em> इति ज्ञानं परामर्शः ।<br>
+    तज्जन्यं <em>पर्वतो वह्निमान्</em> इति ज्ञानमनुमितिः ।
   </div>
-  <p class="q-en">What is the definition of Parāmarśa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">व्याप्तिविशिष्टपक्षधर्मताज्ञानम्</p>
-  <p class="ans-en-text">Cognition of hetu in pakṣa pervaded by vyāpti</p>
+  <p>Parāmarśa is the cognition in which:</p>
+  <table>
+    <tr><th>Component</th><th>What is cognised</th></tr>
+    <tr><td class="sa">पक्षधर्मता</td><td>The hetu (smoke) is present in the pakṣa (mountain)</td></tr>
+    <tr><td class="sa">व्याप्तिः</td><td>That very hetu is pervaded by the sādhya (fire)</td></tr>
+  </table>
+  <p>Both are grasped <em>together</em> in one cognition — that is parāmarśa. It is the vyāpāra (operative act) of anumāna and the immediate (antima) cause of anumiti.</p>
+  <p class="en">The textbook defines parāmarśa's two viṣayas (objects) as pakṣadharmatā and vyāpti — which is also a 1-mark answer (Q13).</p>
 </div>
 
-<!-- Q3 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q3</span>
-    <p class="q-sa">दृष्टान्तः नाम कः?</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">INFERENCE</span><h3>Vyāpti, Pāka, Saugamyatā</h3></div>
+
+<div class="topic secondary" id="vyapti">
+  <h2>व्याप्तिः</h2>
+  <span class="en-title">Vyāpti — Invariable Concomitance</span>
+  <div class="mulam"><span class="label">Definition</span>अव्यभिचरितसहचरणं व्याप्तिः — हेतोः साध्येन अनिवार्यसम्बन्धः।</div>
+  <table>
+    <tr><th>Kind</th><th>Sanskrit</th><th>Form</th><th>Example</th></tr>
+    <tr><td>Positive</td><td class="sa">अन्वयव्याप्तिः</td><td>Wherever hetu → there sādhya</td><td>Wherever smoke → fire</td></tr>
+    <tr><td>Negative</td><td class="sa">व्यतिरेकव्याप्तिः</td><td>Wherever no sādhya → no hetu</td><td>Wherever no fire → no smoke</td></tr>
+  </table>
+  <p>Vyāpti is the foundation of anumāna. Without it, the hetu has no inferential force.</p>
+
+  <h2 style="margin-top:16px">पाकः · सौगम्यता</h2>
+  <span class="en-title">Pāka &amp; Saugamyatā — Methods of Grasping Vyāpti</span>
+  <div class="mulam"><span class="label">Pāka</span>बहुशः दर्शनजनितसंस्कारेण व्याप्तिनिश्चयः पाकः।</div>
+  <p><strong style="color:var(--deva)">पाकः</strong> — the firm cognition of vyāpti arising from the mental impression (saṃskāra) left by repeated co-observation of hetu and sādhya. Like knowing "smoke always goes with fire" after seeing it many times.</p>
+  <p><strong style="color:var(--deva)">सौगम्यता</strong> — one specific type (bheda) of pāka; the easy or smooth method of grasping vyāpti.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">INFERENCE</span><h3>Liṅga — Three Kinds of Hetu</h3></div>
+
+<div class="topic tertiary" id="linga">
+  <h2>लिङ्गं त्रिविधम्</h2>
+  <span class="en-title">The Three Kinds of Inferential Mark</span>
+  <table>
+    <tr><th>Kind</th><th>Sanskrit</th><th>Definition</th><th>Example</th></tr>
+    <tr>
+      <td>1</td>
+      <td class="sa">केवलान्वयी</td>
+      <td>Has only anvaya-vyāpti (no known vipakṣa)</td>
+      <td class="sa">इदं वक्तव्यम् अभिधेयत्वात्</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="sa">केवलव्यतिरेकी</td>
+      <td>Has only vyatireka-vyāpti (no usable sapakṣa)</td>
+      <td>Inferences about absolute entities</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="sa">अन्वयव्यतिरेकी</td>
+      <td>Has both anvaya and vyatireka vyāpti</td>
+      <td class="sa">पर्वतो वह्निमान् धूमात्</td>
+    </tr>
+  </table>
+  <p class="en">Most common inferences (like the mountain-fire example) use the anvaya-vyatirekī hetu.</p>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">FALLACIES</span><h3>Hetvābhāsas</h3></div>
+
+<div class="topic" id="hetvabhasa">
+  <h2>हेत्वाभासाः</h2>
+  <span class="en-title">The Five Fallacies of the Probans</span>
+  <div class="mulam">
+    <span class="label">Mūlam (textbook)</span>
+    सव्यभिचार-विरुद्ध-सत्प्रतिपक्ष-असिद्ध-वाधिताः पञ्च हेत्वाभासाः ।
   </div>
-  <p class="q-en">What is Dṛṣṭānta?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">साध्यसाधनसाहचर्यदृष्टस्थलम्</p>
-  <p class="ans-en-text">Example where sādhya and hetu are seen together</p>
+  <p>A hetvābhāsa appears to be a valid hetu but is not — <em>हेतुवत् आभासते परन्तु न हेतुः</em>. The word itself means "hetu-dosa" (fault of the hetu).</p>
+
+  <table>
+    <tr><th>#</th><th>Name</th><th>Fault</th><th>Textbook Example</th></tr>
+    <tr>
+      <td>1</td>
+      <td class="sa">सव्यभिचारः<br><small>(अनैकान्तिकः)</small></td>
+      <td>Hetu present in both sapakṣa and vipakṣa — lacks vyāpti</td>
+      <td class="sa">पर्वतो वह्निमान् प्रमेयत्वात्<br><small>(prameya = knowable, present everywhere)</small></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="sa">विरुद्धः</td>
+      <td>Hetu proves the <em>opposite</em> of what is intended</td>
+      <td class="sa">शब्दः नित्यः कृतकत्वात्<br><small>(producedness proves non-eternality)</small></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="sa">सत्प्रतिपक्षः</td>
+      <td>A counter-hetu of equal strength exists — draws opposite conclusion</td>
+      <td class="sa">शब्दः नित्यः श्रावणत्वात् vs. शब्दः अनित्यः कृतकत्वात्</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td class="sa">असिद्धः</td>
+      <td>Hetu not established in the pakṣa (3 sub-kinds)</td>
+      <td class="sa">गगनपुष्पं सुरभि द्रव्यत्वात्<br><small>(pakṣa itself doesn't exist)</small></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td class="sa">बाधितः</td>
+      <td>Sādhya already contradicted by a stronger pramāṇa</td>
+      <td class="sa">वह्निः शीतः द्रव्यत्वात्<br><small>(refuted by direct perception)</small></td>
+    </tr>
+  </table>
+
+  <p style="margin-top:12px"><strong style="color:var(--deva)">सव्यभिचारः — 3 sub-kinds:</strong></p>
+  <table>
+    <tr><th>Sub-kind</th><th>Defect</th><th>Textbook Example</th></tr>
+    <tr>
+      <td class="sa">साधारणः</td>
+      <td>Too wide — present in both sapakṣa and vipakṣa</td>
+      <td class="sa">पर्वतो वह्निमान् प्रमेयत्वात्</td>
+    </tr>
+    <tr>
+      <td class="sa">असाधारणः</td>
+      <td>Too narrow — present only in pakṣa, absent from both sapakṣa and vipakṣa</td>
+      <td class="sa">शब्दः नित्यः शब्दत्वात्</td>
+    </tr>
+    <tr>
+      <td class="sa">अनुपसंहारी</td>
+      <td>Entire universe is pakṣa — no example possible at all</td>
+      <td class="sa">सर्वं अनित्यं प्रमेयत्वात्</td>
+    </tr>
+  </table>
+
+  <p style="margin-top:12px"><strong style="color:var(--deva)">असिद्धः — 3 sub-kinds:</strong></p>
+  <table>
+    <tr><th>Sub-kind</th><th>Defect</th><th>Example</th></tr>
+    <tr>
+      <td class="sa">आश्रयासिद्धः</td>
+      <td>Pakṣa itself does not exist</td>
+      <td class="sa">गगनपुष्पं सुरभि द्रव्यत्वात्</td>
+    </tr>
+    <tr>
+      <td class="sa">स्वरूपासिद्धः</td>
+      <td>Hetu does not exist in the pakṣa</td>
+      <td class="sa">शब्दः नित्यः स्पर्शवत्त्वात्</td>
+    </tr>
+    <tr>
+      <td class="sa">व्याप्यत्वासिद्धः</td>
+      <td>Hetu's pervadedness by sādhya not established</td>
+      <td>Smoke is not always pervaded by fire (in certain conditions)</td>
+    </tr>
+  </table>
 </div>
 
-<!-- Q4 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q4</span>
-    <p class="q-sa">व्याप्तिः कति विधा?</p>
-  </div>
-  <p class="q-en">How many kinds of Vyāpti are there?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">द्विविधा — अन्वयव्याप्तिः, व्यतिरेकव्याप्तिः</p>
-  <p class="ans-en-text">Two — anvaya and vyatireka</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">PRAMĀṆA</span><h3>Upamāna</h3></div>
+
+<div class="topic secondary" id="upamana">
+  <h2>उपमानम्</h2>
+  <span class="en-title">Upamāna — Comparison as a Pramāṇa</span>
+  <div class="mulam"><span class="label">Definition</span>सादृश्यज्ञानात् संज्ञासंज्ञिसम्बन्धज्ञानं उपमितिः । तत्करणं उपमानम् ।</div>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td class="sa">उपमानम्</td><td>The pramāṇa (instrument) — comparison</td></tr>
+    <tr><td class="sa">उपमितिः</td><td>The result — cognition of a name-object relation</td></tr>
+    <tr><td class="sa">व्यापारः</td><td><strong>सादृश्यस्मृतिः</strong> — recollection of similarity</td></tr>
+  </table>
+  <p><strong>Process:</strong> (1) Hear from a reliable person: "a gavaya looks like a cow." (2) Go to the forest, see an animal resembling a cow. (3) Recall the similarity. (4) Cognise: "this is what is called a gavaya" — that is upamiti.</p>
+  <p class="en">Upamāna is independent from anumāna because no vyāpti is involved — only perceived similarity mediates the cognition.</p>
 </div>
 
-<!-- Q5 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q5</span>
-    <p class="q-sa">हेत्वाभासाः कति सन्ति? ते के?</p>
-  </div>
-  <p class="q-en">How many Hetvābhāsas? What are they?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पञ्च — सव्यभिचारः, विरुद्धः, सत्प्रतिपक्षः, असिद्धः, बाधितः</p>
-  <p class="ans-en-text">Five — Savyabhicāra, Viruddha, Satpratipakṣa, Asiddha, Bādhita</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">CAUSATION</span><h3>Kāraṇa</h3></div>
+
+<div class="topic tertiary" id="karana">
+  <h2>कारणम् — त्रिविधम्</h2>
+  <span class="en-title">Kāraṇa — The Three Kinds of Cause</span>
+  <div class="mulam"><span class="label">Definition</span>कार्यनियतपूर्ववृत्ति कारणम् ।</div>
+  <p>A cause is that which invariably precedes its effect (kārya). It has three kinds:</p>
+  <table>
+    <tr><th>Kind</th><th>Sanskrit</th><th>Meaning</th><th>Example</th></tr>
+    <tr>
+      <td>1</td>
+      <td class="sa">समवायिकारणम्</td>
+      <td>Inherent / material cause — in which the effect inheres</td>
+      <td>Threads (tantu) for a cloth (paṭa)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="sa">असमवायिकारणम्</td>
+      <td>Non-inherent cause — present in the material cause</td>
+      <td>The conjunction of threads</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="sa">निमित्तकारणम्</td>
+      <td>Efficient / instrumental cause — external agent</td>
+      <td>The weaver's skill and loom</td>
+    </tr>
+  </table>
+  <p class="en">The textbook also adds that a cause must be ananyathāsiddha — not explicable otherwise (i.e., it is genuinely necessary for the effect).</p>
 </div>
 
-<!-- Q6 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q6</span>
-    <p class="q-sa">लक्षणायाः किं लक्षणम्?</p>
-  </div>
-  <p class="q-en">What is the definition of Lakṣaṇā?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">मुख्यार्थबाधे तत्सम्बन्धे यः अर्थः बोध्यते</p>
-  <p class="ans-en-text">Meaning conveyed when primary sense is blocked</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">EPISTEMOLOGY</span><h3>Anubhūti</h3></div>
+
+<div class="topic info" id="anubhuti">
+  <h2>अनुभूतिः</h2>
+  <span class="en-title">Anubhūti — Direct Apprehension</span>
+  <div class="mulam"><span class="label">Definition</span>स्मृतिव्यतिरिक्तं ज्ञानम् अनुभूतिः ।</div>
+  <p>Anubhūti is any cognition that is <em>not</em> memory (smṛti). It includes perception (pratyakṣa), inference (anumāna), comparison (upamāna), and testimony (śabda) — all fresh, first-hand cognitions.</p>
+  <table>
+    <tr><th>Type</th><th>Anubhūti?</th></tr>
+    <tr><td>Seeing fire directly</td><td>✓ Yes (pratyakṣa)</td></tr>
+    <tr><td>Inferring fire from smoke</td><td>✓ Yes (anumāna)</td></tr>
+    <tr><td>Remembering yesterday's fire</td><td>✗ No (smṛti)</td></tr>
+  </table>
 </div>
 
-<!-- Q7 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q7</span>
-    <p class="q-sa">सौगम्यता नाम का?</p>
-  </div>
-  <p class="q-en">What is Saugamyatā?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पाकभेदः</p>
-  <p class="ans-en-text">A type of pāka (method of grasping vyāpti)</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">ŚABDA</span><h3>Śabda, Śakti, Lakṣaṇā</h3></div>
+
+<div class="topic" id="shabda">
+  <h2>शब्दः · शक्तिः · लक्षणा</h2>
+  <span class="en-title">Word, Denotative Power &amp; Secondary Signification</span>
+
+  <div class="mulam"><span class="label">Śakti</span>ईश्वरसंकेतः शक्तिः ।</div>
+  <p><strong style="color:var(--deva)">शक्तिः</strong> — the God-ordained (Īśvara-saṃketa) relation between a word and its primary meaning. A word possessing this is śaktaṃ padam. By śakti alone the primary (mukhya) meaning is conveyed.</p>
+
+  <div class="mulam" style="margin-top:12px"><span class="label">Lakṣaṇā</span>मुख्यार्थबाधे तत्सम्बन्धे यः अर्थः बोध्यते सा लक्षणा ।</div>
+  <p><strong style="color:var(--deva)">लक्षणा</strong> — when the primary meaning is blocked, a related secondary meaning is conveyed. Three kinds:</p>
+  <table>
+    <tr><th>Kind</th><th>Sanskrit</th><th>What happens</th><th>Example</th></tr>
+    <tr>
+      <td>1</td>
+      <td class="sa">जहल्लक्षणा</td>
+      <td>Primary meaning fully abandoned</td>
+      <td class="sa">गङ्गायां घोषः — गङ्गा = bank (not stream)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="sa">अजहल्लक्षणा</td>
+      <td>Primary meaning retained, secondary added</td>
+      <td>Soldier-like qualities implied alongside</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="sa">जहदजहल्लक्षणा</td>
+      <td>Partial retention and partial abandonment</td>
+      <td class="sa">तत्त्वमसि (That thou art)</td>
+    </tr>
+  </table>
+
+  <p style="margin-top:10px">Three functions by which words convey meaning: <strong style="color:var(--deva)">शक्तिः</strong> (primary), <strong style="color:var(--deva)">लक्षणा</strong> (secondary), <strong style="color:var(--deva)">व्यञ्जना</strong> (suggestion).</p>
 </div>
 
-<!-- Q8 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q8</span>
-    <p class="q-sa">पाकः नाम कः?</p>
-  </div>
-  <p class="q-en">What is Pāka?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">बहुशः दर्शनजनितसंस्कारेण व्याप्तिनिश्चयः</p>
-  <p class="ans-en-text">Firm vyāpti-cognition from repeated observation</p>
+<!-- ══════════════════════════════════════════ -->
+<div class="section-head"><span class="chip">ŚABDA</span><h3>Vākya &amp; Śābdabodha</h3></div>
+
+<div class="topic secondary" id="vakya">
+  <h2>वाक्यम् · शाब्दबोधः</h2>
+  <span class="en-title">Sentence &amp; Verbal Cognition</span>
+
+  <div class="mulam"><span class="label">Vākya definition</span>आकाङ्क्षायोग्यतासत्तिमत् पदसमूहः वाक्यम् ।</div>
+
+  <p><strong>Three necessary properties of a vākya:</strong></p>
+  <table>
+    <tr><th>Property</th><th>Sanskrit</th><th>Meaning</th></tr>
+    <tr><td>1</td><td class="sa">आकाङ्क्षा</td><td>Syntactic expectancy — each word expects others to complete the sense</td></tr>
+    <tr><td>2</td><td class="sa">योग्यता</td><td>Semantic compatibility — meanings must not contradict each other</td></tr>
+    <tr><td>3</td><td class="sa">आसत्तिः</td><td>Temporal proximity — words uttered in close succession</td></tr>
+  </table>
+
+  <p style="margin-top:10px"><strong>Two kinds of Vākya:</strong></p>
+  <table>
+    <tr><th>Kind</th><th>Sanskrit</th><th>Meaning</th><th>Example</th></tr>
+    <tr><td>1</td><td class="sa">विधिवाक्यम्</td><td>Injunctive — prescribes action</td><td class="sa">सोमेन यजेत</td></tr>
+    <tr><td>2</td><td class="sa">निषेधवाक्यम्</td><td>Prohibitive — forbids action</td><td class="sa">कलञ्जं न भक्षयेत्</td></tr>
+  </table>
+
+  <p style="margin-top:12px"><strong style="color:var(--deva)">शाब्दबोधः</strong> — verbal cognition: knowledge generated when a valid vākya from a reliable speaker (āpta) is understood. Its causes:</p>
+  <table>
+    <tr><th>Cause</th><th>Role</th></tr>
+    <tr><td class="sa">शक्तिः</td><td>Primary cause — each word's denotative power</td></tr>
+    <tr><td class="sa">आकाङ्क्षा</td><td>Auxiliary — syntactic expectancy</td></tr>
+    <tr><td class="sa">योग्यता</td><td>Auxiliary — semantic compatibility</td></tr>
+    <tr><td class="sa">आसत्तिः</td><td>Auxiliary — temporal proximity</td></tr>
+    <tr><td class="sa">तात्पर्यम्</td><td>Auxiliary — speaker's intention (resolves ambiguity)</td></tr>
+  </table>
+  <p class="en">Two kinds of śabda: Vaidika (Vedic, authored by Īśvara — infallible) and Laukika (everyday speech of reliable persons). Both generate valid śābdabodha.</p>
 </div>
 
-<!-- Q9 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q9</span>
-    <p class="q-sa">वाक्यं नाम किम्?</p>
-  </div>
-  <p class="q-en">What is Vākya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">आकाङ्क्षायोग्यतासत्तिमत् पदसमूहः</p>
-  <p class="ans-en-text">Group of words with ākāṅkṣā, yogyatā, āsatti</p>
-</div>
-
-<!-- Q10 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q10</span>
-    <p class="q-sa">कारणं कति विधम्?</p>
-  </div>
-  <p class="q-en">How many kinds of Kāraṇa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">त्रिविधम् — समवायि, असमवायि, निमित्तम्</p>
-  <p class="ans-en-text">Three — samavāyi, asamavāyi, nimitta</p>
-</div>
-
-<!-- Q11 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q11</span>
-    <p class="q-sa">अनुभूतेः नाम का?</p>
-  </div>
-  <p class="q-en">What is Anubhūti?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">स्मृतिव्यतिरिक्तं ज्ञानम्</p>
-  <p class="ans-en-text">Cognition other than memory</p>
-</div>
-
-<!-- Q12 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q12</span>
-    <p class="q-sa">'इदं द्रव्यं गुणवत्' इत्यत्र साध्यं किम्?</p>
-  </div>
-  <p class="q-en">In "idaṃ dravyaṃ guṇavat" — what is the sādhya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">गुणवत्त्वम्</p>
-  <p class="ans-en-text">Guṇavatva</p>
-</div>
-
-<!-- Q13 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q13</span>
-    <p class="q-sa">परामर्शस्य विषयौ कौ?</p>
-  </div>
-  <p class="q-en">What are the two objects of Parāmarśa?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">पक्षधर्मता, व्याप्तिः</p>
-  <p class="ans-en-text">Pakṣadharmatā and vyāpti</p>
-</div>
-
-<!-- Q14 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q14</span>
-    <p class="q-sa">न्यायः नाम कः?</p>
-  </div>
-  <p class="q-en">What is Nyāya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">प्रमाणैः अर्थपरीक्षणम्</p>
-  <p class="ans-en-text">Examination of objects by pramāṇas</p>
-</div>
-
-<!-- Q15 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q15</span>
-    <p class="q-sa">हेत्वाभासपदस्य कोऽर्थः?</p>
-  </div>
-  <p class="q-en">Meaning of the word "Hetvābhāsa"?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">हेतुदोषः / हेतोः आभासः</p>
-  <p class="ans-en-text">Fallacy of the hetu / pseudo-probans</p>
-</div>
-
-<!-- Q16 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q16</span>
-    <p class="q-sa">उपमाने व्यापारः कः?</p>
-  </div>
-  <p class="q-en">Operative function in Upamāna?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">सादृश्यस्मृतिः</p>
-  <p class="ans-en-text">Sādṛśya-smṛti (recollection of similarity)</p>
-</div>
-
-<!-- Q17 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q17</span>
-    <p class="q-sa">वाक्यं कति विधम्?</p>
-  </div>
-  <p class="q-en">How many kinds of Vākya?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">द्विविधम् — विधिवाक्यम्, निषेधवाक्यम्</p>
-  <p class="ans-en-text">Two — vidhi-vākya and niṣedha-vākya</p>
-</div>
-
-<!-- Q18 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q18</span>
-    <p class="q-sa">शक्तिः नाम का?</p>
-  </div>
-  <p class="q-en">What is Śakti?</p>
-  <div class="label ans-sa">Answer</div>
-  <p class="ans-sa-text">ईश्वरसंकेतः</p>
-  <p class="ans-en-text">Īśvara-saṃketa (God's ordinance)</p>
-</div>
-
-<hr class="divider">
-
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 2 — 5 MARK                            -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s5mark">
-  <span class="badge">5 MARKS</span>
-  <h2>लघुप्रबन्धाः — Short Essays</h2>
-</div>
-
-<!-- 5M Q1 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q19</span>
-    <p class="q-sa">अनुमितिः।</p>
-  </div>
-  <p class="q-en">Write a short note on Anumiti (inferential cognition).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    मूलम् — <em>अनुमितिकरणमनुमानम् । परामर्शजन्यज्ञानमनुमितिः ।</em><br><br>
-    अनुमितिः परामर्शजन्यं ज्ञानम्। परामर्शः व्याप्तिविशिष्टपक्षधर्मताज्ञानम्। स एव अनुमितेः अन्तिमकारणम्।<br><br>
-    यथा — प्रथमं धूमदर्शनम्। ततः "यत्र धूमः तत्र वह्निः" इति व्याप्तिस्मरणम्। ततः "वह्निव्याप्यधूमवान् अयं पर्वतः" इति परामर्शः। ततः "पर्वतो वह्निमान्" इति अनुमितिः उत्पद्यते।<br><br>
-    अनुमानं करणम्, अनुमितिः फलम्। परामर्शः अनुमानस्य व्यापारः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Mūlam: "Anumāna is the instrument that produces anumiti; anumiti is the cognition born of parāmarśa."<br><br>
-    Anumiti is the inferential cognition — the result (phala) of the anumāna process. Parāmarśa, the cognition of the hetu as pervaded by vyāpti and present in the pakṣa, is its immediate cause.<br><br>
-    Example (from textbook): First, smoke is seen on the mountain. Then vyāpti is recalled: "wherever smoke, there fire." Then parāmarśa arises: "this mountain has smoke that is pervaded by fire (vahni-vyāpya-dhūmavān ayaṃ parvataḥ)." From this parāmarśa, the anumiti arises: "the mountain has fire."<br><br>
-    Anumāna is the karaṇa (instrument); anumiti is the phala (result); parāmarśa is the vyāpāra (operative act).
-  </p>
-</div>
-
-<!-- 5M Q2 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q20</span>
-    <p class="q-sa">याप्तिः।</p>
-  </div>
-  <p class="q-en">Write a short note on Vyāpti (invariable concomitance).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    अव्यभिचरितसहचरणं व्याप्तिः। हेतोः साध्येन अनिवार्यसम्बन्धः व्याप्तिः इत्युच्यते।<br><br>
-    व्याप्तिः द्विविधा — अन्वयव्याप्तिः विपक्षव्याप्तिः च। "यत्र धूमः तत्र वह्निः" इति अन्वयव्याप्तिः। "यत्र वह्निः नास्ति तत्र धूमः नास्ति" इति व्यतिरेकव्याप्तिः।<br><br>
-    व्याप्तिग्रहणस्य उपायाः — भूयोदर्शनम्, उपाधिः, तर्कः च। व्याप्तिज्ञानम् अनुमानस्य मूलभूतं साधनम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Vyāpti is the invariable concomitance between hetu (probans) and sādhya (probandum) — the unfailing accompaniment of one with the other.<br><br>
-    It has two forms: anvaya-vyāpti (positive) — "wherever there is smoke, there is fire" — and vyatireka-vyāpti (negative) — "wherever there is no fire, there is no smoke."<br><br>
-    The means of cognising vyāpti are repeated observation (bhūyadarśana), elimination of upādhi (conditional qualifiers), and tarka (reductio ad absurdum reasoning). Vyāpti-jñāna is the foundation of all valid inference.
-  </p>
-</div>
-
-<!-- 5M Q3 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q21</span>
-    <p class="q-sa">परामर्शलक्षणं सदलकृत्वं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain the definition of Parāmarśa with illustration.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    मूलम् — <em>व्याप्तिविशिष्टपक्षधर्मताज्ञानं परामर्शः ।</em><br><br>
-    यस्मिन् ज्ञाने हेतुः पक्षे विशेषणतया भासते, हेतौ च व्याप्तिः विशेषणतया भासते — तज्ज्ञानं परामर्शः।<br><br>
-    यथा — वह्निसाध्यकानुमाने परामर्शस्य आकारः: <em>"वह्निव्याप्यधूमवान् अयं पर्वतः"</em> इति। वह्निव्याप्यः धूमः। वह्नेन सह व्याप्तिः धूमस्य वर्तते। अतः धूमः व्याप्यः इत्युच्यते। तादृशः धूमः पर्वते वर्तते इति विषयीकरोतीदं ज्ञानं परामर्शः।<br><br>
-    परामर्शात् "पर्वतो वह्निमान्" इति अनुमितिः जायते। अतः परामर्शः अनुमितेः अन्तिमकारणम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Mūlam: "Parāmarśa is the cognition of pakṣa-dharmatā qualified by vyāpti."<br><br>
-    It is the cognition in which: the hetu appears as a qualifier of the pakṣa, and vyāpti appears as a qualifier of the hetu. Both are grasped together in one act of cognition.<br><br>
-    Textbook example: In inferring fire on the mountain, parāmarśa takes the form — <em>"vahni-vyāpya-dhūmavān ayaṃ parvataḥ"</em> — "this mountain possesses smoke that is pervaded by fire." Dhūma (smoke) is vyāpya (the pervaded), fire is its vyāpaka (the pervader). Cognising that such smoke is present on the mountain is parāmarśa.<br><br>
-    From this parāmarśa arises the anumiti: "the mountain has fire." Parāmarśa is thus the immediate (antima) cause of anumiti.
-  </p>
-</div>
-
-<!-- 5M Q4 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q22</span>
-    <p class="q-sa">लिङ्गं त्रिविधम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">The liṅga (mark/hetu) is of three kinds — Explain.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    लिङ्गं (हेतुः) त्रिविधम् — केवलान्वयी, केवलव्यतिरेकी, अन्वयव्यतिरेकी च।<br><br>
-    १. केवलान्वयी — यः हेतुः केवलम् अन्वयव्याप्तिमान्, न तु व्यतिरेकव्याप्तिमान्। यथा — "इदं वक्तव्यम् अभिधेयत्वात्।" अत्र अभिधेयत्वस्य केवलान्वयव्याप्तिः अस्ति।<br><br>
-    २. केवलव्यतिरेकी — यः हेतुः केवलम् व्यतिरेकव्याप्तिमान्। यथा — "आत्मा ज्ञानाश्रयः न, अज्ञानाश्रयत्वात्।"<br><br>
-    ३. अन्वयव्यतिरेकी — यः उभाभ्यां व्याप्तिभ्यां युक्तः। यथा — "पर्वतो वह्निमान् धूमात्।"
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    The liṅga (inferential mark / hetu) is of three kinds: Kevalānvayī, Kevalavyatirekī, and Anvaya-vyatirekī.<br><br>
-    1. Kevalānvayī — has only positive (anvaya) vyāpti, no negative counterpart (because sādhya-abhāva has no known locus). E.g., "This is nameable, because it is expressible."<br><br>
-    2. Kevalavyatirekī — has only negative (vyatireka) vyāpti. E.g., inferences about the self or absolute entities where positive instances cannot be enumerated.<br><br>
-    3. Anvaya-vyatirekī — has both positive and negative vyāpti. E.g., "The mountain has fire, because of smoke" — both "where there is smoke there is fire" and "where there is no fire there is no smoke" hold.
-  </p>
-</div>
-
-<!-- 5M Q5 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q23</span>
-    <p class="q-sa">सव्यभिचारं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain Savyabhicāra (the fallacy of the irregular/erratic hetu).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    अनैकान्तिकः सव्यभिचारः। यः हेतुः साध्यवति, असाध्यवति च विद्यते — सः सव्यभिचारः।<br><br>
-    सव्यभिचारः त्रिविधः — साधारणः, असाधारणः, अनुपसंहारी च।<br><br>
-    साधारणः — "पर्वतो वह्निमान् प्रमेयत्वात्।" प्रमेयत्वं वह्निमति (महानसे) वह्न्यभाववति (ह्रदे) च वर्तते — साध्यवति असाध्यवति च।<br><br>
-    असाधारणः — "शब्दः नित्यः शब्दत्वात्।" शब्दत्वं केवलं शब्दे एव वर्तते, न नित्येषु (आकाशादिषु) न अनित्येषु (घटादिषु) — सपक्षविपक्षव्यावृत्तम्।<br><br>
-    अनुपसंहारी — "सर्वं अनित्यं प्रमेयत्वात्।" अत्र सर्वम् एव पक्षः, अतः दृष्टान्तः (सपक्षः विपक्षः वा) न सम्भवति।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Savyabhicāra is the "erratic" or "irregular" hetu — one that is present in both sapakṣa (where sādhya obtains) and vipakṣa (where sādhya does not obtain), and hence lacks vyāpti.<br><br>
-    Three sub-kinds: (1) Sādhāraṇa (too wide) — present in both sapakṣa and vipakṣa. E.g., "The mountain has fire because of knowability (prameya-tva)" — knowability is present in fire-possessing places (kitchen) and also in non-fire places (lake), so it proves nothing. (2) Asādhāraṇa (too narrow) — present only in the pakṣa itself, absent from both sapakṣa and vipakṣa. E.g., "Sound is eternal because of soundness (śabdatva)" — soundness belongs only to sound, so no sapakṣa or vipakṣa example exists. (3) Anupasaṃhāri — the entire universe is taken as the pakṣa, so no example (sapakṣa or vipakṣa) can be given at all. E.g., "Everything is non-eternal because of knowability."
-  </p>
-</div>
-
-<!-- 5M Q6 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q24</span>
-    <p class="q-sa">उपमानं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain Upamāna (comparison as a pramāṇa).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    उपमानं नाम उपमितिकरणम्। सादृश्यज्ञानात् संज्ञासंज्ञिसम्बन्धज्ञानम् उपमितिः। तत्करणम् उपमानम्।<br><br>
-    प्रक्रिया — पुरुषः वनं गच्छति। तत्र "गवयः गोसदृशः" इति पूर्वं श्रुतम् अस्ति। वने गवयं दृष्ट्वा "अयं गोसदृशः अतः गवयः" इति संज्ञासंज्ञिसम्बन्धः ज्ञायते। एतत् उपमितिः।<br><br>
-    उपमाने व्यापारः सादृश्यस्मृतिः। उपमानं न अनुमानान्तर्गतम् — यतः अत्र व्याप्तिज्ञानम् नास्ति।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Upamāna is the pramāṇa (means of valid knowledge) that produces upamiti — the cognition of the relation between a name and its object through perceived similarity.<br><br>
-    Process: A person goes to a forest. He has previously heard "a gavaya (wild cow) looks like a cow." On seeing the gavaya in the forest, he cognises "this is similar to a cow, so this must be what is called a gavaya." This cognition of the name-object relation is upamiti.<br><br>
-    The operative function (vyāpāra) in upamāna is the recollection of similarity (sādṛśya-smṛti). Upamāna is a distinct pramāṇa — it cannot be reduced to anumāna, because it does not rely on vyāpti.
-  </p>
-</div>
-
-<!-- 5M Q7 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q25</span>
-    <p class="q-sa">शक्तं पदम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">Explain "Śaktaṃ padam" — a word endowed with denotative power.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    ईश्वरसंकेतः शक्तिः। येन पदेन यः अर्थः ईश्वरेण संकेतितः, तस्य पदस्य सः अर्थः शक्यार्थः। तद् पदं शक्तं पदम् इत्युच्यते।<br><br>
-    पदार्थबोधस्य साधनत्रयम् — शक्तिः, लक्षणा, व्यञ्जना च। तेषु शक्तिः मुख्या। शक्त्या एव मुख्यार्थः बोध्यते।<br><br>
-    यत्र शक्यार्थः बाधितः तत्र लक्षणाशक्तिः आश्रीयते। यथा — "गङ्गायां घोषः" इत्यत्र "गङ्गा" पदस्य शक्यार्थः नद्याः प्रवाहः। परं तत्र घोषः सम्भवति — अतः लक्षणया तीरम् अर्थः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Śakti is the divinely ordained (Īśvara-saṃketa) denotative power — the God-given relation between a word and its primary meaning. A word possessing this power is called śaktaṃ padam.<br><br>
-    There are three functions by which a word conveys meaning: (1) Śakti (primary denotation), (2) Lakṣaṇā (secondary/indicative), (3) Vyañjanā (suggestion). Among them, śakti is primary.<br><br>
-    Example: The word "gaṅgā" by its śakti denotes the river (stream). But "gaṅgāyāṃ ghoṣaḥ" (the village is on the Gaṅgā) — here the primary meaning (stream) is blocked, so lakṣaṇā shifts the meaning to the bank (tīra).
-  </p>
-</div>
-
-<!-- 5M Q8 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q26</span>
-    <p class="q-sa">वाक्यं द्विविधम् — व्याख्यात।</p>
-  </div>
-  <p class="q-en">Vākya is of two kinds — Explain.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    वाक्यं द्विविधम् — विधिवाक्यम्, निषेधवाक्यञ्च।<br><br>
-    विधिवाक्यम् — यत् वाक्यम् अनुष्ठानाय प्रेरयति। यथा — "सोमेन यजेत" (सोमेन यजनं विधीयते)।<br><br>
-    निषेधवाक्यम् — यत् वाक्यम् अनुष्ठानात् निवारयति। यथा — "कलञ्जं न भक्षयेत्" (कलञ्जभक्षणं निषिध्यते)।<br><br>
-    वाक्यस्य त्रयो गुणाः — आकाङ्क्षा (syntactic expectancy), योग्यता (semantic compatibility), आसत्तिः (proximity). एतैः त्रिभिः गुणैः युक्तः पदसमूहः एव वाक्यम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Vākya (sentence) is of two kinds: Vidhi-vākya (injunctive) and Niṣedha-vākya (prohibitive).<br><br>
-    Vidhi-vākya prescribes an action. E.g., "Sacrifice with soma" — enjoining the performance of the soma sacrifice.<br><br>
-    Niṣedha-vākya prohibits an action. E.g., "Do not eat kalañja (garlic/onion)" — a Vedic prohibition.<br><br>
-    A valid vākya requires three properties in its constituent words: ākāṅkṣā (each word expecting the others for completeness), yogyatā (the meanings must be mutually compatible), and āsatti/sannidhi (the words must be uttered in temporal proximity).
-  </p>
-</div>
-
-<!-- 5M Q9 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q27</span>
-    <p class="q-sa">लक्षणा।</p>
-  </div>
-  <p class="q-en">Write a short note on Lakṣaṇā (secondary signification).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    मुख्यार्थबाधे तत्सम्बन्धे रूढितः प्रयोजनाद्वा यः अर्थः बोध्यते सा लक्षणा।<br><br>
-    लक्षणायाः त्रयः भेदाः — जहल्लक्षणा, अजहल्लक्षणा, जहदजहल्लक्षणा च।<br><br>
-    जहल्लक्षणा — मुख्यार्थं जहाति। "गङ्गायां घोषः" — गङ्गायाः मुख्यार्थः (प्रवाहः) जहाति, तीरम् अर्थः।<br><br>
-    अजहल्लक्षणा — मुख्यार्थं न जहाति। "शौरिः विक्रान्तः" — श्रीकृष्णस्य शौर्यं मुख्यार्थेन सह लक्ष्यते।<br><br>
-    जहदजहल्लक्षणा — "तत्त्वमसि" — "तत्" पदस्य सर्वज्ञत्वम्, "त्वम्" पदस्य अल्पज्ञत्वम् जहाति, शुद्धचैतन्यमात्रम् अर्थः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    Lakṣaṇā is the secondary (indicative) function of a word — operative when the primary (śakya) meaning is blocked, and conveying a related meaning either by convention or by purpose.<br><br>
-    Three kinds: (1) Jahallakṣaṇā — completely abandons the primary meaning. E.g., "gaṅgāyāṃ ghoṣaḥ" where "gaṅgā" shifts from "stream" to "bank." (2) Ajahallakṣaṇā — retains the primary meaning, adds a secondary one. (3) Jahadajahallakṣaṇā — partially retains and partially abandons, as in the great Upaniṣadic statement "Tat tvam asi" (That thou art), where the conditioned aspects of both terms are negated and pure consciousness alone is indicated.
-  </p>
-</div>
-
-<!-- 5M Q10 -->
-<div class="qa">
-  <div class="qhead"><span class="qnum">Q28</span>
-    <p class="q-sa">शाब्दबोधे सहकारिणः।</p>
-  </div>
-  <p class="q-en">What are the auxiliary factors (sahakāriṇas) in Śābdabodha (verbal/linguistic cognition)?</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    शाब्दबोधस्य सहकारिकारणानि — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br><br>
-    आकाङ्क्षा — एकस्य पदस्य अन्यपदापेक्षा। यथा — "पच" इति पदं कर्तृ-कर्म-पदापेक्षं करोति।<br><br>
-    योग्यता — पदार्थानाम् परस्परबाधाभावः। "अग्निना सिञ्चति" इति वाक्ये योग्यता नास्ति।<br><br>
-    आसत्तिः — पदानां कालिकसान्निध्यम्। विच्छिन्नोच्चारणे वाक्यं न भवति।<br><br>
-    तात्पर्यम् — वक्तुः अभिप्रायः। शाब्दबोधाय वक्तुः तात्पर्यज्ञानम् आवश्यकम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    The auxiliary factors (sahakāri-kāraṇas) in śābdabodha (cognition generated by verbal testimony) are four: ākāṅkṣā, yogyatā, āsatti (sannidhi), and tātparya.<br><br>
-    Ākāṅkṣā — syntactic expectancy: each word expects others to complete the sense. "Cook!" expects a subject and object.<br><br>
-    Yogyatā — semantic compatibility: the meanings must not contradict each other. "Water with fire" lacks yogyatā.<br><br>
-    Āsatti — temporal proximity: words must be uttered in close succession; a sentence split across days fails.<br><br>
-    Tātparya — the speaker's intention: knowing what the speaker means is essential to correctly understand the sentence.
-  </p>
-</div>
-
-<hr class="divider">
-
-<!-- ═══════════════════════════════════════════════ -->
-<!--  SECTION 3 — 15 MARK                           -->
-<!-- ═══════════════════════════════════════════════ -->
-<div class="section-title" id="s15mark">
-  <span class="badge">15 MARKS</span>
-  <h2>दीर्घप्रबन्धाः — Long Essays</h2>
-</div>
-
-<!-- 15M Q1 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q29</span>
-    <p class="q-sa">अनुमानप्रमाणं निरूपयत।</p>
-  </div>
-  <p class="q-en">Explain the pramāṇa of Anumāna (inference) in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>मूलम्</strong><br>
-    <em>अनुमितिकरणमनुमानम् । परामर्शजन्यज्ञानमनुमितिः ।</em><br><br>
-    <strong>अनुमानस्वरूपम्</strong><br>
-    अनुमानं नाम अनुमितेः करणम्। अनुमितिः परामर्शजन्यं ज्ञानम्। परामर्शः व्याप्तिविशिष्टपक्षधर्मताज्ञानम्। परामर्शात् अनुमितिः, अनुमितिकरणत्वात् अनुमानम्।<br><br>
-    <strong>अनुमानस्य प्रक्रिया</strong><br>
-    १. साध्यः — यः अर्थः अनुमातुं वाञ्छितः (यथा वह्निः)।<br>
-    २. पक्षः — यत्र साध्यः सिषाधयिषितः (यथा पर्वतः)।<br>
-    ३. हेतुः (लिङ्गम्) — साध्येन व्याप्तः पक्षे वर्तमानः धर्मः (यथा धूमः)।<br>
-    ४. व्याप्तिः — हेतोः साध्येन अव्यभिचरितसम्बन्धः — "यत्र धूमः तत्र वह्निः।"<br>
-    ५. परामर्शः — <em>"वह्निव्याप्यधूमवान् अयं पर्वतः"</em> इति ज्ञानम्।<br>
-    ६. अनुमितिः — "पर्वतो वह्निमान्" इति ज्ञानम्।<br><br>
-    <strong>अनुमानभेदाः</strong><br>
-    अनुमानं द्विविधम् — स्वार्थानुमानम्, परार्थानुमानञ्च।<br>
-    स्वार्थानुमाने — स्वस्य ज्ञानार्थम् अनुमानम्।<br>
-    परार्थानुमाने — परस्मै बोधनाय पञ्चावयवी प्रयुज्यते — प्रतिज्ञा, हेतुः, उदाहरणम्, उपनयः, निगमनञ्च।<br><br>
-    <strong>हेतोः लक्षणम्</strong><br>
-    हेतोः पञ्च लक्षणानि — पक्षधर्मता, सपक्षसत्त्वम्, विपक्षाव्यावृत्तिः, अबाधितविषयता, असत्प्रतिपक्षता च।<br><br>
-    <strong>हेत्वाभासाः</strong><br>
-    अनुमानस्य दोषाः पञ्च — सव्यभिचारः, विरुद्धः, सत्प्रतिपक्षः, असिद्धः, बाधितः च।<br><br>
-    <strong>उपसंहारः</strong><br>
-    अनुमानम् प्रत्यक्षानुपलब्धार्थस्य ज्ञानसाधनम्। तर्कशास्त्रे अनुमानं सर्वप्रधानम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Mūlam</strong><br>
-    "Anumāna is the instrument that produces anumiti; anumiti is the cognition born of parāmarśa."<br><br>
-    <strong>Nature of Anumāna</strong><br>
-    Anumāna is the karaṇa (instrument/means) of anumiti (inferential cognition). Anumiti is the phala (result) — the fresh cognition of the sādhya in the pakṣa. The operative act (vyāpāra) is parāmarśa. Together: parāmarśa produces anumiti; anumāna is what enables that production.<br><br>
-    <strong>Process of Inference</strong><br>
-    (1) Sādhya — what is to be proved (e.g., fire). (2) Pakṣa — the subject (e.g., mountain). (3) Hetu — probans present in pakṣa and pervaded by sādhya (e.g., smoke). (4) Vyāpti — invariable concomitance: "wherever smoke, there fire." (5) Parāmarśa — <em>"vahni-vyāpya-dhūmavān ayaṃ parvataḥ"</em> (this mountain has smoke that is pervaded by fire). (6) Anumiti — "the mountain has fire."<br><br>
-    <strong>Kinds of Anumāna</strong><br>
-    Svārthānumāna — inference for oneself (mental process). Parārthānumāna — stated for another, using the five-membered syllogism: (1) Pratijñā, (2) Hetu, (3) Udāharaṇa, (4) Upanaya, (5) Nigamana.<br><br>
-    <strong>Five Properties of a Valid Hetu</strong><br>
-    Pakṣa-dharmatā, sapakṣa-sattva, vipakṣa-vyāvṛtti, abādhita-viṣayatā, asat-pratipakṣatā.<br><br>
-    <strong>Fallacies (Hetvābhāsas)</strong><br>
-    Five: Savyabhicāra, Viruddha, Satpratipakṣa, Asiddha, Bādhita.<br><br>
-    <strong>Conclusion</strong><br>
-    Anumāna is the instrument for knowing what cannot be directly perceived. It is the cornerstone of Nyāya epistemology.
-  </p>
-</div>
-
-<!-- 15M Q2 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q30</span>
-    <p class="q-sa">हेत्वाभासाः।</p>
-  </div>
-  <p class="q-en">Discuss the Hetvābhāsas (fallacies of the probans) in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>हेत्वाभासस्वरूपम्</strong><br>
-    हेतुवत् आभासते, परन्तु वास्तवेन हेतुः न भवति — इति हेत्वाभासः। हेत्वाभासाः पञ्च सन्ति।<br><br>
-    <strong>१. सव्यभिचारः (अनैकान्तिकः)</strong><br>
-    साध्यवति असाध्यवति च विद्यमानः हेतुः सव्यभिचारः।<br>
-    — साधारणः: "पर्वतो वह्निमान् प्रमेयत्वात्।" प्रमेयत्वं वह्निमति (महानसे) वह्न्यभाववति (ह्रदे) च।<br>
-    — असाधारणः: "शब्दः नित्यः शब्दत्वात्।" शब्दत्वं शब्दमात्रे — सपक्षविपक्षव्यावृत्तम्।<br>
-    — अनुपसंहारी: "सर्वं अनित्यं प्रमेयत्वात्।" सर्वस्यापि पक्षत्वात् दृष्टान्तो नास्ति।<br><br>
-    <strong>२. विरुद्धः</strong><br>
-    साध्याभावं साधयति। यथा — "शब्दः नित्यः कृतकत्वात्।" कृतकत्वं तु अनित्यत्वव्याप्तम्।<br><br>
-    <strong>३. सत्प्रतिपक्षः</strong><br>
-    यस्य हेतोः प्रतिपक्षेऽपि सत् हेत्वन्तरम् अस्ति। यथा — "शब्दः नित्यः श्रावणत्वात्। शब्दः अनित्यः कृतकत्वात्।" — एतौ द्वौ विरुद्धौ हेतू।<br><br>
-    <strong>४. असिद्धः</strong><br>
-    पक्षे हेतोः सिद्धत्वाभावः। त्रिविधः — आश्रयासिद्धः, स्वरूपासिद्धः, व्याप्यत्वासिद्धः।<br>
-    — आश्रयासिद्धः: "गगनपुष्पं सुरभि, द्रव्यत्वात्।" गगनपुष्पमेव नास्ति।<br>
-    — स्वरूपासिद्धः: "शब्दः नित्यः स्पर्शवत्त्वात्।" शब्दे स्पर्शः नास्ति।<br>
-    — व्याप्यत्वासिद्धः: "वह्निः धूमवान् धूमे सति।" धूमः वह्निव्याप्तः नास्ति।<br><br>
-    <strong>५. बाधितः</strong><br>
-    यः हेतुः अन्यप्रमाणबाधितसाध्यसाधकः। यथा — "वह्निः शीतः द्रव्यत्वात्।" वह्नेः शैत्यम् अनुमानेन गम्यते, परन्तु प्रत्यक्षबाधितम्।<br><br>
-    <strong>उपसंहारः</strong><br>
-    एते पञ्च हेत्वाभासाः अनुमानदोषाः। तान् परिहृत्य शुद्धहेतुना अनुमानं कर्तव्यम्।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Hetvābhāsa</strong><br>
-    A hetvābhāsa appears to be a valid hetu (probans) but is actually fallacious — it violates one or more conditions of a valid hetu. The Nyāya system enumerates five hetvābhāsas.<br><br>
-    <strong>1. Savyabhicāra (Irregular/Erratic)</strong><br>
-    The hetu occurs in both sapakṣa (where sādhya holds) and vipakṣa (where sādhya does not hold) — lacking vyāpti. Three sub-kinds: (1) Sādhāraṇa (too wide) — e.g., "The mountain has fire because of knowability" — knowability is present in fire-possessing places and also in non-fire places like a lake, so it wanders across both. (2) Asādhāraṇa (too narrow) — e.g., "Sound is eternal because of soundness (śabdatva)" — soundness belongs only to sound, absent from both sapakṣa and vipakṣa, so it generates only doubt. (3) Anupasaṃhāri — e.g., "Everything is non-eternal because of knowability" — since everything is the pakṣa, no sapakṣa or vipakṣa example can be provided.<br><br>
-    <strong>2. Viruddha (Contradictory)</strong><br>
-    The hetu is pervaded by the contradictory of the sādhya — it proves the opposite of what is intended. E.g., "Sound is eternal because it is produced" — "producedness" actually proves non-eternality.<br><br>
-    <strong>3. Satpratipakṣa (Counter-balanced)</strong><br>
-    A genuine counter-hetu of equal strength exists, leading to opposing conclusions simultaneously. Neither inference can be accepted. E.g., "Sound is eternal because of audibility" versus "Sound is non-eternal because of producedness."<br><br>
-    <strong>4. Asiddha (Unestablished)</strong><br>
-    The hetu is not established in the pakṣa. Three sub-kinds: Āśrayāsiddha (the pakṣa itself does not exist — e.g., "sky-flower"); Svarūpāsiddha (the hetu does not exist in the pakṣa — e.g., "sound has touch"); Vyāpyatvāsiddha (the hetu's pervadedness is not established).<br><br>
-    <strong>5. Bādhita (Contradicted)</strong><br>
-    The hetu's sādhya is already contradicted by a stronger pramāṇa (usually perception). E.g., "Fire is cold because it is a substance" — the sādhya (coldness of fire) is directly refuted by perception.<br><br>
-    <strong>Conclusion</strong><br>
-    The five hetvābhāsas cover all possible ways a hetu can fail. A logician must identify and avoid these to produce a sound (saddhetu) inference.
-  </p>
-</div>
-
-<!-- 15M Q3 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q31</span>
-    <p class="q-sa">उपमानम्।</p>
-  </div>
-  <p class="q-en">Discuss Upamāna (comparison/analogy) as a pramāṇa in detail.</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>उपमानस्वरूपम्</strong><br>
-    उपमानं सादृश्यज्ञानजन्यसंज्ञासंज्ञिसम्बन्धज्ञानकरणम्। तज्जन्यं ज्ञानं उपमितिः।<br><br>
-    <strong>उपमितेः प्रक्रिया</strong><br>
-    (१) पूर्वमेव "गवयः गोसदृशः" इति श्रुतम्।<br>
-    (२) वने गवयं दृष्ट्वा सादृश्यं स्मृतम् — "अयं गोसदृशः।"<br>
-    (३) तदनन्तरं "अयमेव गवयशब्दवाच्यः" इति संज्ञासंज्ञिसम्बन्धः ज्ञायते।<br>
-    एतत् उपमितिज्ञानम्।<br><br>
-    <strong>उपमाने व्यापारः</strong><br>
-    सादृश्यस्मृतिः उपमाने व्यापारः। आप्तवाक्यजन्यसादृश्यज्ञानस्मृत्या संज्ञासंज्ञिसम्बन्धज्ञानं जायते।<br><br>
-    <strong>उपमानस्य स्वातन्त्र्यम्</strong><br>
-    नैयायिकाः उपमानं स्वतन्त्रं प्रमाणम् इति स्वीकुर्वन्ति। बौद्धाः तु उपमानम् अनुमानान्तर्गतम् इति वदन्ति। परन्तु नैयायिकमते — अत्र व्याप्तिज्ञानं नास्ति, सादृश्यज्ञानं कारणम् — अतः उपमानं स्वतन्त्रम्।<br><br>
-    <strong>उपमितिः</strong><br>
-    का उपमितिः? संज्ञासंज्ञिसम्बन्धविषयकं ज्ञानम् उपमितिः। "अयं गवयः" इति ज्ञानम् उपमितिः।<br><br>
-    <strong>उपमानस्य उपयोगः</strong><br>
-    अज्ञातार्थज्ञाने उपमानं प्रमाणम्। पशुपक्षिनामज्ञाने, अपरिचितव्यक्तिपरिचये च उपमानम् उपयुज्यते।<br><br>
-    <strong>उपसंहारः</strong><br>
-    उपमानं प्रत्यक्ष-अनुमान-शब्दव्यतिरिक्तम् स्वतन्त्रं प्रमाणम्। नैयायिकचतुष्टयप्रमाणेषु तृतीयस्थाने विराजते।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Upamāna</strong><br>
-    Upamāna is the pramāṇa whose result (upamiti) is the cognition of the relation between a name (saṃjñā) and its referent (saṃjñī), produced through the cognition of similarity (sādṛśya).<br><br>
-    <strong>Process of Upamiti</strong><br>
-    (1) One has previously heard from a trustworthy person: "A gavaya looks like a cow." (2) On going to the forest, one perceives an animal and cognises the similarity: "This looks like a cow." (3) Through this similarity-cognition, one recalls the description and arrives at: "This is what is called a gavaya." This final cognition — of the word–object relation — is upamiti.<br><br>
-    <strong>Operative Function (Vyāpāra)</strong><br>
-    The vyāpāra in upamāna is sādṛśya-smṛti — the memory of the similarity as communicated by verbal testimony. It is this smṛti, combined with direct perception of the similar object, that generates the upamiti.<br><br>
-    <strong>Upamāna as an Independent Pramāṇa</strong><br>
-    The Naiyāyikas accept upamāna as a fourth, independent pramāṇa. Buddhists reduce it to anumāna. The Naiyāyika counter: no vyāpti is operative here — the mediating cognition is similarity, not invariable concomitance — therefore upamāna is irreducibly distinct.<br><br>
-    <strong>Definition of Upamiti</strong><br>
-    Upamiti is the cognition whose content is the name-object relation (saṃjñā-saṃjñi-sambandha). "This is a gavaya" — the first-time recognition via comparison — is upamiti.<br><br>
-    <strong>Practical Use</strong><br>
-    Upamāna is invaluable for learning the names of unfamiliar animals, plants, and people through resemblance to known entities.<br><br>
-    <strong>Conclusion</strong><br>
-    Upamāna is the third of the four Nyāya pramāṇas — distinct from perception, inference, and verbal testimony. Its unique character lies in the role of perceived similarity as the means to new propositional knowledge.
-  </p>
-</div>
-
-<!-- 15M Q4 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q32</span>
-    <p class="q-sa">शाब्दबोधहेतुः।</p>
-  </div>
-  <p class="q-en">Discuss the causes (hetus) of Śābdabodha (verbal cognition).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>शाब्दबोधस्वरूपम्</strong><br>
-    शब्दप्रमाणजन्यं ज्ञानं शाब्दबोधः। आप्तोक्तेः शब्दात् यत् ज्ञानम् उत्पद्यते तत् शाब्दबोधः।<br><br>
-    <strong>शाब्दबोधस्य हेतवः</strong><br>
-    शाब्दबोधस्य प्रधानहेतुः — वाक्यस्य पदानां शक्तिः। तस्याः सहकारिकारणानि — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br><br>
-    <strong>१. शक्तिः</strong><br>
-    ईश्वरसंकेतः शक्तिः। शक्त्या एव पदं स्वार्थं बोधयति। "घट" पदं शक्त्या घटम् एव बोधयति।<br><br>
-    <strong>२. आकाङ्क्षा</strong><br>
-    एकस्य पदस्य अन्यपदापेक्षा। "आनय" इति पदं "किम्" इति अपेक्षते। आकाङ्क्षारहिते वाक्यं न भवति।<br><br>
-    <strong>३. योग्यता</strong><br>
-    पदार्थानां परस्परबाधाभावः। "अग्निना सिञ्चति" इत्यत्र अग्निः सेचने अयोग्यः — योग्यता नास्ति, अतः शाब्दबोधो न जायते।<br><br>
-    <strong>४. आसत्तिः (सान्निध्यम्)</strong><br>
-    पदानां कालिकसान्निध्यम्। यदि "गां" इत्युक्त्वा वर्षानन्तरं "आनय" उच्यते तदा वाक्यं न भवति।<br><br>
-    <strong>५. तात्पर्यम्</strong><br>
-    वक्तुः अभिप्रायः। एकस्यैव वाक्यस्य अनेकार्थे सम्भवे वक्तुः तात्पर्यज्ञानम् अर्थनिर्णये साहाय्यं करोति।<br><br>
-    <strong>उपसंहारः</strong><br>
-    शक्तिर्मुख्या। आकाङ्क्षा-योग्यता-आसत्ति-तात्पर्याणि सहकारिणः। एतेषां समवायेन शाब्दबोधः जायते।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Śābdabodha</strong><br>
-    Śābdabodha is the cognition generated by verbal testimony (śabda-pramāṇa) — the knowledge one gains from a reliable (āpta) speaker's utterance.<br><br>
-    <strong>Primary Cause: Śakti</strong><br>
-    The primary cause of śābdabodha is the śakti (denotative power) of each word — its God-ordained relation to its meaning. "Pot" (ghaṭa) denotes a pot by śakti.<br><br>
-    <strong>Auxiliary Causes (Sahakāriṇas)</strong><br><br>
-    1. Ākāṅkṣā (Syntactic Expectancy) — Each word in a sentence expects other words to complete the intended sense. "Bring!" expects "what?" Without ākāṅkṣā, words are mere isolated utterances, not a sentence.<br><br>
-    2. Yogyatā (Semantic Compatibility) — The meanings of words must not contradict each other. "Water the plants with fire" — fire and watering are semantically incompatible; no valid śābdabodha arises.<br><br>
-    3. Āsatti / Sannidhi (Temporal Proximity) — Words must be uttered in close temporal sequence. If "bring" is uttered one year after "cow," no cognitive unit (vākya) is formed.<br><br>
-    4. Tātparya (Speaker's Intention) — Where a sentence is ambiguous, the speaker's intended meaning resolves the ambiguity. E.g., "saindhava" can mean both "horse" and "salt" — context and speaker's intent determine which is meant.<br><br>
-    <strong>Conclusion</strong><br>
-    Śakti is the primary cause; ākāṅkṣā, yogyatā, āsatti, and tātparya are indispensable auxiliaries. Their joint operation produces the valid verbal cognition that is śābdabodha.
-  </p>
-</div>
-
-<!-- 15M Q5 -->
-<div class="qa long">
-  <div class="qhead"><span class="qnum">Q33</span>
-    <p class="q-sa">शाब्दबोधः।</p>
-  </div>
-  <p class="q-en">Write a detailed essay on Śābdabodha (verbal cognition / cognition from word-testimony).</p>
-  <div class="label ans-sa">Answer — Sanskrit</div>
-  <p class="ans-sa-text">
-    <strong>शाब्दबोधस्वरूपम्</strong><br>
-    शब्दजन्यं ज्ञानं शाब्दबोधः। शब्दः नाम आप्तोपदिष्टः व्याकरणसम्मतः पदसमूहः। तस्माद् उत्पन्नं बोधनं शाब्दबोधः।<br><br>
-    <strong>शब्दप्रमाणस्य स्वरूपम्</strong><br>
-    शब्दः द्विविधः — वैदिकः, लौकिकः च। वैदिकशब्दः ईश्वरप्रणीतः — अपौरुषेयः। लौकिकशब्दः आप्तमनुष्यप्रणीतः। उभाभ्यां शाब्दबोधः सम्भवति।<br><br>
-    <strong>पदस्य अर्थबोधनप्रक्रिया</strong><br>
-    प्रत्येकं पदं शक्त्या स्वार्थं बोधयति। पदानां संयोगे वाक्यं जायते। वाक्यात् वाक्यार्थबोधः। वाक्यार्थः — "कारकसम्बन्धविशिष्टक्रियाविषयकं बोधनम्।"<br><br>
-    <strong>शाब्दबोधस्य साधनानि</strong><br>
-    शाब्दबोधाय पदस्य शक्तिः मुख्या। सहकारिणः — आकाङ्क्षा, योग्यता, आसत्तिः, तात्पर्यञ्च।<br>
-    — आकाङ्क्षा: पदानाम् अन्योन्यापेक्षा।<br>
-    — योग्यता: पदार्थानां सङ्गतता।<br>
-    — आसत्तिः: उच्चारणे कालिकसान्निध्यम्।<br>
-    — तात्पर्यम्: वक्तुः विवक्षा।<br><br>
-    <strong>शाब्दबोधे लक्षणाया भूमिका</strong><br>
-    यत्र शक्यार्थः बाधितः तत्र लक्षणाशक्त्या अर्थः बोध्यते। "गङ्गायां घोषः" — गङ्गाशब्दस्य शक्यार्थः प्रवाहः, परन्तु लक्षणया तीरम् अर्थः गृह्यते।<br><br>
-    <strong>शाब्दबोधस्य प्रकाराः</strong><br>
-    — मुख्यार्थबोधः (शक्त्या)।<br>
-    — लाक्षणिकार्थबोधः (लक्षणया)।<br>
-    — व्यङ्ग्यार्थबोधः (व्यञ्जनया)।<br><br>
-    <strong>शाब्दबोधस्य महत्त्वम्</strong><br>
-    वेदागमपुराणादिग्रन्थेभ्यः ज्ञानप्राप्तौ शब्दप्रमाणं परमावश्यकम्। गुरूपदेशेन शिष्यः ज्ञानं प्राप्नोति — एतत् सर्वं शाब्दबोधपरम्परायाः फलम्।<br><br>
-    <strong>उपसंहारः</strong><br>
-    शाब्दबोधः न केवलं ज्ञानसाधनम् — अपितु भारतीयज्ञानपरम्पराया मूलाधारः। तर्कशास्त्रे, मीमांसायां, वेदान्ते च शाब्दबोधस्य विचारः अत्यन्तं महत्त्वपूर्णः।
-  </p>
-  <div class="label ans-en">Answer — English</div>
-  <p class="ans-en-text">
-    <strong>Nature of Śābdabodha</strong><br>
-    Śābdabodha is the valid cognition produced by verbal testimony (śabda). It arises when a grammatically well-formed sentence, uttered by a reliable speaker (āpta), is heard and understood.<br><br>
-    <strong>Two Kinds of Śabda</strong><br>
-    Vaidika śabda — the Vedas, which the Naiyāyikas consider to be authored by an omniscient God (Īśvara), hence impersonal and infallible. Laukika śabda — statements of reliable human speakers in everyday life. Both generate valid śābdabodha.<br><br>
-    <strong>How Words Produce Meaning</strong><br>
-    Each word conveys its own meaning through its śakti (denotative power). A collection of words with ākāṅkṣā, yogyatā, and āsatti forms a vākya (sentence). The vākya generates vākyārtha-bodha — cognition of the complete propositional content, understood as: cognition of an action qualified by its kāraka (case) relations.<br><br>
-    <strong>Causes of Śābdabodha</strong><br>
-    Primary: śakti of each word. Auxiliaries: (1) Ākāṅkṣā — mutual expectancy of words; (2) Yogyatā — semantic non-contradiction; (3) Āsatti — temporal proximity of utterance; (4) Tātparya — speaker's intention, resolving ambiguity.<br><br>
-    <strong>Role of Lakṣaṇā in Śābdabodha</strong><br>
-    When the śakya (primary denotative) meaning is blocked, lakṣaṇā (secondary/indicative function) operates. "Gaṅgāyāṃ ghoṣaḥ" — "on the Gaṅgā" — shifts from the primary meaning (stream) to the related meaning (bank), because a village cannot exist in a river-stream.<br><br>
-    <strong>Three Modes of Verbal Meaning</strong><br>
-    (1) Mukhyārtha-bodha via śakti (primary denotation), (2) Lākṣaṇikārtha-bodha via lakṣaṇā (secondary), (3) Vyaṅgyārtha-bodha via vyañjanā (suggestion/implication).<br><br>
-    <strong>Significance</strong><br>
-    Śābdabodha is the foundation of all scriptural and traditional knowledge transmission — from the Vedas to the guru-śiṣya paramparā. Without the validity of verbal testimony, no received knowledge would be epistemologically grounded.<br><br>
-    <strong>Conclusion</strong><br>
-    Śābdabodha is not merely one pramāṇa among four — it is the backbone of the Indian intellectual tradition. Its analysis in Nyāya, Mīmāṃsā, and Vedānta represents one of the most sophisticated philosophies of language in the world.
-  </p>
-</div>
-
-<div style="text-align:center; margin-top:48px; color:var(--ink-dim); font-size:.85rem; letter-spacing:.5px;">
-  तर्कसोपानम् · सर्वे उत्तराः · शुभास्ते परीक्षायाः
+<div style="text-align:center; margin-top:48px; color:var(--ink-dim); font-size:.82rem; letter-spacing:.5px;">
+  तर्कसोपानम् · पठनसामग्री · शुभास्ते परीक्षायाः
 </div>
 
 </body>
