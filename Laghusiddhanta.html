@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>लघुसिद्धान्तकौमुदी — समास · तद्धित · कृदन्त — Answers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#ece3d3;
+    --ink-soft:#b6a88d;
+    --parch:#16120d;
+    --parch-deep:#2c2218;
+    --card:#211a13;
+    --ochre:#e0954a;
+    --ochre-soft:#bd8650;
+    --rule:#3a2e20;
+    --maroon:#e9a079;
+    --en:#fdf4e3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 20% 0%, #241a10 0%, transparent 55%),
+      radial-gradient(circle at 90% 100%, #1f1810 0%, transparent 50%),
+      var(--parch);
+    color:var(--ink);
+    font-family:'Spectral',Georgia,serif;
+    line-height:1.7;
+    font-size:18px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:64px 28px 120px;}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    text-align:center;
+    padding-bottom:38px;
+    border-bottom:2px solid var(--ochre);
+    position:relative;
+    margin-bottom:14px;
+  }
+  header.masthead::after{
+    content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:var(--ochre-soft);
+  }
+  .om{font-family:'Tiro Devanagari Sanskrit',serif;font-size:40px;color:var(--ochre);line-height:1;}
+  header.masthead h1{
+    font-family:'Tiro Devanagari Sanskrit',serif;
+    font-weight:400;font-size:2.6rem;margin:.25em 0 .1em;color:var(--maroon);letter-spacing:.5px;
+  }
+  header.masthead .sub{
+    font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink-soft);
+    letter-spacing:2px;text-transform:uppercase;
+  }
+  header.masthead .meta{font-size:.9rem;color:var(--ink-soft);margin-top:14px;font-style:italic;}
+
+  /* ---- Table of contents ---- */
+  nav.toc{
+    background:var(--card);border:1px solid var(--rule);border-radius:8px;
+    padding:26px 32px;margin:40px 0 56px;box-shadow:0 8px 28px -22px rgba(43,33,24,.6);
+  }
+  nav.toc h2{
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:3px;text-transform:uppercase;
+    color:var(--ochre);margin:0 0 14px;
+  }
+  nav.toc ol{margin:0;padding-left:1.2em;}
+  nav.toc li{margin:.35em 0;}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ochre-soft);}
+  nav.toc a:hover{color:var(--ochre);}
+  nav.toc .grp{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--maroon);margin:16px 0 6px;font-weight:600;}
+  nav.toc .grp:first-of-type{margin-top:4px;}
+
+  /* ---- Section banners ---- */
+  .band{
+    margin:72px 0 30px;text-align:center;
+  }
+  .band .deva{font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.7rem;color:var(--maroon);}
+  .band .en{font-family:'Cormorant Garamond',serif;letter-spacing:4px;text-transform:uppercase;
+    font-size:1rem;color:var(--ochre);margin-top:4px;}
+  .band .line{width:90px;height:2px;background:var(--ochre);margin:14px auto 0;}
+
+  /* ---- Answer cards ---- */
+  article.qa{
+    background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--ochre);
+    border-radius:6px;padding:30px 34px 26px;margin:0 0 40px;
+    box-shadow:0 10px 30px -26px rgba(43,33,24,.7);
+  }
+  article.qa h3{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-weight:400;font-size:1.5rem;
+    color:var(--maroon);margin:0 0 4px;line-height:1.4;
+  }
+  article.qa .qmeta{
+    font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ochre);
+    letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;
+  }
+  .badge{
+    display:inline-block;background:var(--ochre);color:#1a140d;font-family:'Cormorant Garamond',serif;
+    font-size:.75rem;letter-spacing:1.5px;padding:2px 10px;border-radius:20px;
+    vertical-align:middle;margin-left:8px;text-transform:uppercase;
+  }
+
+  .lbl{
+    font-family:'Cormorant Garamond',serif;font-size:.82rem;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--ochre);display:block;margin:22px 0 2px;
+  }
+  .lbl.first{margin-top:6px;}
+
+  .sa{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.12rem;line-height:1.95;color:var(--ink);
+    margin:0 0 4px;overflow-wrap:break-word;
+  }
+  .en{
+    font-family:'Spectral',serif;font-size:1rem;line-height:1.72;color:var(--en);
+    margin:0 0 2px;font-style:normal;font-weight:700;overflow-wrap:break-word;
+  }
+
+  /* paragraph pairing */
+  .para{padding:14px 0;border-bottom:1px dashed var(--rule);}
+  .para:last-child{border-bottom:none;}
+  .para .pnum{
+    font-family:'Cormorant Garamond',serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--ochre-soft);display:block;margin-bottom:6px;
+  }
+  .para .sa{margin-bottom:8px;}
+  .para .en{padding-left:14px;border-left:2px solid var(--parch-deep);}
+
+  /* sutra inline highlight */
+  .sutra{color:var(--maroon);font-weight:500;}
+
+  footer{
+    text-align:center;margin-top:80px;padding-top:24px;border-top:1px solid var(--rule);
+    font-size:.85rem;color:var(--ink-soft);font-style:italic;
+  }
+  .toplink{display:block;text-align:right;font-size:.8rem;color:var(--ochre-soft);
+    text-decoration:none;letter-spacing:1px;margin-top:8px;}
+  .toplink:hover{color:var(--ochre);}
+
+  @media print{
+    :root{
+      --ink:#2b2118; --ink-soft:#4a3c2e;
+      --parch:#fff; --parch-deep:#ece0c8; --card:#fff;
+      --ochre:#a8631b; --ochre-soft:#c98a3e; --rule:#d8c8a6; --maroon:#6e2412; --en:#1f1812;
+    }
+    body{background:#fff;font-size:12pt;}
+    .badge{color:#fff !important;}
+    article.qa{box-shadow:none;break-inside:avoid;border-color:#d8c8a6;}
+    nav.toc{display:none;}
+    .toplink{display:none;}
+  }
+  @media(max-width:560px){
+    body{font-size:16px;}
+    .wrap{padding:40px 16px 80px;}
+    article.qa{padding:22px 18px;}
+    header.masthead h1{font-size:2rem;}
+  }
+  /* ---- Apple Watch / ultra-narrow ---- */
+  @media(max-width:320px){
+    body{font-size:15px;line-height:1.55;}
+    .wrap{padding:14px 9px 36px;}
+    header.masthead{padding-bottom:16px;margin-bottom:8px;}
+    .om{font-size:24px;}
+    header.masthead h1{font-size:1.3rem;letter-spacing:0;}
+    header.masthead .sub{font-size:.72rem;letter-spacing:.5px;}
+    header.masthead .meta{font-size:.7rem;margin-top:8px;}
+    nav.toc{padding:13px 13px;margin:18px 0 26px;border-radius:6px;}
+    nav.toc h2{font-size:.86rem;letter-spacing:1px;margin-bottom:9px;}
+    nav.toc ol{padding-left:1em;}
+    nav.toc li{margin:.45em 0;line-height:1.4;}
+    nav.toc .grp{font-size:.82rem;letter-spacing:1px;margin:12px 0 5px;}
+    .band{margin:34px 0 16px;}
+    .band .deva{font-size:1.2rem;}
+    .band .en{font-size:.78rem;letter-spacing:2px;}
+    article.qa{padding:13px 11px 11px;border-left-width:3px;border-radius:5px;margin-bottom:20px;}
+    article.qa h3{font-size:1.08rem;line-height:1.35;}
+    article.qa .qmeta{font-size:.78rem;letter-spacing:.5px;margin-bottom:12px;}
+    .badge{font-size:.62rem;padding:1px 7px;margin-left:5px;letter-spacing:.5px;}
+    .lbl{font-size:.7rem;letter-spacing:1px;margin:14px 0 2px;}
+    .sa{font-size:1.02rem;line-height:1.78;overflow-wrap:anywhere;}
+    .en{font-size:.92rem;line-height:1.6;overflow-wrap:anywhere;}
+    .para{padding:9px 0;}
+    .para .pnum{font-size:.68rem;letter-spacing:1px;margin-bottom:4px;}
+    .para .en{padding-left:8px;border-left-width:2px;}
+    .sutra{overflow-wrap:anywhere;}
+    .toplink{font-size:.72rem;}
+    footer{margin-top:46px;font-size:.76rem;}
+  }
+  /* derivation / prakriyā block */
+  .deriv{font-family:'Tiro Devanagari Sanskrit',serif;background:rgba(224,149,74,.07);
+    border:1px solid var(--rule);border-left:3px solid var(--ochre-soft);border-radius:5px;
+    padding:9px 13px;margin:8px 0 4px;font-size:1.02rem;line-height:1.95;overflow-wrap:anywhere;}
+  .deriv .arr{color:var(--ochre);font-weight:600;padding:0 3px;}
+  .ref{color:var(--ochre-soft);font-size:.85em;}
+  @media(max-width:320px){ .deriv{font-size:.95rem;padding:7px 9px;} }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+  <header class="masthead">
+    <div class="om">ॐ</div>
+    <h1>विषयः — लघुसिद्धान्तकौमुदी</h1>
+    <div class="sub">Samāsa · Taddhita · Kṛdanta — Model Answers</div>
+    <div class="meta">कर्णाटकसंस्कृतविश्वविद्यालयः · B.A. Sanskrit · पत्रिका-४ — answers in Sanskrit with English explanation, paragraph by paragraph</div>
+  </header>
+
+  <nav class="toc">
+    <h2>विषयसूची · Contents</h2>
+    <div class="grp">I · एकवाक्योत्तराणि — Short answers</div>
+    <ol>
+      <li><a href="#q1">समासः — स्वरूपं भेदाश्च</a></li>
+      <li><a href="#q2">वृत्तिः — का? कति?</a></li>
+      <li><a href="#q3">उपसर्जनम्</a></li>
+      <li><a href="#q4">उपराजम् — विग्रहः, समासान्तः</a></li>
+      <li><a href="#q5">अनश्च (५।४।१०८) — अर्थः</a></li>
+      <li><a href="#q6">शाकपार्थिवः — विग्रहः, समासनाम</a></li>
+      <li><a href="#q7">उपपदसंज्ञाविधायकसूत्रम्</a></li>
+      <li><a href="#q8">आदित्यः — प्रत्ययः, अर्थः</a></li>
+      <li><a href="#q9">गोत्रसंज्ञाविधायकसूत्रम्</a></li>
+      <li><a href="#q10">शिष्यः — प्रत्ययः</a></li>
+    </ol>
+    <div class="grp">II · लघुप्रबन्धाः — Short essays</div>
+    <ol start="11">
+      <li><a href="#q11">तद्धितार्थोत्तरपदसमाहारे च (२।१।५१)</a></li>
+      <li><a href="#q12">उपशरदम् — प्रक्रिया</a></li>
+      <li><a href="#q13">विशालाक्षः — ससूत्रं समासः</a></li>
+      <li><a href="#q14">उरःप्रभृतिभ्यः कप् (५।४।१५१)</a></li>
+      <li><a href="#q15">औडुलोमिः — यथासूत्रम्</a></li>
+      <li><a href="#q16">स्तुत्यः — यथासूत्रम्</a></li>
+    </ol>
+    <div class="grp">III · विस्तरेण — Detailed essays</div>
+    <ol start="17">
+      <li><a href="#q17">अव्ययीभावसमासः</a></li>
+      <li><a href="#q18">तत्पुरुषः</a></li>
+      <li><a href="#q19">कृत्यप्रत्ययाः</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============== SECTION I ============== -->
+  <div class="band">
+    <div class="deva">एकवाक्योत्तराणि</div>
+    <div class="en">Short Answers</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q1">
+    <h3>१. समासो नाम कः? सः कतिधा विभक्तः?</h3>
+    <div class="qmeta">Section I · Q1</div>
+    <div class="para">
+      <p class="sa">समासः नाम अनेकेषां सुबन्तपदानाम् एकपदीभावः। सः चतुर्धा — <span class="sutra">अव्ययीभावः, तत्पुरुषः, बहुव्रीहिः, द्वन्द्वः</span> च।</p>
+      <p class="en">A <em>samāsa</em> is the merging of several inflected words into one word. It is of four kinds — <em>avyayībhāva, tatpuruṣa, bahuvrīhi</em> and <em>dvandva</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q2">
+    <h3>२. वृत्तिः नाम किम्? ताः काः?</h3>
+    <div class="qmeta">Section I · Q2</div>
+    <div class="para">
+      <p class="sa">स्वार्थं विहाय परस्परसम्बद्धम् एकार्थाभिधानं वृत्तिः। ताः पञ्च — <span class="sutra">समासः, कृत्, तद्धितः, एकशेषः, सनाद्यन्तधातुः</span> च।</p>
+      <p class="en"><em>Vṛtti</em> is the expression of one connected meaning by words that drop their separate construction. The five are — <em>samāsa, kṛt, taddhita, ekaśeṣa</em> and the <em>sanādyanta-dhātu</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q3">
+    <h3>३. उपसर्जनं नाम किम्?</h3>
+    <div class="qmeta">Section I · Q3</div>
+    <div class="para">
+      <p class="sa">समासविधायकसूत्रे प्रथमानिर्दिष्टं गौणपदम् उपसर्जनसंज्ञकम् (<span class="sutra">"प्रथमानिर्दिष्टं समास उपसर्जनम्"</span> १।२।४३), तस्य च पूर्वनिपातः।</p>
+      <p class="en">The subordinate member named in the nominative in the rule that forms the compound is the <em>upasarjana</em> (1.2.43), and it is placed first.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q4">
+    <h3>४. उपराजमित्यत्र कथं विग्रहः? समासान्तः कः प्रत्ययः?</h3>
+    <div class="qmeta">Section I · Q4</div>
+    <div class="para">
+      <p class="sa">विग्रहः — <span class="sutra">"राज्ञः समीपम्"</span> (अव्ययीभावः)। समासान्तप्रत्ययः — "अनश्च" (५।४।१०८) इति <span class="sutra">टच्</span>।</p>
+      <p class="en">The analysis is "rājñaḥ samīpam" — "near the king" (an avyayībhāva). The samāsānta affix is <strong>ṬaC</strong>, by <em>anaśca</em> (5.4.108).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q5">
+    <h3>५. अनश्च इति सूत्रस्यार्थः कः?</h3>
+    <div class="qmeta">Section I · Q5 · सूत्रम् ५।४।१०८</div>
+    <div class="para">
+      <p class="sa">अन्नन्तात् अव्ययीभावात् <span class="sutra">टच् समासान्तः</span> स्यात् — यथा उपराजम्, अध्यात्मम् ("च" इति पूर्वसूत्रात् शरत्प्रभृतिभ्यः समुच्चयः)।</p>
+      <p class="en">After an avyayībhāva ending in <em>an</em>, the samāsānta <strong>ṬaC</strong> is added — e.g. <em>uparājam, adhyātmam</em> (the "ca" conjoins it with the previous śarat-prabhṛti rule).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q6">
+    <h3>६. शाकपार्थिवः — विग्रहं समासनाम च लिखत।</h3>
+    <div class="qmeta">Section I · Q6</div>
+    <div class="para">
+      <p class="sa">विग्रहः — <span class="sutra">"शाकप्रियः पार्थिवः"</span> (मध्यमपदस्य "प्रिय"-शब्दस्य लोपः)। समासनाम — मध्यमपदलोपी कर्मधारयः।</p>
+      <p class="en">The analysis is "śāka-priyaḥ pārthivaḥ," with the middle word <em>priya</em> elided. Its name is <em>madhyamapadalopī karmadhāraya</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q7">
+    <h3>७. उपपदसंज्ञाविधायकसूत्रं लिखत।</h3>
+    <div class="qmeta">Section I · Q7</div>
+    <div class="para">
+      <p class="sa"><span class="sutra">"तत्रोपपदं सप्तमीस्थम्"</span> (३।१।९२) इति उपपदसंज्ञाविधायकं सूत्रम्।</p>
+      <p class="en">The rule ordaining the term <em>upapada</em> is "tatropapadaṁ saptamīstham" (3.1.92).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q8">
+    <h3>८. आदित्यः इत्यत्र कः प्रत्ययः? कस्मिन्नर्थे?</h3>
+    <div class="qmeta">Section I · Q8</div>
+    <div class="para">
+      <p class="sa">"दित्यदित्यादित्यपत्युत्तरपदाण्ण्यः" (४।१।८५) इति <span class="sutra">ण्य</span>-प्रत्ययः। अर्थः — <span class="sutra">अपत्यम्</span> (अदितेः अपत्यम् = आदित्यः)।</p>
+      <p class="en">The affix is <strong>ṆyA</strong>, by <em>dityadityādityapatyuttarapadāṇ ṇyaḥ</em> (4.1.85). Its sense is <em>apatya</em> (descendant) — "aditeḥ apatyam" = <em>ādityaḥ</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q9">
+    <h3>९. गोत्रसंज्ञाविधायकं सूत्रं लिखत।</h3>
+    <div class="qmeta">Section I · Q9</div>
+    <div class="para">
+      <p class="sa"><span class="sutra">"अपत्यं पौत्रप्रभृति गोत्रम्"</span> (४।१।१६२) इति गोत्रसंज्ञाविधायकं सूत्रम्।</p>
+      <p class="en">The rule ordaining the term <em>gotra</em> is "apatyaṁ pautraprabhṛti gotram" (4.1.162).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q10">
+    <h3>१०. शिष्यः इत्यत्र कः प्रत्ययः?</h3>
+    <div class="qmeta">Section I · Q10</div>
+    <div class="para">
+      <p class="sa">शास्-धातोः <span class="sutra">"एतिस्तुशास्वृदृजुषः क्यप्"</span> (३।१।१०९) इति क्यप् प्रत्ययः (ततः "शास इदङ्हलोः" → शिष्यः)।</p>
+      <p class="en">The affix is <strong>KyaP</strong>, added to <em>śās</em> by "eti-stu-śās-vṛ-dṛ-juṣaḥ kyap" (3.1.109) — giving <em>śiṣyaḥ</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION II ============== -->
+  <div class="band">
+    <div class="deva">लघुप्रबन्धाः</div>
+    <div class="en">Short Essays</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q11">
+    <h3>११. तद्धितार्थोत्तरपदसमाहारे च — व्याख्यात।</h3>
+    <div class="qmeta">Section II · Q11 · सूत्रम् २।१।५१</div>
+    <div class="para">
+      <p class="sa">अनेन सूत्रेण त्रिषु स्थलेषु दिक्संख्यापूर्वकः तत्पुरुषसमासः ("प्राग्वत्") विधीयते, ते च <span class="sutra">"संख्यापूर्वो द्विगुः"</span> (२।१।५२) इति द्विगुसंज्ञकाः — (१) तद्धितार्थे: पञ्चसु कपालेषु संस्कृतः = <span class="sutra">पञ्चकपालः</span>; (२) उत्तरपदे: पञ्च गावः धनं यस्य = <span class="sutra">पञ्चगवधनः</span>; (३) समाहारे: पञ्चानां गवां समाहारः = <span class="sutra">पञ्चगवम्</span>। दिक्शब्देऽपि समम्।</p>
+      <p class="en">This rule ordains a <em>dik</em>- or numeral-initial tatpuruṣa ("as before"), which the next rule "saṅkhyāpūrvo dviguḥ" (2.1.52) names a <em>dvigu</em>, in three cases — (1) a <em>taddhita</em> sense: "consecrated in five cups" → <em>pañca-kapālaḥ</em>; (2) before an <em>uttarapada</em>: "having five cows as wealth" → <em>pañca-gava-dhanaḥ</em>; (3) an aggregate: "a group of five cows" → <em>pañca-gavam</em>. Direction-words behave the same.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q12">
+    <h3>१२. उपशरदम् — प्रक्रियां दर्शयत।</h3>
+    <div class="qmeta">Section II · Q12</div>
+    <div class="para">
+      <p class="sa">विग्रहः — "शरदः समीपम्"। "उप" (समीपार्थे) इत्यनेन शरद्-शब्देन सह <span class="sutra">"अव्ययं विभक्ति-समीप-..."</span> (२।१।६) इति अव्ययीभावसमासः; <span class="sutra">"अव्ययीभावे शरत्प्रभृतिभ्यः"</span> (५।४।१०७) इति टच् समासान्तः, क्लीबत्वे च अम् —</p>
+      <div class="deriv">उप + शरद् <span class="arr">→</span> शरद् + अ (टच्) <span class="arr">→</span> उपशरद <span class="arr">→</span> + अम् (नपुंसके) <span class="arr">→</span> <strong>उपशरदम्</strong></div>
+      <p class="en">Analysis "śaradaḥ samīpam" — "near autumn." <em>Upa</em> compounds with <em>śarad</em> as an avyayībhāva by "avyayaṁ vibhakti-samīpa-..." (2.1.6); by "avyayībhāve śarat-prabhṛtibhyaḥ" (5.4.107) the samāsānta <strong>ṬaC</strong> is added, and being neuter it takes <em>am</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q13">
+    <h3>१३. विशालाक्षः — ससूत्रं समासं दर्शयत।</h3>
+    <div class="qmeta">Section II · Q13</div>
+    <div class="para">
+      <p class="sa">विग्रहः — "विशाले अक्षिणी यस्य सः" = विशालाक्षः, अन्यपदार्थप्रधानत्वात् <span class="sutra">"अनेकमन्यपदार्थे"</span> (२।२।२४) इति बहुव्रीहिः; अक्षि इति स्वाङ्गवाचि अन्ते इति <span class="sutra">"बहुव्रीहौ सक्थ्यक्ष्णोः स्वाङ्गात् षच्"</span> (५।४।११३) इति षच् समासान्तः —</p>
+      <div class="deriv">विशाल + अक्षि <span class="arr">→</span> अक्षि + अ (षच्) <span class="arr">→</span> अक्ष <span class="arr">→</span> <strong>विशालाक्षः</strong></div>
+      <p class="en">Analysis "viśāle akṣiṇī yasya saḥ" — "he whose two eyes are wide" — a <em>bahuvrīhi</em> (2.2.24); since the body-part word <em>akṣi</em> ends it, the samāsānta <strong>ṣaC</strong> is added by "bahuvrīhau sakthy-akṣṇoḥ svāṅgāt ṣac" (5.4.113). (Cf. <em>dīrgha-sakthaḥ, jala-jākṣī</em>.)</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q14">
+    <h3>१४. उरः प्रभृतिभ्यः कप् — सोदाहरणं विवृणुत।</h3>
+    <div class="qmeta">Section II · Q14 · सूत्रम् ५।४।१५१</div>
+    <div class="para">
+      <p class="sa"><span class="sutra">"उरःप्रभृतिभ्यः कप्"</span> — उरस्-आदिभ्यः (उरःप्रभृतिगणपठितेभ्यः) अन्तेभ्यः बहुव्रीहिभ्यः कप् (=क) समासान्तप्रत्ययः स्यात्। उदाहरणम् — व्यूढम् उरः यस्य सः = <span class="sutra">व्यूढोरस्कः</span> (विस्तीर्णवक्षाः); प्रियं सर्पिः यस्य सः = प्रियसर्पिष्कः; "सोऽपदादौ" (८।३।३८) इत्यादिना विसर्गस्य सत्वम्।</p>
+      <p class="en">"Uraḥ-prabhṛtibhyaḥ kap": after a bahuvrīhi ending in <em>uras</em> and the other <em>uraḥ-prabhṛti</em> words, the samāsānta affix <strong>kaP</strong> (= <em>ka</em>) is added — e.g. "one whose chest is broad" → <em>vyūḍhoraskaḥ</em>; "one to whom ghee is dear" → <em>priya-sarpiṣkaḥ</em> (the visarga becomes <em>s</em> by "so'padādau" 8.3.38).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q15">
+    <h3>१५. औडुलोमिः — यथासूत्रं विशदयत।</h3>
+    <div class="qmeta">Section II · Q15</div>
+    <div class="para">
+      <p class="sa">उडुलोमन् (उडुलोम) इति बाह्वादिगणे पठितः। <span class="sutra">"बाह्वादिभ्यश्च"</span> (४।१।९६) इति ("अत इञ्" ४।१।९५ इत्यतः इञ् अनुवृत्तौ) अपत्ये अर्थे <span class="sutra">इञ्</span> प्रत्ययः; इञ् ञित् इति "तद्धितेष्वचामादेः" (७।२।११७) आदिवृद्धिः (उ → औ) —</p>
+      <div class="deriv">उडुलोम(न्) + इञ् <span class="arr">→</span> औडुलोम् + इ <span class="arr">→</span> <strong>औडुलोमिः</strong> (उडुलोम्नः अपत्यम् पुमान्)</div>
+      <p class="en"><em>Uḍuloman</em> is listed in the <em>bāhv-ādi</em> group. By "bāhvādibhyaśca" (4.1.96) — <em>iñ</em> continuing from "ata iñ" (4.1.95) — the affix <strong>iñ</strong> is added in the <em>apatya</em> sense; being a ñit affix, it causes initial vṛddhi (u → au) by "taddhiteṣv acām ādeḥ" (7.2.117). Cf. <em>bāhaviḥ</em> from <em>bāhu</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q16">
+    <h3>१६. स्तुत्यः — यथासूत्रं विवृणुत।</h3>
+    <div class="qmeta">Section II · Q16</div>
+    <div class="para">
+      <p class="sa">"ष्टुञ् स्तुतौ" इति धातुः। <span class="sutra">"एतिस्तुशास्वृदृजुषः क्यप्"</span> (३।१।१०९) इति इण्-स्तु-शास्-वृ-दृ-जुष्-भ्यः कृत्यसंज्ञकः क्यप् प्रत्ययः; क्यप् पित् इति ह्रस्वान्तात् <span class="sutra">"ह्रस्वस्य पिति कृति तुक्"</span> (६।१।७१) इति तुक् (त्) आगमः —</p>
+      <div class="deriv">स्तु + य (क्यप्) <span class="arr">→</span> स्तु + त् + य <span class="arr">→</span> <strong>स्तुत्यः</strong> (स्तोतुम् अर्हः)</div>
+      <p class="en">The root is <em>ṣṭuñ</em> ("to praise"). By "eti-stu-śās-vṛ-dṛ-juṣaḥ kyap" (3.1.109) the kṛtya affix <strong>KyaP</strong> is added after <em>i, stu, śās, vṛ, dṛ, juṣ</em>; KyaP being pit, the short-vowel root takes the augment <em>tuk</em> (= <em>t</em>) by "hrasvasya piti kṛti tuk" (6.1.71).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION III ============== -->
+  <div class="band">
+    <div class="deva">विस्तरेण उत्तराणि</div>
+    <div class="en">Detailed Essays</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q17">
+    <h3>१७. अव्ययीभावसमासः</h3>
+    <div class="qmeta">Section III · Q17</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — लक्षणम्</span>
+      <p class="sa">यस्मिन् समासे पूर्वपदस्य (प्रायः अव्ययस्य) अर्थः प्रधानः, सः अव्ययीभावसमासः। अयं समासः समुदायेन अव्ययत्वम् आपद्यते — "अव्ययीभावश्च" (१।१।४१) इति अव्ययसंज्ञा। <span class="sutra">"अव्ययं विभक्तिसमीपसमृद्धिव्यृद्ध्यर्थाभावात्ययासम्प्रतिशब्दप्रादुर्भावपश्चाद्यथानुपूर्व्ययौगपद्यसादृश्यसम्पत्तिसाकल्यान्तवचनेषु"</span> (२।१।६) इति मुख्यविधायकं सूत्रम् — एतेषु अर्थेषु अव्ययं सुबन्तेन सह समस्यते।</p>
+      <p class="en">A compound in which the meaning of the first member (usually an indeclinable) predominates is the <em>avyayībhāva</em>. The whole compound itself becomes an indeclinable, by the saṁjñā "avyayībhāvaśca" (1.1.41). Its chief rule is "avyayaṁ vibhakti-samīpa-samṛddhi-vyṛddhi-arthābhāva-atyaya-asamprati-śabdaprādurbhāva-paścād-yathā-ānupūrvya-yaugapadya-sādṛśya-sampatti-sākalya-antavacaneṣu" (2.1.6): an indeclinable compounds with a subanta in these many senses (proximity, prosperity, absence, transgression, and so on).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — कार्याणि</span>
+      <p class="sa">अव्ययीभावः नित्यं नपुंसकैकवचनान्तः — "अव्ययीभावश्च" (२।४।१८) इति क्लीबत्वम्। विभक्तौ <span class="sutra">"नाव्ययीभावादतोऽम्त्वपञ्चम्याः"</span> (२।४।८३) इति अकारान्तात् अम्; अन्यत्र च अव्ययत्वात् सुप्-लुक्। उपसर्जनस्य (अव्ययस्य) पूर्वनिपातः। समासान्ताः — "अव्ययीभावे शरत्प्रभृतिभ्यः" (५।४।१०७, टच्), "अनश्च" (५।४।१०८, टच्) इत्यादयः।</p>
+      <p class="en">The avyayībhāva is always neuter singular — neuter by "avyayībhāvaśca" (2.4.18). For case, an <em>a</em>-final avyayībhāva takes <em>am</em> by "nāvyayībhāvād ato'm tv apañcamyāḥ" (2.4.83); elsewhere, being indeclinable, the case-ending is elided. The indeclinable (upasarjana) is placed first. Samāsānta affixes apply by rules such as 5.4.107 and 5.4.108 (ṬaC).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — उदाहरणानि</span>
+      <p class="sa">समीपे — कुम्भस्य समीपम् = उपकुम्भम्; अभावे — मक्षिकाणाम् अभावः = निर्मक्षिकम्; अत्यये — हिमस्य अत्ययः = अतिहिमम्; यथायोग्यम् — शक्तिम् अनतिक्रम्य = यथाशक्ति; वीप्सायाम् — दिनं दिनं प्रति = प्रतिदिनम्; अनुपूर्व्ये — ज्येष्ठस्य आनुपूर्व्येण = अनुज्येष्ठम्; सादृश्ये — हरेः सादृश्यम् = सहरि ("अव्ययीभावे चाकाले" ६।३।८१ इति सहस्य सः); समीपे — शरदः समीपम् = उपशरदम्।</p>
+      <p class="en">Proximity: "near the pot" → <em>upakumbham</em>; absence: "absence of flies" → <em>nirmakṣikam</em>; transgression: "the passing of cold" → <em>atihimam</em>; "not exceeding one's capacity" → <em>yathāśakti</em>; repetition (vīpsā): "day after day" → <em>pratidinam</em>; in due order: <em>anujyeṣṭham</em>; resemblance: "likeness to Hari" → <em>sahari</em> (with <em>saha → sa</em> by "avyayībhāve cākāle" 6.3.81); proximity again: "near autumn" → <em>upaśaradam</em>.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q18">
+    <h3>१८. तत्पुरुषः</h3>
+    <div class="qmeta">Section III · Q18</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — लक्षणम्</span>
+      <p class="sa">यस्मिन् समासे उत्तरपदस्य अर्थः प्रधानः, सः तत्पुरुषसमासः। अत्र उपसर्जनं (प्रथमानिर्दिष्टं) पूर्वं निपतति, उत्तरपदस्य च लिङ्गं समासस्य लिङ्गम् — <span class="sutra">"परवल्लिङ्गं द्वन्द्वतत्पुरुषयोः"</span> (२।४।२६)।</p>
+      <p class="en">A compound in which the meaning of the latter member predominates is the <em>tatpuruṣa</em>. The upasarjana (named in the nominative in its rule) is placed first, and the gender of the whole follows the latter member — "paravalliṅgaṁ dvandva-tatpuruṣayoḥ" (2.4.26).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — भेदाः</span>
+      <p class="sa">(क) विभक्तितत्पुरुषः — द्वितीयादिविभक्त्यर्थे: द्वितीया ("द्वितीया श्रितातीत..." २।१।२४) कृष्णं श्रितः = कृष्णश्रितः; तृतीया धान्येन अर्थः = धान्यार्थः; चतुर्थी यूपाय दारु = यूपदारु; पञ्चमी चोरात् भयम् = चोरभयम्; षष्ठी राज्ञः पुरुषः = राजपुरुषः; सप्तमी अक्षेषु शौण्डः = अक्षशौण्डः। (ख) नञ्तत्पुरुषः — न ब्राह्मणः = अब्राह्मणः ("नञ्" २।२।६)। (ग) कर्मधारयः (समानाधिकरणः) — नीलम् उत्पलम् = नीलोत्पलम् ("तत्पुरुषः समानाधिकरणः कर्मधारयः" १।२।४२)। (घ) द्विगुः — संख्यापूर्वः, पञ्चानां गवां समाहारः = पञ्चगवम् ("संख्यापूर्वो द्विगुः" २।१।५२)। (ङ) उपपदतत्पुरुषः — कुम्भं करोति = कुम्भकारः ("उपपदमतिङ्" २।२।१९)। (च) प्रादि-गतितत्पुरुषः — प्रगतः आचार्यः = प्राचार्यः।</p>
+      <p class="en">(a) <em>Case-tatpuruṣa</em>, in the sense of the second through seventh cases: <em>kṛṣṇa-śritaḥ</em> (acc.), <em>dhānyārthaḥ</em> (instr.), <em>yūpa-dāru</em> (dat.), <em>cora-bhayam</em> (abl.), <em>rāja-puruṣaḥ</em> (gen.), <em>akṣa-śauṇḍaḥ</em> (loc.). (b) <em>Nañ-tatpuruṣa</em> (negation): "not a brahmin" → <em>abrāhmaṇaḥ</em> (2.2.6). (c) <em>Karmadhāraya</em> (appositional): "blue lotus" → <em>nīlotpalam</em> (1.2.42). (d) <em>Dvigu</em> (numeral): "aggregate of five cows" → <em>pañca-gavam</em> (2.1.52). (e) <em>Upapada-tatpuruṣa</em>: "pot-maker" → <em>kumbha-kāraḥ</em> (2.2.19). (f) <em>Prādi/gati-tatpuruṣa</em>: "the departed teacher" → <em>prācāryaḥ</em>.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — समासान्ताः</span>
+      <p class="sa">तत्पुरुषे राजन्-अहन्-सखि-अन्तात् <span class="sutra">"राजाहःसखिभ्यष्टच्"</span> (५।४।९१) इति टच् — यथा परमराजः। एवम् अन्येऽपि समासान्ताः उत्तरपदभेदेन विधीयन्ते। समासः च प्रातिपदिकत्वात् सुबुत्पत्तियोग्यः।</p>
+      <p class="en">In a tatpuruṣa ending in <em>rājan, ahan</em> or <em>sakhi</em>, the samāsānta <em>ṬaC</em> is added by "rājāhaḥsakhibhyaṣ ṭac" (5.4.91) — e.g. <em>parama-rājaḥ</em>. Other samāsāntas apply according to the final member. Being a nominal stem, the compound then takes the usual case-endings.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q19">
+    <h3>१९. कृत्यप्रत्ययाः</h3>
+    <div class="qmeta">Section III · Q19</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — संज्ञा अर्थश्च</span>
+      <p class="sa">धातोः विहितः तिङ्भिन्नः प्रत्ययः कृत् ("कृदतिङ्" ३।१।९३)। तेषु "कृत्याः प्राङ् ण्वुलः" (३।१।९५) इति अधिकारे ये प्रत्ययाः ते कृत्याः। <span class="sutra">"तयोरेव कृत्यक्तखलर्थाः"</span> (३।४।७०) इति कृत्याः भावे कर्मणि च विधीयन्ते; प्रायेण अर्हार्थे आवश्यके वा (कर्तव्यतायाम्)।</p>
+      <p class="en">A non-finite (non-tiṅ) affix taught after a root is a <em>kṛt</em> ("kṛd atiṅ," 3.1.93). Among these, the affixes falling under the heading "kṛtyāḥ prāṅ ṇvulaḥ" (3.1.95) are the <em>kṛtyas</em>. By "tayor eva kṛtya-kta-khalarthāḥ" (3.4.70), the kṛtyas are prescribed in the sense of <em>bhāva</em> (the action, impersonal) and <em>karman</em> (the object) — generally conveying fitness or obligation ("ought / fit to be done").</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — प्रत्ययाः</span>
+      <p class="sa">मुख्याः कृत्याः — (१) <span class="sutra">तव्यत्, तव्य, अनीयर्</span> ("तव्यत्तव्यानीयरः" ३।१।९६) — सर्वधातुभ्यः; (२) <span class="sutra">ण्यत्</span> ("ऋहलोर्ण्यत्" ३।१।१२४ — ऋवर्णान्तात् हलन्ताच्च; "ओरावश्यके" ३।१।१२५); (३) <span class="sutra">यत्</span> ("अचो यत्" ३।१।९७ — अजन्तात्; "पोरदुपधात्" ३।१।९८); (४) <span class="sutra">क्यप्</span> ("एतिस्तुशास्वृदृजुषः क्यप्" ३।१।१०९); (५) केलिमर् (वार्तिकम्)।</p>
+      <p class="en">The chief kṛtyas are: (1) <em>tavyat, tavya, anīyar</em> ("tavyat-tavyānīyaraḥ," 3.1.96), for all roots; (2) <em>ṇyat</em> ("ṛhalor ṇyat," 3.1.124 — after roots ending in <em>ṛ</em> or a consonant; "orāvaśyake," 3.1.125); (3) <em>yat</em> ("aco yat," 3.1.97 — after vowel-final roots; "por adupadhāt," 3.1.98); (4) <em>kyap</em> ("eti-stu-śās-vṛ-dṛ-juṣaḥ kyap," 3.1.109); (5) <em>kelimar</em> (by a vārtika).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — उदाहरणानि</span>
+      <p class="sa">कृ → कर्तव्यम्, करणीयम्, कार्यम्; एध् → एधितव्यम्, एधनीयम्; दा → देयम् ("ईद्यति" ६।४।६५); पच् → पाच्यम्, पक्तव्यम्; भू → भव्यम्; स्तु → स्तुत्यः; शास् → शिष्यः; हृ → हार्यम्। प्रयोगे — कर्मणि "ओदनः भोक्तव्यः", भावे "त्वया हसितव्यम्"।</p>
+      <p class="en">From <em>kṛ</em>: <em>kartavyam, karaṇīyam, kāryam</em>; from <em>edh</em>: <em>edhitavyam, edhanīyam</em>; from <em>dā</em>: <em>deyam</em> (with "īd yati," 6.4.65); from <em>pac</em>: <em>pācyam, paktavyam</em>; from <em>bhū</em>: <em>bhavyam</em>; from <em>stu</em>: <em>stutyaḥ</em>; from <em>śās</em>: <em>śiṣyaḥ</em>; from <em>hṛ</em>: <em>hāryam</em>. In use — in the object sense: "odanaḥ bhoktavyaḥ" ("the rice is to be eaten"); in the impersonal sense: "tvayā hasitavyam" ("you ought to laugh").</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <footer>
+    लघुसिद्धान्तकौमुदी · समास-तद्धित-कृदन्त-प्रकरणम् · सूत्राङ्काः अष्टाध्याय्यनुसारेण · स्वाध्यायार्थम्
+  </footer>
+
+</div>
+</body>
+</html>
