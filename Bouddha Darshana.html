@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बौद्धदर्शनम् — आधारभूताः सिद्धान्ताः · अष्टाङ्गिकमार्गः · निर्वाणम् — Answers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#ece3d3;
+    --ink-soft:#b6a88d;
+    --parch:#16120d;
+    --parch-deep:#2c2218;
+    --card:#211a13;
+    --ochre:#e0954a;
+    --ochre-soft:#bd8650;
+    --rule:#3a2e20;
+    --maroon:#e9a079;
+    --en:#fdf4e3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 20% 0%, #241a10 0%, transparent 55%),
+      radial-gradient(circle at 90% 100%, #1f1810 0%, transparent 50%),
+      var(--parch);
+    color:var(--ink);
+    font-family:'Spectral',Georgia,serif;
+    line-height:1.7;
+    font-size:18px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:64px 28px 120px;}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    text-align:center;
+    padding-bottom:38px;
+    border-bottom:2px solid var(--ochre);
+    position:relative;
+    margin-bottom:14px;
+  }
+  header.masthead::after{
+    content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:var(--ochre-soft);
+  }
+  .om{font-family:'Tiro Devanagari Sanskrit',serif;font-size:40px;color:var(--ochre);line-height:1;}
+  header.masthead h1{
+    font-family:'Tiro Devanagari Sanskrit',serif;
+    font-weight:400;font-size:2.6rem;margin:.25em 0 .1em;color:var(--maroon);letter-spacing:.5px;
+  }
+  header.masthead .sub{
+    font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink-soft);
+    letter-spacing:2px;text-transform:uppercase;
+  }
+  header.masthead .meta{font-size:.9rem;color:var(--ink-soft);margin-top:14px;font-style:italic;}
+
+  /* ---- Table of contents ---- */
+  nav.toc{
+    background:var(--card);border:1px solid var(--rule);border-radius:8px;
+    padding:26px 32px;margin:40px 0 56px;box-shadow:0 8px 28px -22px rgba(43,33,24,.6);
+  }
+  nav.toc h2{
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:3px;text-transform:uppercase;
+    color:var(--ochre);margin:0 0 14px;
+  }
+  nav.toc ol{margin:0;padding-left:1.2em;}
+  nav.toc li{margin:.35em 0;}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ochre-soft);}
+  nav.toc a:hover{color:var(--ochre);}
+  nav.toc .grp{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--maroon);margin:16px 0 6px;font-weight:600;}
+  nav.toc .grp:first-of-type{margin-top:4px;}
+
+  /* ---- Section banners ---- */
+  .band{
+    margin:72px 0 30px;text-align:center;
+  }
+  .band .deva{font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.7rem;color:var(--maroon);}
+  .band .en{font-family:'Cormorant Garamond',serif;letter-spacing:4px;text-transform:uppercase;
+    font-size:1rem;color:var(--ochre);margin-top:4px;}
+  .band .line{width:90px;height:2px;background:var(--ochre);margin:14px auto 0;}
+
+  /* ---- Answer cards ---- */
+  article.qa{
+    background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--ochre);
+    border-radius:6px;padding:30px 34px 26px;margin:0 0 40px;
+    box-shadow:0 10px 30px -26px rgba(43,33,24,.7);
+  }
+  article.qa h3{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-weight:400;font-size:1.5rem;
+    color:var(--maroon);margin:0 0 4px;line-height:1.4;
+  }
+  article.qa .qmeta{
+    font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ochre);
+    letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;
+  }
+  .badge{
+    display:inline-block;background:var(--ochre);color:#1a140d;font-family:'Cormorant Garamond',serif;
+    font-size:.75rem;letter-spacing:1.5px;padding:2px 10px;border-radius:20px;
+    vertical-align:middle;margin-left:8px;text-transform:uppercase;
+  }
+
+  .lbl{
+    font-family:'Cormorant Garamond',serif;font-size:.82rem;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--ochre);display:block;margin:22px 0 2px;
+  }
+  .lbl.first{margin-top:6px;}
+
+  .sa{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.12rem;line-height:1.95;color:var(--ink);
+    margin:0 0 4px;overflow-wrap:break-word;
+  }
+  .en{
+    font-family:'Spectral',serif;font-size:1rem;line-height:1.72;color:var(--en);
+    margin:0 0 2px;font-style:normal;font-weight:700;overflow-wrap:break-word;
+  }
+
+  /* paragraph pairing */
+  .para{padding:14px 0;border-bottom:1px dashed var(--rule);}
+  .para:last-child{border-bottom:none;}
+  .para .pnum{
+    font-family:'Cormorant Garamond',serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--ochre-soft);display:block;margin-bottom:6px;
+  }
+  .para .sa{margin-bottom:8px;}
+  .para .en{padding-left:14px;border-left:2px solid var(--parch-deep);}
+
+  /* sutra inline highlight */
+  .sutra{color:var(--maroon);font-weight:500;}
+
+  footer{
+    text-align:center;margin-top:80px;padding-top:24px;border-top:1px solid var(--rule);
+    font-size:.85rem;color:var(--ink-soft);font-style:italic;
+  }
+  .toplink{display:block;text-align:right;font-size:.8rem;color:var(--ochre-soft);
+    text-decoration:none;letter-spacing:1px;margin-top:8px;}
+  .toplink:hover{color:var(--ochre);}
+
+  @media print{
+    :root{
+      --ink:#2b2118; --ink-soft:#4a3c2e;
+      --parch:#fff; --parch-deep:#ece0c8; --card:#fff;
+      --ochre:#a8631b; --ochre-soft:#c98a3e; --rule:#d8c8a6; --maroon:#6e2412; --en:#1f1812;
+    }
+    body{background:#fff;font-size:12pt;}
+    .badge{color:#fff !important;}
+    article.qa{box-shadow:none;break-inside:avoid;border-color:#d8c8a6;}
+    nav.toc{display:none;}
+    .toplink{display:none;}
+  }
+  @media(max-width:560px){
+    body{font-size:16px;}
+    .wrap{padding:40px 16px 80px;}
+    article.qa{padding:22px 18px;}
+    header.masthead h1{font-size:2rem;}
+  }
+  /* ---- Apple Watch / ultra-narrow ---- */
+  @media(max-width:320px){
+    body{font-size:15px;line-height:1.55;}
+    .wrap{padding:14px 9px 36px;}
+    header.masthead{padding-bottom:16px;margin-bottom:8px;}
+    .om{font-size:24px;}
+    header.masthead h1{font-size:1.3rem;letter-spacing:0;}
+    header.masthead .sub{font-size:.72rem;letter-spacing:.5px;}
+    header.masthead .meta{font-size:.7rem;margin-top:8px;}
+    nav.toc{padding:13px 13px;margin:18px 0 26px;border-radius:6px;}
+    nav.toc h2{font-size:.86rem;letter-spacing:1px;margin-bottom:9px;}
+    nav.toc ol{padding-left:1em;}
+    nav.toc li{margin:.45em 0;line-height:1.4;}
+    nav.toc .grp{font-size:.82rem;letter-spacing:1px;margin:12px 0 5px;}
+    .band{margin:34px 0 16px;}
+    .band .deva{font-size:1.2rem;}
+    .band .en{font-size:.78rem;letter-spacing:2px;}
+    article.qa{padding:13px 11px 11px;border-left-width:3px;border-radius:5px;margin-bottom:20px;}
+    article.qa h3{font-size:1.08rem;line-height:1.35;}
+    article.qa .qmeta{font-size:.78rem;letter-spacing:.5px;margin-bottom:12px;}
+    .badge{font-size:.62rem;padding:1px 7px;margin-left:5px;letter-spacing:.5px;}
+    .lbl{font-size:.7rem;letter-spacing:1px;margin:14px 0 2px;}
+    .sa{font-size:1.02rem;line-height:1.78;overflow-wrap:anywhere;}
+    .en{font-size:.92rem;line-height:1.6;overflow-wrap:anywhere;}
+    .para{padding:9px 0;}
+    .para .pnum{font-size:.68rem;letter-spacing:1px;margin-bottom:4px;}
+    .para .en{padding-left:8px;border-left-width:2px;}
+    .sutra{overflow-wrap:anywhere;}
+    .toplink{font-size:.72rem;}
+    footer{margin-top:46px;font-size:.76rem;}
+  }
+  /* derivation / prakriyā block */
+  .deriv{font-family:'Tiro Devanagari Sanskrit',serif;background:rgba(224,149,74,.07);
+    border:1px solid var(--rule);border-left:3px solid var(--ochre-soft);border-radius:5px;
+    padding:9px 13px;margin:8px 0 4px;font-size:1.02rem;line-height:1.95;overflow-wrap:anywhere;}
+  .deriv .arr{color:var(--ochre);font-weight:600;padding:0 3px;}
+  .ref{color:var(--ochre-soft);font-size:.85em;}
+  @media(max-width:320px){ .deriv{font-size:.95rem;padding:7px 9px;} }
+</style>
+</head>
+<body>
+<a href="index.html" style="display:inline-block;margin:10px 0 0 10px;font-family:Georgia,serif;font-size:.82rem;color:#b6a88d;text-decoration:none;letter-spacing:1px;">← Home</a>
+<div class="wrap" id="top">
+
+  <header class="masthead">
+    <div class="om">ॐ</div>
+    <h1>विषयः — बौद्धदर्शनम्</h1>
+    <div class="sub">Bauddha-darśana — Model Answers</div>
+    <div class="meta">B.A. Sanskrit · आधारभूताः सिद्धान्ताः · अष्टाङ्गिकः मार्गः · निर्वाणसिद्धान्ताः — answers in Sanskrit with English explanation</div>
+  </header>
+
+  <nav class="toc">
+    <h2>विषयसूची · Contents</h2>
+    <div class="grp">I · एकवाक्योत्तराणि — 1-mark</div>
+    <ol>
+      <li><a href="#q1">निर्वाणस्य अर्थः</a></li>
+      <li><a href="#q2">धर्मचक्रम्</a></li>
+      <li><a href="#q3">तृतीयाध्यायस्य मुख्यविषयः</a></li>
+      <li><a href="#q4">कति आर्यसत्यानि</a></li>
+      <li><a href="#q5">दुःखम्</a></li>
+      <li><a href="#q6">दुःखसमुदयः</a></li>
+      <li><a href="#q7">सम्यक् इत्यस्य अर्थः</a></li>
+      <li><a href="#q8">संकल्पस्य अर्थः</a></li>
+      <li><a href="#q9">वचनस्य अर्थः</a></li>
+      <li><a href="#q10">सम्यग्व्यायामः</a></li>
+      <li><a href="#q11">स्मृतिः</a></li>
+      <li><a href="#q12">सम्यक्समाधिः</a></li>
+      <li><a href="#q13">हीनयानम्</a></li>
+      <li><a href="#q14">महायानम्</a></li>
+      <li><a href="#q15">बौद्धसम्प्रदायाः</a></li>
+    </ol>
+    <div class="grp">II · लघुप्रबन्धाः — 5-mark</div>
+    <ol start="16">
+      <li><a href="#q16">दुःखस्य त्रयः भेदाः</a></li>
+      <li><a href="#q17">दुःखनिरोधः</a></li>
+      <li><a href="#q18">दुःखनिरोधमार्गः</a></li>
+      <li><a href="#q19">कर्मणः भेदाः</a></li>
+      <li><a href="#q20">सम्यगाजीवः</a></li>
+      <li><a href="#q21">सम्यग्व्यायामः (विस्तरेण)</a></li>
+      <li><a href="#q22">समाधिः</a></li>
+      <li><a href="#q23">पुनर्जन्मवादः</a></li>
+      <li><a href="#q24">रत्नत्रयम्</a></li>
+    </ol>
+    <div class="grp">III · विस्तरेण — 15-mark</div>
+    <ol start="25">
+      <li><a href="#q25">निर्वाणसिद्धान्तः</a></li>
+      <li><a href="#q26">अष्टाङ्गिकमार्गः</a></li>
+      <li><a href="#q27">चत्वारि आर्यसत्यानि (दुःखस्वरूपं च)</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============== SECTION I ============== -->
+  <div class="band">
+    <div class="deva">एकवाक्योत्तराणि</div>
+    <div class="en">One-mark Answers</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q1">
+    <h3>१. निर्वाणस्य अर्थः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">निर्वाणं नाम सर्वक्लेशानां तृष्णायाश्च आत्यन्तिकः नाशः, यत्र दुःखस्य आत्यन्तिकी निवृत्तिः परमा शान्तिश्च।</p>
+      <p class="en">Nirvāṇa is the complete extinction of all afflictions and craving — the final cessation of suffering and the attainment of supreme peace.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q2">
+    <h3>२. धर्मचक्रं किम्?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">सारनाथे पञ्चशिष्येभ्यः भगवता बुद्धेन प्रथमम् आर्यसत्यानाम् अष्टाङ्गिकमार्गस्य च यः उपदेशः कृतः, तत् "धर्मचक्रप्रवर्तनम्" इति प्रसिद्धम्।</p>
+      <p class="en">The Dharma-chakra ("turning of the wheel of Dharma") is the Buddha's first sermon at Sarnath to his five disciples, in which he taught the Noble Truths and the Eightfold Path.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q3">
+    <h3>३. तृतीयाध्यायस्य मुख्यविषयः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">तृतीयाध्यायस्य मुख्यविषयः बौद्धधर्मस्य आधारभूताः सिद्धान्ताः — विशेषतः चत्वारि आर्यसत्यानि।</p>
+      <p class="en">The main topic of the third chapter is the foundational doctrines of Buddhism — chiefly the Four Noble Truths.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q4">
+    <h3>४. बुद्धदर्शने कति सत्यानि उक्तानि?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">बुद्धदर्शने चत्वारि आर्यसत्यानि उक्तानि — दुःखम्, दुःखसमुदयः, दुःखनिरोधः, दुःखनिरोधगामिनी प्रतिपत् च।</p>
+      <p class="en">Buddha's philosophy teaches four Noble Truths — suffering, the origin of suffering, the cessation of suffering, and the path leading to its cessation.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q5">
+    <h3>५. दुःखं किम्?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">"जगति सर्वत्र दुःखम् अस्ति" इति प्रथमम् आर्यसत्यं दुःखम् — जन्म-जरा-मरण-शोकादिषु सर्वत्र दुःखस्य विद्यमानता।</p>
+      <p class="en">"Dukkha" is the first Noble Truth — that suffering pervades all existence: birth, old age, death, sorrow and the rest are all suffering.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q6">
+    <h3>६. दुःखसमुदयः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">दुःखसमुदयः इति द्वितीयम् आर्यसत्यम् — दुःखस्य कारणं तृष्णा (वासना) इति, यतः कारणं विना कार्यस्य उत्पत्तिः न भवति।</p>
+      <p class="en">"Dukkha-samudaya" is the second Noble Truth — that the cause of suffering is craving (tṛṣṇā), since no effect arises without a cause.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q7">
+    <h3>७. सम्यक् इत्यस्य अर्थः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">"सम्यक्" इत्यस्य अर्थः समीचीनं, यथार्थम्, उचितम् इति — अष्टाङ्गमार्गे प्रत्येकम् अङ्गं "सम्यक्"-विशेषणेन युक्तम्।</p>
+      <p class="en">"Samyak" means right, correct or proper — each limb of the Eightfold Path is qualified by this word "right."</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q8">
+    <h3>८. संकल्पस्य अर्थः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">संकल्पस्य अर्थः निश्चयः — निष्कामता, अद्रोहः, अहिंसा च इत्येतेषां मनसि यः दृढः निश्चयः सः सम्यक् संकल्पः।</p>
+      <p class="en">"Sankalpa" means resolve — the firm mental determination toward desirelessness, non-malice and non-violence is Right Resolve.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q9">
+    <h3>९. वचनस्य अर्थः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">वचनस्य अर्थः भाषणम् — असत्य-पिशुन-कटु-संप्रलापेभ्यः विरम्य सत्यस्य भाषणं सम्यक् वचनम्।</p>
+      <p class="en">"Vachana" means speech — abstaining from false, slanderous, harsh and frivolous talk and speaking the truth is Right Speech.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q10">
+    <h3>१०. सम्यग्व्यायामः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">सम्यग्व्यायामः नाम सम्यक् उद्योगः — इन्द्रियसंयमाय, सद्भावनाविकासाय, असद्भावनानिराकरणाय च यः प्रयत्नः।</p>
+      <p class="en">"Samyak Vyāyāma" is Right Effort — the exertion made to restrain the senses, develop wholesome states of mind, and dispel unwholesome ones.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q11">
+    <h3>११. स्मृतिः का?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">काय-वेदना-चित्त-धर्माणां वास्तविकस्वरूपस्य अनुपश्यना (चतुर्विधं स्मृतिप्रस्थानम्) सम्यक् स्मृतिः।</p>
+      <p class="en">"Smṛti" (Right Mindfulness) is the contemplation of the true nature of body, feelings, mind and mental objects — the fourfold foundation of mindfulness.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q12">
+    <h3>१२. सम्यक्समाधिः कः?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">शील-प्रज्ञयोः आचरणेन प्राप्ता चित्तस्य एकाग्रता, यया अज्ञानस्य नाशः भवति, सः साधकस्य चरमलक्ष्यभूतः सम्यक् समाधिः।</p>
+      <p class="en">"Samyak Samādhi" (Right Concentration) is the one-pointedness of mind attained through conduct and wisdom, by which ignorance is destroyed — the practitioner's final goal.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q13">
+    <h3>१३. हीनयानं किम्?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">हीनयानं बौद्धधर्मस्य सः सम्प्रदायः यन्मतानुयायिनः निर्वाणस्य प्राप्तिम् एव भिक्षोः चरमं लक्ष्यं मन्यन्ते।</p>
+      <p class="en">Hīnayāna is the Buddhist tradition whose followers hold that the attainment of nirvāṇa alone is the monk's final goal.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q14">
+    <h3>१४. महायानं किम्?</h3>
+    <div class="qmeta">Section I · 1 mark</div>
+    <div class="para">
+      <p class="sa">महायानं बौद्धधर्मस्य सः सम्प्रदायः यन्मते बोधिसत्त्वस्य उपलब्धिः भिक्षोः मुख्यम् उद्देश्यं, न तु केवलं निर्वाणप्राप्तिः।</p>
+      <p class="en">Mahāyāna is the Buddhist tradition in which the bodhisattva-realization — not merely the attainment of nirvāṇa — is the monk's chief aim.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q15">
+    <h3>१५. बौद्धधर्मे कति सम्प्रदायाः? तेषां नामानि लिखत।</h3>
+    <div class="qmeta">Section I · 1 mark · (double)</div>
+    <div class="para">
+      <p class="sa">बुद्धस्य परिनिर्वाणानन्तरं बौद्धधर्मः प्रथमं स्थविरवादि-महासाङ्घिक-भेदेन द्विधा विभक्तः। ततः कालान्तरे सः अष्टादशसु शाखासु (सम्प्रदायेषु) विभक्तः जातः।</p>
+      <p class="en">After the Buddha's parinirvāṇa, Buddhism first split into two — the Sthaviravādins and the Mahāsāṅghikas. Later it further divided into eighteen schools (sampradāyas).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION II ============== -->
+  <div class="band">
+    <div class="deva">लघुप्रबन्धाः</div>
+    <div class="en">Five-mark Answers</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q16">
+    <h3>१६. बौद्धदर्शने दुःखस्य कतिविधाः भेदाः उक्ताः? तान् परिभाष्य व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">हीनयानमतानुसारं दुःखं त्रिविधम् — (१) दुःख-दुःखता, (२) संस्कार-दुःखता, (३) विपरिणाम-दुःखता च। <strong>दुःख-दुःखता</strong> नाम भौतिक-विषयेभ्यः मानसिक-कारणाद् वा जायमानं प्रत्यक्षं दुःखम् (यथा रोगः, वियोगः, शोकः)। <strong>संस्कार-दुःखता</strong> नाम जगति विद्यमानानां सर्वेषां वस्तूनाम् अनित्यत्वात् संस्कारजन्यं दुःखम् — यतः सर्वं संस्कृतम् अनित्यम्। <strong>विपरिणाम-दुःखता</strong> नाम सुखप्राप्तेः अनन्तरं यदा तस्य सुखस्य परिणामे (नाशे) दुःखम् उत्पद्यते तत्। एवं त्रिविधैः एतैः दुःखैः सर्वे मनुष्याः पीडिताः सन्ति; एतेषां क्लेशानां नाशेन एव क्लेशात् दुःखाद् वा मुक्तिः निर्वाणप्राप्तिश्च सम्भवति।</p>
+      <p class="en">According to the Hīnayāna, suffering is of three kinds. (1) <em>Duḥkha-duḥkhatā</em> — the obvious suffering born of physical objects or mental causes (such as illness, separation or grief). (2) <em>Saṃskāra-duḥkhatā</em> — the suffering inherent in all conditioned things on account of their impermanence, since whatever is compounded is transient. (3) <em>Vipariṇāma-duḥkhatā</em> — the suffering of change, which arises when an attained pleasure decays into pain. All beings are afflicted by these three; only by the destruction of these afflictions is liberation from suffering — and the attainment of nirvāṇa — possible.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q17">
+    <h3>१७. दुःखनिरोधः कः? संक्षेपेण व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">दुःखनिरोधः इति तृतीयम् आर्यसत्यम्; "निरोधः" इति शब्दस्य अर्थः नाशः। यथा दुःखस्य कारणं तृष्णा (कामः), तथा तस्य कारणस्य नाशे कार्यभूतस्य दुःखस्यापि नाशः सम्भवति — इति कार्यकारणवादः। अतः कामस्य त्यागः, वैराग्यम् (असेवितविरागः), तृष्णायाः च असेसविरागनिरोधः करणीयः। यस्य मनसि कामस्य (तृष्णायाः) नाशः जातः, सः इह जन्मनि एव दुःखनिरोधं प्राप्नोति, इन्द्रियाणां वशीभूतः न भवति। एतदेव अवस्था "निर्वाणम्" इति अपरनाम्ना उच्यते; यदा क्लेशस्य आवरणस्य च सर्वथा परिहारः, तदा निर्वाणस्य प्राप्तिः।</p>
+      <p class="en">Duḥkha-nirodha is the third Noble Truth; the word "nirodha" means cessation. Just as the cause of suffering is craving (desire), so with the destruction of that cause the effect — suffering — also ceases; this is the principle of cause and effect. Therefore one must renounce desire, cultivate dispassion (vairāgya), and bring about the complete fading-away of craving. One in whose mind craving has been destroyed attains the cessation of suffering in this very life and is no longer a slave to the senses. This state is called by the further name "nirvāṇa"; when the covering of the afflictions is wholly removed, nirvāṇa is attained.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q18">
+    <h3>१८. दुःखनिरोधमार्गः कः? संक्षेपेण व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">दुःख-निरोधगामिनी प्रतिपत् इति चतुर्थम् आर्यसत्यम्; "प्रतिपत्" इति शब्दस्य अर्थः मार्गः। प्रत्येकस्य जनस्य अन्तिमं लक्ष्यं निर्वाणस्य प्राप्तिः, तस्याः च उपायः अयं मार्गः। बुद्धस्य मते अस्य मार्गस्य अष्टौ अङ्गानि सन्ति, अतः अयं "अष्टाङ्गिक-मार्गः" इति नाम्ना प्रसिद्धः — सम्यक् दृष्टिः, सम्यक् संकल्पः, सम्यक् वचनम्, सम्यक् कर्मान्तः, सम्यक् आजीवः, सम्यक् व्यायामः, सम्यक् स्मृतिः, सम्यक् समाधिश्च। एतानि अष्टौ अङ्गानि प्रज्ञा-शील-समाधि-इति त्रिषु वर्गेषु अन्तर्भवन्ति; अयमेव मध्यम-प्रतिपद् इति कथ्यते। धम्मपदे उक्तम् — "मग्गानट्ठङ्गिको सेट्ठो" (मार्गाणाम् अष्टाङ्गिकः श्रेष्ठः) इति।</p>
+      <p class="en">The path leading to the cessation of suffering is the fourth Noble Truth; the word "pratipad" means path. Every person's final goal is the attainment of nirvāṇa, and this path is its means. According to the Buddha this path has eight limbs, so it is famed as the "Eightfold Path" — right view, right resolve, right speech, right action, right livelihood, right effort, right mindfulness and right concentration. These eight are included under three heads — wisdom (prajñā), conduct (śīla) and concentration (samādhi) — and this very path is called the Middle Way. The Dhammapada says, "the Eightfold is the best of paths."</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q19">
+    <h3>१९. बौद्धदर्शने कर्मणः कतिविधाः भेदाः उक्ताः? तेषां नामानि लिखित्वा व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">सम्यक् दृष्टेः विवेचनप्रसङ्गे बौद्धदर्शने कर्म त्रिविधम् उक्तम् — कायिक-कर्म, वाचिक-कर्म, मानसिक-कर्म च; प्रत्येकं च कुशल-अकुशल-भेदेन द्विधा। <strong>कायिककर्मणि</strong> अकुशलानि — प्राणातिपातः (हिंसा), अदत्तादानम् (चौर्यम्), मिथ्याचारः (व्यभिचारः); तेषां प्रतिपक्षभूतानि कुशलानि — अहिंसा, अस्तेयम्, अव्यभिचारः। <strong>वाचिककर्मणि</strong> अकुशलानि — मृषावचनम्, पिशुनवचनम्, परुषवचनम् (कटुवचनम्), संप्रलापः (वृथावादः); कुशलानि — सत्यवचनम्, अपिशुनवचनम्, अकटुवचनम्, असंप्रलापः। <strong>मानसकर्मणि</strong> अकुशलानि — अभिध्या (लोभः), व्यापादः (प्रतिहिंसा), मिथ्यादृष्टिः; कुशलानि — अनभिध्या, अप्रतिहिंसा, सत्यदृष्टिः। लोभात् दोषात् मोहाद् वा जनः अकुशलकर्मणि प्रवर्तते; तेषाम् अकुशलानां परिहारः कुशलानां च आचरणम् एव सम्यक् दृष्टिः।</p>
+      <p class="en">In discussing Right View, Buddhism speaks of three kinds of action — bodily, verbal and mental — each twofold as wholesome (kuśala) or unwholesome (akuśala). The unwholesome <em>bodily</em> acts are killing, taking what is not given (theft) and sexual misconduct; their wholesome opposites are non-violence, non-stealing and chastity. The unwholesome <em>verbal</em> acts are lying, slander, harsh speech and frivolous chatter; the wholesome are truthful speech, non-slander, gentle speech and meaningful talk. The unwholesome <em>mental</em> acts are covetousness (greed), ill-will (malice) and wrong view; the wholesome are non-covetousness, non-malice and right view. Out of greed, hatred or delusion a person engages in unwholesome action; abandoning these and practising the wholesome is itself Right View.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q20">
+    <h3>२०. सम्यगाजीवः कः? व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">सम्यक् आजीवः इत्यस्य अर्थः उचिता आजीविका इति। बुद्धस्य मते याभिः आजीविकाभिः हिंसाचरणं भवेत् ताः सर्वथा वर्जनीयाः। अङ्गुत्तरनिकाये पञ्च वर्जनीयाः वाणिज्याः उक्ताः — (१) सत्थ-वणिज्जा (शस्त्रास्त्रादीनां वाणिज्यम्), (२) सत्त-वणिज्जा (प्राणिनां क्रय-विक्रयणम्), (३) मंस-वणिज्जा (मांसविक्रयणम्), (४) मज्ज-वणिज्जा (मद्यादिमादकपदार्थानां वाणिज्यम्), (५) विस-वणिज्जा (विषादीनां वाणिज्यम्)। एतद् अतिरिच्य वञ्चनं, लुण्ठनं, छेदनं, वधः, बन्धनं, कृतघ्नता च सर्वथा परिहरणीयानि। एवं हिंसारहितेन शुद्धेन उपायेन जीविकोपार्जनम् एव सम्यक् आजीवः।</p>
+      <p class="en">"Samyak Ājīva" means right livelihood. According to the Buddha, any livelihood that involves doing harm is to be wholly shunned. The Aṅguttara Nikāya names five forbidden trades — (1) trade in weapons, (2) trade in living beings, (3) trade in meat, (4) trade in intoxicants, and (5) trade in poisons. Beyond these, cheating, plundering, maiming, killing, imprisoning and ingratitude must all be entirely avoided. Thus earning one's living by pure, non-violent means is itself Right Livelihood.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q21">
+    <h3>२१. सम्यग्व्यायामं विस्तरेण व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">सम्यक् व्यायामः इत्यस्य तात्पर्यं सम्यक् उद्योगः करणीयः इति। अत्र साधकेन इन्द्रियाणां संयमः प्रयत्नेन विधातव्यः। अहिंसा-सत्यादीनां धर्माणाम् आचरणं कथं विधातव्यम् इति विषये सततं प्रयत्नः करणीयः। अपि च मनसि सद्भावनायाः (कुशलभावनायाः) विकासः कथम् उत्पद्येत, तथा च असाधु-भावनायाः (अकुशलभावनायाः) निराकरणं कथं सम्भवेत् — इत्यपि प्रयत्नः अवश्यं करणीयः। संक्षेपेण — अनुत्पन्नानाम् अकुशलानाम् अनुत्पादाय, उत्पन्नानां च प्रहाणाय, अनुत्पन्नानां कुशलानाम् उत्पादाय, उत्पन्नानां च वृद्धये यः सम्यक् प्रयत्नः सः एव सम्यक् व्यायामः।</p>
+      <p class="en">"Samyak Vyāyāma" means that right exertion is to be made. Here the practitioner must, by effort, restrain the senses. He must strive continually over how the virtues of non-violence, truthfulness and the rest are to be practised. Moreover he must take pains to see how wholesome dispositions may be developed in the mind and how unwholesome dispositions may be dispelled. In short, the right effort to prevent unarisen unwholesome states, to abandon those that have arisen, to arouse unarisen wholesome states, and to increase those that have arisen — that is Right Effort.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q22">
+    <h3>२२. बौद्धदर्शनानुसारं समाधिं परिभाषत।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">साधकस्य कृते समाधिः चरमं लक्ष्यं भवति; समाधेः प्राप्तिः तदा एव सम्भवति यदा अज्ञानस्य नाशः। शीलस्य आचरणेन कायशुद्धिः, ततः चित्तशुद्धिः; एवं शील-प्रज्ञा-समाधीनाम् आचरणेन अष्टाङ्गिकमार्गस्य अनुपालनं सम्यक्-रूपेण सम्भवति। बौद्धदर्शनानुसारं प्रज्ञा त्रिविधा — (१) श्रुतमयी प्रज्ञा (आप्त-प्रमाणजन्यं ज्ञानम्), (२) चिन्तामयी प्रज्ञा (तर्केण सिद्धं ज्ञानम्), (३) भावनामयी प्रज्ञा (समाधि-लब्धं ज्ञानम्)। यः साधकः समाधिमार्गे प्रवृत्तः तस्य चित्तं कामास्रवात्, भवास्रवात्, अविद्यास्रवात् च मुक्तं भवति। धम्मपदे उक्तम् — "सब्बपापस्स अकरणं कुसलस्स उपसम्पदा, सचित्तपरियोदपनम् एतं बुद्धान सासनम्" (सर्वेषां पापानां नाशः, पुण्यस्य सञ्चयः, चित्तपरिशुद्धिश्च इति बुद्धशासनम्) इति।</p>
+      <p class="en">For the practitioner, samādhi is the final goal; its attainment becomes possible only when ignorance is destroyed. Through the practice of conduct comes purity of body, and thence purity of mind; thus by practising conduct, wisdom and concentration the Eightfold Path is rightly fulfilled. According to Buddhism, wisdom is of three kinds — (1) <em>śrutamayī</em>, knowledge born of authoritative testimony; (2) <em>cintāmayī</em>, knowledge established by reasoning; and (3) <em>bhāvanāmayī</em>, knowledge gained through meditation. The practitioner set upon the path of samādhi has his mind freed from the influxes of desire, of becoming and of ignorance. The Dhammapada says, "not doing any evil, cultivating the good, and purifying one's own mind — this is the teaching of the Buddhas."</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q23">
+    <h3>२३. बौद्धदर्शनानुसारं पुनर्जन्मवादं परिभाषत।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">यद्यपि बौद्धधर्मे आत्मनः अस्तित्वं न अङ्गीक्रियते, तथापि जन्मान्तरस्य (पुनर्जन्मनः) सिद्धान्तः स्वीक्रियते; बौद्ध-त्रिपिटक-ग्रन्थेषु जातक-कथासु च अस्य उल्लेखः प्राप्यते। पुनर्जन्मवादस्य प्रतिपादनार्थं "दीपशिखायाः" प्रसिद्धम् उदाहरणं दीयते। यथा कश्चन जनः रात्रौ यावत् दीपज्वालनं करोति, तत्र रात्रेः प्रथमप्रहरे या दीपशिखा प्रज्वलिता आसीत् सा एव अन्तिमप्रहरे न ज्वलति; यद्यपि मध्ये दीपशिखायाः परिवर्तनं भवति तथापि दीपः तु समानः एव। एवम् एव दीपशिखायाः परिवर्तनम् इव शरीरस्य देहान्तरप्राप्तिः (पुनर्जन्म) भवति — न तु कश्चित् नित्यः आत्मा देहाद् देहान्तरं संक्रामति। एवं नैरात्म्यवादेन सह पुनर्जन्मवादः समन्वितः।</p>
+      <p class="en">Although Buddhism does not accept the existence of a self, it does accept the doctrine of rebirth (passage to another birth); references occur in the Tripiṭaka texts and the Jātaka tales. To establish rebirth the famous illustration of the "lamp-flame" is given. Just as, when someone keeps a lamp burning through the night, the flame that burned in the first watch is not the very same as the one in the last watch — though the flame keeps changing, the lamp remains one — so, like the changing of the flame, the body passes into another body (rebirth); it is not that some permanent self migrates from one body to another. In this way the doctrine of rebirth is reconciled with the teaching of no-self.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q24">
+    <h3>२४. बौद्धदर्शनानुसारं रत्नत्रयं व्याख्यात।</h3>
+    <div class="qmeta">Section II · 5 marks</div>
+    <div class="para">
+      <p class="sa">"शीलं", "प्रज्ञा" तथा "समाधिः" इति बौद्धधर्मस्य तत्त्वत्रयं भवति; बौद्धधर्मः वस्तुतः आचारपरः धर्मः। बौद्धानां कृते त्रिविधं शरणं शास्त्रेषु उल्लिखितम् — "बुद्धं शरणं गच्छामि, धर्मं शरणं गच्छामि, सङ्घं शरणं गच्छामि" इति शरणत्रयम्। एतदेव "बुद्धः, धर्मः, सङ्घः" इति रत्नत्रयम् इत्युच्यते — बुद्धः मार्गदर्शकः, धर्मः तेन उपदिष्टः मार्गः, सङ्घः च धर्मानुयायिनां समूहः। बौद्धधर्मस्य अनुयायिना (१) आर्यसत्यचतुष्टयस्य ज्ञानम्, (२) अष्टाङ्गिकमार्गस्य अनुसरणम्, (३) तत्त्वत्रयस्य (शील-प्रज्ञा-समाधीनाम्) अनुपालनम्, (४) त्रिविधं शरणं च — एते मुख्याः परिपालनीयाः विषयाः सन्ति।</p>
+      <p class="en">"Conduct" (śīla), "wisdom" (prajñā) and "concentration" (samādhi) form the triad of essentials of Buddhism, which is fundamentally a religion of practice. For Buddhists the scriptures lay down a threefold refuge — "I go to the Buddha for refuge, I go to the Dharma for refuge, I go to the Saṅgha for refuge." This very thing — "the Buddha, the Dharma, the Saṅgha" — is called the Three Jewels: the Buddha as guide, the Dharma as the path he taught, and the Saṅgha as the community of his followers. The chief observances for a follower are: (1) knowledge of the Four Noble Truths, (2) following the Eightfold Path, (3) practising the triad of conduct, wisdom and concentration, and (4) taking the threefold refuge.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION III ============== -->
+  <div class="band">
+    <div class="deva">विस्तरेण उत्तराणि</div>
+    <div class="en">Fifteen-mark Essays</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q25">
+    <h3>२५. बौद्धदर्शनानुसारं निर्वाणसिद्धान्तं विस्तरेण व्याख्यात।</h3>
+    <div class="qmeta">Section III · 15 marks</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — प्रस्तावना</span>
+      <p class="sa">निर्वाणसिद्धान्तः बौद्धदर्शने मुख्यः सिद्धान्तः। भगवान् बुद्धः न स्वमुक्त्यर्थं किन्तु लोकस्य जनानां च दुःखात् मुक्तिः केन प्रकारेण सम्भवति इति ज्ञातुं कठोरतपः आचरितवान्; ततः आर्यसत्यचतुष्टयस्य, अष्टाङ्गिकमार्गस्य, मध्यम-प्रतिपदश्च उपदेशं कृतवान्। निर्वाणं नाम सर्वक्लेशानां तृष्णायाश्च आत्यन्तिकः नाशः, परमा च शान्तिः। बुद्धस्य परिनिर्वाणानन्तरं बौद्धधर्मः अष्टादशसम्प्रदायेषु विभक्तः; निर्वाणस्य विषये हीनयान-महायानयोः भिन्नं मतं वर्तते।</p>
+      <p class="en">The doctrine of nirvāṇa is the central teaching of Buddhist philosophy. The Buddha undertook severe austerity not for his own liberation but to discover how beings and the world might be freed from suffering; he then taught the Four Noble Truths, the Eightfold Path and the Middle Way. Nirvāṇa is the complete extinction of all afflictions and craving, and supreme peace. After the Buddha's parinirvāṇa, Buddhism split into eighteen schools, and on the question of nirvāṇa the Hīnayāna and Mahāyāna hold differing views.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — हीनयानमते निर्वाणम्</span>
+      <p class="sa">हीनयानमते निर्वाणस्य प्राप्तिः एव भिक्षोः चरमं लक्ष्यम्। हीनयानानुयायिनः चिन्तयन्ति यत् जनाः त्रिविधैः दुःखैः (दुःख-दुःखता, संस्कार-दुःखता, विपरिणाम-दुःखता) पीडिताः सन्ति। आर्यसत्यज्ञानेन, अष्टाङ्गमार्गानुपालनेन, सदाचारेण मध्यम-प्रतिपदा च क्लेशस्य नाशे निर्वाणस्य प्राप्तिः; अतः निर्वाणम् इति क्लेशाभावः। मिलिन्दपञ्हे आचार्यस्य नागसेनस्य मते निर्वाणस्य उत्पादकहेतुः वर्णयितुं न शक्यते; निर्वाणं निर्गुणम्, त्रिकालातीतम्, इन्द्रियातीतम्, अनिर्वचनीयं च तत्त्वम्; विशुद्धेन ज्ञानेन एव अस्य साक्षात्कारः। अश्वघोषस्य सौन्दरनन्दे — "दीपो यथा निर्वृतिमभ्युपेतो... स्नेहक्षयात् केवलमेति शान्तिम्। तथा कृती... क्लेशक्षयात् केवलमेति शान्तिम्" इति।</p>
+      <p class="en">In the Hīnayāna, the attainment of nirvāṇa alone is the monk's final goal. Its followers hold that people are afflicted by the three kinds of suffering (duḥkha-, saṃskāra-, and vipariṇāma-duḥkhatā). Through knowledge of the Noble Truths, observance of the Eightfold Path, right conduct and the Middle Way, the afflictions are destroyed and nirvāṇa attained; hence nirvāṇa is the absence of the afflictions. In the Milinda-pañha, according to the teacher Nāgasena, the cause that produces nirvāṇa cannot be described; nirvāṇa is quality-less, beyond the three times, beyond the senses, and indescribable, and is realized only by pure knowledge. Aśvaghoṣa's Saundarananda says: "As a lamp that goes out reaches peace simply by the exhaustion of its oil, so the accomplished one reaches peace simply by the exhaustion of the afflictions."</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — वैभाषिकमते निर्वाणम्</span>
+      <p class="sa">वैभाषिकाणां नये निर्वाणस्य स्वरूपं "प्रतिसंख्यानिरोधः" इति। प्रतिसंख्यानिरोधः इत्यस्य अर्थः — विशुद्धेन (अनास्रवया) प्रज्ञया संसारस्य सास्रवधर्माणां संस्काराणां निरोधः अर्थात् नाशः। यशोमित्रेण अस्य स्वरूपम् एवं वर्णितम् — "प्रतिसंख्यानम् अनास्रवा एव प्रज्ञा गृह्यते, तेन प्रज्ञाविशेषेण प्राप्यः निरोधः इति प्रतिसंख्यानिरोधः" इति। तेषां नये निर्वाणस्य स्वरूपं भवति — नित्यम्, असंस्कृत-धर्मयुक्तम्, स्वतन्त्र-सत्तायुक्तं च द्रव्यम् इति।</p>
+      <p class="en">In the Vaibhāṣika view, the nature of nirvāṇa is "pratisaṅkhyā-nirodha." This means the cessation — that is, destruction — of the influx-laden (sāsrava) tendencies and formations of saṃsāra through pure, influx-free (anāsrava) wisdom. Yaśomitra describes it thus: "by 'pratisaṅkhyāna' only the influx-free wisdom is meant; the cessation attainable through that special wisdom is the pratisaṅkhyā-nirodha." In their view nirvāṇa is eternal, possessed of an unconditioned nature, and a substance having independent existence.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — महायानमते निर्वाणम्</span>
+      <p class="sa">महायानानुयायिनः केवलं दुःखात् क्लेशाद् वा मुक्तिम् एव निर्वाणस्य चरमं लक्ष्यम् इति न अङ्गीकुर्वन्ति। तेषां नये निर्वाणप्राप्तिः चेत् क्लेशावरणात् ज्ञेयावरणात् च उभयतः मुक्तिः आवश्यकी। नैरात्म्यं द्विविधं भवति — पुद्गल-नैरात्म्यम्, धर्म-नैरात्म्यं च। यः जनः आत्मनः अस्तित्वं निराकरोति (पुद्गलनैरात्म्यबोधः) तस्य क्लेशात् मुक्तिः सम्भवति। माध्यमिकाचार्यः नागार्जुनः निर्वाणस्य स्वरूपम् एवं वर्णयति — "अप्रहीणमसम्प्राप्तमनुच्छिन्नमशाश्वतम्। अनिरुद्धमनुत्पन्नमेतन्निर्वाणमुच्यते" इति। महायानमते निर्वाणम् उत्पत्ति-विनाश-अभाव-रहितम्, अनिर्वचनीयं तत्त्वम्; कल्पनाजालस्य नाशे एव साक्षात्कारः। अस्य अपरं नाम भूतकोटिः धर्मधातुः वा।</p>
+      <p class="en">Mahāyāna followers do not accept that mere liberation from suffering or affliction is the final goal of nirvāṇa. In their view, the attainment of nirvāṇa requires liberation from both the obscuration of the afflictions (kleśāvaraṇa) and the obscuration of the knowable (jñeyāvaraṇa). No-self is twofold — the no-self of the person (pudgala-nairātmya) and the no-self of phenomena (dharma-nairātmya). One who negates the existence of a self (the realization of pudgala-nairātmya) gains liberation from the afflictions. The Mādhyamika teacher Nāgārjuna describes nirvāṇa thus: "neither abandoned nor attained, neither annihilated nor eternal, neither ceased nor arisen — this is called nirvāṇa." In the Mahāyāna, nirvāṇa is a reality free of arising, perishing and absence, and indescribable; it is realized only when the web of mental construction is destroyed. Its other names are bhūta-koṭi and dharma-dhātu.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 5 — उभयोः सामान्यं स्वरूपम्</span>
+      <p class="sa">उभयोः सम्प्रदाययोः मतानुसारं निर्वाणे कानिचित् सामान्यलक्षणानि दृश्यन्ते — (१) निर्वाणं "निष्प्रपञ्चम्", शब्दैः वर्णयितुं न शक्यते; अस्य उत्पत्तिः न, विनाशः न, परिवर्तनम् अपि न, अतः निर्वाणम् "असंस्कृत-धर्मः"; (२) निर्वाणस्य अनुभूतिः स्वतः एव कर्तुं शक्यते — योगाचारमते "प्रत्यात्मवेद्यम्", थेरवादमते "पच्चत्तं वेदितब्बम्"; (३) भूत-वर्तमान-भविष्यत्-कालिकानां बुद्धानां निर्वाणानुभवः समानः; (४) अष्टाङ्गिकमार्गस्य अनुपालनेन एव निर्वाणस्य प्राप्तिः; (५) निर्वाणस्य स्थितौ व्यक्तित्वस्य लोपः सर्वथा भवति। उभयोः अपि मतानुसारं बुद्धस्य प्रज्ञा प्रतिभा च लोकोत्तरा आसीत्।</p>
+      <p class="en">According to both traditions, nirvāṇa shows certain common features — (1) it is "free of conceptual elaboration" (niṣprapañca) and cannot be described in words; having no arising, no perishing and no change, nirvāṇa is an "unconditioned reality" (asaṃskṛta-dharma); (2) its experience can be had by oneself alone — "self-realizable" (pratyātma-vedya) in the Yogācāra, "to be known each for oneself" (paccattaṃ veditabbaṃ) in the Theravāda; (3) the experience of nirvāṇa is the same for the Buddhas of past, present and future; (4) nirvāṇa is attained only by following the Eightfold Path; (5) in the state of nirvāṇa, individuality is wholly dissolved. According to both views, the Buddha's wisdom and genius were transcendent.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q26">
+    <h3>२६. अष्टाङ्गमार्गं विस्तरेण व्याख्यात।</h3>
+    <div class="qmeta">Section III · 15 marks</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — प्रस्तावना</span>
+      <p class="sa">चतुर्थम् आर्यसत्यं दुःख-निरोधगामिनी प्रतिपत्; अयमेव दुःखनिवृत्तेः निर्वाणप्राप्तेश्च मार्गः। बुद्धस्य मते अस्य मार्गस्य अष्टौ अङ्गानि, अतः "अष्टाङ्गिक-मार्गः" इति प्रसिद्धः; अयमेव मध्यम-प्रतिपद् इति च कथ्यते। एतानि अष्टौ अङ्गानि त्रिषु वर्गेषु विभक्तानि — सम्यक् दृष्टि-संकल्पौ प्रज्ञायाम्; सम्यक् वचन-कर्मान्त-आजीवाः शीले; सम्यक् व्यायाम-स्मृति-समाधयः समाधौ।</p>
+      <p class="en">The fourth Noble Truth is the path leading to the cessation of suffering; this very path is the means to the ending of suffering and the attainment of nirvāṇa. According to the Buddha it has eight limbs, hence the "Eightfold Path," also called the Middle Way. These eight are grouped under three heads — right view and resolve under wisdom (prajñā); right speech, action and livelihood under conduct (śīla); and right effort, mindfulness and concentration under concentration (samādhi).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — प्रज्ञा (दृष्टिः, संकल्पः)</span>
+      <p class="sa"><strong>१. सम्यक् दृष्टिः</strong> — अत्र "दृष्टिः" इति ज्ञानम्। कायिक-वाचिक-मानसिक-कर्मणां कुशल-अकुशल-भेदेन प्रकारद्वयं विद्यते; यः कुशल-अकुशलयोः भेदं जानाति, अकुशलं परिहरति, कुशलं च आचरति — सा सम्यक् दृष्टिः। <strong>२. सम्यक् संकल्पः</strong> — दृष्ट्यनन्तरं जनः सम्यक् निश्चयं करोति। कामना दुःखस्य उत्पादिका शक्तिः; अतः निष्कामभावः, अद्रोहः, अहिंसा च — एतेषां यः मनसि निश्चयः सः सम्यक् संकल्पः।</p>
+      <p class="en"><strong>1. Right View</strong> — here "view" means knowledge. Bodily, verbal and mental actions are each twofold, wholesome and unwholesome; one who knows the difference, avoids the unwholesome and practises the wholesome has Right View. <strong>2. Right Resolve</strong> — after view, a person forms the right resolve. Since desire is the force that produces suffering, the firm mental determination toward desirelessness, non-malice and non-violence is Right Resolve.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — शीलम् (वचनम्, कर्मान्तः, आजीवः)</span>
+      <p class="sa"><strong>३. सम्यक् वचनम्</strong> — "वचनम्" इति भाषणम्; असत्यभाषणात्, पिशुनवचनात्, कटुवचनात्, संप्रलापात् च विरम्य सर्वदा सत्यं भाषणं सम्यक् वचनम्। <strong>४. सम्यक् कर्मान्तः</strong> — शीलानां सुष्ठु अनुपालनम्; अहिंसा-सत्य-अस्तेय-ब्रह्मचर्य-सुरावर्जनम् इति पञ्चशीलं सर्वैः आचरणीयम्, बौद्धभिक्षूणां कृते च दशशीलम् उक्तम्। <strong>५. सम्यक् आजीवः</strong> — उचिता आजीविका; याभिः हिंसाचरणं भवेत् ताः (सत्थ-, सत्त-, मंस-, मज्ज-, विस-वणिज्जाः इति पञ्च वाणिज्याः) वर्जनीयाः; हिंसारहितेन शुद्धेन उपायेन जीविका करणीया।</p>
+      <p class="en"><strong>3. Right Speech</strong> — "speech" means utterance; abstaining from falsehood, slander, harsh words and frivolous chatter, and always speaking truth, is Right Speech. <strong>4. Right Action</strong> — the careful observance of the moral precepts; the five precepts (non-violence, truth, non-stealing, chastity and abstaining from intoxicants) are for all, and ten precepts are laid down for monks. <strong>5. Right Livelihood</strong> — a proper means of living; livelihoods that involve harm (the five trades — in weapons, living beings, meat, intoxicants and poison) are to be shunned, and one should earn a living by pure, non-violent means.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — समाधिः (व्यायामः, स्मृतिः, समाधिः)</span>
+      <p class="sa"><strong>६. सम्यक् व्यायामः</strong> — सम्यक् उद्योगः; इन्द्रियसंयमाय, सद्भावनायाः विकासाय, असद्भावनायाः निराकरणाय च प्रयत्नः करणीयः। <strong>७. सम्यक् स्मृतिः</strong> — काय-वेदना-चित्त-धर्माणां वास्तविकस्वरूपस्य अनुपश्यना; एतत् चतुर्विधं स्मृतिप्रस्थानम्। <strong>८. सम्यक् समाधिः</strong> — साधकस्य चरमं लक्ष्यम्; अज्ञाननाशे समाधेः प्राप्तिः; शील-प्रज्ञयोः आचरणेन कायशुद्धिः चित्तशुद्धिश्च भवति, ततः समाधिः सिध्यति। यः अस्मिन् मार्गे प्रवृत्तः तस्य दुःखस्य नाशः निश्चयेन भवति; अतः धम्मपदे "मार्गाणाम् अष्टाङ्गिकः श्रेष्ठः" इति उच्यते।</p>
+      <p class="en"><strong>6. Right Effort</strong> — right exertion; effort must be made to restrain the senses, develop wholesome dispositions and dispel unwholesome ones. <strong>7. Right Mindfulness</strong> — the contemplation of the true nature of body, feelings, mind and mental objects; this is the fourfold foundation of mindfulness. <strong>8. Right Concentration</strong> — the practitioner's final goal; with the destruction of ignorance, samādhi is attained; through conduct and wisdom come purity of body and mind, and thence samādhi is accomplished. For one set upon this path the destruction of suffering surely follows; hence the Dhammapada declares, "the Eightfold is the best of paths."</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q27">
+    <h3>२७. चत्वारि आर्यसत्यानि विस्तरेण व्याख्यात। <span class="badge">अथवा — दुःखस्वरूपम्</span></h3>
+    <div class="qmeta">Section III · 15 marks</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — प्रस्तावना (बुद्धः वैद्यः इव)</span>
+      <p class="sa">निर्वाणप्राप्तेः अनन्तरं भगवान् बुद्धः सारनाथे (ऋषिपत्तने) पञ्चशिष्येभ्यः प्रथमं धर्मचक्रप्रवर्तनं कुर्वन् चत्वारि आर्यसत्यानि उपदिष्टवान्। यथा वैद्यः रोगस्य कारणम् अन्विष्य रोगिणे यथायथम् औषधं ददाति, तथा भगवान् बुद्धः अपि जगति विद्यमानस्य दुःखस्य कारणम् अन्विष्य तस्य निरोधस्य उपायम् उपदिष्टवान्; अनेन कारणेन सः "महाभिषक्" "वैद्यराजः" इति च कथ्यते। तानि चत्वारि सत्यानि — दुःखम्, दुःखसमुदयः, दुःखनिरोधः, दुःख-निरोधगामिनी प्रतिपत् च।</p>
+      <p class="en">After attaining nirvāṇa, the Buddha, turning the wheel of Dharma for the first time at Sarnath before his five disciples, taught the Four Noble Truths. Just as a physician investigates the cause of a disease and gives the patient suitable medicine, so the Buddha investigated the cause of the suffering present in the world and taught the means of its cessation; for this reason he is called the "great physician" and the "king of healers." The four truths are: suffering, its origin, its cessation, and the path leading to its cessation.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — (क) दुःखम्</span>
+      <p class="sa">प्रथमम् आर्यसत्यं दुःखम् — बुद्धस्य मतानुसारं संसारे सर्वत्र दुःखं विद्यमानम्। भगवान् भिक्षून् उद्दिश्य उपदिशति — "जाति पि दुक्खा, जरापि दुक्खा, मरणम्पि दुक्खं, सोक-परिदेव-दोमनस्स-उपायासापि दुक्खा, अप्पियेहि सम्पयोगो दुक्खो, पियेहि विप्पयोगो दुक्खो, यम्पिच्छं न लभति तम्पि दुक्खं, संखित्तेन पञ्चुपादानक्खन्धापि दुक्खा" इति। अर्थात् जन्म, जरा, मरणम्, शोकः, अप्रियेण सह संयोगः, प्रियेण सह वियोगः, ईप्सितस्य अलाभः, संक्षेपेण पञ्चस्कन्धाः (रूप-वेदना-संज्ञा-संस्कार-विज्ञानानि) च — सर्वम् एतत् दुःखमयम्। जगति प्रत्येकं कर्मणि दुःखं निहितम्; अतः धम्मपदे संसारः प्रज्वलितं गृहम् इव वर्ण्यते।</p>
+      <p class="en">The first Noble Truth is suffering — according to the Buddha, suffering is present everywhere in saṃsāra. Addressing the monks he teaches: birth is suffering, old age is suffering, death is suffering, sorrow, lamentation and despair are suffering, union with the unpleasant is suffering, separation from the pleasant is suffering, not getting what one wishes is suffering — in short, the five aggregates of clinging (form, feeling, perception, formations and consciousness) are suffering. Suffering is lodged in every act in the world; hence the Dhammapada likens saṃsāra to a house on fire.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — (ख) दुःखसमुदयः</span>
+      <p class="sa">द्वितीयम् आर्यसत्यं दुःखसमुदयः — "समुदयः" इति कारणम्। कारणेन विना कार्यस्य उत्पत्तिः न भवति; अतः दुःखस्य कारणं तृष्णा (वासना) इति। तृष्णायाः कारणात् लोके जीवाः बद्धाः दुःखेन पीडिताश्च भवन्ति। तृष्णा त्रिविधा — (१) कामतृष्णा (विविधविषयाणां प्रति आसक्तिजनिता कामना), (२) भवतृष्णा (संसारे पौनःपुन्येन जन्मग्रहणस्य इच्छा), (३) विभवतृष्णा (अन्यैः प्राणिभिः सह हिंसायाः प्रतिहिंसायाश्च मानसिकी वृत्तिः)। एषा तृष्णा एव सर्वदुःखस्य मूलम्।</p>
+      <p class="en">The second Noble Truth is the origin of suffering — "samudaya" means cause. No effect arises without a cause; hence the cause of suffering is craving (tṛṣṇā). Because of craving, beings in the world are bound and afflicted by suffering. Craving is of three kinds — (1) craving for sense-pleasures (born of attachment to various objects), (2) craving for becoming (the wish for repeated birth in saṃsāra), and (3) craving for non-becoming (the aggressive mental tendency of harm and counter-harm toward other beings). This craving is the very root of all suffering.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — (ग) दुःखनिरोधः</span>
+      <p class="sa">तृतीयम् आर्यसत्यं दुःखनिरोधः — "निरोधः" इति नाशः। यतः दुःखस्य कारणं तृष्णा, अतः तस्याः नाशे दुःखस्यापि नाशः सम्भवति। तृष्णायाः असेसविरागनिरोधः, त्यागः, वैराग्यम् (असेवितविरागः), मुक्तिः, अनालयः च समाचरणीयः। यस्य मनसि कामस्य नाशः सः इह जन्मनि निर्वाणं प्राप्नोति। अङ्गुत्तरनिकाये उक्तम् — "सेलो यथा एकघनो वातेन न समीरति, एवं रूपा रसा सद्दा... इट्ठा धम्मा अनिट्ठा च न पवेधेन्ति तादिनो" इति; यथा एकघनः शैलः वातेन न चाल्यते, तथा निर्वृतः जनः इष्ट-अनिष्टैः न विचाल्यते। एतदेव "निर्वाणम्"।</p>
+      <p class="en">The third Noble Truth is the cessation of suffering — "nirodha" means destruction. Since the cause of suffering is craving, with its destruction suffering too can be destroyed. The complete fading and cessation of craving, its relinquishment, dispassion, release and non-attachment are to be cultivated. One in whose mind desire is destroyed attains nirvāṇa in this very life. The Aṅguttara Nikāya says: "as a solid rock is not stirred by the wind, so forms, tastes, sounds... pleasant and unpleasant things do not perturb the steadfast one." Just as a single mass of rock is not moved by the wind, so the liberated person is not shaken by the pleasant or the unpleasant. This itself is "nirvāṇa."</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 5 — (घ) दुःख-निरोधगामिनी प्रतिपत्</span>
+      <p class="sa">चतुर्थम् आर्यसत्यं दुःख-निरोधगामिनी प्रतिपत् — "प्रतिपत्" इति मार्गः। निर्वाणस्य प्राप्तिः अन्तिमं लक्ष्यम्, तस्याः उपायः अयं मार्गः। बुद्धस्य मते अस्य अष्टौ अङ्गानि, अतः "अष्टाङ्गिक-मार्गः" — सम्यक् दृष्टिः, संकल्पः, वचनम्, कर्मान्तः, आजीवः, व्यायामः, स्मृतिः, समाधिश्च — एतानि प्रज्ञा-शील-समाधि-इति त्रिषु वर्गेषु अन्तर्भवन्ति। एवं चत्वारि आर्यसत्यानि बौद्धधर्मस्य आधारभूताः सिद्धान्ताः, येषु दुःखस्य स्वरूपं, तस्य कारणं, निवृत्तिः, निवृत्त्युपायश्च क्रमेण प्रतिपादिताः।</p>
+      <p class="en">The fourth Noble Truth is the path leading to the cessation of suffering — "pratipad" means path. The attainment of nirvāṇa is the final goal, and this path is its means. According to the Buddha it has eight limbs — right view, resolve, speech, action, livelihood, effort, mindfulness and concentration — which fall under the three heads of wisdom, conduct and concentration. Thus the Four Noble Truths are the foundational doctrines of Buddhism, in which the nature of suffering, its cause, its cessation, and the means to that cessation are set out in order.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <footer>
+    बौद्धदर्शनम् · आधारभूताः सिद्धान्ताः · अष्टाङ्गिकः मार्गः · निर्वाणसिद्धान्ताः · स्वाध्यायार्थम्
+  </footer>
+
+</div>
+</body>
+</html>
