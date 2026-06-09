@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mṛcchakaṭikam — Exam Prep (English)</title>
+<style>
+  :root {
+    --bg: #0a0b0d;
+    --card: #131619;
+    --card2: #1a1e24;
+    --line: #252b35;
+    --ink: #f0ece3;
+    --ink-dim: #9a9590;
+    --deva: #ffd98a;
+    --accent: #d4883a;
+    --jade: #6fbfa3;
+    --rose: #c47a7a;
+    --qnum: #3a4a5a;
+  }
+  *, *::before, *::after { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: Georgia, "Iowan Old Style", serif;
+    line-height: 1.7;
+    padding: 12px 14px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .deva {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", serif;
+    line-height: 1.9;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px 4px 22px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  header h1 {
+    font-size: 2rem; margin: 0 0 6px;
+    color: var(--deva);
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+  }
+  header .sub { color: var(--ink-dim); font-size: .95rem; letter-spacing: .5px; }
+
+  .section-title {
+    display: flex; align-items: center; gap: 12px;
+    margin: 36px 0 16px;
+  }
+  .section-title .badge {
+    background: var(--accent);
+    color: #000;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .section-title h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--accent);
+    font-variant: small-caps;
+    letter-spacing: 1px;
+  }
+
+  .qa {
+    background: var(--card);
+    border-left: 3px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 16px 14px;
+    margin-bottom: 14px;
+    transition: border-color .2s;
+  }
+  .qa:hover { border-color: var(--accent); }
+
+  .qa .qhead {
+    display: flex; gap: 10px; align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .qa .qnum {
+    background: var(--qnum);
+    color: var(--ink-dim);
+    font-size: .72rem;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .qa .q-sa {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: var(--deva);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+  .qa .q-en {
+    font-style: italic;
+    color: var(--ink-dim);
+    font-size: .88rem;
+    margin: 2px 0 12px 0;
+  }
+
+  .label {
+    font-size: .7rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .label.ans-sa { color: var(--jade); }
+  .label.ans-en { color: var(--rose); }
+
+  .ans-sa-text {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: #e8dfc8;
+    font-size: 1rem;
+    line-height: 1.9;
+    margin: 0 0 10px 0;
+    padding: 10px 12px;
+    background: #0f1215;
+    border-radius: 6px;
+  }
+  .ans-en-text {
+    color: var(--ink-dim);
+    font-size: .92rem;
+    line-height: 1.65;
+    margin: 0;
+    padding: 10px 12px;
+    background: #0d1118;
+    border-radius: 6px;
+    font-style: italic;
+  }
+
+  .qa.long { border-left-color: var(--jade); }
+  .qa.long .q-sa { font-size: 1.08rem; }
+
+  .toc {
+    background: var(--card2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+  }
+  .toc h3 { margin: 0 0 10px; font-size: .9rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
+  .toc a { display: block; color: var(--ink-dim); text-decoration: none; font-size: .88rem; padding: 3px 0; }
+  .toc a:hover { color: var(--ink); }
+
+  hr.divider { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .88rem; }
+  th { background: #1e242d; color: var(--accent); padding: 8px 10px; text-align: left; font-style: normal; }
+  td { padding: 7px 10px; border-top: 1px solid var(--line); vertical-align: top; font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif; font-size: .93rem; color: #e8dfc8; line-height: 1.7; }
+  tr:nth-child(even) td { background: #0f1215; }
+
+  @media (max-width: 380px) {
+    body { font-size: 15px; padding: 8px 10px 60px; }
+    header h1 { font-size: 1.5rem; }
+    .qa { padding: 12px 11px; }
+    .ans-sa-text, .ans-en-text { font-size: .9rem; padding: 8px 9px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" style="display:inline-block;margin:10px 0 0 2px;font-family:Georgia,serif;font-size:.82rem;color:#9a9590;text-decoration:none;letter-spacing:1px;">← Home</a>
+
+<header>
+  <h1 class="deva">मृच्छकटिकम्</h1>
+  <div class="sub">Question Bank · English Medium · All Sections</div>
+</header>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <a href="#s1mark">§1 — 1-Mark Questions</a>
+  <a href="#s5mark">§2 — 5-Mark Questions</a>
+  <a href="#s15mark">§3 — 15-Mark Questions</a>
+</div>
+
+<!-- ═══════════════════════════ 1 MARK ═══════════════════════════ -->
+<div class="section-title" id="s1mark">
+  <span class="badge">1 MARK</span>
+  <h2>Short Answer Questions</h2>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q1</span>
+    <p class="q-sa">मृच्छकटिकं कति अङ्कात्मकं नाटकम्?</p>
+  </div>
+  <p class="q-en">How many acts does Mṛcchakaṭikam have?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">दश (Ten)</p>
+  <p class="ans-en-text">Ten acts (daśa aṅkāḥ)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q2</span>
+    <p class="q-sa">शूद्रकस्य गुणविशेषमधिकृत्य कुत्र उल्लिखितम्?</p>
+  </div>
+  <p class="q-en">Where are Śūdraka's special qualities mentioned?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मृच्छकटिकस्य प्रथमाङ्के (In the Preamble/First Act of Mṛcchakaṭikam)</p>
+  <p class="ans-en-text">In the prologue (pīṭhikā) of the first act of Mṛcchakaṭikam</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q3</span>
+    <p class="q-sa">चारुदत्तस्य पत्न्याः नाम किम्?</p>
+  </div>
+  <p class="q-en">What is the name of Cārudatta's wife?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">धूता (Dhūtā)</p>
+  <p class="ans-en-text">Dhūtā</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q4</span>
+    <p class="q-sa">रोहसेनः केन क्रीडितुमिच्छति?</p>
+  </div>
+  <p class="q-en">With what does Rohasena wish to play?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">सुवर्णशकटेन (With a golden cart)</p>
+  <p class="ans-en-text">With a golden cart (suvarṇa-śakaṭa)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q5</span>
+    <p class="q-sa">मृच्छकटिकस्य रूपकभेदः कः?</p>
+  </div>
+  <p class="q-en">What is the dramatic type (rūpaka-bheda) of Mṛcchakaṭikam?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">प्रकरणम् (Prakaraṇa)</p>
+  <p class="ans-en-text">Prakaraṇa — a social drama with fictional characters (as opposed to nāṭaka which uses historical/legendary heroes)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q6</span>
+    <p class="q-sa">वसन्तसेना स्वस्य सुवर्णाभूषणानि कस्मै किमर्थं यच्छति?</p>
+  </div>
+  <p class="q-en">To whom and why does Vasantasenā give her gold ornaments?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">चारुदत्तस्य पुत्राय रोहसेनाय, सुवर्णशकटिकां निर्मातुम् (To Cārudatta's son Rohasena, to make a golden toy-cart)</p>
+  <p class="ans-en-text">To Rohasena, Cārudatta's son, so that a golden toy-cart may be made for him</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q7</span>
+    <p class="q-sa">वसन्तसेनायाः सख्याः नाम किम्?</p>
+  </div>
+  <p class="q-en">What is the name of Vasantasenā's companion?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मदनिका (Madanikā)</p>
+  <p class="ans-en-text">Madanikā</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q8</span>
+    <p class="q-sa">राजमार्गे वसन्तसेनाम् के अनुसृत्य गच्छन्ति?</p>
+  </div>
+  <p class="q-en">Who pursues Vasantasenā on the royal road?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">शकारः, चेटः, विटश्च (Śakāra, the servant Ceṭa, and the parasite Viṭa)</p>
+  <p class="ans-en-text">Śakāra (the king's brother-in-law), his servant (ceṭa), and the parasite (viṭa)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q9</span>
+    <p class="q-sa">मृच्छकटिकम् इति शब्दं विभज्य लिखत।</p>
+  </div>
+  <p class="q-en">Analyse the compound word "Mṛcchakaṭikam".</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मृत् + शकटिकम् = मृच्छकटिकम् (Clay + little cart = little clay cart)</p>
+  <p class="ans-en-text">mṛt (clay/earth) + śakaṭikam (little cart) = mṛcchakaṭikam (the little clay cart)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q10</span>
+    <p class="q-sa">वसन्तसेना कस्य गृहे आश्रयं प्राप्तवती?</p>
+  </div>
+  <p class="q-en">In whose house did Vasantasenā take shelter?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">चारुदत्तस्य (Cārudatta's)</p>
+  <p class="ans-en-text">In Cārudatta's house</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q11</span>
+    <p class="q-sa">वसन्तसेना चारुदत्तं किमर्थमाद्रियते?</p>
+  </div>
+  <p class="q-en">Why does Vasantasenā hold Cārudatta in high regard?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">तस्य सद्गुणान् दृष्ट्वा (Having seen his virtuous qualities)</p>
+  <p class="ans-en-text">Because she is attracted by his noble virtues (sādguṇya)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q12</span>
+    <p class="q-sa">आर्यकः कः?</p>
+  </div>
+  <p class="q-en">Who is Āryaka?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">गोपालकः — नाटकस्य अन्ते एषः एव राजा भवति (A cowherd who becomes king at the end of the play)</p>
+  <p class="ans-en-text">Āryaka is a cowherd (gopālaka) imprisoned by the unjust king; he escapes and eventually becomes the new king at the end of the play</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q13</span>
+    <p class="q-sa">चारुदत्तस्य मित्रस्य नाम किम्?</p>
+  </div>
+  <p class="q-en">What is the name of Cārudatta's friend?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मैत्रेयः (Maitreya)</p>
+  <p class="ans-en-text">Maitreya — who also serves as the vidūṣaka (comic companion)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q14</span>
+    <p class="q-sa">शर्विलकः काम् इच्छति?</p>
+  </div>
+  <p class="q-en">Whom does Śarvilaka desire?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मदनिकाम् (Madanikā)</p>
+  <p class="ans-en-text">Madanikā, Vasantasenā's maid</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q15</span>
+    <p class="q-sa">मृच्छकटिके कः रसः मुख्यतया उपयुक्तः?</p>
+  </div>
+  <p class="q-en">What is the predominant rasa in Mṛcchakaṭikam?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">शृङ्गाररसः (Śṛṅgāra — the erotic/love sentiment)</p>
+  <p class="ans-en-text">Śṛṅgāra rasa (the sentiment of love), particularly the vipralambha (love in separation) variety</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════ 5 MARKS ═══════════════════════════ -->
+<div class="section-title" id="s5mark">
+  <span class="badge">5 MARKS</span>
+  <h2>Short Essays</h2>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q16</span>
+    <p class="q-sa">मृच्छकटिकस्य मूलस्त्रोतम् उद्दिश्य लिखत।</p>
+  </div>
+  <p class="q-en">Write a note on the source materials of Mṛcchakaṭikam.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">दरिद्रचारुदत्तम् → मृच्छकटिकम् (Bhāsa's Daridra-Cārudattam is the primary source)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    Several Sanskrit works contain characters, events, and passages that resemble material in Mṛcchakaṭikam. The chief sources and parallels are:<br><br>
+    <strong>1. Daridra-Cārudattam (Bhāsa)</strong> — Scholars widely accept this four-act play as the primary source. The first four acts of Mṛcchakaṭikam closely mirror its plot, characters, and even individual verses. The table below shows direct textual parallels.<br><br>
+
+    <table>
+      <tr><th>Daridra-Cārudattam</th><th>Mṛcchakaṭikam</th></tr>
+      <tr><td>श्रूणोमि गद्यं श्रवणाभ्याम्। अन्धकारपूरिताभ्यां नासापुटाभ्याम्॥</td><td>श्रूणोमि माल्यगन्धम् अन्धकारपूरितया पुनर्नासिकया न सुव्यक्तं भूषणशब्दम्।</td></tr>
+      <tr><td>तव मम च दारुणा शोभा भविष्यति।</td><td>मरणान्तिकं वैरं भविष्यति।</td></tr>
+      <tr><td>उत्कण्ठितस्य हृदयानुगता सखीव।</td><td>उत्कण्ठितस्य हृदयानुगुणा वयस्या।</td></tr>
+    </table><br>
+
+    <strong>2. Abhijñānaśākuntalam (Kālidāsa)</strong> — The court scene in Mṛcchakaṭikam parallels the royal hall scene in Śākuntalam. Both heroines suffer because their beloved is distracted by royal duties.<br><br>
+    <strong>3. Mudrarākṣasam (Viśākhadatta)</strong> — The trial scene and the condemned man's procession to the execution ground in Mṛcchakaṭikam resembles Act 5 of Mudrarākṣasam.<br><br>
+    <strong>4. Daśakumāracaritam (Daṇḍin)</strong> — The love story of Rāgamañjarī and a Brāhmaṇa parallels the Vasantasenā-Cārudatta subplot. However, since Daṇḍin lived after Śūdraka, it is more likely that Daṇḍin borrowed from Śūdraka, not vice versa.<br><br>
+    <strong>5. Kathāsaritsāgara (Somadeva)</strong> — Also contains a parallel love story (Rūpānikā and Lohajangha), but again the Mṛcchakaṭikam is older, so this is a case of borrowing from the play, not the reverse.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q17</span>
+    <p class="q-sa">'मृच्छकटिक' इति नामस्य औचित्यं विवृणुत।</p>
+  </div>
+  <p class="q-en">Explain the appropriateness of the title "Mṛcchakaṭikam".</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    Viśvanātha in the Sāhityadarpaṇa (6/148) says a play's title should be meaningful and suggestive of its content. Mṛcchakaṭikam is a prakaraṇa, and the usual convention for this form is to name the play after its hero and heroine. Śūdraka, however, departed from convention and named it after a key incident in Act Six instead.<br><br>
+    <strong>The episode behind the title:</strong> Cārudatta's young son Rohasena weeps because he wants to play with a golden toy-cart like the ones he has seen at a neighbour's house, but his father is too poor to afford one. Vasantasenā, learning of this, fills the toy-cart with her own jewels so that a gold one may be made for him. This moving act of generosity — the exchange of a clay cart (mṛt-śakaṭikā) for a golden one — gives the play its name: Mṛcchakaṭikam.<br><br>
+    The title thus captures both the humble material circumstances of the hero and the nobility of spirit that transcends them — making it thematically apt even while unconventional.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q18</span>
+    <p class="q-sa">मृच्छकटिकस्य चतुर्थाङ्कस्य मुख्यविषयः कः?</p>
+  </div>
+  <p class="q-en">What is the main subject of Act Four of Mṛcchakaṭikam?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    Act Four is one of the most important acts of the play. Its central themes are:<br><br>
+    <strong>1. Vasantasenā's pure love for Cārudatta</strong> — Though she is a wealthy courtesan (gaṇikā), Vasantasenā's love for the impoverished Cārudatta is wholly selfless. She is drawn not by his wealth (which he no longer has) but entirely by his noble character — his generosity, kindness, humility, and concern for others.<br><br>
+    <strong>2. The villainy of Śakāra</strong> — Śakāra's cruel desire to possess Vasantasenā by force is laid bare in this act. She rejects him utterly. This rejection sets in motion the central conflict of the play.<br><br>
+    <strong>3. Contrast of virtue and vice</strong> — The act vividly juxtaposes Cārudatta's nobility with Śakāra's baseness, and Vasantasenā's dignified love with Śakāra's predatory lust.<br><br>
+    In sum, Act Four establishes the moral centre of the drama — love, inner conflict, and the opposition between virtue and corruption.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q19</span>
+    <p class="q-sa">मैत्रेयस्य पात्रस्य वैशिष्ट्यं वर्णयत।</p>
+  </div>
+  <p class="q-en">Describe the character of Maitreya.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    Maitreya fulfils the role of the vidūṣaka (comic companion) in Mṛcchakaṭikam and is Cārudatta's closest friend. His character has several notable features:<br><br>
+    <strong>Comic and candid</strong> — His speech and behaviour create humour throughout the play. He is blunt, says what he thinks, and deflates pretension with casual directness.<br><br>
+    <strong>Loyal and courageous</strong> — Despite his comic persona, Maitreya is deeply devoted to Cārudatta. He shares in his joys and sorrows, and fearlessly stands up to Śakāra's harassment when it threatens those he cares for.<br><br>
+    <strong>Intelligent and dutiful</strong> — He is trusted with Vasantasenā's jewels (in Act 1) and carries out his responsibilities faithfully.<br><br>
+    <strong>Ideal of friendship</strong> — Śūdraka uses Maitreya not merely for comic relief but as a portrait of true friendship (maitri) — selfless, constant, and courageous. He is a model companion, not just a jester.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q20</span>
+    <p class="q-sa">मदनिकायाः पात्रचित्रणम्।</p>
+  </div>
+  <p class="q-en">Describe the character of Madanikā.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    Madanikā is one of the significant characters of Mṛcchakaṭikam and serves as Vasantasenā's personal attendant. Her portrayal goes well beyond that of a mere servant:<br><br>
+    <strong>Intelligent and charming</strong> — She is perceptive, sweet-spoken, and knows how to conduct herself in every situation. She handles complex situations with finesse.<br><br>
+    <strong>Loyal and trusted</strong> — Vasantasenā's affection for Madanikā is genuine and deep. She is not just a maidservant but Vasantasenā's most trusted confidante and inner companion.<br><br>
+    <strong>Emblem of ideal womanhood</strong> — Though she lives in a courtesan's household, Madanikā is portrayed as an ideal woman of good counsel and noble sentiment.<br><br>
+    <strong>Love story with Śarvilaka</strong> — Śarvilaka loves her and eventually frees her from bondage (dāsya). This love story forms an important subplot, and Madanikā's liberation — her happy ending — is Śūdraka's affirmation that virtue, even in difficult circumstances, finds its reward.<br><br>
+    Her dialogues consistently add beauty and depth to the play.
+  </p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════ 15 MARKS ═══════════════════════════ -->
+<div class="section-title" id="s15mark">
+  <span class="badge">15 MARKS</span>
+  <h2>Long Essays</h2>
+</div>
+
+<div class="qa long">
+  <div class="qhead"><span class="qnum">Q21</span>
+    <p class="q-sa">शूद्रकस्य जीवनं, कृतिपरिचयं च कुरुत।</p>
+  </div>
+  <p class="q-en">Give an account of Śūdraka's life and works.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    <strong>Introduction</strong><br>
+    Mṛcchakaṭikam holds an honoured place in Sanskrit dramatic literature, yet its author Śūdraka remains a figure of considerable mystery. Almost all we know of him comes from the preamble of the play itself.<br><br>
+
+    <strong>Description in the Preamble</strong><br>
+    The prologue describes Śūdraka as: powerful, prosperous, learned in the Ṛgveda, Sāmaveda, mathematics, the sixty-four arts, commerce, and elephant-training; a devotee of Śiva who, by Śiva's grace, had his eyes (previously blind with ignorance) opened. After performing the Aśvamedha sacrifice, handing the kingdom to his son, and living to 110 years and ten days, he entered fire (agnipraviṣṭa). Three famous verses from this preamble are:
+
+    <div class="ans-sa-text" style="margin-top:8px;">
+      द्विरदेन्द्रगतिश्चकोरनेत्रः परिपूर्णेन्दुमुखः सुविग्रहश्च।<br>
+      द्विजमुख्यतमः कविर्बभूव प्रथितः शूद्रकेत्यगाद्यसत्त्वः॥<br><br>
+      ऋग्वेदं सामवेदं गणितमथ कलां वैशिकीं हस्तिशिक्षां<br>
+      ज्ञात्वा शर्वप्रसादात् व्यपगततिमिरो चक्षुषी चोपलभ्य।<br>
+      राजानं वीक्ष्य पुत्रं परमसमुदयेनाश्वमेधेन चेष्ट्वा<br>
+      लब्ध्वा चायुः शताब्दं दशदिनसहितं शूद्रकोऽग्निं प्रविष्टः॥
+    </div><br>
+
+    The puzzling fact: how could the author describe his own death in the preamble? This has led some scholars to suggest the preamble was written by a later hand, or that "Śūdraka" is a pen-name.<br><br>
+
+    <strong>Historical References to Śūdraka</strong><br>
+    Several other works mention the name Śūdraka. The Skanda Purāṇa's Kumārikā Khaṇḍa mentions a heroic king named Śūdraka who would arise in the Kali age. Historians such as Dr. Smith have identified this figure with Simuka (or Śiśuka), the first king of the Āndhra dynasty. Prof. Stein Konow proposed that Śūdraka was another name for Śivadatta, a king of the Ābhīra dynasty. Rājaśekhara (in Kāvyamīmāṃsā) mentions two poets — Rābhila and Sobhila — who composed a work called "Śūdraka-kathā." Bāṇabhaṭṭa (Harshacarita, Kādambarī) refers to a king of Vidiśā named Śūdraka. Daṇḍin (Daśakumāracarita), Vetālapañcaviṃśati, and Kathāsaritsāgara also contain references to the name. Despite this wealth of references, there is no scholarly consensus on which "Śūdraka" composed the play.<br><br>
+
+    <strong>Personality of Śūdraka</strong><br>
+    From the play's preamble: Śūdraka was a Brāhmaṇa (dvija) of heroic and contemplative temperament — warrior, scholar, and ascetic in one. He was well-versed in Vedic lore, mathematics, fine arts, elephant-lore, commerce, and also (notably) in the arts of theft (caurakala) and gambling (dyūtakala), which suggests broad familiarity with real social life. His mastery of both Sanskrit and Prākrit is evident throughout the play.<br><br>
+
+    <strong>Region</strong><br>
+    Linguistic evidence in the play points to a southern origin. The word khuṇḍamoṭaka (Act 2), the epithet sahyavāsinī for the goddess (Act 10), the term nāṇaka for money (Act 1), and the expression karnāṭa-kalaha (Act 6) all suggest the author was from the Deccan / South India.<br><br>
+
+    <strong>Date</strong><br>
+    There is much scholarly debate. Some place Śūdraka before the common era; others as late as 6th century CE. Based on internal and external evidence, a date broadly between 2nd century BCE and 6th century CE is generally accepted, with most placing him in the early centuries CE.<br><br>
+
+    <strong>Works</strong><br>
+    Mṛcchakaṭikam is his undisputed masterwork. Daṇḍin and Vāmana mention other compositions by Śūdraka, but none have survived. A play called Padya-prābhṛtaka (a bhāṇa) circulates in South India under his name, but its authenticity remains uncertain.<br><br>
+
+    <strong>Conclusion</strong><br>
+    Śūdraka remains one of Sanskrit literature's most intriguing figures — a genius who left one extraordinary play and almost no biography. Yet from that single work, a vivid personality emerges: humane, witty, socially perceptive, and deeply compassionate.
+  </p>
+</div>
+
+<div class="qa long">
+  <div class="qhead"><span class="qnum">Q22</span>
+    <p class="q-sa">मृच्छकटिकस्य प्रथमाङ्कस्य सारांशं लिखत।</p>
+  </div>
+  <p class="q-en">Write a summary of the First Act of Mṛcchakaṭikam.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    <strong>Introduction</strong><br>
+    The first act of Mṛcchakaṭikam introduces all the main characters and sets the central plot in motion. It opens with the traditional nāndī (benedictory verse) and the sūtradhāra's (stage manager's) prologue.<br><br>
+
+    <strong>Prologue (Prastāvanā)</strong><br>
+    The sūtradhāra, tired from music rehearsal, prepares to go home for a meal. He finds the house unusually decorated and asks his wife why. She explains she had taken a vow called "abhirūpapati-vrata" (vow for a handsome husband) which is now complete, and she needs to feed a Brāhmaṇa to fulfil it. The sūtradhāra goes in search of a Brāhmaṇa and encounters Maitreya, Cārudatta's friend, but despite offers of fine food and a fee (dakṣiṇā), Maitreya refuses to go. The sūtradhāra departs, and the prologue ends.<br><br>
+
+    <strong>Entry of Vidūṣaka (Maitreya)</strong><br>
+    Maitreya enters the stage and presents Cārudatta with a fragrant upper garment (uttarīya), sent by their mutual friend Cūrṇadatta. Cārudatta, receiving it, muses sadly on how poverty changes people's behaviour toward you — a man once respected for his wealth is ignored when he is poor.<br><br>
+
+    <strong>Cārudatta and the Domestic Ritual</strong><br>
+    Cārudatta asks Maitreya to go and offer the bali (ritual offering) to the household deities. Maitreya protests — "What's the point of all this worship?" Cārudatta answers him and then goes himself to perform the evening prayers (sandhyāvandana).<br><br>
+
+    <strong>Vasantasenā's Arrival</strong><br>
+    Meanwhile, on the royal road, Śakāra (the king's wicked brother-in-law), his servant (ceṭa), and the parasite Viṭa are pursuing Vasantasenā. Fleeing in the darkness, she arrives at Cārudatta's door and seeks shelter.<br><br>
+
+    <strong>The Night Scene</strong><br>
+    Cārudatta and Maitreya return to the stage. Maitreya takes a lamp and goes inside with the maid Radanikā to offer the bali. Vasantasenā, already inside, extinguishes the lamp to hide. Maitreya sends Radanikā to wait at the door and goes back in to relight the lamp. At that moment, Śakāra arrives, mistakes Radanikā for Vasantasenā and tries to embrace her. Maitreya, furious at this affront, threatens to behead him. The parasite Viṭa calms the situation. Despite urging, Śakāra does not leave immediately — he threatens Cārudatta before finally departing. Maitreya and Radanikā re-enter, and Maitreya tells Cārudatta all that happened (except the specific insult to Radanikā).<br><br>
+
+    <strong>The Meeting of Cārudatta and Vasantasenā</strong><br>
+    Cārudatta, in the dim light, mistakes Vasantasenā for the maid Radanikā and asks her to take his son Rohasena inside. She hesitates, overcome with shyness. When Cārudatta and Vasantasenā finally recognise each other, a mutual awareness and admiration is established. She leaves her jewels (ābharaṇas) with Cārudatta for safekeeping, entrusting them to Vardhamānaka by day and to Maitreya by night. Cārudatta and Maitreya then escort Vasantasenā home, and the first act concludes.<br><br>
+
+    <strong>Significance of Act One</strong><br>
+    Act One introduces: (a) the contrast between Cārudatta's noble poverty and Śakāra's vicious wealth; (b) the beginning of the love between Cārudatta and Vasantasenā; (c) the device of the jewels, which will drive the plot forward; and (d) the humour and loyalty of Maitreya.
+  </p>
+</div>
+
+<div style="text-align:center; margin-top:48px; color:var(--ink-dim); font-size:.85rem; letter-spacing:.5px;">
+  मृच्छकटिकम् · Question Bank · English Medium · OurSchoolHouse
+</div>
+
+</body>
+</html>
