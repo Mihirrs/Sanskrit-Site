@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sāṅkhyadarśana — Exam Prep (English)</title>
+<style>
+  :root {
+    --bg: #0a0b0d;
+    --card: #131619;
+    --card2: #1a1e24;
+    --line: #252b35;
+    --ink: #f0ece3;
+    --ink-dim: #9a9590;
+    --deva: #ffd98a;
+    --accent: #d4883a;
+    --jade: #6fbfa3;
+    --rose: #c47a7a;
+    --qnum: #3a4a5a;
+  }
+  *, *::before, *::after { box-sizing: border-box; -webkit-text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: Georgia, "Iowan Old Style", serif;
+    line-height: 1.7;
+    padding: 12px 14px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .deva {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", serif;
+    line-height: 1.9;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px 4px 22px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  header h1 {
+    font-size: 2rem; margin: 0 0 6px;
+    color: var(--deva);
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+  }
+  header .sub { color: var(--ink-dim); font-size: .95rem; letter-spacing: .5px; }
+
+  .section-title {
+    display: flex; align-items: center; gap: 12px;
+    margin: 36px 0 16px;
+  }
+  .section-title .badge {
+    background: var(--accent);
+    color: #000;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .section-title h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--accent);
+    font-variant: small-caps;
+    letter-spacing: 1px;
+  }
+
+  .qa {
+    background: var(--card);
+    border-left: 3px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 16px 14px;
+    margin-bottom: 14px;
+    transition: border-color .2s;
+  }
+  .qa:hover { border-color: var(--accent); }
+
+  .qa .qhead {
+    display: flex; gap: 10px; align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .qa .qnum {
+    background: var(--qnum);
+    color: var(--ink-dim);
+    font-size: .72rem;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .qa .q-sa {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: var(--deva);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+  .qa .q-en {
+    font-style: italic;
+    color: var(--ink-dim);
+    font-size: .88rem;
+    margin: 2px 0 12px 0;
+  }
+
+  .label {
+    font-size: .7rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .label.ans-sa { color: var(--jade); }
+  .label.ans-en { color: var(--rose); }
+
+  .ans-sa-text {
+    font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif;
+    color: #e8dfc8;
+    font-size: 1rem;
+    line-height: 1.9;
+    margin: 0 0 10px 0;
+    padding: 10px 12px;
+    background: #0f1215;
+    border-radius: 6px;
+  }
+  .ans-en-text {
+    color: var(--ink-dim);
+    font-size: .92rem;
+    line-height: 1.65;
+    margin: 0;
+    padding: 10px 12px;
+    background: #0d1118;
+    border-radius: 6px;
+    font-style: italic;
+  }
+
+  .qa.long { border-left-color: var(--jade); }
+  .qa.long .q-sa { font-size: 1.08rem; }
+
+  .toc {
+    background: var(--card2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+  }
+  .toc h3 { margin: 0 0 10px; font-size: .9rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
+  .toc a { display: block; color: var(--ink-dim); text-decoration: none; font-size: .88rem; padding: 3px 0; }
+  .toc a:hover { color: var(--ink); }
+
+  hr.divider { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .88rem; }
+  th { background: #1e242d; color: var(--accent); padding: 8px 10px; text-align: left; font-style: normal; }
+  td { padding: 7px 10px; border-top: 1px solid var(--line); vertical-align: top; font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", serif; font-size: .93rem; color: #e8dfc8; line-height: 1.7; }
+  tr:nth-child(even) td { background: #0f1215; }
+
+  @media (max-width: 380px) {
+    body { font-size: 15px; padding: 8px 10px 60px; }
+    header h1 { font-size: 1.5rem; }
+    .qa { padding: 12px 11px; }
+    .ans-sa-text, .ans-en-text { font-size: .9rem; padding: 8px 9px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" style="display:inline-block;margin:10px 0 0 2px;font-family:Georgia,serif;font-size:.82rem;color:#9a9590;text-decoration:none;letter-spacing:1px;">← Home</a>
+
+<header>
+  <h1 class="deva">साङ्ख्यदर्शनपरिचयः</h1>
+  <div class="sub">Question Bank · English Medium · QP Code 21B4OE2SBS5 · Paper-5</div>
+</header>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <a href="#s1mark">§1 — 1-Mark Questions (Q1–10)</a>
+  <a href="#s5mark">§2 — 5-Mark Questions (Q11–16)</a>
+  <a href="#s15mark">§3 — 15-Mark Questions (Q17–19)</a>
+</div>
+
+<!-- ═══════════════════════════ 1 MARK ═══════════════════════════ -->
+<div class="section-title" id="s1mark">
+  <span class="badge">1 MARK</span>
+  <h2>Short Answer Questions</h2>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q1</span>
+    <p class="q-sa">कति वैदिकदर्शनानि सन्ति?</p>
+  </div>
+  <p class="q-en">How many vaidika darśanas are there?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">षट् (Six) — न्यायः, वैशेषिकः, साङ्ख्यः, योगः, मीमांसा, वेदान्तश्च</p>
+  <p class="ans-en-text">Six (ṣaṭ-darśanas) — Nyāya, Vaiśeṣika, Sāṅkhya, Yoga, Mīmāṃsā, and Vedānta</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q2</span>
+    <p class="q-sa">सांख्यदर्शनानुसारं चैतन्यः नाम कः?</p>
+  </div>
+  <p class="q-en">According to Sāṅkhya philosophy, what is caitanya?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">पुरुषः (Puruṣa) — चैतन्यं पुरुषस्य स्वरूपम्</p>
+  <p class="ans-en-text">Caitanya (consciousness) is Puruṣa itself — consciousness is the very nature (svarūpa) of Puruṣa, not a quality of matter</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q3</span>
+    <p class="q-sa">कां कारिकां पुरातनीं कारिकाम् इति मन्यन्ते?</p>
+  </div>
+  <p class="q-en">Which kārikā is considered the oldest kārikā?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">ईश्वरकृष्णविरचिता साङ्ख्यकारिका (The Sāṅkhyakārikā of Īśvarakṛṣṇa)</p>
+  <p class="ans-en-text">The Sāṅkhyakārikā composed by Īśvarakṛṣṇa — the oldest available authoritative text of the Sāṅkhya system</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q4</span>
+    <p class="q-sa">"सांख्य" इत्यस्य अर्थं लिखत।</p>
+  </div>
+  <p class="q-en">Write the meaning of "Sāṅkhya".</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">संख्या नाम सम्यग्ज्ञानं तत्त्वगणना च (Saṅkhyā means right knowledge and enumeration of tattvas)</p>
+  <p class="ans-en-text">"Sāṅkhya" is derived from saṅkhyā, meaning both right discriminative knowledge (samyag-jñāna) and enumeration — the system that enumerates the twenty-five tattvas</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q5</span>
+    <p class="q-sa">पञ्चकर्मेन्द्रियाणि कानि?</p>
+  </div>
+  <p class="q-en">Which are the pañca-karmendriyas?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">वाक्, पाणिः, पादः, पायुः, उपस्थश्च</p>
+  <p class="ans-en-text">Speech (vāk), hands (pāṇi), feet (pāda), organ of excretion (pāyu), and organ of generation (upastha)</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q6</span>
+    <p class="q-sa">सांख्यदर्शनानुसारं कति तत्त्वानि सन्ति?</p>
+  </div>
+  <p class="q-en">According to Sāṅkhya philosophy, how many tattvas are there?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">पञ्चविंशतिः (Twenty-five)</p>
+  <p class="ans-en-text">Twenty-five tattvas — Puruṣa, Prakṛti, and the twenty-three evolutes of Prakṛti</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q7</span>
+    <p class="q-sa">साङ्ख्यदर्शनस्य दार्शनिकः कः?</p>
+  </div>
+  <p class="q-en">Who is the philosopher (founder) of Sāṅkhya darśana?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">कपिलमहर्षिः (Maharṣi Kapila)</p>
+  <p class="ans-en-text">Sage Kapila — the founder of the Sāṅkhya system</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q8</span>
+    <p class="q-sa">साङ्ख्यमतानुसारम् अव्यक्तं नाम किम्?</p>
+  </div>
+  <p class="q-en">According to Sāṅkhya, what is avyakta?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">मूलप्रकृतिः / प्रधानम् (Mūla-prakṛti, also called Pradhāna)</p>
+  <p class="ans-en-text">Avyakta (the unmanifest) is mūla-prakṛti — the primordial, uncaused root-matter in its unmanifest state of equilibrium of the three guṇas</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q9</span>
+    <p class="q-sa">त्रिगुणानां नामानि लिखत।</p>
+  </div>
+  <p class="q-en">Write the names of the triguṇas.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">सत्त्वं, रजः, तमश्च</p>
+  <p class="ans-en-text">Sattva, Rajas, and Tamas</p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q10</span>
+    <p class="q-sa">सांख्यदर्शने कति प्रमाणानि सन्ति?</p>
+  </div>
+  <p class="q-en">How many pramāṇas are there in Sāṅkhya philosophy?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">त्रीणि (Three) — प्रत्यक्षम्, अनुमानम्, आप्तवचनं (शब्दः) च</p>
+  <p class="ans-en-text">Three — perception (pratyakṣa/dṛṣṭa), inference (anumāna), and reliable testimony (āptavacana/śabda)</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════ 5 MARKS ═══════════════════════════ -->
+<div class="section-title" id="s5mark">
+  <span class="badge">5 MARKS</span>
+  <h2>Answer in Brief (Any Four)</h2>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q11</span>
+    <p class="q-sa">सांख्यदर्शनानुसारं कति प्रमाणानि सन्ति? तानि व्याख्यात।</p>
+  </div>
+  <p class="q-en">According to Sāṅkhya philosophy, how many pramāṇas are there? Explain them.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">दृष्टमनुमानमाप्तवचनं च सर्वप्रमाणसिद्धत्वात्।<br>त्रिविधं प्रमाणमिष्टं प्रमेयसिद्धिः प्रमाणाद्धि॥ (साङ्ख्यकारिका ४)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    Sāṅkhya accepts exactly <strong>three pramāṇas</strong> (means of valid knowledge), since all other pramāṇas proposed by other schools are included within these three. Kārikā 4 states that the establishment of all knowable objects (prameya-siddhi) depends on pramāṇa.<br><br>
+    <strong>1. Dṛṣṭa / Pratyakṣa (Perception)</strong> — Direct knowledge arising from the contact of the sense organs with their objects. The kārikā defines it as the determinate cognition of each sense with its own object (prativiṣayādhyavasāya). It is the foundational pramāṇa on which the other two rest.<br><br>
+    <strong>2. Anumāna (Inference)</strong> — Knowledge of an unperceived object derived through the invariable relation (vyāpti) between a mark (liṅga) and the thing marked (liṅgī), as fire is inferred from smoke. It is said to be of three kinds (trividham anumānam): pūrvavat, śeṣavat, and sāmānyatodṛṣṭa. Supersensuous realities like Prakṛti and Puruṣa are established chiefly by inference.<br><br>
+    <strong>3. Āptavacana / Śabda (Reliable Testimony)</strong> — The statement of a trustworthy authority (āpta-śruti), including the Veda. It gives knowledge of objects that can be known neither by perception nor by inference, e.g. heaven, subtle dharma.<br><br>
+    Thus, by perception we know the gross world, by inference the subtle principles, and by testimony the supersensuous truths — together they establish the entire Sāṅkhya scheme of twenty-five tattvas.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q12</span>
+    <p class="q-sa">सांख्यदर्शने गुणत्रयाणां भूमिकां निरूपयत।</p>
+  </div>
+  <p class="q-en">Evaluate the role of the three guṇas in the Sāṅkhya system.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">सत्त्वं लघु प्रकाशकमिष्टमुपष्टम्भकं चलं च रजः।<br>गुरु वरणकमेव तमः प्रदीपवच्चार्थतो वृत्तिः॥ (साङ्ख्यकारिका १३)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    The three guṇas — sattva, rajas, and tamas — are the very constituents of Prakṛti and play the most fundamental role in the Sāṅkhya world-view.<br><br>
+    <strong>Constituents of Prakṛti</strong> — Prakṛti is nothing but the three guṇas in equilibrium (sāmyāvasthā). They are not "qualities" of Prakṛti but its very strands or threads (guṇa = strand of a rope).<br><br>
+    <strong>Cause of evolution</strong> — When the equilibrium is disturbed (guṇa-kṣobha) through the proximity of Puruṣa, evolution (sarga) begins, and Mahat, Ahaṅkāra, and the rest emerge. All change in the universe is the interplay of the guṇas.<br><br>
+    <strong>Explanation of diversity</strong> — Sattva is light (laghu) and illuminating (prakāśaka), producing pleasure, knowledge, and clarity; rajas is stimulating (upaṣṭambhaka) and mobile (cala), producing pain, activity, and restlessness; tamas is heavy (guru) and enveloping (varaṇaka), producing indifference, ignorance, and inertia. The endless variety of things and temperaments is explained by the varying predominance of the three.<br><br>
+    <strong>Cooperative functioning</strong> — Though opposed in nature, they always work together for a single purpose, like the wick, oil, and flame of a lamp (pradīpavat) jointly producing light.<br><br>
+    Thus the guṇa doctrine is the key by which Sāṅkhya explains creation, psychology, and even ethics — bondage is the play of the guṇas, and liberation is discriminating Puruṣa from them.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q13</span>
+    <p class="q-sa">महत् नाम किम्? व्याख्यात।</p>
+  </div>
+  <p class="q-en">What is Mahat? Explain.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">अध्यवसायो बुद्धिः धर्मो ज्ञानं विराग ऐश्वर्यम्।<br>सात्त्विकमेतद्रूपं तामसमस्माद्विपर्यस्तम्॥ (साङ्ख्यकारिका २३)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    <strong>Mahat ("the Great One")</strong> is the first evolute (vikṛti) of Prakṛti — the first product to emerge when the equilibrium of the guṇas is disturbed. In its psychological aspect it is called <strong>Buddhi</strong> (intellect).<br><br>
+    <strong>Nature</strong> — Its defining function is adhyavasāya: determination, decision, ascertainment ("this is to be done," "this is a pot"). It is the faculty by which all definite knowledge and resolve arise.<br><br>
+    <strong>Cosmic and individual aspects</strong> — Cosmically, Mahat is the great germ of the entire universe, the first stage of manifestation; individually, it operates as buddhi, the highest instrument of the inner organ (antaḥkaraṇa).<br><br>
+    <strong>Its eight bhāvas</strong> — When sattva predominates, buddhi possesses dharma (virtue), jñāna (knowledge), virāga (detachment), and aiśvarya (power); when tamas predominates, their four opposites appear (adharma, ajñāna, rāga, anaiśvarya).<br><br>
+    <strong>Place in evolution</strong> — From Prakṛti arises Mahat; from Mahat arises Ahaṅkāra; thus it is both an effect (of Prakṛti) and a cause (of further evolutes) — a prakṛti-vikṛti. Being nearest to Puruṣa, it is in buddhi that the reflection of consciousness appears, and it is buddhi's discriminative knowledge (viveka-khyāti) that finally brings about liberation.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q14</span>
+    <p class="q-sa">सांख्यदर्शने दुःखत्रयं किम्? संक्षेपेण व्याख्यात।</p>
+  </div>
+  <p class="q-en">What is duḥkhatraya (trividha-duḥkha) as per Sāṅkhya philosophy? Explain briefly.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">दुःखत्रयाभिघाताज्जिज्ञासा तदपघातके हेतौ।<br>दृष्टे सापार्था चेन्नैकान्तात्यन्ततोऽभावात्॥ (साङ्ख्यकारिका १)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    The very first kārikā opens with the duḥkhatraya: it is because of the torment of the threefold suffering that the desire to know (jijñāsā) the means of its removal arises — and this inquiry is the starting point of the whole Sāṅkhya philosophy.<br><br>
+    <strong>1. Ādhyātmika duḥkha (intra-organic suffering)</strong> — Suffering arising from one's own body and mind: bodily (śārīra) pain such as fever and disease caused by disorders of wind, bile, and phlegm; and mental (mānasa) pain such as desire, anger, greed, grief, and fear.<br><br>
+    <strong>2. Ādhibhautika duḥkha (external-natural suffering)</strong> — Suffering caused by other created beings: men, beasts, birds, serpents, insects, and so on.<br><br>
+    <strong>3. Ādhidaivika duḥkha (supernatural/cosmic suffering)</strong> — Suffering caused by supernatural and cosmic agencies: planetary influences, spirits (yakṣa-rākṣasa), heat, cold, storm, flood, lightning, and the like.<br><br>
+    Ordinary (dṛṣṭa) remedies like medicine and Vedic (ānuśravika) remedies like sacrifice cannot remove suffering absolutely and finally (ekānta-atyanta-abhāva). Hence only the discriminative knowledge of Vyakta, Avyakta, and Jña (the manifest, the unmanifest, and the knower) brings about the complete and final cessation of the threefold pain — which is mokṣa (apavarga).
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q15</span>
+    <p class="q-sa">सांख्यदर्शनानुसारं सत्कार्यवादं विशदयत।</p>
+  </div>
+  <p class="q-en">Define and explain Satkāryavāda according to Sāṅkhyadarśana.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">असदकरणादुपादानग्रहणात् सर्वसम्भवाभावात्।<br>शक्तस्य शक्यकरणात् कारणभावाच्च सत्कार्यम्॥ (साङ्ख्यकारिका ९)</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    <strong>Definition</strong> — Satkāryavāda is the Sāṅkhya theory of causation according to which the effect (kārya) pre-exists (sat) in its material cause (upādāna-kāraṇa) even before its production. Production is only the manifestation (āvirbhāva) of what was already latent, and destruction is its disappearance (tirobhāva); nothing new is ever created.<br><br>
+    Kārikā 9 gives <strong>five arguments</strong>:<br><br>
+    <strong>1. Asad-akaraṇāt</strong> — What is non-existent can never be produced; no one can turn the non-existent (like a hare's horn) into the existent.<br><br>
+    <strong>2. Upādāna-grahaṇāt</strong> — A specific material cause is always selected: one who wants curd takes milk, not water. This shows the effect is already related to its cause.<br><br>
+    <strong>3. Sarva-sambhava-abhāvāt</strong> — Everything cannot arise from everything; if the effect were not pre-existent in the cause, anything could come from anything.<br><br>
+    <strong>4. Śaktasya śakya-karaṇāt</strong> — A potent cause produces only that effect for which it has the potency (śakti); the potency implies the latent presence of the effect.<br><br>
+    <strong>5. Kāraṇa-bhāvāt</strong> — The effect is of the same essence as the cause; cloth is not different in substance from its threads.<br><br>
+    On this foundation Sāṅkhya establishes Prakṛti: since the world of effects exists, its ultimate material cause must also exist — the unmanifest Pradhāna. This form of satkāryavāda is called <strong>pariṇāmavāda</strong> (real transformation), as opposed to the vivartavāda of Advaita Vedānta.
+  </p>
+</div>
+
+<div class="qa">
+  <div class="qhead"><span class="qnum">Q16</span>
+    <p class="q-sa">त्रिगुणानां नामानि लिखत? संक्षेपेण व्याख्यात।</p>
+  </div>
+  <p class="q-en">Write the names of the triguṇas and explain briefly.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-sa-text">सत्त्वं, रजः, तमश्च इति त्रयो गुणाः। प्रीत्यप्रीतिविषादात्मकाः प्रकाशप्रवृत्तिनियमार्थाः।</p>
+  <div class="label ans-en">Answer — English</div>
+  <p class="ans-en-text">
+    The three guṇas — <strong>Sattva, Rajas, and Tamas</strong> — are the three constituents of Prakṛti. They are respectively of the nature of pleasure, pain, and delusion (prīti-aprīti-viṣāda-ātmaka) and serve the purposes of illumination, activity, and restraint (prakāśa-pravṛtti-niyamārtha).<br><br>
+    <strong>Sattva</strong> — Light (laghu) and illuminating (prakāśaka). It manifests as pleasure, knowledge, clarity, purity, and buoyancy. The luminosity of the mind, the brightness of fire, the upward blazing of flame are its work.<br><br>
+    <strong>Rajas</strong> — Mobile (cala) and stimulating (upaṣṭambhaka). It is the principle of energy and activity, manifesting as pain, passion, restlessness, and effort. Without rajas the other two could not function, for it alone moves them.<br><br>
+    <strong>Tamas</strong> — Heavy (guru) and enveloping (varaṇaka). It is the principle of inertia and obstruction, manifesting as indifference, sloth, sleep, and ignorance. It conceals knowledge and resists activity.<br><br>
+    Though mutually opposed, the guṇas always operate together, dominating and supporting one another, like the wick, oil, and flame of a lamp (pradīpavat) which jointly produce a single light. In Prakṛti they lie in equilibrium; the disturbance of that equilibrium starts the evolution of the world.
+  </p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════ 15 MARKS ═══════════════════════════ -->
+<div class="section-title" id="s15mark">
+  <span class="badge">15 MARKS</span>
+  <h2>Explain in Detail (Any Two)</h2>
+</div>
+
+<div class="qa long">
+  <div class="qhead"><span class="qnum">Q17</span>
+    <p class="q-sa">सांख्यस्य द्वैतवादि-तत्त्वशास्त्रस्य चर्चां कुरुत। पुरुषः प्रकृतिश्च परस्परं कथं वर्तेते?</p>
+  </div>
+  <p class="q-en">Discuss the dualistic metaphysics of Sāṅkhya. How do Puruṣa and Prakṛti interact?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    <strong>Introduction</strong><br>
+    Sāṅkhya is the classic dualistic (dvaitavādi) system of Indian philosophy. It explains the whole of experience by two ultimate, eternal, and independent realities: <strong>Puruṣa</strong>, pure consciousness, and <strong>Prakṛti</strong>, unconscious primordial matter. Everything in the universe is either one of these two or a product of Prakṛti witnessed by Puruṣa.<br><br>
+
+    <strong>Prakṛti — the Unconscious Root-Matter</strong><br>
+    Prakṛti (also called Pradhāna or Avyakta) is the uncaused, eternal, all-pervading material cause of the world. It is one, ever-active, unconscious (acetana), and constituted of the three guṇas — sattva, rajas, and tamas — in equilibrium. Its existence is proved by inference (Kārikā 15): the finite, dependent, and homogeneous nature of effects requires an unmanifest ultimate cause; effects differ from their cause yet share its essence; the world of effects must rest on an uncaused ground, or there would be infinite regress. As the kārikā summarizes:
+    <div class="ans-sa-text" style="margin-top:8px;">
+      मूलप्रकृतिरविकृतिर्महदाद्याः प्रकृतिविकृतयः सप्त।<br>
+      षोडशकस्तु विकारो न प्रकृतिर्न विकृतिः पुरुषः॥ (साङ्ख्यकारिका ३)
+    </div><br>
+    Mūla-prakṛti is no one's effect; Mahat and the other six (ahaṅkāra and the five tanmātras) are both cause and effect; the sixteen (mind, ten indriyas, five mahābhūtas) are effects only; Puruṣa is neither cause nor effect.<br><br>
+
+    <strong>Puruṣa — Pure Consciousness</strong><br>
+    Puruṣa is pure, contentless consciousness (cit, caitanya). It is not the body, senses, or mind — these are all evolutes of matter. It is the eternal witness (sākṣī), neutral (madhyastha), a seer (draṣṭā), inactive (akartā), and ever-free (kevalī) — as Kārikā 19 declares. Its existence is established (Kārikā 17): all composite objects exist for the sake of another (saṅghāta-parārthatvāt); there must be a subject distinct from the three guṇas; an intelligent principle must superintend unconscious matter; there must be an experiencer (bhoktā); and the universal striving for liberation presupposes a spirit that can be liberated. Further, Sāṅkhya argues for a <strong>plurality of Puruṣas</strong> (puruṣa-bahutva): birth, death, and faculties are allotted differently to each; activities differ; and the proportions of the guṇas differ from person to person (Kārikā 18).<br><br>
+
+    <strong>The Contrast</strong><br>
+    Prakṛti is object, unconscious, active, three-guṇa-natured, one, and ever-changing; Puruṣa is subject, conscious, inactive, beyond the guṇas, many, and changeless. Neither can be reduced to the other — hence the strict dualism.<br><br>
+
+    <strong>How Puruṣa and Prakṛti Interact</strong><br>
+    Since Puruṣa is inactive and Prakṛti is blind, neither alone can produce the world. Their association (saṃyoga) is explained by the celebrated analogy of the lame man and the blind man:
+    <div class="ans-sa-text" style="margin-top:8px;">
+      पुरुषस्य दर्शनार्थं कैवल्यार्थं तथा प्रधानस्य।<br>
+      पङ्ग्वन्धवदुभयोरपि संयोगस्तत्कृतः सर्गः॥ (साङ्ख्यकारिका २१)
+    </div><br>
+    As a lame man (who can see but not walk) mounts the shoulders of a blind man (who can walk but not see) and both reach their destination, so Puruṣa (conscious but inactive) and Prakṛti (active but unconscious) cooperate. The union serves a double purpose: Puruṣa gains experience (darśana/bhoga) of Prakṛti's display, and Prakṛti serves Puruṣa's eventual isolation (kaivalya). The mere proximity (sannidhi) of Puruṣa disturbs the equilibrium of the guṇas and evolution begins — Prakṛti acts unconsciously for Puruṣa's ends, as milk flows unconsciously for the nourishment of the calf (Kārikā 57).<br><br>
+
+    <strong>Bondage and Liberation</strong><br>
+    Through non-discrimination (aviveka), Puruṣa wrongly identifies itself with buddhi, ahaṅkāra, and the body, and appears bound; in truth, it is Prakṛti that binds and releases herself — "no Puruṣa is really bound or released" (Kārikā 62). Like a dancer (nartakī) who retires after showing herself to the audience, Prakṛti withdraws once she has been seen (Kārikā 59). When viveka-khyāti — the discrimination "I am not this, nothing is mine, there is no ego in me" — arises, the guṇas cease their work for that Puruṣa, and it abides in its own nature: this is kaivalya.<br><br>
+
+    <strong>Conclusion</strong><br>
+    The dualism of Sāṅkhya thus accounts at once for the objective world (through Prakṛti and her evolution) and for subjective experience and liberation (through Puruṣa). The teleological cooperation of the two — matter unconsciously serving spirit — is the most distinctive feature of Sāṅkhya metaphysics, even though later critics (notably Vedāntins) questioned how an inactive Puruṣa and an unconscious Prakṛti could ever truly come into relation.
+  </p>
+</div>
+
+<div class="qa long">
+  <div class="qhead"><span class="qnum">Q18</span>
+    <p class="q-sa">साङ्ख्ये चतुर्विंशतितत्त्वानां प्रक्रियां महत्त्वं च वर्णयत।</p>
+  </div>
+  <p class="q-en">Describe the process and significance of the 24 Tattvas in Sāṅkhya.</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    <strong>Introduction</strong><br>
+    Sāṅkhya enumerates twenty-five tattvas in all: Puruṣa (pure consciousness) and twenty-four material principles — Prakṛti together with its twenty-three evolutes. The "24 tattvas" are thus the entire order of unconscious nature, from the unmanifest root to the gross elements. The order of evolution is stated in Kārikā 22:
+    <div class="ans-sa-text" style="margin-top:8px;">
+      प्रकृतेर्महांस्ततोऽहङ्कारस्तस्माद्गणश्च षोडशकः।<br>
+      तस्मादपि षोडशकात् पञ्चभ्यः पञ्च भूतानि॥ (साङ्ख्यकारिका २२)
+    </div><br>
+
+    <strong>The Process of Evolution (Sṛṣṭi-krama)</strong><br><br>
+    <strong>1. Mūla-Prakṛti (Avyakta)</strong> — The uncaused root: the three guṇas in equilibrium. When Puruṣa's proximity disturbs this equilibrium, evolution begins.<br><br>
+    <strong>2. Mahat (Buddhi)</strong> — The first evolute; the principle of determination (adhyavasāya). Cosmically the great germ of the world, individually the intellect.<br><br>
+    <strong>3. Ahaṅkāra</strong> — From Mahat arises the ego-principle, whose function is self-appropriation (abhimāna): "I" and "mine". From Ahaṅkāra the evolution proceeds along two lines according to the dominant guṇa: from its <strong>sāttvika</strong> aspect (vaikṛta) arise the eleven — mind and the ten senses; from its <strong>tāmasa</strong> aspect (bhūtādi) arise the five tanmātras; the <strong>rājasa</strong> aspect (taijasa) supplies the energy for both.<br><br>
+    <strong>4. Manas (Mind)</strong> — The internal organ that synthesizes sense-data (saṅkalpaka); it functions as both a sense organ and an action organ.<br><br>
+    <strong>5–9. Pañca-jñānendriyas</strong> — The five organs of knowledge: eye (cakṣus), ear (śrotra), nose (ghrāṇa), tongue (rasanā), and skin (tvak).<br><br>
+    <strong>10–14. Pañca-karmendriyas</strong> — The five organs of action: speech (vāk), hands (pāṇi), feet (pāda), excretion (pāyu), and generation (upastha).<br><br>
+    <strong>15–19. Pañca-tanmātras</strong> — The five subtle essences: sound (śabda), touch (sparśa), form (rūpa), taste (rasa), and smell (gandha). They are imperceptible to ordinary beings.<br><br>
+    <strong>20–24. Pañca-mahābhūtas</strong> — From the five tanmātras arise the five gross elements: from śabda, ākāśa (ether); from sparśa, vāyu (air); from rūpa, tejas (fire); from rasa, ap (water); from gandha, pṛthivī (earth) — each later element possessing the qualities of the preceding ones.<br><br>
+
+    <strong>Classification</strong><br>
+    Kārikā 3 classifies these into four groups: (a) Prakṛti only — mūla-prakṛti, cause but never effect; (b) Prakṛti-vikṛti — Mahat, Ahaṅkāra, and the five tanmātras: seven that are both causes and effects; (c) Vikṛti only — the sixteen (manas, ten indriyas, five mahābhūtas), effects that produce nothing further; (d) neither — Puruṣa. Buddhi, ahaṅkāra, and manas together form the antaḥkaraṇa (threefold internal organ); with the ten senses they make the thirteen-fold instrument (trayodaśa-karaṇa) of experience.<br><br>
+
+    <strong>Significance of the Tattva Scheme</strong><br>
+    <strong>(i) A complete map of experience</strong> — Every element of the psychophysical world, from intellect to earth, is accounted for in a single genetic order; mind and matter are shown to be two developments of the same Prakṛti.<br><br>
+    <strong>(ii) Satkāryavāda demonstrated</strong> — Each evolute pre-exists in its cause; evolution (pariṇāma) is the unfolding of the potential, and dissolution (pralaya) is its reabsorption in reverse order back into Prakṛti.<br><br>
+    <strong>(iii) Teleology</strong> — The whole process is for the sake of Puruṣa (puruṣārtha): evolution provides experience (bhoga) and, ultimately, liberation (apavarga). Unconscious nature works toward spirit's ends as milk flows for the calf.<br><br>
+    <strong>(iv) Foundation for sādhana</strong> — Discrimination of the twenty-fifth principle (Puruṣa) from the twenty-four is itself the saving knowledge; the tattva-scheme is therefore not mere cosmology but the ladder of viveka. The scheme also profoundly influenced Yoga, Āyurveda, the Purāṇas, and the Bhagavadgītā.<br><br>
+
+    <strong>Conclusion</strong><br>
+    The doctrine of the tattvas is Sāṅkhya's systematic answer to the question "What is this world, and what am I in it?" By tracing all objects to Prakṛti and reserving consciousness for Puruṣa alone, it converts metaphysics into a discipline of discrimination leading to kaivalya.
+  </p>
+</div>
+
+<div class="qa long">
+  <div class="qhead"><span class="qnum">Q19</span>
+    <p class="q-sa">साङ्ख्यानुसारं कारणत्वसिद्धान्तं (सत्कार्यवादः) समीक्षात्मकरूपेण व्याख्यात। सत्कार्यवादः असत्कार्यवादात् कथं भिद्यते?</p>
+  </div>
+  <p class="q-en">Critically explain the Sāṅkhya theory of causation (Satkāryavāda). How does it differ from Asatkāryavāda?</p>
+  <div class="label ans-sa">Answer</div>
+  <p class="ans-en-text">
+    <strong>Introduction</strong><br>
+    The problem of causation — what is the relation between cause (kāraṇa) and effect (kārya)? — divides Indian philosophy into two camps. Sāṅkhya upholds <strong>Satkāryavāda</strong>: the effect exists (sat) in the material cause even before production. Nyāya-Vaiśeṣika upholds <strong>Asatkāryavāda</strong> (ārambhavāda): the effect is non-existent (asat) before production and is a new beginning. Sāṅkhya's entire metaphysics — the inference of Prakṛti itself — rests on satkāryavāda, which is established in Kārikā 9:
+    <div class="ans-sa-text" style="margin-top:8px;">
+      असदकरणादुपादानग्रहणात् सर्वसम्भवाभावात्।<br>
+      शक्तस्य शक्यकरणात् कारणभावाच्च सत्कार्यम्॥ (साङ्ख्यकारिका ९)
+    </div><br>
+
+    <strong>The Five Arguments for Satkāryavāda</strong><br><br>
+    <strong>1. Asad-akaraṇāt</strong> — The non-existent can never be made existent. No agency can produce blue from yellow or oil from sand; a hare's horn cannot be brought into being. If the effect were truly non-existent before its production, production itself would be impossible.<br><br>
+    <strong>2. Upādāna-grahaṇāt</strong> — There is invariable selection of the material cause: curd is sought from milk alone, cloth from threads alone. This fixed relation is intelligible only if the effect is already latently present in that particular material.<br><br>
+    <strong>3. Sarva-sambhava-abhāvāt</strong> — If the effect were non-existent in the cause, anything could arise from anything — gold from grass. The restriction of effects to specific causes proves pre-existence.<br><br>
+    <strong>4. Śaktasya śakya-karaṇāt</strong> — A cause produces only what it has the power (śakti) to produce, and that power is nothing but the effect in its potential state.<br><br>
+    <strong>5. Kāraṇa-bhāvāt</strong> — The effect is non-different in essence from its cause: the cloth is not a different substance from the threads; it neither weighs more nor exists apart from them. What is non-different from the existent cause must itself be existent.<br><br>
+    Production, therefore, is manifestation (āvirbhāva) of the latent, and destruction is concealment (tirobhāva) — as the statue is "brought out" of the stone and oil is "brought out" of the sesame seed. Since this manifestation is a real transformation of the cause, the Sāṅkhya form of satkāryavāda is called <strong>pariṇāmavāda</strong>, distinguished from the Advaitin's <strong>vivartavāda</strong>, for which the change is only apparent.<br><br>
+
+    <strong>Asatkāryavāda — the Opposed View</strong><br>
+    The Naiyāyikas and Vaiśeṣikas hold that the effect is a new production (ārambha), non-existent before the operation of the cause: the cloth simply did not exist before weaving; the pot is a fresh entity inhering in its clay. Their arguments: if the effect already existed, (a) production would be pointless and the potter's effort useless; (b) cause and effect could not be distinguished, yet we speak of them differently; (c) the effect serves purposes (carrying water) which the cause (a lump of clay) cannot serve — so they cannot be identical.<br><br>
+
+    <strong>How Satkāryavāda Differs from Asatkāryavāda</strong><br>
+    (1) For Sāṅkhya the effect is existent in the cause before production; for Nyāya it is non-existent. (2) For Sāṅkhya production is manifestation of the latent; for Nyāya it is a fresh creation. (3) For Sāṅkhya cause and effect are essentially identical (different states of one substance); for Nyāya they are distinct entities related by inherence (samavāya). (4) For Sāṅkhya the causal operation (vyāpāra) only removes the veil; for Nyāya it genuinely brings something new into being. (5) Satkāryavāda leads Sāṅkhya to one continuous material substratum — Prakṛti; asatkāryavāda allows Nyāya its atomistic pluralism (paramāṇuvāda).<br><br>
+
+    <strong>Critical Estimate</strong><br>
+    Sāṅkhya answers the Nyāya objections: effort is not useless, for manifestation itself requires an operative cause (oil pre-exists in the seed, yet pressing is needed); the difference between cause and effect is one of state (avasthā-bheda), not of substance — the same clay in lump-state and pot-state serves different purposes. Critics in turn press a dilemma: if the effect is wholly existent already, "production" loses meaning; if even manifestation is something new, asatkāryavāda re-enters by the back door. The Advaitin further objects that real transformation (pariṇāma) of an eternal Prakṛti is incoherent and reduces change to appearance (vivarta). Nevertheless, satkāryavāda has great philosophical strength: it preserves the continuity of nature ("nothing comes from nothing"), anticipates the modern principle of the conservation of matter and energy, and provides the logical foundation for the Sāṅkhya inference of the unmanifest Prakṛti as the world's root cause.<br><br>
+
+    <strong>Conclusion</strong><br>
+    Satkāryavāda is thus not an isolated doctrine but the keystone of the Sāṅkhya system: upon the pre-existence of the effect rest its doctrines of Prakṛti, the order of the tattvas, and dissolution. Whatever the dialectical difficulties, it remains one of the most carefully argued theories of causation in Indian philosophy.
+  </p>
+</div>
+
+<div style="text-align:center; margin-top:48px; color:var(--ink-dim); font-size:.85rem; letter-spacing:.5px;">
+  साङ्ख्यदर्शनपरिचयः · Question Bank · English Medium · OurSchoolHouse
+</div>
+
+</body>
+</html>
