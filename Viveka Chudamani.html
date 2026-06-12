@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>विवेकचूडामणिः — शङ्कराचार्यः · अद्वैतवेदान्तः — Answers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#ece3d3;
+    --ink-soft:#b6a88d;
+    --parch:#16120d;
+    --parch-deep:#2c2218;
+    --card:#211a13;
+    --ochre:#e0954a;
+    --ochre-soft:#bd8650;
+    --rule:#3a2e20;
+    --maroon:#e9a079;
+    --en:#fdf4e3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 20% 0%, #241a10 0%, transparent 55%),
+      radial-gradient(circle at 90% 100%, #1f1810 0%, transparent 50%),
+      var(--parch);
+    color:var(--ink);
+    font-family:'Spectral',Georgia,serif;
+    line-height:1.7;
+    font-size:18px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:64px 28px 120px;}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    text-align:center;
+    padding-bottom:38px;
+    border-bottom:2px solid var(--ochre);
+    position:relative;
+    margin-bottom:14px;
+  }
+  header.masthead::after{
+    content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:var(--ochre-soft);
+  }
+  .om{font-family:'Tiro Devanagari Sanskrit',serif;font-size:40px;color:var(--ochre);line-height:1;}
+  header.masthead h1{
+    font-family:'Tiro Devanagari Sanskrit',serif;
+    font-weight:400;font-size:2.6rem;margin:.25em 0 .1em;color:var(--maroon);letter-spacing:.5px;
+  }
+  header.masthead .sub{
+    font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink-soft);
+    letter-spacing:2px;text-transform:uppercase;
+  }
+  header.masthead .meta{font-size:.9rem;color:var(--ink-soft);margin-top:14px;font-style:italic;}
+
+  /* ---- Table of contents ---- */
+  nav.toc{
+    background:var(--card);border:1px solid var(--rule);border-radius:8px;
+    padding:26px 32px;margin:40px 0 56px;box-shadow:0 8px 28px -22px rgba(43,33,24,.6);
+  }
+  nav.toc h2{
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:3px;text-transform:uppercase;
+    color:var(--ochre);margin:0 0 14px;
+  }
+  nav.toc ol{margin:0;padding-left:1.2em;}
+  nav.toc li{margin:.35em 0;}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ochre-soft);}
+  nav.toc a:hover{color:var(--ochre);}
+  nav.toc .grp{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--maroon);margin:16px 0 6px;font-weight:600;}
+  nav.toc .grp:first-of-type{margin-top:4px;}
+
+  /* ---- Section banners ---- */
+  .band{
+    margin:72px 0 30px;text-align:center;
+  }
+  .band .deva{font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.7rem;color:var(--maroon);}
+  .band .en{font-family:'Cormorant Garamond',serif;letter-spacing:4px;text-transform:uppercase;
+    font-size:1rem;color:var(--ochre);margin-top:4px;}
+  .band .line{width:90px;height:2px;background:var(--ochre);margin:14px auto 0;}
+
+  /* ---- Answer cards ---- */
+  article.qa{
+    background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--ochre);
+    border-radius:6px;padding:30px 34px 26px;margin:0 0 40px;
+    box-shadow:0 10px 30px -26px rgba(43,33,24,.7);
+  }
+  article.qa h3{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-weight:400;font-size:1.5rem;
+    color:var(--maroon);margin:0 0 4px;line-height:1.4;
+  }
+  article.qa .qmeta{
+    font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ochre);
+    letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;
+  }
+  .badge{
+    display:inline-block;background:var(--ochre);color:#1a140d;font-family:'Cormorant Garamond',serif;
+    font-size:.75rem;letter-spacing:1.5px;padding:2px 10px;border-radius:20px;
+    vertical-align:middle;margin-left:8px;text-transform:uppercase;
+  }
+
+  .lbl{
+    font-family:'Cormorant Garamond',serif;font-size:.82rem;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--ochre);display:block;margin:22px 0 2px;
+  }
+  .lbl.first{margin-top:6px;}
+
+  .sa{
+    font-family:'Tiro Devanagari Sanskrit',serif;font-size:1.12rem;line-height:1.95;color:var(--ink);
+    margin:0 0 4px;overflow-wrap:break-word;
+  }
+  .en{
+    font-family:'Spectral',serif;font-size:1rem;line-height:1.72;color:var(--en);
+    margin:0 0 2px;font-style:normal;font-weight:700;overflow-wrap:break-word;
+  }
+
+  /* paragraph pairing */
+  .para{padding:14px 0;border-bottom:1px dashed var(--rule);}
+  .para:last-child{border-bottom:none;}
+  .para .pnum{
+    font-family:'Cormorant Garamond',serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+    color:var(--ochre-soft);display:block;margin-bottom:6px;
+  }
+  .para .sa{margin-bottom:8px;}
+  .para .en{padding-left:14px;border-left:2px solid var(--parch-deep);}
+
+  /* sutra inline highlight */
+  .sutra{color:var(--maroon);font-weight:500;}
+
+  footer{
+    text-align:center;margin-top:80px;padding-top:24px;border-top:1px solid var(--rule);
+    font-size:.85rem;color:var(--ink-soft);font-style:italic;
+  }
+  .toplink{display:block;text-align:right;font-size:.8rem;color:var(--ochre-soft);
+    text-decoration:none;letter-spacing:1px;margin-top:8px;}
+  .toplink:hover{color:var(--ochre);}
+
+  @media print{
+    :root{
+      --ink:#2b2118; --ink-soft:#4a3c2e;
+      --parch:#fff; --parch-deep:#ece0c8; --card:#fff;
+      --ochre:#a8631b; --ochre-soft:#c98a3e; --rule:#d8c8a6; --maroon:#6e2412; --en:#1f1812;
+    }
+    body{background:#fff;font-size:12pt;}
+    .badge{color:#fff !important;}
+    article.qa{box-shadow:none;break-inside:avoid;border-color:#d8c8a6;}
+    nav.toc{display:none;}
+    .toplink{display:none;}
+  }
+  @media(max-width:560px){
+    body{font-size:16px;}
+    .wrap{padding:40px 16px 80px;}
+    article.qa{padding:22px 18px;}
+    header.masthead h1{font-size:2rem;}
+  }
+  /* ---- Apple Watch / ultra-narrow ---- */
+  @media(max-width:320px){
+    body{font-size:15px;line-height:1.55;}
+    .wrap{padding:14px 9px 36px;}
+    header.masthead{padding-bottom:16px;margin-bottom:8px;}
+    .om{font-size:24px;}
+    header.masthead h1{font-size:1.3rem;letter-spacing:0;}
+    header.masthead .sub{font-size:.72rem;letter-spacing:.5px;}
+    header.masthead .meta{font-size:.7rem;margin-top:8px;}
+    nav.toc{padding:13px 13px;margin:18px 0 26px;border-radius:6px;}
+    nav.toc h2{font-size:.86rem;letter-spacing:1px;margin-bottom:9px;}
+    nav.toc ol{padding-left:1em;}
+    nav.toc li{margin:.45em 0;line-height:1.4;}
+    nav.toc .grp{font-size:.82rem;letter-spacing:1px;margin:12px 0 5px;}
+    .band{margin:34px 0 16px;}
+    .band .deva{font-size:1.2rem;}
+    .band .en{font-size:.78rem;letter-spacing:2px;}
+    article.qa{padding:13px 11px 11px;border-left-width:3px;border-radius:5px;margin-bottom:20px;}
+    article.qa h3{font-size:1.08rem;line-height:1.35;}
+    article.qa .qmeta{font-size:.78rem;letter-spacing:.5px;margin-bottom:12px;}
+    .badge{font-size:.62rem;padding:1px 7px;margin-left:5px;letter-spacing:.5px;}
+    .lbl{font-size:.7rem;letter-spacing:1px;margin:14px 0 2px;}
+    .sa{font-size:1.02rem;line-height:1.78;overflow-wrap:anywhere;}
+    .en{font-size:.92rem;line-height:1.6;overflow-wrap:anywhere;}
+    .para{padding:9px 0;}
+    .para .pnum{font-size:.68rem;letter-spacing:1px;margin-bottom:4px;}
+    .para .en{padding-left:8px;border-left-width:2px;}
+    .sutra{overflow-wrap:anywhere;}
+    .toplink{font-size:.72rem;}
+    footer{margin-top:46px;font-size:.76rem;}
+  }
+  /* derivation / prakriyā block */
+  .deriv{font-family:'Tiro Devanagari Sanskrit',serif;background:rgba(224,149,74,.07);
+    border:1px solid var(--rule);border-left:3px solid var(--ochre-soft);border-radius:5px;
+    padding:9px 13px;margin:8px 0 4px;font-size:1.02rem;line-height:1.95;overflow-wrap:anywhere;}
+  .deriv .arr{color:var(--ochre);font-weight:600;padding:0 3px;}
+  .ref{color:var(--ochre-soft);font-size:.85em;}
+  @media(max-width:320px){ .deriv{font-size:.95rem;padding:7px 9px;} }
+  /* śloka verse block */
+  .shloka{font-family:'Tiro Devanagari Sanskrit',serif;text-align:center;font-size:1.12rem;line-height:2.05;
+    color:var(--maroon);background:rgba(224,149,74,.06);border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);padding:14px 12px;margin:6px 0 12px;overflow-wrap:anywhere;}
+  @media(max-width:320px){ .shloka{font-size:1rem;line-height:1.85;padding:10px 8px;} }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+  <a href="index.html" style="display:inline-block;margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-size:.88rem;color:#bd8650;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">← Home</a>
+
+  <header class="masthead">
+    <div class="om">ॐ</div>
+    <h1>विषयः — विवेकचूडामणिः</h1>
+    <div class="sub">Vivekacūḍāmaṇi · Śaṅkarācārya · Advaita Vedānta</div>
+    <div class="meta">B.A. Sanskrit · Karnataka Saṁskṛta University — answers in Sanskrit with English explanation, ślokas with स्वारस्य / आशय</div>
+  </header>
+
+  <nav class="toc">
+    <h2>विषयसूची · Contents</h2>
+    <div class="grp">I · लघूत्तराणि — Short answers</div>
+    <ol>
+      <li><a href="#q1">ग्रन्थकर्ता</a></li>
+      <li><a href="#q2">दैवानुग्रहहेतवः</a></li>
+      <li><a href="#q3">आत्मा कुत्र मग्नः</a></li>
+      <li><a href="#q4">किमासाद्य उद्धरेत्</a></li>
+      <li><a href="#q5">वस्तुसिद्धिः केन</a></li>
+      <li><a href="#q6">कीदृशं देशिकम्</a></li>
+      <li><a href="#q7">कीदृशं गुरुम्</a></li>
+      <li><a href="#q8">ब्रह्मजिज्ञासायोग्यता</a></li>
+      <li><a href="#q9">तितिक्षा</a></li>
+      <li><a href="#q10">गरीयसी</a></li>
+    </ol>
+    <div class="grp">II · श्लोकव्याख्या — Ślokas</div>
+    <ol start="11">
+      <li><a href="#q11">जन्तूनां नरजन्म…</a></li>
+      <li><a href="#q12">वदन्तु शास्त्राणि…</a></li>
+      <li><a href="#q13">उद्धरेदात्मनात्मानम्…</a></li>
+      <li><a href="#q14">ब्रह्मसत्यं जगन्मिथ्या…</a></li>
+      <li><a href="#q15">शास्त्रस्य गुरुवाक्यस्य…</a></li>
+      <li><a href="#q16">वैराग्यं च मुमुक्षुत्वम्…</a></li>
+    </ol>
+    <div class="grp">III · निबन्धाः — Essays</div>
+    <ol start="17">
+      <li><a href="#q17">शङ्कराचार्यः (अद्वैतसिद्धान्तः)</a></li>
+      <li><a href="#q18">साधनचतुष्टयम्</a></li>
+      <li><a href="#q19">ज्ञानप्राप्तिसाधनानि</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============== SECTION I ============== -->
+  <div class="band">
+    <div class="deva">लघूत्तराणि</div>
+    <div class="en">Short Answers</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q1">
+    <h3>१. विवेकचूडामणिः ग्रन्थस्य कर्ता कः?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">विवेकचूडामणेः कर्ता आदिशङ्कराचार्यः — अद्वैतवेदान्तस्य प्रमुखः आचार्यः।</p>
+      <p class="en">The author of the Vivekacūḍāmaṇi is Ādi Śaṅkarācārya, the foremost teacher of Advaita Vedānta.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q2">
+    <h3>२. दैवानुग्रहहेतवः के?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">तीव्रं मुमुक्षुत्वं महापुरुषसंश्रयश्च — एतौ द्वौ दैवानुग्रहस्य हेतू (विवेकचूडामणि ३)।</p>
+      <p class="en">Intense longing for liberation and the refuge of a great soul (the Guru) — these two are reckoned as marks of divine grace (VCM 3).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q3">
+    <h3>३. आत्मा कुत्र मग्नः अस्ति?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">आत्मा अज्ञानजनिते संसारवारिधौ (संसारसागरे) मग्नः अस्ति (विवेकचूडामणि ९)।</p>
+      <p class="en">The self lies submerged in the ocean of saṃsāra born of ignorance (VCM 9).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q4">
+    <h3>४. किमासाद्य आत्मना आत्मानमुद्धरेत्?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">योगारूढत्वं सम्यग्दर्शननिष्ठां च आसाद्य आत्मना आत्मानम् उद्धरेत् (विवेकचूडामणि ९)।</p>
+      <p class="en">Having attained steadfastness in yoga and devotion to right knowledge, one should lift oneself up by oneself (VCM 9).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q5">
+    <h3>५. वस्तुसिद्धिः केन जायते?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">वस्तुसिद्धिः प्रमाणेन एव जायते, न तर्कमात्रेण न च वचनमात्रेण (विवेकचूडामणि ६५)।</p>
+      <p class="en">The establishment of a real entity comes about only through a valid means of knowledge (pramāṇa) — not by mere reasoning nor by mere assertion (VCM 65).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q6">
+    <h3>६. विद्वान् कीदृशं देशिकं समुपेत्य विमुक्तौ प्रयतेत?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">श्रोत्रियं (वेदविदं) ब्रह्मनिष्ठं देशिकं समुपेत्य विद्वान् विमुक्तौ प्रयतेत (विवेकचूडामणि ३३)।</p>
+      <p class="en">The wise one should approach a teacher who is learned in the Vedas (śrotriya) and established in Brahman (brahma-niṣṭha), and strive for liberation (VCM 33).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q7">
+    <h3>७. कीदृशं गुरुं समासाद्य आत्मवस्तुनः विचारः कर्तव्यः?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">दयालुं ब्रह्मविदं गुरुं समासाद्य आत्मवस्तुनः विचारः कर्तव्यः।</p>
+      <p class="en">One should approach a compassionate, Brahman-knowing Guru and inquire into the reality of the Self.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q8">
+    <h3>८. ब्रह्मजिज्ञासायाः योग्यता केषां वर्तते?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">साधनचतुष्टयसम्पन्नानाम् एव — विवेक-वैराग्य-शमादिषट्क-मुमुक्षुत्वयुक्तानां — ब्रह्मजिज्ञासायां योग्यता वर्तते।</p>
+      <p class="en">Only those endowed with the four-fold means — discrimination, dispassion, the six virtues, and longing for liberation — are qualified for inquiry into Brahman.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q9">
+    <h3>९. का तितिक्षा निगद्यते?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">शीतोष्ण-सुखदुःख-मानापमानादीनां द्वन्द्वानाम् अप्रतीकारपूर्वकं चिन्ताविलापरहितं सहनं तितिक्षा निगद्यते (विवेकचूडामणि २४)।</p>
+      <p class="en">The endurance of opposites — heat and cold, pleasure and pain, honour and dishonour — without retaliation and without anxious lament, is called titikṣā (VCM 24).</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q10">
+    <h3>१०. मोक्षकारणसामग्र्यां का गरीयसी?</h3>
+    <div class="qmeta">Section I</div>
+    <div class="para">
+      <p class="sa">"मोक्षकारणसामग्र्यां भक्तिः एव गरीयसी" — सा च "स्वस्वरूपानुसन्धानम्" इति निर्दिष्टा (विवेकचूडामणि ३२); साधनचतुष्टये तु मुमुक्षुत्वं प्रधानम्।</p>
+      <p class="en">"Among the means of liberation, bhakti is the foremost" — and that bhakti is defined as "contemplation of one's own true nature" (VCM 32); among the four qualifications, however, mumukṣutva is the chief.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION II ============== -->
+  <div class="band">
+    <div class="deva">श्लोकव्याख्या</div>
+    <div class="en">Verse Explanations</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q11">
+    <h3>११. जन्तूनां नरजन्म… — स्वारस्यं लिखत।</h3>
+    <div class="qmeta">Section II · विवेकचूडामणि २</div>
+    <div class="shloka">जन्तूनां नरजन्म दुर्लभमतः पुंस्त्वं ततो विप्रता<br>तस्माद्वैदिकधर्ममार्गपरता विद्वत्त्वमस्मात्परम्।<br>आत्मानात्मविवेचनं स्वनुभवो ब्रह्मात्मना संस्थितिः<br>मुक्तिर्नो शतजन्मकोटिसुकृतैः पुण्यैर्विना लभ्यते॥</div>
+    <div class="para">
+      <p class="sa">अनेन श्लोकेन दौर्लभ्यस्य आरोहक्रमः प्रदर्श्यते। सर्वेषु जन्मसु मनुष्यजन्म दुर्लभम्, ततः पुंस्त्वं, ततः विप्रता (ब्राह्मणत्वम्), ततः वैदिकधर्ममार्गपरता, ततश्च विद्वत्ता; एतेभ्यः अपि दुर्लभम् आत्मानात्मविवेचनम्, ततोऽपि स्वानुभवः, सर्वोपरि च ब्रह्मात्मना संस्थितिः। एषा मुक्तिः शतकोटिजन्मसुकृतैः पुण्यैः विना न लभ्यते। एवम् अत्र ब्रह्मविद्यायाः परमं दौर्लभ्यं माहात्म्यं च प्रतिपादितम्।</p>
+      <p class="en">This verse sets out an ascending ladder of rarity. Among all births human birth is rare; rarer still is being male (in the Vedic frame), then brahminhood, then devotion to the Vedic path, then learning; rarer than all these is the discrimination of Self from non-Self, then direct experience, and supreme of all, abiding as Brahman. Such liberation is not gained without the merit of countless births. Thus the supreme rarity and greatness of Brahma-vidyā is established.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q12">
+    <h3>१२. वदन्तु शास्त्राणि… — आशयं लिखत।</h3>
+    <div class="qmeta">Section II · श्रीशङ्कराचार्यः</div>
+    <div class="shloka">वदन्तु शास्त्राणि यजन्तु देवान्<br>कुर्वन्तु कर्माणि भजन्तु देवताः।<br>आत्मैक्यबोधेन विनापि मुक्तिर्<br>न सिध्यति ब्रह्मशतान्तरेऽपि॥</div>
+    <div class="para">
+      <p class="sa">शास्त्राध्ययनं, देवयजनम्, कर्मानुष्ठानम्, देवतास्तुतिः च मनःशुद्धये उपयुज्यन्ते, परं स्वयं मुक्तिं दातुं न शक्नुवन्ति। आत्मब्रह्मणोः ऐक्यबोधेन (आत्मैक्यबोधेन) विना ब्रह्मणः शतजन्मान्तरेऽपि मुक्तिः न सिध्यति। अतः ज्ञानम् एव मोक्षस्य साक्षात् कारणम्, न कर्म न उपासना — इति शङ्करस्य दृढः सिद्धान्तः।</p>
+      <p class="en">Study of scriptures, sacrifice to the gods, performance of rites and praise of deities serve to purify the mind, but cannot of themselves grant liberation. Without the realization of the oneness of Self and Brahman, liberation is not achieved even after a hundred lifetimes of Brahmā. Hence Śaṅkara's firm doctrine: knowledge alone is the direct cause of mokṣa — not action, not worship.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q13">
+    <h3>१३. उद्धरेदात्मनात्मानम्… — विशदयत।</h3>
+    <div class="qmeta">Section II · विवेकचूडामणि ९</div>
+    <div class="shloka">उद्धरेदात्मनात्मानं मग्नं संसारवारिधौ।<br>योगारूढत्वमासाद्य सम्यग्दर्शननिष्ठया॥</div>
+    <div class="para">
+      <p class="sa">संसारसागरे मग्नः जनः केनापि अन्येन न उद्धर्तुं शक्यते; स्वयम् एव आत्मना आत्मानम् उद्धरेत्। तस्य उपायः — योगारूढत्वम् (योगे दृढम् अवस्थानम्) सम्यग्दर्शननिष्ठा (ब्रह्मसाक्षात्कारे स्थैर्यम्) च। "आत्मा एव आत्मनः बन्धुः रिपुश्च" (गीता ६।५) इति अत्र अनुरणति। आत्मप्रयत्नेन सम्यग्ज्ञानेन च एव मुक्तिः, न तु बाह्योपायेन।</p>
+      <p class="en">A person drowning in the ocean of saṃsāra cannot be rescued by anyone else; one must lift oneself up by oneself. The means: steadfastness in yoga (firm establishment in meditation) and devotion to right vision (stability in the realization of Brahman). The Gītā's "the self alone is the friend and the foe of the self" (6.5) resounds here. Liberation comes only through self-effort guided by right knowledge, not by any external agent.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q14">
+    <h3>१४. ब्रह्मसत्यं जगन्मिथ्या… — आशयं लिखत।</h3>
+    <div class="qmeta">Section II · विवेकचूडामणि २०</div>
+    <div class="shloka">ब्रह्म सत्यं जगन्मिथ्येत्येवंरूपो विनिश्चयः।<br>सोऽयं नित्यानित्यवस्तुविवेकः समुदाहृतः॥</div>
+    <div class="para">
+      <p class="sa">"ब्रह्म एव सत्यम्, जगत् मिथ्या" इति यः दृढः विनिश्चयः, सः एव नित्यानित्यवस्तुविवेकः इति उच्यते। "मिथ्या" इति न जगतः अत्यन्ताभावः, अपि तु ब्रह्मणः पृथक् स्वतन्त्रसत्ताया अभावः — यथा शुक्तौ रजतम्, यथा च रज्जौ सर्पः। एषः विवेकः साधनचतुष्टये प्रथमम् आवश्यकं साधनम्।</p>
+      <p class="en">The firm conviction "Brahman alone is real, the world is appearance" is itself called the discrimination between the eternal and the transient. "Mithyā" does not mean the world is utterly non-existent, but that it has no independent reality apart from Brahman — like the silver seen in nacre, or the snake in a rope. This discrimination is the first and indispensable means among the four qualifications.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q15">
+    <h3>१५. शास्त्रस्य गुरुवाक्यस्य… — स्वारस्यं लिखत।</h3>
+    <div class="qmeta">Section II · विवेकचूडामणि २५</div>
+    <div class="shloka">शास्त्रस्य गुरुवाक्यस्य सत्यबुद्ध्यवधारणा।<br>सा श्रद्धा कथिता सद्भिर्यया वस्तूपलभ्यते॥</div>
+    <div class="para">
+      <p class="sa">शास्त्रस्य गुरुवाक्यस्य च सत्यत्वेन या दृढा अवधारणा (निश्चयः), सा एव सद्भिः "श्रद्धा" इति कथिता; यया श्रद्धया वस्तु (ब्रह्म) उपलभ्यते। एषा श्रद्धा न अन्धविश्वासः, अपि तु प्रमाणस्य प्रामाण्ये विवेकयुक्तः विश्वासः। श्रद्धा शमादिषट्के अन्तर्भूता एका सम्पत्।</p>
+      <p class="en">The firm conviction that the scripture and the Guru's words are true is what the wise have called "śraddhā," by which the real entity (Brahman) is apprehended. This faith is not blind belief but a discerning trust in the validity of the means of knowledge. Śraddhā is one of the six virtues included under śama and the rest.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q16">
+    <h3>१६. वैराग्यं च मुमुक्षुत्वम्… — विशदयत।</h3>
+    <div class="qmeta">Section II · विवेकचूडामणि ३०</div>
+    <div class="shloka">वैराग्यं च मुमुक्षुत्वं तीव्रं यस्य तु विद्यते।<br>तस्मिन्नेवार्थवन्तः स्युः फलवन्तः शमादयः॥</div>
+    <div class="para">
+      <p class="sa">यस्मिन् साधके वैराग्यं तीव्रं मुमुक्षुत्वं च विद्यते, तस्मिन् एव शमादयः गुणाः अर्थवन्तः फलवन्तश्च भवन्ति। एतयोः द्वयोः अभावे शमादीनां भानमात्रता — मरौ सलिलवत् निष्फला (विवेकचूडामणि ३१)। अतः वैराग्यमुमुक्षुत्वे एव सर्वसाधनानां मूलाधारौ।</p>
+      <p class="en">In that seeker alone in whom dispassion is strong and the longing for liberation is intense do the virtues like śama become meaningful and fruitful. In the absence of these two, śama and the rest are a mere appearance — barren, like water in a desert mirage (VCM 31). Hence dispassion and the longing for liberation are the very foundation of all the means.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <!-- ============== SECTION III ============== -->
+  <div class="band">
+    <div class="deva">निबन्धाः</div>
+    <div class="en">Essays</div>
+    <div class="line"></div>
+  </div>
+
+  <article class="qa" id="q17">
+    <h3>१७. शङ्कराचार्याणां विषयमधिकृत्य लघुप्रबन्धमेकं रचयत।</h3>
+    <div class="qmeta">Section III · Essay</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — जीवनवृत्तम्</span>
+      <p class="sa">आदिशङ्कराचार्यः भारतीयदर्शनस्य इतिहासे महत्तमः दार्शनिकसन्तः। सः अष्टमशताब्द्यां केरलप्रदेशस्य कालटीग्रामे जातः। बाल्ये एव संसारं त्यक्त्वा गोविन्दपादाचार्यस्य शिष्यः भूत्वा ब्रह्मविद्याम् अधिगतवान्। सः वेदान्तस्य आधारभूतायाः प्रस्थानत्रय्याः — उपनिषदां, ब्रह्मसूत्राणां, भगवद्गीतायाश्च — भाष्याणि रचितवान्। विवेकचूडामणिः तस्य प्रसिद्धः स्वतन्त्रः प्रकरणग्रन्थः, मुमुक्षुं शिष्यम् उद्दिश्य पद्यरूपेण विरचितः।</p>
+      <p class="en">Ādi Śaṅkarācārya is among the greatest philosopher-saints in the history of Indian thought. He was born in the 8th century CE in the village of Kālaḍi in Kerala. Renouncing the world even as a child, he became a disciple of Govindapādācārya and mastered the knowledge of Brahman. He composed authoritative commentaries on the three foundational texts of Vedānta — the Upaniṣads, the Brahma-sūtras and the Bhagavad-gītā (the prasthāna-trayī). The Vivekacūḍāmaṇi is his celebrated independent treatise, composed in verse and addressed to an earnest seeker of liberation.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — अद्वैतसिद्धान्तः</span>
+      <p class="sa">शङ्करस्य मूलसिद्धान्तः अद्वैतवेदान्तः। "ब्रह्म सत्यं जगन्मिथ्या जीवो ब्रह्मैव नापरः" इति त्रिभिः वाक्यैः अस्य सारः गृह्यते — ब्रह्म एव परमार्थसत्यम्, जगत् प्रातीतिकम्, जीवः च ब्रह्मणः अनन्यः। जीवः वस्तुतः ब्रह्मणा अभिन्नः, परं अनादिअविद्यया देहेन्द्रियमनःसु आत्मबुद्धिं कृत्वा जन्ममरणरूपे संसारे भ्रमति।</p>
+      <p class="en">Śaṅkara's fundamental position is Advaita Vedānta, non-dualism. Its essence is grasped in three statements: "Brahman is real, the world is appearance, the individual self is none other than Brahman." Brahman alone is ultimately real, the world is phenomenal, and the jīva is non-different from Brahman. The jīva is in truth identical with Brahman, but through beginningless ignorance it takes the body, senses and mind to be the self and wanders in the saṃsāra of birth and death.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — सत्तात्रयम्</span>
+      <p class="sa">शङ्करः त्रिविधां सत्तां स्वीकरोति — पारमार्थिकी (ब्रह्म एव), व्यावहारिकी (दैनन्दिनम् अनुभूयमानं जगत्), प्रातिभासिकी (स्वप्न-रज्जुसर्पादि भ्रमः)। जगत् व्यावहारिकम्, न तु मिथ्याभ्रममात्रम्; तथापि ब्रह्मणः पृथक् स्वतन्त्रसत्ता नास्ति — यथा जलात् तरङ्गाः न पृथक्।</p>
+      <p class="en">Śaṅkara recognizes three levels of reality — the absolute (pāramārthika, Brahman alone), the conventional (vyāvahārika, the world experienced day to day), and the merely apparent (prātibhāsika, like a dream or a rope mistaken for a snake). The world is conventional, not a mere hallucination; yet it has no independent existence apart from Brahman — just as waves are not separate from water.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — मोक्षः</span>
+      <p class="sa">मोक्षः केवलं ज्ञानेन — ब्रह्मात्मैक्यसाक्षात्कारेण — सिध्यति। कर्म-उपासना-शास्त्राध्ययनादीनि मनःशुद्धये उपयुज्यन्ते, परं स्वयम् अविद्यां नाशयितुं न शक्नुवन्ति। आत्मैक्यबोधं विना ब्रह्मशतान्तरेऽपि मुक्तिः न भवति। अस्मिन् मार्गे श्रोत्रियः ब्रह्मनिष्ठश्च गुरुः अनिवार्यः, यः लिबरणकारकं ज्ञानं संक्रामयति।</p>
+      <p class="en">Liberation is accomplished by knowledge alone — by the direct realization of the identity of self and Brahman. Action, worship and scriptural study purify the mind, but cannot of themselves destroy ignorance. Without the realization of this unity, liberation does not occur even after a hundred lifetimes of Brahmā. On this path a Guru who is learned in the Vedas and established in Brahman is indispensable, for he transmits the liberating knowledge.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 5 — उपसंहारः</span>
+      <p class="sa">एवं शङ्कराचार्यः विवेकचूडामण्या बन्धनात् मोक्षपर्यन्तं सोपानक्रमेण स्पष्टं मार्गं दर्शितवान् — अज्ञानात् स्वस्वरूपस्य अनन्तब्रह्मभावस्य साक्षात्कारपर्यन्तम्। भारतीयदर्शने तस्य योगदानम् अमूल्यम्।</p>
+      <p class="en">Thus, through the Vivekacūḍāmaṇi, Śaṅkarācārya laid out a clear, step-by-step path from bondage to liberation — from ignorance to the direct experience of one's own infinite nature as Brahman. His contribution to Indian philosophy is beyond measure.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q18">
+    <h3>१८. साधनचतुष्टयं विशदयत।</h3>
+    <div class="qmeta">Section III · Essay</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — प्रस्तावना</span>
+      <p class="sa">ब्रह्मजिज्ञासायां कः अधिकारी इति प्रश्ने शङ्करः विवेकचूडामणौ साधनचतुष्टयं निरूपयति। यथा बीजस्य अङ्कुरणाय उर्वरा भूमिः अपेक्षिता, तथा अद्वैतज्ञानाय संस्कृतः शिष्यः अपेक्षितः। एतानि चत्वारि साधनानि यैः जनः ब्रह्मविचारयोग्यः भवति।</p>
+      <p class="en">To the question of who is qualified for the inquiry into Brahman, Śaṅkara sets out in the Vivekacūḍāmaṇi the four-fold means (sādhana-catuṣṭaya). Just as a seed needs fertile soil to sprout, the knowledge of Advaita needs a prepared student. These are the four qualifications by which a person becomes fit for the inquiry into Brahman.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — नित्यानित्यवस्तुविवेकः</span>
+      <p class="sa">प्रथमं साधनम् — ब्रह्म एव नित्यम् अविनाशि स्वयंप्रकाशम्, अन्यत् सर्वम् (देह-इन्द्रिय-मनो-धन-पद-स्वर्गादि) अनित्यं विनाशि — इति दृढः विवेकः। "ब्रह्म सत्यं जगन्मिथ्या" इति निश्चयः एव अयं विवेकः। एतेन विना शिष्यस्य मोक्षेच्छा एव न उद्भवति, यतः सः अनित्यजगति शाश्वतसुखं मन्यते।</p>
+      <p class="en">The first means is the firm discrimination that Brahman alone is eternal, imperishable and self-luminous, while all else — body, senses, mind, wealth, status, even heavenly pleasures — is transient and perishable. This very discrimination is the conviction "Brahman is real, the world is appearance." Without it the student has no desire for liberation, for he still imagines lasting happiness in the transient world.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — इहामुत्रार्थफलभोगविरागः</span>
+      <p class="sa">द्वितीयं साधनम् — इहलोकस्य परलोकस्य च भोगेषु निःस्पृहता वैराग्यम्। केवलं लौकिकविषयेभ्यः न, अपि तु पुण्यार्जितस्वर्गादिफलेभ्यः अपि विरागः आवश्यकः; यतः फलकामनया युक्तः साधकः अद्यापि बद्धः। एषा निःस्पृहता तम् अन्तरङ्गम् अवकाशं जनयति यत्र ब्रह्मोपदेशः प्रतिष्ठां लभते।</p>
+      <p class="en">The second means is dispassion (vairāgya) toward enjoyments here and hereafter. Not only toward worldly objects, but dispassion even toward heavenly rewards earned by merit is required, for a seeker driven by desire for results is still bound. This freedom from craving creates the inner space in which the teaching of Brahman can take hold.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — शमादिषट्कसम्पत्</span>
+      <p class="sa">तृतीयं साधनम् — षड् अन्तरङ्गगुणाः: <strong>शमः</strong> (मनसः निग्रहः), <strong>दमः</strong> (बाह्येन्द्रियाणां निग्रहः), <strong>उपरतिः</strong> (विषयेभ्यः निवृत्तिः, स्वस्वरूपे विश्रान्तिः), <strong>तितिक्षा</strong> (शीतोष्णादिद्वन्द्वानाम् अप्रतीकारं सहनम्), <strong>श्रद्धा</strong> (शास्त्रगुरुवाक्ये दृढः विवेकयुक्तः विश्वासः), <strong>समाधानम्</strong> (चित्तस्य एकाग्र्यं, अविक्षिप्तता)।</p>
+      <p class="en">The third means is the six inner virtues: <em>śama</em> (control of the mind), <em>dama</em> (control of the outer senses), <em>uparati</em> (withdrawal from sense-objects and rest in one's own nature), <em>titikṣā</em> (endurance of the pairs of opposites without retaliation), <em>śraddhā</em> (firm, discerning trust in the words of scripture and Guru), and <em>samādhāna</em> (one-pointedness and freedom from distraction of the mind).</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 5 — मुमुक्षुत्वम् · उपसंहारः</span>
+      <p class="sa">चतुर्थं साधनम् — तीव्रा मोक्षेच्छा मुमुक्षुत्वम्, या जीवनस्य परमं प्राधान्यम् आपद्यते। "मोक्षकारणसामग्र्यां ... गरीयसी"; वैराग्यमुमुक्षुत्वयुक्ते एव शमादयः फलवन्तः, अन्यथा निष्फलाः। एवं विवेकः ज्ञेयं दर्शयति, वैराग्यम् आसक्तिं नाशयति, षट्सम्पत् मनः संस्करोति, मुमुक्षुत्वं च सर्वसाधनेभ्यः ऊर्जां ददाति — एतैः चतुर्भिः मिलितैः वेदान्तस्य द्वारम् उद्घाटितम्।</p>
+      <p class="en">The fourth means is mumukṣutva — an intense longing for liberation that becomes the overriding priority of life. "Among the means of liberation it is the foremost"; only in one possessed of dispassion and intense longing do śama and the rest bear fruit — otherwise they are barren. Thus viveka shows what is worth seeking, vairāgya removes attachment, the six virtues refine the mind, and mumukṣutva supplies the energy for the whole journey — together these four open the gate of Vedānta.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <article class="qa" id="q19">
+    <h3>१९. ज्ञानप्राप्तिसाधनानि निरूपयत।</h3>
+    <div class="qmeta">Section III · Essay</div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 1 — प्रस्तावना</span>
+      <p class="sa">विवेकचूडामणेः मूलसिद्धान्तः — मोक्षः केवलं ज्ञानेन, ब्रह्मात्मैक्यस्य साक्षादनुभवेन। "वदन्तु शास्त्राणि... आत्मैक्यबोधेन विना मुक्तिः न" इति शङ्करः दृढम् उक्तवान्। तत् ज्ञानं कथं प्राप्यते इति प्रश्ने श्रवण-मनन-निदिध्यासनादीनि परस्परसम्बद्धानि साधनानि निरूप्यन्ते।</p>
+      <p class="en">The central claim of the Vivekacūḍāmaṇi is that liberation comes only through knowledge — the direct experience of the identity of self and Brahman. "Let them recite scriptures... without the realization of oneness there is no liberation," Śaṅkara firmly declares. To the question of how that knowledge is attained, several interconnected means are set out — listening, reflection, and meditation.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 2 — श्रवणम्</span>
+      <p class="sa">प्रथमं साधनं श्रवणम् — योग्यात् गुरोः सकाशात् "तत्त्वमसि", "अहं ब्रह्मास्मि" इत्यादिमहावाक्यानां वेदान्तसन्दर्भे सावधानं पुनःपुनः श्रवणम्। उपनिषदः ब्रह्मणि प्रमाणम्; श्रवणं तस्य प्रमाणस्य ग्रहणम्। श्रवणेन विना विचारयोग्यं किमपि न अवशिष्यते।</p>
+      <p class="en">The first means is śravaṇa — attentive, repeated listening, from a qualified Guru and in the proper Vedāntic context, to the great sayings such as "That thou art" and "I am Brahman." The Upaniṣads are the valid means of knowledge for Brahman, and śravaṇa is the reception of that means. Without listening, nothing remains to reflect upon.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 3 — मननम्</span>
+      <p class="sa">द्वितीयं साधनं मननम् — श्रुतस्य अर्थस्य युक्तिभिः क्रमशः विचारः, आक्षेपाणां समाधानम्, संशयनिवारणं च। "जगत् प्रत्यक्षं दृश्यते, कथं मिथ्या?", "यदि अहं ब्रह्म, तर्हि कथं दुःखी?" — एवंविधाः संशयाः मननेन निवार्यन्ते। एतेन विक्षेपः (संशयजनितः) निवर्तते, उपदेशश्च बौद्धिकनिश्चयरूपं प्राप्नोति।</p>
+      <p class="en">The second means is manana — systematic reflection on the heard teaching by reasoning, resolving objections, and dispelling doubt. "I see the world plainly — how can it be appearance?" "If I am Brahman, why do I suffer?" — such doubts are removed by manana. This dispels the distraction caused by unresolved doubt (vikṣepa) and brings the teaching to firm intellectual conviction.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 4 — निदिध्यासनम्</span>
+      <p class="sa">तृतीयं साधनं निदिध्यासनम् — बौद्धिकनिश्चये अपि देहाभिमानः पुनः उत्तिष्ठति; अतः "अहं ब्रह्मास्मि" इति अविच्छिन्नं गभीरं ध्यानम् अपेक्षितम् — न केवलं संकल्परूपं, अपि तु जीवन्तं स्वरूपानुभवरूपम्। एतेन आवरणं (अनुभवस्तरे अज्ञानम्) नश्यति, परोक्षज्ञानं च अपरोक्षानुभवरूपं भवति। श्रवण-मनन-निदिध्यासनम् इति एतत् त्रयं वेदान्ते प्रधानं साधनत्रयम्।</p>
+      <p class="en">The third means is nididhyāsana — even after intellectual conviction, identification with the body reasserts itself; hence sustained, unbroken contemplation of "I am Brahman" is required — not as a mere concept but as a living experience of one's own nature. By this the veil (the ignorance at the experiential level) is destroyed, and indirect knowledge becomes direct realization. These three — śravaṇa, manana, nididhyāsana — form the primary triad of means in Vedānta.</p>
+    </div>
+    <div class="para">
+      <span class="pnum">परिच्छेदः 5 — गुरुकृपा · वैराग्यं · मुमुक्षुत्वम् · उपसंहारः</span>
+      <p class="sa">अन्यानि सहकारीणि साधनानि — <strong>गुरुकृपा</strong>: गुरुः श्रोत्रियः ब्रह्मनिष्ठः दयालुश्च; तेन विना महावाक्यानि अक्षरमात्रम् अवशिष्यन्ते। <strong>वैराग्यम्</strong>: निःस्पृहतया मनः शान्तं भवति, येन श्रवणादि सम्भवति। <strong>मुमुक्षुत्वम्</strong>: तीव्रा मोक्षेच्छा सर्वसाधनानां प्रेरकं बलम्; तेन विना दीर्घा साधना न सिध्यति। एवं साधनचतुष्टयसम्पन्नः साधकः गुरुकृपया श्रवण-मनन-निदिध्यासनैः, मुमुक्षुत्वप्रेरितः वैराग्यपोषितश्च, "अहं ब्रह्मास्मि" इति अपरोक्षानुभवं प्राप्नोति; तदा अविद्या नश्यति, बन्धनं च निवर्तते — न तु किञ्चित् नूतनं प्राप्तम्, अपि तु यत् सदा सत्यम् आसीत् तत् स्पष्टं दृष्टम्।</p>
+      <p class="en">The auxiliary means are: <em>guru-kṛpā</em> — the Guru, learned in the Vedas, established in Brahman and compassionate, without whom the great sayings remain mere words; <em>vairāgya</em> — through dispassion the mind grows calm, making śravaṇa and the rest possible; and <em>mumukṣutva</em> — the intense longing for liberation, the motive force behind all the means, without which the long discipline cannot be carried through. Thus the qualified seeker, by the Guru's grace, through listening, reflection and meditation, driven by mumukṣutva and sustained by vairāgya, attains the direct experience "I am Brahman"; then ignorance is destroyed and bondage ends — not because something new was gained, but because what was always true was at last seen clearly.</p>
+    </div>
+    <a class="toplink" href="#top">↑ शीर्षम्</a>
+  </article>
+
+  <footer>
+    विवेकचूडामणिः · श्रीशङ्कराचार्यविरचितः · अद्वैतवेदान्तः · स्वाध्यायार्थम्
+  </footer>
+
+</div>
+</body>
+</html>
